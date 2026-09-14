@@ -1,4 +1,4 @@
-# Настройки прототипа (SPEC 8). Значения примерные, подбираются по первым прогонам.
+# Prototype settings (SPEC 8). Values are rough and get tuned after the first runs.
 
 agents:
   tutor:     { provider: anthropic, model: claude-haiku-4-5 }
@@ -8,13 +8,13 @@ agents:
 
 max_attempts: 3
 
-pace:                 # пороги для тега pace в режиме --answer
+pace:                 # thresholds for the pace tag in --answer mode
   fast_below_sec: 60
   struggled_above_sec: 180
 
-rating:               # Эло + IRT (SPEC 5.6)
+rating:               # Elo + IRT (SPEC 5.6)
   k0: 0.4
-  decay: 0.05         # K = k0 / (1 + decay·n)
+  decay: 0.05         # K = k0 / (1 + decay * n)
   corridor: [0.70, 0.85]
 
 sandbox:
@@ -22,7 +22,7 @@ sandbox:
   memory_mb: 256
 
 readability:
-  max_grade_margin: 1 # Флеш-Кинкейд не выше класса ученика + 1
+  max_grade_margin: 1 # Flesch-Kincaid grade at most the student's grade + 1
 
 near_duplicate:
-  max_similarity: 0.6 # pg_trgm
+  max_similarity: 0.6 # pg_trgm similarity threshold
