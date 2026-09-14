@@ -6,6 +6,7 @@ Prototype: a chain of LLM agents generates Kangaroo-style math problems for grad
 
 - [SPEC.md](SPEC.md) — what we build. The source of truth.
 - [RUN.md](RUN.md) — implementation plan: tasks T01–T31, run one at a time. Full executor rules are in its «Как пользоваться» section.
+- [docs/decisions.md](docs/decisions.md) — decision log: what was decided, why, and which alternatives were rejected. Read it before proposing design changes.
 - [docs/architecture/](docs/architecture/) — diagrams. Each file ends with a «Замечания к SPEC» section.
 - [research/](research/) — pre-prototype research; summary in [research/11-spec-recommendations.md](research/11-spec-recommendations.md).
 
@@ -19,6 +20,7 @@ Project context lives in these files, not in chat history: Claude sessions on th
 - Do not commit: the author commits after review.
 - If a task contradicts SPEC or something is missing, stop and ask. Do not silently fill SPEC gaps — record them in the «Замечания к SPEC» section of the document being worked on.
 - Before any Claude API calls, state the expected cost and wait for confirmation.
+- Do not re-propose alternatives rejected in `docs/decisions.md` without new evidence. If a decision has to change, ask the author and update the log.
 
 ## Hard rules
 
