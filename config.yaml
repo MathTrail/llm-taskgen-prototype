@@ -1,0 +1,28 @@
+# Настройки прототипа (SPEC 8). Значения примерные, подбираются по первым прогонам.
+
+agents:
+  tutor:     { provider: anthropic, model: claude-haiku-4-5 }
+  generator: { provider: anthropic, model: claude-opus-5, effort: high }
+  analyst:   { provider: anthropic, model: claude-sonnet-5, effort: medium }
+  skeptic:   { provider: anthropic, model: claude-sonnet-5, effort: medium }
+
+max_attempts: 3
+
+pace:                 # пороги для тега pace в режиме --answer
+  fast_below_sec: 60
+  struggled_above_sec: 180
+
+rating:               # Эло + IRT (SPEC 5.6)
+  k0: 0.4
+  decay: 0.05         # K = k0 / (1 + decay·n)
+  corridor: [0.70, 0.85]
+
+sandbox:
+  timeout_sec: 10
+  memory_mb: 256
+
+readability:
+  max_grade_margin: 1 # Флеш-Кинкейд не выше класса ученика + 1
+
+near_duplicate:
+  max_similarity: 0.6 # pg_trgm

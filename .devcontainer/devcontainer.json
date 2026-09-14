@@ -1,0 +1,29 @@
+{
+    "name": "MathTrail LLM TaskGen Prototype DevContainer",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    },
+    "containerEnv": {
+        "UV_LINK_MODE": "copy"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python",
+                "python.testing.pytestEnabled": true
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-azuretools.vscode-docker",
+                "redhat.vscode-yaml",
+                "bierner.markdown-mermaid",
+                "eamodio.gitlens",
+                "anthropic.claude-code"
+            ]
+        }
+    },
+    "postCreateCommand": "uv sync"
+}
