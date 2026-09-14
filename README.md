@@ -17,3 +17,4 @@ Standalone PoC for evaluating multi-agent LLM pipelines (Methodist, Generator, A
 - [RUN.md](RUN.md) — порядок работы, задачи по одной.
 - [docs/architecture/](docs/architecture/) — схемы.
 - [research/](research/) — исследование перед прототипом.
+- [CLAUDE.md](CLAUDE.md) — правила для Claude Code в этом репозитории.
