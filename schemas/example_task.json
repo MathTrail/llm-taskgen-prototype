@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reference task (SPEC 4.3)",
+  "description": "One of our own hand-written reference tasks in data/examples/tasks.json. Field names match the Generator output (SPEC 5.2). Catalog ids and option rules are checked by taskgen.validate_examples.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "topic",
+    "grade_level",
+    "difficulty",
+    "question",
+    "options",
+    "correct_answer",
+    "solution",
+    "distractors"
+  ],
+  "properties": {
+    "id": {
+      "description": "Unique name of the task, e.g. gaps-trees-1.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "draft": {
+      "description": "Sample task from T10; the author replaces samples with real ones in T11.",
+      "type": "boolean"
+    },
+    "topic": {
+      "description": "Topic id from data/catalogs/topics.json.",
+      "type": "string"
+    },
+    "grade_level": {
+      "description": "The same values as tasks.grade_level (SPEC 7).",
+      "enum": ["1-2", "3-4"]
+    },
+    "difficulty": {
+      "description": "Points 3, 4 or 5 within the grade level: the difficulty scale (SPEC 4.3).",
+      "enum": [3, 4, 5]
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "options": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["A", "B", "C", "D", "E"],
+      "properties": {
+        "A": { "$ref": "#/$defs/option" },
+        "B": { "$ref": "#/$defs/option" },
+        "C": { "$ref": "#/$defs/option" },
+        "D": { "$ref": "#/$defs/option" },
+        "E": { "$ref": "#/$defs/option" }
+      }
+    },
+    "correct_answer": {
+      "enum": ["A", "B", "C", "D", "E"]
+    },
+    "solution": {
+      "description": "Short solution in plain language.",
+      "type": "string",
+      "minLength": 1
+    },
+    "distractors": {
+      "description": "One entry per wrong option: 4 letters, all except correct_answer.",
+      "type": "object",
+      "propertyNames": { "enum": ["A", "B", "C", "D", "E"] },
+      "minProperties": 4,
+      "maxProperties": 4,
+      "additionalProperties": { "$ref": "#/$defs/distractor" }
+    }
+  },
+  "$defs": {
+    "option": {
+      "type": "string",
+      "minLength": 1
+    },
+    "distractor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["trap", "text"],
+      "properties": {
+        "trap": {
+          "description": "Trap id from data/catalogs/traps.json.",
+          "type": "string"
+        },
+        "text": {
+          "description": "Shown to the student after choosing this wrong option.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

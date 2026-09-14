@@ -1,0 +1,72 @@
+[
+  {
+    "id": "gaps-trees-draft",
+    "draft": true,
+    "topic": "counting.gaps",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "A gardener plants 5 trees in a straight row. Each tree is 2 metres away from the next one. How many metres is it from the first tree to the last tree?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "5",
+      "D": "8",
+      "E": "10"
+    },
+    "correct_answer": "D",
+    "solution": "Between 5 trees in a row there are 4 gaps. Each gap is 2 metres, so from the first tree to the last it is 2 + 2 + 2 + 2 = 8 metres.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "2 metres is the distance between two neighbouring trees. The question asks about the first and the last tree."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "There are 4 gaps, but each gap is 2 metres long."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "5 is the number of trees, not the distance."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "5 trees in a row have only 4 gaps between them, not 5."
+      }
+    }
+  },
+  {
+    "id": "enumeration-robots-draft",
+    "draft": true,
+    "topic": "combinatorics.enumeration",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Five robots meet at a space station. Each robot shakes hands with every other robot exactly once. How many handshakes are there in total?",
+    "options": {
+      "A": "5",
+      "B": "9",
+      "C": "10",
+      "D": "15",
+      "E": "20"
+    },
+    "correct_answer": "C",
+    "solution": "The first robot shakes hands with the 4 others. The second robot has already greeted the first, so it adds 3 new handshakes. The third adds 2 and the fourth adds 1. The fifth has greeted everyone already. 4 + 3 + 2 + 1 = 10.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "5 is the number of robots. The question asks how many handshakes there are."
+      },
+      "B": {
+        "trap": "missed_case",
+        "text": "You missed one handshake. Try listing the pairs robot by robot."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "The first robot shakes hands with 4 other robots, not 5: 4 + 3 + 2 + 1 = 10."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "You counted every handshake twice: robot 1 greeting robot 2 is the same handshake as robot 2 greeting robot 1."
+      }
+    }
+  }
+]

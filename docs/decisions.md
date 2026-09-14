@@ -58,7 +58,7 @@ The spec grew out of a chat with Gemini, then a research phase ([research/](../r
 
 **D22. Datasets are collected but never used for fine-tuning.** Anthropic's terms forbid using Claude outputs as training targets without written permission (research/08). The collected views are an evaluation reference for local models; phase 2 fine-tuning uses ready open datasets (licenses to be checked). — *Rejected:* distilling Claude into a local model. — SPEC 1, 7, 11.
 
-**D23. Reference examples are written by the author.** ~30 Kangaroo-style problems (3 per topic) with trap annotations. Real Kangaroo problems are never used: SMART-840 forbids commercial use and AI training, MathArena's set is CC BY-NC-SA (research/02). — SPEC 4.3.
+**D23. Reference examples are written by the author.** ~30 Kangaroo-style problems (3 per topic) with trap annotations. They are our own tasks, so files and ids never carry the Kangaroo name (`data/examples/tasks.json`). Real Kangaroo problems are never used: SMART-840 forbids commercial use and AI training, MathArena's set is CC BY-NC-SA (research/02). — SPEC 4.3.
 
 **D24. Children's data: pseudonyms only.** No real names, birth dates or schools in profiles or prompts. Video and voice feedback would be biometric data under COPPA 2025 — legal review before any use. — SPEC 4.1, 11.
 

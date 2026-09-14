@@ -7,7 +7,7 @@ import pytest
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-MODULES = ["main", "agents", "tutor_rule", "rating", "sandbox", "llm", "db", "seed", "catalogs", "apply_schema"]
+MODULES = ["main", "agents", "tutor_rule", "rating", "sandbox", "llm", "db", "seed", "catalogs", "apply_schema", "validate_examples"]
 
 
 @pytest.mark.parametrize("name", MODULES)

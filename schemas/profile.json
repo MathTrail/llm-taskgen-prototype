@@ -68,7 +68,7 @@
           "type": "string"
         },
         "difficulty": {
-          "description": "Kangaroo points within the grade level.",
+          "description": "Points 3, 4 or 5 within the grade level: the difficulty scale (SPEC 4.3).",
           "enum": [3, 4, 5]
         },
         "correct": {
