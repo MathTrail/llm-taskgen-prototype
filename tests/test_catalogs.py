@@ -4,7 +4,7 @@ import copy
 
 import pytest
 
-from scripts.validate_catalogs import CATALOGS, catalog_errors, load_catalog
+from taskgen.catalogs import CATALOGS, catalog_errors, load_catalog
 
 # Topics are a closed list fixed by SPEC 4.2: adding one is a SPEC change.
 SPEC_TOPICS = {

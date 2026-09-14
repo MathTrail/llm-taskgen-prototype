@@ -1,5 +1,5 @@
 # PostgreSQL for the prototype (SPEC 7).
-# Start: `docker compose up -d --wait`, then create the schema: `uv run python db/apply_schema.py`.
+# Start: `docker compose up -d --wait`, then create the schema: `uv run python -m taskgen.apply_schema`.
 services:
   db:
     # Exact versions only: the tag is pinned by the digest of its multi-arch image.

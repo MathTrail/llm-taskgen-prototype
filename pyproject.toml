@@ -16,9 +16,14 @@ dev = [
     "pytest",
 ]
 
-[tool.uv]
-package = false
+# src layout: the taskgen package in src/taskgen/ is installed editable by `uv sync` (decision D35).
+# Exact versions only: the build backend is pinned to the same version as uv.
+[build-system]
+requires = ["uv_build==0.12.13"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "taskgen"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["."]

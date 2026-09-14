@@ -1,15 +1,15 @@
-"""Validate the catalogs in catalogs/ against the schemas in schemas/catalogs/ (T08, SPEC 4.2, 4.4, 4.5).
+"""Closed catalogs in catalogs/: loading and validation against schemas/catalogs/ (T08, SPEC 4.2, 4.4, 4.5).
 
-Run: uv run python scripts/validate_catalogs.py. Exit code 1 if any catalog is invalid.
+Validate: uv run python -m taskgen.catalogs. Exit code 1 if any catalog is invalid.
 """
 
 import json
 import sys
-from pathlib import Path
 
 from jsonschema import Draft202012Validator
 
-ROOT = Path(__file__).resolve().parent.parent
+from taskgen import ROOT
+
 CATALOGS = ["topics", "skills", "traps"]
 
 

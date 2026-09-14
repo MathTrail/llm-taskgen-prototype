@@ -6,7 +6,7 @@
 
 ## 1. Одиночный запуск
 
-`python main.py --student masha [--fresh] [--tutor rule]`
+`python -m taskgen.main --student masha [--fresh] [--tutor rule]`
 
 ```mermaid
 sequenceDiagram
@@ -80,7 +80,7 @@ sequenceDiagram
 
 ## 2. Цикл `--answer`
 
-`python main.py --student masha --answer`
+`python -m taskgen.main --student masha --answer`
 
 Шаг «запрос задачи» — это весь поток из схемы 1, от чтения профиля до записи в `student_tasks`.
 

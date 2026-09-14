@@ -4,12 +4,11 @@ Every run resets the chosen students to their starting state: history and topic 
 again from the JSON file, so rerunning never duplicates data. Request and attempt logs are kept.
 Ratings are not computed yet (T13): theta stays 0 and there are no per-topic offsets.
 
-Run: uv run python seed.py [--student masha]
+Run: uv run python -m taskgen.seed [--student masha]
 """
 
 import argparse
 import json
-import os
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -17,24 +16,12 @@ from pathlib import Path
 import psycopg
 from jsonschema import Draft202012Validator
 
-from scripts.validate_catalogs import load_catalog
+from taskgen import ROOT
+from taskgen.catalogs import load_catalog
+from taskgen.db import database_url
 
-ROOT = Path(__file__).resolve().parent
 SEED_DIR = ROOT / "db" / "seed"
 PROFILE_SCHEMA = json.loads((ROOT / "schemas" / "profile.json").read_text(encoding="utf-8"))
-
-
-def database_url() -> str:
-    """DATABASE_URL from the environment, otherwise from the .env file (same lookup as db/apply_schema.py)."""
-    if url := os.environ.get("DATABASE_URL"):
-        return url
-    env_file = ROOT / ".env"
-    if env_file.exists():
-        for line in env_file.read_text(encoding="utf-8").splitlines():
-            key, sep, value = line.partition("=")
-            if sep and key.strip() == "DATABASE_URL" and value.strip():
-                return value.strip().strip("\"'")
-    sys.exit("DATABASE_URL is not set: copy .env.example to .env")
 
 
 def trailing_failures(history: list[dict]) -> int:

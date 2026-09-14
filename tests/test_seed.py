@@ -5,7 +5,7 @@ import json
 
 import pytest
 
-from seed import SEED_DIR, profile_errors
+from taskgen.seed import SEED_DIR, profile_errors
 
 PATHS = sorted(SEED_DIR.glob("*.json"))
 

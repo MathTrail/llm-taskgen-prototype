@@ -10,7 +10,7 @@
 flowchart LR
     me(["Я (консоль)"])
 
-    subgraph proto["Прототип · Python"]
+    subgraph proto["Прототип · Python · src/taskgen/"]
         direction TB
         main["main.py<br/>CLI · цикл попыток · цикл --answer"]
         seed["seed.py<br/>загрузка и сброс профилей"]

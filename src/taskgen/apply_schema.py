@@ -1,32 +1,20 @@
 """Recreate the database schema from db/schema.sql (T07): drops everything in the public schema, safe to rerun.
 
-DATABASE_URL comes from the environment or from .env in the project root.
+Run: uv run python -m taskgen.apply_schema [--force]
+DATABASE_URL comes from the environment or from .env in the repository root.
 If any table already holds rows, the script stops unless --force is given, so a paid task bank is not lost by accident.
 """
 
 import argparse
-import os
 import sys
-from pathlib import Path
 
 import psycopg
 from psycopg import sql
 
-ROOT = Path(__file__).resolve().parent.parent
+from taskgen import ROOT
+from taskgen.db import database_url
+
 SCHEMA = ROOT / "db" / "schema.sql"
-
-
-def database_url() -> str:
-    """DATABASE_URL from the environment, otherwise from the .env file."""
-    if url := os.environ.get("DATABASE_URL"):
-        return url
-    env_file = ROOT / ".env"
-    if env_file.exists():
-        for line in env_file.read_text(encoding="utf-8").splitlines():
-            key, sep, value = line.partition("=")
-            if sep and key.strip() == "DATABASE_URL" and value.strip():
-                return value.strip().strip("\"'")
-    sys.exit("DATABASE_URL is not set: copy .env.example to .env")
 
 
 def nonempty_tables(conn: psycopg.Connection) -> dict[str, int]:

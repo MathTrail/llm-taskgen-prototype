@@ -1,4 +1,4 @@
-"""Skeleton checks for T06: modules import and config.yaml has every key from SPEC 8."""
+"""Skeleton checks for T06: package modules import and config.yaml has every key from SPEC 8."""
 
 import importlib
 from pathlib import Path
@@ -7,12 +7,12 @@ import pytest
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-MODULES = ["main", "agents", "tutor_rule", "rating", "sandbox", "llm", "db", "seed"]
+MODULES = ["main", "agents", "tutor_rule", "rating", "sandbox", "llm", "db", "seed", "catalogs", "apply_schema"]
 
 
 @pytest.mark.parametrize("name", MODULES)
 def test_module_imports(name):
-    module = importlib.import_module(name)
+    module = importlib.import_module(f"taskgen.{name}")
     assert module.__doc__
 
 
