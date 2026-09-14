@@ -10,3 +10,12 @@ RUN rm -f /etc/apt/sources.list.d/yarn.list \
     && apt-get update \
     && apt-get install -y --no-install-recommends postgresql-client \
     && rm -rf /var/lib/apt/lists/*
+
+# Claude Code CLI, pinned to the same version as the VS Code extension in devcontainer.json.
+# The config dir is created here so the named volume mounted over it inherits vscode ownership.
+ARG CLAUDE_CODE_VERSION=2.1.270
+RUN mkdir -p /home/vscode/.claude && chown vscode:vscode /home/vscode/.claude
+USER vscode
+RUN curl -fsSL https://claude.ai/install.sh | bash -s ${CLAUDE_CODE_VERSION}
+ENV PATH="/home/vscode/.local/bin:${PATH}"
+USER root
