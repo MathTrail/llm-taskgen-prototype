@@ -1,20 +1,22 @@
 # llm-taskgen-prototype
 Standalone PoC for evaluating multi-agent LLM pipelines (Methodist, Generator, Analyst, Skeptic) to generate verified, adaptive Math Olympiad tasks and synthetic fine-tuning datasets.
 
-## Запуск
+## Getting started
 
-Работаем из devcontainer: в нём Python 3.12, `uv`, Docker (docker-in-docker) и `psql`.
+Work from the devcontainer: it has Python 3.12, `uv`, Docker (docker-in-docker) and `psql`.
 
-1. Открыть папку в VS Code → «Reopen in Container». При создании контейнера выполняется `uv sync`.
-2. `cp .env.example .env` и вписать `ANTHROPIC_API_KEY` (нужен с T18).
-3. `uv run pytest` — проверка каркаса.
+1. Open the folder in VS Code → "Reopen in Container". Creating the container runs `uv sync`.
+2. `cp .env.example .env` and fill in `ANTHROPIC_API_KEY` (needed from T18).
+3. `docker compose up -d --wait` — PostgreSQL 17 on `localhost:5432`.
+4. `uv run python db/apply_schema.py` — create the schema from `db/schema.sql`. The script recreates the whole schema; if the tables already hold data, it refuses without `--force`.
+5. `uv run pytest` — tests.
 
-Дальше — по [RUN.md](RUN.md): PostgreSQL (`docker compose up -d`) появится в T07, стартовые профили — в T09.
+Next steps follow [RUN.md](RUN.md): starting profiles come in T09.
 
-## Документы
+## Documents
 
-- [SPEC.md](SPEC.md) — что строим.
-- [RUN.md](RUN.md) — порядок работы, задачи по одной.
-- [docs/architecture/](docs/architecture/) — схемы.
-- [research/](research/) — исследование перед прототипом.
-- [CLAUDE.md](CLAUDE.md) — правила для Claude Code в этом репозитории.
+- [SPEC.md](SPEC.md) — what we build.
+- [RUN.md](RUN.md) — implementation plan, one task at a time.
+- [docs/architecture/](docs/architecture/) — diagrams.
+- [research/](research/) — research done before the prototype.
+- [CLAUDE.md](CLAUDE.md) — rules for Claude Code in this repository.
