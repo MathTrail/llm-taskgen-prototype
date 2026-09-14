@@ -20,7 +20,7 @@
   "history": [
     {
       "topic": "time.calendar",
-      "difficulty": 3,
+      "difficulty": 2,
       "correct": false,
       "chosen_option": "C",
       "trap_hit": "answered_other_question",
@@ -28,19 +28,19 @@
     },
     {
       "topic": "counting.gaps",
-      "difficulty": 3,
+      "difficulty": 2,
       "correct": true,
       "pace": "normal"
     },
     {
       "topic": "counting.gaps",
-      "difficulty": 4,
+      "difficulty": 3,
       "correct": true,
       "pace": "normal"
     },
     {
       "topic": "combinatorics.enumeration",
-      "difficulty": 3,
+      "difficulty": 2,
       "correct": false,
       "chosen_option": "E",
       "trap_hit": "double_count",
@@ -48,7 +48,7 @@
     },
     {
       "topic": "counting.gaps",
-      "difficulty": 5,
+      "difficulty": 4,
       "correct": true,
       "pace": "fast"
     }

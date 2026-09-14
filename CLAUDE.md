@@ -1,6 +1,6 @@
 # CLAUDE.md — working rules for this repository
 
-Prototype: a chain of LLM agents generates Kangaroo-style math problems for grades 1–4. The code is throwaway; the goal is to test the hypothesis in SPEC.
+Prototype: a chain of LLM agents generates olympiad-style math problems for grades 1–4 (5 options A–E; style follows Soviet problem books). The code is throwaway; the goal is to test the hypothesis in SPEC.
 
 ## Documents
 
@@ -26,12 +26,13 @@ Project context lives in these files, not in chat history: Claude sessions on th
 
 - **Exact versions only.** No `latest`, no floating tags. Docker images: exact tag or digest; tools (`uv`, `claude`), devcontainer features, VS Code extensions: exact version; Python dependencies are pinned in `uv.lock`.
 - **Language.** Code, prompts, data, `CLAUDE.md` and every comment in code and config files (Python, SQL, YAML, Dockerfile, `.env.example`, etc.) — strictly English. Project documents (SPEC, RUN, docs, research) and reports to the author — Russian.
+- **No contest names.** Our tasks are olympiad-style problems; the repository never names a specific math contest, in any language (D36).
 - **Children's data.** Profiles and prompts use pseudonyms like `masha` only: no real names, birth dates or schools (SPEC 4.1).
 - **Secrets** live only in `.env`, which is never committed.
 
 ## The author
 
-The author is an experienced Kangaroo solver and coaches a child on these problems; they review task quality themselves. Do not suggest external experts or review panels.
+The author is an experienced olympiad problem solver and coaches a child on such problems; they review task quality themselves. Do not suggest external experts or review panels.
 
 ## Environment
 

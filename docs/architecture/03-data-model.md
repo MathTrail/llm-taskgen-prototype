@@ -40,7 +40,7 @@ erDiagram
         text task_id PK
         timestamptz created_at
         text topic "id из topics.json"
-        int difficulty "3, 4 или 5 баллов"
+        int difficulty "сложность 1–5"
         text grade_level "1-2 или 3-4"
         text setting
         text[] excluded_skills "запреты из ТЗ"
@@ -126,7 +126,7 @@ erDiagram
 | `students` | `seed.py` — загрузка и сброс, θ после пересчёта стартовой истории. `main.py` через `db.py` в `--answer` после ответа — `consecutive_failures`, `rating`, `answers_count` | `main.py` в начале запроса — профиль для Методиста или правила. `rating.py` — θ для коридора. `db.py` — `excluded_skills` для поиска в банке |
 | `student_topic_ratings` | `seed.py` — пересчёт стартовой истории. `main.py` в `--answer` после ответа — δ темы этой задачи | `rating.py` — коридор по темам. `tutor_rule.py` — через коридор |
 | `student_tasks` | `seed.py` — стартовая история (`task_id` пустой). `main.py` — INSERT при выдаче задачи из банка или после генерации. `main.py` в `--answer` — UPDATE ответом | `main.py` — последние 5 записей для Методиста. `db.py` — поиск в банке: не выдавалась ли задача. `tutor_rule.py` — давно не решавшиеся темы, частые `trap_hit`. Отчёт (T29) |
-| `tasks` | `main.py` — INSERT после принятой попытки, β по баллам. `main.py` в `--answer` — UPDATE `rating`, `rating_count` после ответа | `db.py` — поиск в банке. Проверки — близкие дубли по условию через `pg_trgm`. View датасетов. Ручная проверка (T30) |
+| `tasks` | `main.py` — INSERT после принятой попытки, β по сложности. `main.py` в `--answer` — UPDATE `rating`, `rating_count` после ответа | `db.py` — поиск в банке. Проверки — близкие дубли по условию через `pg_trgm`. View датасетов. Ручная проверка (T30) |
 | `requests` | `main.py` — INSERT после ТЗ; UPDATE в конце запроса: `source`, `task_id`, попытки, токены, стоимость, время | Отчёт (T29), прогонщик (T28). Неудавшееся ТЗ для следующей итерации `--answer` передаётся в памяти, в БД оно остаётся для истории |
 | `attempts` | `main.py` — INSERT после каждой попытки | Отчёт (T29): доли статусов и причин, `solver_disagrees`, стоимость по `prompt_version`. Мой ручной разбор отказов |
 | `finetune_solver`, `finetune_generator` | никто: view вычисляются из `tasks` | Выгрузка для оценки локальных моделей во второй фазе |

@@ -13,13 +13,13 @@
   "history": [
     {
       "topic": "logic.knights_liars",
-      "difficulty": 3,
+      "difficulty": 2,
       "correct": true,
       "pace": "fast"
     },
     {
       "topic": "combinatorics.enumeration",
-      "difficulty": 4,
+      "difficulty": 3,
       "correct": false,
       "chosen_option": "B",
       "trap_hit": "missed_case",
@@ -28,7 +28,7 @@
     },
     {
       "topic": "time.clocks",
-      "difficulty": 3,
+      "difficulty": 2,
       "correct": null,
       "feedback": "didn't understand the question",
       "pace": "struggled"

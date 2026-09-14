@@ -29,7 +29,7 @@ CREATE TABLE tasks (                -- task bank
   task_id         text PRIMARY KEY,
   created_at      timestamptz NOT NULL DEFAULT now(),
   topic           text   NOT NULL,  -- topic id from topics.json
-  difficulty      int    NOT NULL,  -- 3, 4 or 5 points
+  difficulty      int    NOT NULL,  -- level 1-5 within the grade level (SPEC 4.3)
   grade_level     text   NOT NULL,  -- '1-2' or '3-4'
   setting         text,
   excluded_skills text[] NOT NULL,  -- restrictions from the brief the task was generated for
@@ -39,7 +39,7 @@ CREATE TABLE tasks (                -- task bank
   analyst         jsonb  NOT NULL,  -- Analyst output, including the walkthrough for the student
   skeptic         jsonb  NOT NULL,
   attempt_count   int    NOT NULL,
-  rating          real   NOT NULL,  -- difficulty beta (SPEC 5.6), starts from the points
+  rating          real   NOT NULL,  -- difficulty beta (SPEC 5.6), starts at difficulty - 3
   rating_count    int    NOT NULL DEFAULT 0
 );
 

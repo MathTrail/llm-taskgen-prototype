@@ -24,13 +24,13 @@
   "history": [
     {
       "topic": "logic.ordering",
-      "difficulty": 3,
+      "difficulty": 2,
       "correct": true,
       "pace": "struggled"
     },
     {
       "topic": "counting.gaps",
-      "difficulty": 3,
+      "difficulty": 2,
       "correct": false,
       "chosen_option": "A",
       "trap_hit": "off_by_one",
@@ -38,7 +38,7 @@
     },
     {
       "topic": "arithmetic.tricks",
-      "difficulty": 3,
+      "difficulty": 2,
       "correct": true,
       "hint_used": true,
       "pace": "normal"

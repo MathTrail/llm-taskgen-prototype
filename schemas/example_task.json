@@ -34,8 +34,8 @@
       "enum": ["1-2", "3-4"]
     },
     "difficulty": {
-      "description": "Points 3, 4 or 5 within the grade level: the difficulty scale (SPEC 4.3).",
-      "enum": [3, 4, 5]
+      "description": "Difficulty from 1 (easiest) to 5 (hardest) within the grade level (SPEC 4.3).",
+      "enum": [1, 2, 3, 4, 5]
     },
     "question": {
       "type": "string",

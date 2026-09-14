@@ -12,25 +12,25 @@
   "history": [
     {
       "topic": "logic.ordering",
-      "difficulty": 4,
+      "difficulty": 3,
       "correct": true,
       "pace": "fast"
     },
     {
       "topic": "counting.gaps",
-      "difficulty": 4,
+      "difficulty": 3,
       "correct": true,
       "pace": "normal"
     },
     {
       "topic": "arithmetic.tricks",
-      "difficulty": 5,
+      "difficulty": 4,
       "correct": true,
       "pace": "normal"
     },
     {
       "topic": "combinatorics.enumeration",
-      "difficulty": 5,
+      "difficulty": 4,
       "correct": false,
       "chosen_option": "D",
       "trap_hit": "stopped_early",
@@ -38,13 +38,13 @@
     },
     {
       "topic": "logic.knights_liars",
-      "difficulty": 4,
+      "difficulty": 3,
       "correct": true,
       "pace": "normal"
     },
     {
       "topic": "pigeonhole.basic",
-      "difficulty": 4,
+      "difficulty": 3,
       "correct": true,
       "pace": "fast"
     }

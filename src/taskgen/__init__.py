@@ -1,4 +1,4 @@
-"""Prototype package: LLM agents generate Kangaroo-style math tasks for grades 1-4 (see SPEC.md)."""
+"""Prototype package: LLM agents generate olympiad-style math tasks for grades 1-4 (see SPEC.md)."""
 
 from pathlib import Path
 

@@ -14,13 +14,15 @@ The spec grew out of a chat with Gemini, then a research phase ([research/](../r
 
 **D03. Language.** Problems, prompts, data, code comments, `CLAUDE.md`, this file — English. SPEC, RUN, docs, research and reports to the author — Russian. — *Rejected:* Russian-language problems.
 
-**D04. Text-only problems.** — *Why:* 60–70% of real Kangaroo problems use a picture, and even top models are much weaker on visual problems (research/01–02). The prototype tests only the text part of the contest. Pictures (SVG or image generation) come after the prototype. — SPEC 1, 2, 4.2, 11.
+**D04. Text-only problems.** — *Why:* 60–70% of problems in a major international multiple-choice contest for schoolchildren use a picture, and even top models are much weaker on visual problems (research/01–02). The prototype tests only text problems. Pictures (SVG or image generation) come after the prototype. — SPEC 1, 2, 4.2, 11.
 
 **D05. Closed topic catalog.** 10 text-solvable topics in `topics.json`. Excluded: spatial geometry, visual counting, symmetry, geometry described in words, heavy arithmetic and fractions, school motion/work problems, and `patterns.sequences` (several plausible continuations; code cannot prove the rule is unique). All remaining topics are brute-force computable — the program check depends on that. — SPEC 4.2.
 
+**D36. Olympiad-style tasks, no contest names; difficulty 1–5.** Our tasks are olympiad-style problems for grades 1–4 with 5 options A–E; the style follows Soviet collections of olympiad and graded problems. The repository never names a specific contest. Difficulty is a level from 1 to 5 within the grade level, the starting β = difficulty − 3; the former points 3/4/5 became levels 2/3/4 with the same β, so the rating maths and the T05 numbers are unchanged. Research keeps its facts about the international contest it studied but describes it neutrally; links whose address contains the contest name were removed. — *Why:* the author does not want to use or reference that contest; the points 3/4/5 were its scale. — *Rejected:* open answers as in the books (would drop distractors, `trap_hit` and the guessing floor 0.2); copying problems from the books into the examples (rights unclear, see D23); deleting the research on the contest (D04 and D23 would lose their evidence). — SPEC 1, 4.3, 5.6.
+
 ## Agents and pipeline
 
-**D06. The Methodist picks the target.** The caller does not specify topic or difficulty; an LLM Methodist chooses topic, points, pedagogical goal, setting and traps from the profile. — *Why:* the author corrected an early design where the target was an input. — SPEC 5.1.
+**D06. The Methodist picks the target.** The caller does not specify topic or difficulty; an LLM Methodist chooses topic, difficulty, pedagogical goal, setting and traps from the profile. — *Why:* the author corrected an early design where the target was an input. — SPEC 5.1.
 
 **D07. Four roles: Methodist → Generator → Analyst ∥ Skeptic.** Analyst and Skeptic see only question and options, run in parallel. — *Rejected:* single blind verifier (shared blind spots); multi-agent framework such as LangChain (plain code is clearer for a fixed workflow, per Anthropic's "Building effective agents"). — SPEC 5, 10.
 
@@ -58,7 +60,7 @@ The spec grew out of a chat with Gemini, then a research phase ([research/](../r
 
 **D22. Datasets are collected but never used for fine-tuning.** Anthropic's terms forbid using Claude outputs as training targets without written permission (research/08). The collected views are an evaluation reference for local models; phase 2 fine-tuning uses ready open datasets (licenses to be checked). — *Rejected:* distilling Claude into a local model. — SPEC 1, 7, 11.
 
-**D23. Reference examples are written by the author.** ~30 Kangaroo-style problems (3 per topic) with trap annotations. They are our own tasks, so files and ids never carry the Kangaroo name (`data/examples/tasks.json`). Real Kangaroo problems are never used: SMART-840 forbids commercial use and AI training, MathArena's set is CC BY-NC-SA (research/02). — SPEC 4.3.
+**D23. Reference examples are written by the author.** ~30 olympiad-style problems (3 per topic) with trap annotations in `data/examples/tasks.json`; style and difficulty levels follow Soviet problem books (D36). They are our own tasks: problems are never copied from books or open sets. A freely available book is not necessarily in the public domain, and open contest sets forbid commercial use or AI training: SMART-840 forbids both, MathArena's sets are CC BY-NC-SA (research/02). — SPEC 4.3.
 
 **D24. Children's data: pseudonyms only.** No real names, birth dates or schools in profiles or prompts. Video and voice feedback would be biometric data under COPPA 2025 — legal review before any use. — SPEC 4.1, 11.
 
@@ -72,7 +74,7 @@ The spec grew out of a chat with Gemini, then a research phase ([research/](../r
 
 **D27. Budget.** Rough estimate $0.15–0.23 per attempt, driven by Opus 5 output with thinking. The target "< $0.10 per accepted task" is kept but expected to fail; an experiment compares the Generator on Sonnet 5 vs Opus 5 at low effort. — SPEC 8, 9.
 
-**D28. Quality review is done by the author alone.** The author is an experienced Kangaroo solver and coach. — *Rejected:* external coach, child trials as a formal step. — SPEC 9.
+**D28. Quality review is done by the author alone.** The author is an experienced olympiad problem solver and coach. — *Rejected:* external coach, child trials as a formal step. — SPEC 9.
 
 **D29. "False accepts" means math failures only.** Wrong answer, ambiguity, no solution, several correct options. Style and age fit belong to the quality metric — this removed a contradiction between the two targets. — SPEC 9.
 
