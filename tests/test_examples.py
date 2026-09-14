@@ -43,6 +43,14 @@ def test_draft_flag_is_allowed():
     assert errors_after(lambda task: task.update(draft=True)) == []
 
 
+def test_source_is_allowed():
+    assert errors_after(lambda task: task.update(source="Author, Book title, 1950, problem 12")) == []
+
+
+def test_empty_source_is_rejected():
+    assert errors_after(lambda task: task.update(source=""))
+
+
 def test_file_must_be_an_array():
     assert examples_errors(VALID) == ["the file must hold a JSON array of tasks"]
 

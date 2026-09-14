@@ -25,6 +25,11 @@
       "description": "Sample task from T10; the author replaces samples with real ones in T11.",
       "type": "boolean"
     },
+    "source": {
+      "description": "Where the idea comes from, if it is not the author's own: author, book or olympiad, year, problem number. The wording, plot and options are always ours (D23).",
+      "type": "string",
+      "minLength": 1
+    },
     "topic": {
       "description": "Topic id from data/catalogs/topics.json.",
       "type": "string"

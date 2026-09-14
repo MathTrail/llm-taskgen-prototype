@@ -26,7 +26,7 @@ Project context lives in these files, not in chat history: Claude sessions on th
 
 - **Exact versions only.** No `latest`, no floating tags. Docker images: exact tag or digest; tools (`uv`, `claude`), devcontainer features, VS Code extensions: exact version; Python dependencies are pinned in `uv.lock`.
 - **Language.** Code, prompts, data, `CLAUDE.md` and every comment in code and config files (Python, SQL, YAML, Dockerfile, `.env.example`, etc.) — strictly English. Project documents (SPEC, RUN, docs, research) and reports to the author — Russian.
-- **No contest names.** Our tasks are olympiad-style problems; the repository never names a specific math contest, in any language (D36).
+- **One contest is never named.** Our tasks are olympiad-style problems; the repository never names the international multiple-choice contest the project started from, in any language (D36). Other olympiads may be named, e.g. as problem sources.
 - **Children's data.** Profiles and prompts use pseudonyms like `masha` only: no real names, birth dates or schools (SPEC 4.1).
 - **Secrets** live only in `.env`, which is never committed.
 
