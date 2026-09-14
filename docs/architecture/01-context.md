@@ -32,10 +32,10 @@ flowchart LR
         direction TB
         cfg["config.yaml"]
         prompts["prompts/*.md<br/>schemas/*.json"]
-        catalogs["catalogs/<br/>topics.json · skills.json · traps.json"]
-        examples["examples/kangaroo.json"]
-        seeds["db/seed/*.json"]
-        evalset["eval/"]
+        catalogs["data/catalogs/<br/>topics.json · skills.json · traps.json"]
+        examples["data/examples/kangaroo.json"]
+        seeds["data/seed/*.json"]
+        evalset["data/eval/"]
     end
 
     subgraph docker["Docker (локально)"]
@@ -104,10 +104,10 @@ flowchart LR
 | `seed.py` | Загрузка и сброс стартовых профилей, пересчёт рейтингов по стартовой истории | 3, 4.1 |
 | `config.yaml` | Модели и `effort` агентов, лимит попыток, пороги `pace`, рейтинги, песочница, фильтры | 8 |
 | `prompts/`, `schemas/` | Промпты агентов и JSON-схемы их ответов | 5, 8 |
-| `catalogs/` — `topics.json`, `skills.json`, `traps.json` | Закрытые каталоги тем, навыков и ловушек | 4.2, 4.4, 4.5 |
-| `examples/kangaroo.json` | ~30 эталонных задач, пишу я | 4.3 |
-| `db/seed/*.json` | 5 стартовых профилей | 4.1 |
-| `eval/` | Фиксированный набор для оценки | 9 |
+| `data/catalogs/` — `topics.json`, `skills.json`, `traps.json` | Закрытые каталоги тем, навыков и ловушек | 4.2, 4.4, 4.5 |
+| `data/examples/kangaroo.json` | ~30 эталонных задач, пишу я | 4.3 |
+| `data/seed/*.json` | 5 стартовых профилей | 4.1 |
+| `data/eval/` | Фиксированный набор для оценки | 9 |
 | PostgreSQL (`docker-compose.yml`, `db/schema.sql`) | Все данные: профили, история, рейтинги, банк задач, журналы, view датасетов | 7 |
 | Контейнер без сети | Изоляция недоверенного кода, который пишет модель | 5.3 |
 | Claude API | Модели агентов: Haiku 4.5 — Методист, Opus 5 — Генератор, Sonnet 5 — Аналитик и Скептик | 8 |

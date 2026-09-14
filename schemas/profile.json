@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Starting student profile (SPEC 4.1)",
-  "description": "Hand-written profile in db/seed/<id>.json, loaded by seed.py. Catalog ids and consecutive_failures are checked by seed.py.",
+  "description": "Hand-written profile in data/seed/<id>.json, loaded by seed.py. Catalog ids and consecutive_failures are checked by seed.py.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -35,13 +35,13 @@
       "items": { "type": "string", "minLength": 1 }
     },
     "mastered_topics": {
-      "description": "Topic ids from catalogs/topics.json.",
+      "description": "Topic ids from data/catalogs/topics.json.",
       "type": "array",
       "uniqueItems": true,
       "items": { "type": "string" }
     },
     "excluded_skills": {
-      "description": "Skill ids from catalogs/skills.json.",
+      "description": "Skill ids from data/catalogs/skills.json.",
       "type": "array",
       "uniqueItems": true,
       "items": { "type": "string" }
@@ -64,7 +64,7 @@
       "required": ["topic", "difficulty", "correct"],
       "properties": {
         "topic": {
-          "description": "Topic id from catalogs/topics.json.",
+          "description": "Topic id from data/catalogs/topics.json.",
           "type": "string"
         },
         "difficulty": {
@@ -77,7 +77,7 @@
         },
         "chosen_option": { "enum": ["A", "B", "C", "D", "E"] },
         "trap_hit": {
-          "description": "Trap id from catalogs/traps.json.",
+          "description": "Trap id from data/catalogs/traps.json.",
           "type": "string"
         },
         "feedback": { "type": "string", "minLength": 1 },

@@ -9,7 +9,7 @@ Work from the devcontainer: it has Python 3.12, `uv`, Docker (docker-in-docker) 
 2. `cp .env.example .env` and fill in `ANTHROPIC_API_KEY` (needed from T18).
 3. `docker compose up -d --wait` — PostgreSQL 17 on `localhost:5432`.
 4. `uv run python -m taskgen.apply_schema` — create the schema from `db/schema.sql`. The script recreates the whole schema; if the tables already hold data, it refuses without `--force`.
-5. `uv run python -m taskgen.seed` — load the five starting profiles from `db/seed/*.json`. Rerunning resets them; `--student masha` resets one student.
+5. `uv run python -m taskgen.seed` — load the five starting profiles from `data/seed/*.json`. Rerunning resets them; `--student masha` resets one student.
 6. `uv run pytest` — tests.
 
 All code lives in the `taskgen` package in `src/taskgen/`, installed into the venv by `uv sync`. Run any module with `uv run python -m taskgen.<module>`.

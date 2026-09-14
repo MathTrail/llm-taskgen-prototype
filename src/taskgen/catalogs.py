@@ -1,4 +1,4 @@
-"""Closed catalogs in catalogs/: loading and validation against schemas/catalogs/ (T08, SPEC 4.2, 4.4, 4.5).
+"""Closed catalogs in data/catalogs/: loading and validation against schemas/catalogs/ (T08, SPEC 4.2, 4.4, 4.5).
 
 Validate: uv run python -m taskgen.catalogs. Exit code 1 if any catalog is invalid.
 """
@@ -14,8 +14,8 @@ CATALOGS = ["topics", "skills", "traps"]
 
 
 def load_catalog(name: str) -> list[dict]:
-    """Entries of a catalog in catalogs/, e.g. load_catalog("traps")."""
-    return json.loads((ROOT / "catalogs" / f"{name}.json").read_text(encoding="utf-8"))
+    """Entries of a catalog in data/catalogs/, e.g. load_catalog("traps")."""
+    return json.loads((ROOT / "data" / "catalogs" / f"{name}.json").read_text(encoding="utf-8"))
 
 
 def catalog_errors(name: str, entries: object) -> list[str]:

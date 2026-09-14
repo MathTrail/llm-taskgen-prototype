@@ -2,5 +2,5 @@
 
 from pathlib import Path
 
-# Repository root: catalogs/, schemas/, db/, config.yaml and other data live there, not in the package.
+# Repository root: data/, schemas/, prompts/, db/ and config.yaml live there, not in the package.
 ROOT = Path(__file__).resolve().parents[2]

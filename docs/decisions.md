@@ -62,7 +62,7 @@ The spec grew out of a chat with Gemini, then a research phase ([research/](../r
 
 **D24. Children's data: pseudonyms only.** No real names, birth dates or schools in profiles or prompts. Video and voice feedback would be biometric data under COPPA 2025 — legal review before any use. — SPEC 4.1, 11.
 
-**D34. Starting history has no `task_id`.** Seed profiles (`db/seed/*.json`) omit it and `schemas/profile.json` rejects it; `seed.py` writes `student_tasks.task_id` as NULL. — *Why:* those tasks are not in the bank, so the foreign key would fail (remark 03-1). — *Rejected:* keeping `task_id` in the file and dropping it on load (the file and the DB would silently disagree). — SPEC 4.1, 7.
+**D34. Starting history has no `task_id`.** Seed profiles (`data/seed/*.json`) omit it and `schemas/profile.json` rejects it; `seed.py` writes `student_tasks.task_id` as NULL. — *Why:* those tasks are not in the bank, so the foreign key would fail (remark 03-1). — *Rejected:* keeping `task_id` in the file and dropping it on load (the file and the DB would silently disagree). — SPEC 4.1, 7.
 
 ## Models and cost
 
@@ -86,7 +86,7 @@ The spec grew out of a chat with Gemini, then a research phase ([research/](../r
 
 **D33. Host and container sessions are separate.** Claude history is keyed by config dir and project path, both differ in the container. Context therefore lives in files: SPEC, RUN, docs, CLAUDE.md and this log. — *Rejected:* sharing the host `~/.claude` and mirroring the host path into the container.
 
-**D35. src layout: all code in the `taskgen` package.** Every Python module lives in `src/taskgen/`, including utilities (`catalogs`, `apply_schema`, and later `validate_examples`, `try_<agent>`, `run_eval`, `report`, `review`); the repo root keeps only config, data folders and docs. `uv sync` installs the package in editable mode (`uv_build` backend, pinned); modules run with `uv run python -m taskgen.<module>`. — *Why:* the author does not want code in the root; the src layout is the Python convention and removes the `db.py` / `db/` name clash. — *Rejected:* modules in the root (as SPEC 10 first had them); console scripts in `[project.scripts]` (one registration per program, about ten by T30); a separate `scripts/` folder. — SPEC 3, 10.
+**D35. src layout: all code in the `taskgen` package.** Every Python module lives in `src/taskgen/`, including utilities (`catalogs`, `apply_schema`, and later `validate_examples`, `try_<agent>`, `run_eval`, `report`, `review`); nothing but code goes into `src/`. The repo root keeps config (`config.yaml`), docs, `db/schema.sql`, the contracts `schemas/` and `prompts/` (they move to MathTrail, SPEC 11), and `data/` with all hand-written data: catalogs, examples, seed profiles, eval set. `uv sync` installs the package in editable mode (`uv_build` backend, pinned); modules run with `uv run python -m taskgen.<module>`. — *Why:* the author does not want code in the root; the src layout is the Python convention and removes the `db.py` / `db/` name clash. — *Rejected:* modules in the root (as SPEC 10 first had them); console scripts in `[project.scripts]` (one registration per program, about ten by T30); a separate `scripts/` folder. — SPEC 3, 10.
 
 ## Deferred
 

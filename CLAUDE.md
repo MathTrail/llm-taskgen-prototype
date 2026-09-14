@@ -38,7 +38,7 @@ The author is an experienced Kangaroo solver and coaches a child on these proble
 We work from the devcontainer (`.devcontainer/`): Python 3.12, `uv`, Docker inside the container (docker-in-docker), `psql`, Claude Code CLI.
 
 - `uv sync` installs dependencies, `uv run pytest` runs the tests.
-- All code lives in the `taskgen` package in `src/taskgen/` (src layout, installed editable by `uv sync`); run modules with `uv run python -m taskgen.<module>`, e.g. `uv run python -m taskgen.seed`. The repo root holds only config, data folders and docs (D35).
+- All code lives in the `taskgen` package in `src/taskgen/` (src layout, installed editable by `uv sync`); run modules with `uv run python -m taskgen.<module>`, e.g. `uv run python -m taskgen.seed`. Nothing but code goes into `src/`; the repo root holds config, docs, `db/schema.sql`, contracts (`schemas/`, `prompts/`) and `data/` with all hand-written data — catalogs, examples, seed profiles, eval set (D35).
 - PostgreSQL (from T07): `docker compose up -d`; inside the devcontainer it is reachable on `localhost:5432`, `DATABASE_URL` is in `.env` (template: `.env.example`).
 
 ## What is open

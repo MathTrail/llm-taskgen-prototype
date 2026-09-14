@@ -1,4 +1,4 @@
-"""Loads or resets starting student profiles from db/seed/*.json (SPEC 4.1).
+"""Loads or resets starting student profiles from data/seed/*.json (SPEC 4.1).
 
 Every run resets the chosen students to their starting state: history and topic ratings are deleted and written
 again from the JSON file, so rerunning never duplicates data. Request and attempt logs are kept.
@@ -20,7 +20,7 @@ from taskgen import ROOT
 from taskgen.catalogs import load_catalog
 from taskgen.db import database_url
 
-SEED_DIR = ROOT / "db" / "seed"
+SEED_DIR = ROOT / "data" / "seed"
 PROFILE_SCHEMA = json.loads((ROOT / "schemas" / "profile.json").read_text(encoding="utf-8"))
 
 
@@ -56,7 +56,7 @@ def profile_errors(profile: object, stem: str) -> list[str]:
     for field, values, catalog in references:
         known = {entry["id"] for entry in load_catalog(catalog)}
         if unknown := sorted(set(values) - known):
-            errors.append(f"{field}: unknown ids {unknown}, not in catalogs/{catalog}.json")
+            errors.append(f"{field}: unknown ids {unknown}, not in data/catalogs/{catalog}.json")
 
     expected = trailing_failures(history)
     if profile["consecutive_failures"] != expected:
@@ -141,7 +141,7 @@ def seed_paths(student: str | None) -> list[Path]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Load or reset starting student profiles from db/seed/*.json.")
+    parser = argparse.ArgumentParser(description="Load or reset starting student profiles from data/seed/*.json.")
     parser.add_argument("--student", help="reset only this student, e.g. masha; default: every profile")
     args = parser.parse_args()
 
