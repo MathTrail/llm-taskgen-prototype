@@ -36,7 +36,7 @@
 | [x] | T06 | Скелет проекта и devcontainer | Claude | T01–T05 |
 | [x] | T07 | PostgreSQL и схема БД | Claude | T06 |
 | [x] | T08 | Каталоги тем, навыков, ловушек | Claude | T06 |
-| [ ] | T09 | Seed-профили и `seed.py` | Claude | T07, T08 |
+| [x] | T09 | Seed-профили и `seed.py` | Claude | T07, T08 |
 | [ ] | T10 | Формат и валидатор эталонных задач | Claude | T08 |
 | [ ] | T11 | Написать ~30 эталонных задач | **я** | T10 |
 | [ ] | T12 | `db.py` | Claude | T07 |

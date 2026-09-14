@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Starting student profile (SPEC 4.1)",
+  "description": "Hand-written profile in db/seed/<id>.json, loaded by seed.py. Catalog ids and consecutive_failures are checked by seed.py.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "grade",
+    "interests",
+    "cognitive_profile",
+    "mastered_topics",
+    "excluded_skills",
+    "consecutive_failures",
+    "history"
+  ],
+  "properties": {
+    "id": {
+      "description": "Pseudonym only, never a real name (SPEC 4.1); equals the file name.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "grade": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4
+    },
+    "interests": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "cognitive_profile": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "mastered_topics": {
+      "description": "Topic ids from catalogs/topics.json.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string" }
+    },
+    "excluded_skills": {
+      "description": "Skill ids from catalogs/skills.json.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string" }
+    },
+    "consecutive_failures": {
+      "description": "Failures in a row at the end of the history: a wrong answer or \"didn't understand\".",
+      "type": "integer",
+      "minimum": 0
+    },
+    "history": {
+      "description": "Oldest first. No task_id: these tasks are not in the bank, student_tasks.task_id stays NULL (SPEC 7).",
+      "type": "array",
+      "items": { "$ref": "#/$defs/history_row" }
+    }
+  },
+  "$defs": {
+    "history_row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["topic", "difficulty", "correct"],
+      "properties": {
+        "topic": {
+          "description": "Topic id from catalogs/topics.json.",
+          "type": "string"
+        },
+        "difficulty": {
+          "description": "Kangaroo points within the grade level.",
+          "enum": [3, 4, 5]
+        },
+        "correct": {
+          "description": "null means \"didn't understand the question\".",
+          "type": ["boolean", "null"]
+        },
+        "chosen_option": { "enum": ["A", "B", "C", "D", "E"] },
+        "trap_hit": {
+          "description": "Trap id from catalogs/traps.json.",
+          "type": "string"
+        },
+        "feedback": { "type": "string", "minLength": 1 },
+        "hint_used": { "type": "boolean" },
+        "pace": { "enum": ["fast", "normal", "struggled"] }
+      },
+      "if": {
+        "properties": { "correct": { "const": false } }
+      },
+      "then": {
+        "description": "A wrong answer records the chosen option and the trap behind it (SPEC 3).",
+        "required": ["chosen_option", "trap_hit"]
+      },
+      "else": {
+        "description": "Only a wrong answer has a chosen option and a trap.",
+        "not": {
+          "anyOf": [{ "required": ["chosen_option"] }, { "required": ["trap_hit"] }]
+        }
+      }
+    }
+  }
+}

@@ -62,6 +62,8 @@ The spec grew out of a chat with Gemini, then a research phase ([research/](../r
 
 **D24. Children's data: pseudonyms only.** No real names, birth dates or schools in profiles or prompts. Video and voice feedback would be biometric data under COPPA 2025 — legal review before any use. — SPEC 4.1, 11.
 
+**D34. Starting history has no `task_id`.** Seed profiles (`db/seed/*.json`) omit it and `schemas/profile.json` rejects it; `seed.py` writes `student_tasks.task_id` as NULL. — *Why:* those tasks are not in the bank, so the foreign key would fail (remark 03-1). — *Rejected:* keeping `task_id` in the file and dropping it on load (the file and the DB would silently disagree). — SPEC 4.1, 7.
+
 ## Models and cost
 
 **D25. All agents run on Claude in the prototype.** Haiku 4.5 — Methodist; Opus 5 — Generator; Sonnet 5 — Analyst and Skeptic (the Skeptic deliberately uses a different model than the Generator). — *Reversals:* Gemini first proposed cloud models; the author then asked for a hybrid with local models (Methodist and Skeptic local); after the review the author chose all-Claude to keep things simple. Weak local verifiers would also degrade the dataset reference. Local models are phase 2. — *Rejected:* GPT/Gemini Skeptic (second paid provider). — SPEC 8.
@@ -87,4 +89,4 @@ The spec grew out of a chat with Gemini, then a research phase ([research/](../r
 ## Deferred
 
 - **Where the verifiers live in MathTrail** (`llm-taskgen` or `solution-validator`) — decided later. SPEC 11.
-- **17 remarks from phase 0** in `docs/architecture/01…05` («Замечания к SPEC») — to be resolved at the phase 0 checkpoint.
+- **17 remarks from phase 0** in `docs/architecture/01…05` («Замечания к SPEC») — to be resolved at the phase 0 checkpoint. Resolved so far: 03-1 (D34).

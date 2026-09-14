@@ -105,14 +105,12 @@ python main.py --student masha --answer
   "consecutive_failures": 2,
   "history": [
     {
-      "task_id": "t-0012",
       "topic": "logic.knights_liars",
       "difficulty": 3,
       "correct": true,
       "pace": "fast"
     },
     {
-      "task_id": "t-0013",
       "topic": "combinatorics.enumeration",
       "difficulty": 4,
       "correct": false,
@@ -122,7 +120,6 @@ python main.py --student masha --answer
       "pace": "struggled"
     },
     {
-      "task_id": "t-0014",
       "topic": "time.clocks",
       "difficulty": 3,
       "correct": null,
@@ -148,6 +145,8 @@ python main.py --student masha --answer
 | `history[].hint_used` | Брал ли ученик подсказку | вручную | по действиям ученика |
 
 Колонка «В прототипе» относится к стартовому профилю. В режиме `--answer` новые записи истории и `consecutive_failures` пишет сам скрипт. Рейтинги (5.6) в стартовом профиле не задаются: `seed.py` считает их (общий уровень и поправки по темам), прогоняя стартовую историю.
+
+В стартовой истории нет `task_id`: этих задач нет в банке, поэтому `student_tasks.task_id` у таких записей пустой (раздел 7). Записи идут от старых к новым. `consecutive_failures` должен совпадать с числом неудач подряд в конце истории, `seed.py` это проверяет.
 
 **Только псевдонимы.** В профиле и промптах — только id вроде `masha`: никаких реальных имён, дат рождения, школ. `cognitive_profile` — чувствительное описание ребёнка, за пределы своей БД его не логируем (research/10).
 

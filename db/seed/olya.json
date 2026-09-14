@@ -1,0 +1,56 @@
+{
+  "id": "olya",
+  "grade": 2,
+  "interests": ["horses", "drawing"],
+  "cognitive_profile": [
+    "careful and accurate when counting objects and gaps",
+    "unsure when a question needs several steps",
+    "answers a different question when the question is long"
+  ],
+  "mastered_topics": ["counting.gaps"],
+  "excluded_skills": [
+    "division",
+    "division_with_remainder",
+    "fractions",
+    "numbers_above_100",
+    "numbers_above_1000",
+    "unit_conversion"
+  ],
+  "consecutive_failures": 0,
+  "history": [
+    {
+      "topic": "time.calendar",
+      "difficulty": 3,
+      "correct": false,
+      "chosen_option": "C",
+      "trap_hit": "answered_other_question",
+      "pace": "normal"
+    },
+    {
+      "topic": "counting.gaps",
+      "difficulty": 3,
+      "correct": true,
+      "pace": "normal"
+    },
+    {
+      "topic": "counting.gaps",
+      "difficulty": 4,
+      "correct": true,
+      "pace": "normal"
+    },
+    {
+      "topic": "combinatorics.enumeration",
+      "difficulty": 3,
+      "correct": false,
+      "chosen_option": "E",
+      "trap_hit": "double_count",
+      "pace": "struggled"
+    },
+    {
+      "topic": "counting.gaps",
+      "difficulty": 5,
+      "correct": true,
+      "pace": "fast"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "dima",
+  "grade": 1,
+  "interests": ["cats", "trains"],
+  "cognitive_profile": [
+    "reads slowly and loses track in questions longer than two sentences",
+    "counts on fingers and gets lost with numbers above 20",
+    "gives up quickly when the question looks long"
+  ],
+  "mastered_topics": [],
+  "excluded_skills": [
+    "multiplication",
+    "division",
+    "division_with_remainder",
+    "fractions",
+    "order_of_operations",
+    "numbers_above_20",
+    "numbers_above_100",
+    "numbers_above_1000",
+    "hours_minutes",
+    "unit_conversion"
+  ],
+  "consecutive_failures": 0,
+  "history": [
+    {
+      "topic": "logic.ordering",
+      "difficulty": 3,
+      "correct": true,
+      "pace": "struggled"
+    },
+    {
+      "topic": "counting.gaps",
+      "difficulty": 3,
+      "correct": false,
+      "chosen_option": "A",
+      "trap_hit": "off_by_one",
+      "pace": "struggled"
+    },
+    {
+      "topic": "arithmetic.tricks",
+      "difficulty": 3,
+      "correct": true,
+      "hint_used": true,
+      "pace": "normal"
+    }
+  ]
+}
