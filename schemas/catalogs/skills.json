@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill catalog (SPEC 4.4)",
+  "description": "Closed flat list of school skills. excluded_skills in profiles, briefs and tasks refer to skills by id only.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "description"],
+    "properties": {
+      "id": {
+        "description": "Snake case, e.g. division_with_remainder.",
+        "type": "string",
+        "pattern": "^[a-z]+(_[a-z0-9]+)*$"
+      },
+      "description": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

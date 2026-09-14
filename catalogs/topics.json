@@ -1,0 +1,62 @@
+[
+  {
+    "id": "logic.ordering",
+    "name": "Ordering",
+    "description": "Restore an order from comparisons: who stands behind whom, who is older or taller.",
+    "grade_levels": ["1-2", "3-4"]
+  },
+  {
+    "id": "logic.knights_liars",
+    "name": "Knights and liars",
+    "description": "Knights always tell the truth and liars always lie; decide which statements are true and who said them.",
+    "grade_levels": ["3-4"]
+  },
+  {
+    "id": "combinatorics.enumeration",
+    "name": "Enumeration",
+    "description": "Count all possible options: handshakes, simple routes described in words, numbers made of given digits.",
+    "grade_levels": ["1-2", "3-4"]
+  },
+  {
+    "id": "counting.gaps",
+    "name": "Gaps and boundaries",
+    "description": "Count gaps versus objects: saw cuts in a log, trees in a row, floors of a building.",
+    "grade_levels": ["1-2", "3-4"]
+  },
+  {
+    "id": "time.clocks",
+    "name": "Clocks",
+    "description": "Differences between times of day and how long something lasts.",
+    "grade_levels": ["1-2", "3-4"]
+  },
+  {
+    "id": "time.calendar",
+    "name": "Calendar and age",
+    "description": "Shifting days of the week, dates, ages in a few years.",
+    "grade_levels": ["1-2", "3-4"]
+  },
+  {
+    "id": "pigeonhole.basic",
+    "name": "Pigeonhole principle",
+    "description": "The simplest pigeonhole arguments: how many socks to take out in the dark to be sure of a pair.",
+    "grade_levels": ["1-2", "3-4"]
+  },
+  {
+    "id": "parity.alternation",
+    "name": "Parity and alternation",
+    "description": "Properties of even and odd numbers, alternation in a sequence of objects or moves.",
+    "grade_levels": ["1-2", "3-4"]
+  },
+  {
+    "id": "arithmetic.tricks",
+    "name": "Arithmetic with a trick",
+    "description": "A convenient order of operations instead of long computation, \"I thought of a number\" puzzles.",
+    "grade_levels": ["1-2", "3-4"]
+  },
+  {
+    "id": "algorithms.weighing_pouring",
+    "name": "Weighing and pouring",
+    "description": "Plan a short sequence of weighings on a balance or pourings between jugs to reach a goal.",
+    "grade_levels": ["3-4"]
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Trap catalog (SPEC 4.5)",
+  "description": "Closed flat list of typical traps. traps_to_use, distractors[].trap and trap_hit refer to traps by id only.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "description"],
+    "properties": {
+      "id": {
+        "description": "Snake case, e.g. off_by_one.",
+        "type": "string",
+        "pattern": "^[a-z]+(_[a-z0-9]+)*$"
+      },
+      "description": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

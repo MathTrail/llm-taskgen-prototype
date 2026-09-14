@@ -674,9 +674,9 @@ eval/                  — фиксированный набор для оцен
 seed.py                — загрузить или сбросить стартовые профили в БД
 db/seed/*.json         — 5 выдуманных учеников (стартовые профили, формат из 4.1)
 examples/kangaroo.json — эталонные задачи (пишу сам)
-topics.json            — каталог тем
-skills.json            — каталог навыков для excluded_skills
-traps.json             — каталог ловушек (4.5)
+catalogs/topics.json   — каталог тем
+catalogs/skills.json   — каталог навыков для excluded_skills
+catalogs/traps.json    — каталог ловушек (4.5)
 config.yaml            — модели по агентам, лимиты, пороги для pace
 docker-compose.yml     — PostgreSQL
 db/schema.sql          — таблицы и view из раздела 7

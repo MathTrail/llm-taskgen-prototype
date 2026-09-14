@@ -1,0 +1,26 @@
+[
+  {
+    "id": "off_by_one",
+    "description": "Off by one when counting gaps, floors or saw cuts."
+  },
+  {
+    "id": "missed_case",
+    "description": "Missed an option while enumerating."
+  },
+  {
+    "id": "double_count",
+    "description": "Counted the same option twice."
+  },
+  {
+    "id": "ignored_not",
+    "description": "Did not notice the word \"not\" in the question."
+  },
+  {
+    "id": "answered_other_question",
+    "description": "Answered a different question: asked how many are left, answered how many were taken."
+  },
+  {
+    "id": "stopped_early",
+    "description": "Stopped at an intermediate result instead of finishing the solution."
+  }
+]
