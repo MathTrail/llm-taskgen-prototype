@@ -425,7 +425,7 @@ P = 0,2 + 0,8 · σ(θ + δ_тема − β), где σ(x) = 1 / (1 + e^(−x))
 
 Задача **принимается**, если:
 
-1. ТЗ, задача и самопроверка проходят свои JSON-схемы (`schemas/brief.json`, `generator.json`, `skeptic.json`); вариантов ровно 5 и все разные, в `distractors` ровно 4 ключа (все варианты, кроме верного), `hint` не пустой, id ловушек и тем — из каталогов (`filters.structure_errors`);
+1. ТЗ, задача и самопроверка проходят свои JSON-схемы (`schemas/brief.json`, `generator.json`, `skeptic.json`); вариантов ровно 5 и все разные, в `distractors` ровно 4 ключа (все варианты, кроме верного), `hint` не пустой, id ловушек, тем и навыков — из каталогов (`filters.structure_errors`); тема и сложность ТЗ совпадают с запросом из `get_next_task`, а `excluded_skills` содержит все запреты ученика;
 2. программа-решатель выполнилась в песочнице и вернула ровно `[correct_answer]`;
 3. в самопроверке нет замечаний `blocking`, а её `final_answer` совпадает с `correct_answer`;
 4. текст проходит фильтр читаемости: самое длинное предложение не длиннее порога для уровня класса — для любого языка; оценка Флеша-Кинкейда не выше класса ученика плюс запас — только для английского (`config.yaml`). LLM плохо держат уровень чтения младших (research/10);
@@ -530,7 +530,7 @@ CREATE TABLE requests (             -- один запрос задачи для
   created_at    timestamptz NOT NULL DEFAULT now(),
   student_id    text  NOT NULL REFERENCES students,
   tutor_mode    text  NOT NULL,         -- 'rule': ТЗ правила; 'llm': модель его изменила (5.1)
-  brief         jsonb NOT NULL,         -- итоговое ТЗ
+  brief         jsonb NOT NULL,         -- ТЗ из get_next_task; итоговое, с уточнениями модели, — в tasks.brief
   source        text  NOT NULL,         -- 'bank', 'generated' или 'failed'
   task_id       text  REFERENCES tasks, -- NULL, если 'failed'
   attempt_count int   NOT NULL DEFAULT 0,

@@ -101,15 +101,18 @@ class Readability:
         return not self.problems
 
 
-def readability(question: str, grade: int, thresholds: Thresholds) -> Readability:
-    """Flesch-Kincaid grade and the longest sentence of the question against a student of this grade."""
+def readability(question: str, grade: int, thresholds: Thresholds, language: str = "en") -> Readability:
+    """Flesch-Kincaid grade and the longest sentence of the question against a student of this grade.
+
+    The sentence limit applies to every language; Flesch-Kincaid is an English formula, checked only for "en" (D42).
+    """
     fk_grade = textstat.flesch_kincaid_grade(question)
     longest = max(sentences(question), key=lambda sentence: len(sentence.split()), default="")
     words = len(longest.split())
     max_fk_grade = grade + thresholds.max_grade_margin
     max_words = thresholds.max_sentence_words[grade_level(grade)]
     problems = []
-    if fk_grade > max_fk_grade:
+    if language == "en" and fk_grade > max_fk_grade:
         problems.append(f"Flesch-Kincaid grade {fk_grade:.1f} is above {max_fk_grade} for grade {grade}")
     if words > max_words:
         problems.append(f"the longest sentence has {words} words, more than {max_words}: {longest!r}")

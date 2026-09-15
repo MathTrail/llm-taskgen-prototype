@@ -8,15 +8,17 @@ import hashlib
 import json
 import re
 import time
-from collections.abc import Iterator
+from collections.abc import Callable, Iterator
 from contextlib import contextmanager
+from datetime import datetime, timezone
 from functools import lru_cache
 from pathlib import Path
 
 import psycopg
 import yaml
+from jsonschema import Draft202012Validator
 
-from taskgen import ROOT
+from taskgen import ROOT, sandbox
 from taskgen.catalogs import load_catalog
 from taskgen.db import (
     HISTORY_LIMIT,
@@ -27,10 +29,13 @@ from taskgen.db import (
     grade_level,
     issue_task,
     list_students,
+    load_request,
     load_student,
+    record_attempt,
+    save_task,
     task_questions,
 )
-from taskgen.filters import load_thresholds
+from taskgen.filters import load_thresholds, near_duplicate, readability, structure_errors
 from taskgen.rating import DIFFICULTIES, Params, corridor, difficulty_to_beta, elo
 from taskgen.tutor_rule import make_brief, pick_traps
 from taskgen.validate_examples import load_examples
@@ -45,6 +50,10 @@ LANGUAGE = re.compile(r"[a-z]{2}")  # ISO 639-1
 BANK_TASK_NOTE = (
     "Show the question and the options A-E. Give the hint only when the child asks for help. "
     "The correct answer, the trap texts and the solution come after the child answers."
+)
+ACCEPTED_NOTE = (
+    "Show the child the question and the options A-E. Keep the answer and the solution to yourself until the "
+    "child answers; give the hint only when asked."
 )
 
 
@@ -118,6 +127,10 @@ def history_rows(rows: list[dict]) -> list[dict]:
         }
         for row in rows
     ]
+
+
+def elapsed_ms(started: float) -> int:
+    return round((time.monotonic() - started) * 1000)
 
 
 # get_student_profile and get_progress
@@ -269,8 +282,7 @@ def next_task(conn: psycopg.Connection, student_id: str, language: str, params: 
     if found:
         task = found[0]
         issue_task(conn, student_id, task["task_id"])
-        close_request(conn, request_id, "bank", task["task_id"],
-                      duration_ms=round((time.monotonic() - started) * 1000))  # fmt: skip
+        close_request(conn, request_id, "bank", task["task_id"], duration_ms=elapsed_ms(started))
         return {
             "source": "bank",
             "request_id": request_id,
@@ -323,4 +335,136 @@ def next_task(conn: psycopg.Connection, student_id: str, language: str, params: 
         },
         "formats": {"brief": load_schema("brief"), "task": load_schema("generator"), "self_check": load_schema("skeptic")},
         "guide": GUIDE.read_text(encoding="utf-8"),
+    }
+
+
+# submit_task
+
+
+def open_request(conn: psycopg.Connection, request_id: int, limit: int) -> dict:
+    """The request a task is handed in for; it must be open and have attempts left."""
+    request = load_request(conn, request_id)
+    if request is None:
+        raise InvalidRequest(f"no request {request_id}; call get_next_task first")
+    if request["source"] != "failed" or request["task_id"] is not None:
+        raise InvalidRequest(f"request {request_id} is already closed ({request['source']}); "
+                             "call get_next_task for a new task")  # fmt: skip
+    if request["attempt_count"] >= limit:
+        raise InvalidRequest(f"request {request_id} has used all {limit} attempts; call get_next_task for a new task")
+    return request
+
+
+def schema_errors(name: str, value: object, schema: str) -> list[str]:
+    return [
+        f"{name}/{'/'.join(map(str, error.absolute_path)) or '(root)'}: {error.message}"
+        for error in Draft202012Validator(load_schema(schema)).iter_errors(value)
+    ]
+
+
+def structure_problems(request: dict, student: dict, brief: object, task: object, solver_code: object,
+                       self_check: object, language: object) -> list[str]:
+    """Condition 1 of SPEC 6: formats, the rules of a task, catalog ids and the fixed parts of the brief."""
+    problems = (schema_errors("brief", brief, "brief") + schema_errors("task", task, "generator")
+                + schema_errors("self_check", self_check, "skeptic"))  # fmt: skip
+    if not isinstance(solver_code, str) or not solver_code.strip():
+        problems.append("solver_code is empty")
+    if not isinstance(language, str) or not LANGUAGE.fullmatch(language):
+        problems.append(f"language must be a two-letter ISO 639-1 code such as 'en' or 'ru', got {language!r}")
+    if problems:
+        return problems  # the checks below need the right shapes
+
+    problems += structure_errors(task)
+    fixed = request["brief"]
+    if (brief["target_concept"], brief["difficulty"]) != (fixed["target_concept"], fixed["difficulty"]):
+        problems.append(f"brief: the topic and difficulty were set by get_next_task ({fixed['target_concept']}, "
+                        f"difficulty {fixed['difficulty']}); to change them call get_next_task with topic, "
+                        "difficulty and reason")  # fmt: skip
+    traps = {entry["id"] for entry in load_catalog("traps")}
+    if unknown := sorted(set(brief["traps_to_use"]) - traps):
+        problems.append(f"brief.traps_to_use: unknown trap ids {unknown}")
+    skills = {entry["id"] for entry in load_catalog("skills")}
+    if unknown := sorted(set(brief["excluded_skills"]) - skills):
+        problems.append(f"brief.excluded_skills: unknown skill ids {unknown}")
+    if missing := sorted(set(student["excluded_skills"]) - set(brief["excluded_skills"])):
+        problems.append(f"brief.excluded_skills must keep the student's restrictions; missing {missing}")
+    return problems
+
+
+def review(conn: psycopg.Connection, request: dict, student: dict, brief: dict, task: dict, solver_code: str,
+           self_check: dict, language: str, run_solver: Callable) -> tuple[list[dict], dict | None]:
+    """Every failed check of SPEC 6 in check order, and what the solver program returned."""
+    problems = structure_problems(request, student, brief, task, solver_code, self_check, language)
+    if problems:
+        return [{"code": "bad_structure", "details": problems}], None
+
+    failures = []
+    result = run_solver(solver_code)  # sandbox.SandboxUnavailable means the machine failed, not the task
+    if result.status != "ok":
+        failures.append(("solver_error", [f"{result.status}: {result.message}"]))
+    if blocking := [issue for issue in self_check["issues"] if issue["severity"] == "blocking"]:
+        failures.append(("self_check_blocking", [f"{issue['type']}: {issue['comment']}" for issue in blocking]))
+    thresholds = load_thresholds()
+    read = readability(task["question"], student["grade"], thresholds, language)
+    if not read.ok:
+        failures.append(("readability", read.problems))
+    if duplicate := near_duplicate(conn, task["question"], thresholds.max_similarity):
+        failures.append(("near_duplicate", [f"similarity {duplicate.similarity:.2f} to {duplicate.source} task "
+                                            f"{duplicate.id}: {duplicate.question}"]))  # fmt: skip
+    disagree = []
+    correct = task["correct_answer"]
+    if result.status == "ok" and result.options != [correct]:
+        disagree.append(f"the solver program found {result.options}, the task says ['{correct}']")
+    if self_check["final_answer"] != correct:
+        disagree.append(f"self_check.final_answer is {self_check['final_answer']!r}, the task says {correct!r}")
+    if disagree:
+        failures.append(("solver_disagrees", disagree))
+    return [{"code": code, "details": details} for code, details in failures], result.to_json()
+
+
+def submit_task(conn: psycopg.Connection, request_id: int, brief: dict, task: dict, solver_code: str,
+                self_check: dict, language: str, params: Params, *, client: dict | None = None,
+                run_solver: Callable = sandbox.run) -> dict:
+    """Check a task the model wrote (SPEC 6): accepted into the bank and issued, or every reason to fix it."""
+    started = time.monotonic()
+    limit = max_attempts()
+    request = open_request(conn, request_id, limit)
+    student = require_student(conn, request["student_id"])
+    attempt_no = request["attempt_count"] + 1
+    failures, solver_result = review(conn, request, student, brief, task, solver_code, self_check, language,
+                                     run_solver)  # fmt: skip
+    logged = {"generator": task, "analyst": {"solver_code": solver_code}, "skeptic": self_check,
+              "solver_result": solver_result, "models": client}  # fmt: skip
+
+    if failures:
+        record_attempt(conn, request_id, attempt_no, "rejected", prompt_version(), reason=failures[0]["code"],
+                       duration_ms=elapsed_ms(started), **logged)  # fmt: skip
+        close_request(conn, request_id, "failed", attempt_count=attempt_no)  # still open while attempts are left
+        left = limit - attempt_no
+        return {
+            "status": "rejected",
+            "request_id": request_id,
+            "attempt": attempt_no,
+            "attempts_left": left,
+            "reasons": failures,
+            "next": ("Fix every reason and call submit_task again with the same request_id." if left else
+                     "No attempts left: tell the child this task did not work out and call get_next_task."),
+        }  # fmt: skip
+
+    record_attempt(conn, request_id, attempt_no, "accepted", prompt_version(), duration_ms=elapsed_ms(started),
+                   **logged)  # fmt: skip
+    task_id = save_task(conn, brief=brief, task=task,
+                        analyst={"solver_code": solver_code, "solver_result": solver_result}, skeptic=self_check,
+                        grade_level=grade_level(student["grade"]), attempt_count=attempt_no,
+                        rating=difficulty_to_beta(brief["difficulty"]), language=language)  # fmt: skip
+    issue_task(conn, student["student_id"], task_id)
+    since_request = datetime.now(timezone.utc) - request["created_at"]
+    close_request(conn, request_id, "generated", task_id, attempt_count=attempt_no,
+                  duration_ms=round(since_request.total_seconds() * 1000))  # fmt: skip
+    return {
+        "status": "accepted",
+        "request_id": request_id,
+        "task_id": task_id,
+        "attempt": attempt_no,
+        "minor_issues": [issue for issue in self_check["issues"] if issue["severity"] == "minor"],
+        "next": ACCEPTED_NOTE,
     }

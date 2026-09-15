@@ -18,7 +18,10 @@ HISTORY_LIMIT = 5  # the Methodist gets the last 5 history rows (SPEC 3, 4.1)
 OPTIONS = ("A", "B", "C", "D", "E")
 TUTOR_MODES = ("llm", "rule")
 SOURCES = ("bank", "generated", "failed")
-STATUSES = ("accepted", "rejected", "generator_answer_error")
+STATUSES = ("accepted", "rejected")
+REASONS = (  # rejection reason codes in check order (SPEC 6)
+    "bad_structure", "solver_error", "self_check_blocking", "readability", "near_duplicate", "solver_disagrees",
+)  # fmt: skip
 PACES = ("fast", "normal", "struggled")
 
 
@@ -157,6 +160,12 @@ def create_request(conn: psycopg.Connection, student_id: str, tutor_mode: str, b
     ).fetchone()[0]
 
 
+def load_request(conn: psycopg.Connection, request_id: int) -> dict | None:
+    """A request row, locked for this transaction so two hand-ins of one task cannot race; None if unknown."""
+    with conn.cursor(row_factory=dict_row) as cursor:
+        return cursor.execute("SELECT * FROM requests WHERE request_id = %s FOR UPDATE", (request_id,)).fetchone()
+
+
 def close_request(
     conn: psycopg.Connection,
     request_id: int,
@@ -201,14 +210,16 @@ def record_attempt(
     cost_usd: float | None = None,
     duration_ms: int | None = None,
 ) -> int:
-    """Log one generation attempt, rejected ones included; returns attempt_id.
+    """Log one hand-in of a task, rejected ones included; returns attempt_id.
 
-    Reason codes are not checked here: the list in SPEC 6 is still open (bad_structure, fix_changed_task).
+    A rejected attempt carries the first failed check as its reason (REASONS, SPEC 6); an accepted one has none.
     """
     if status not in STATUSES:
         raise ValueError(f"status must be one of {STATUSES}, got {status!r}")
     if status == "accepted" and reason is not None:
         raise ValueError("an accepted attempt has no rejection reason")
+    if status == "rejected" and reason not in REASONS:
+        raise ValueError(f"a rejected attempt needs a reason from {REASONS}, got {reason!r}")
 
     def json_or_null(value):
         return None if value is None else Jsonb(value)

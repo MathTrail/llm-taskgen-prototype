@@ -9,9 +9,10 @@ from contextlib import contextmanager
 from typing import Any
 
 from mcp.server import MCPServer
+from mcp.server.mcpserver import Context
 from mcp.server.mcpserver.exceptions import ToolError
 
-from taskgen import service
+from taskgen import sandbox, service
 from taskgen.rating import load_params
 
 server = MCPServer("taskgen", instructions=service.instructions())
@@ -24,6 +25,17 @@ def tool_errors() -> Iterator[None]:
         yield
     except (service.StudentNotFound, service.InvalidRequest) as error:
         raise ToolError(str(error)) from error
+    except sandbox.SandboxUnavailable as error:
+        raise ToolError(f"the server cannot run the solver program right now ({error}); the attempt was not "
+                        "counted, try submit_task again later") from error  # fmt: skip
+
+
+def client_info(ctx: Context) -> dict[str, str] | None:
+    """Name and version the MCP client declared (SPEC 7: attempts.models); the model itself is not disclosed."""
+    params = ctx.session.client_params
+    if params is None:
+        return None
+    return {"name": params.client_info.name, "version": params.client_info.version}
 
 
 @server.tool(title="Student profile")
@@ -61,6 +73,28 @@ def get_next_task(
     with tool_errors(), service.connect() as conn:
         return service.next_task(conn, student_id, language, load_params(), topic=topic, difficulty=difficulty,
                                  reason=reason)  # fmt: skip
+
+
+@server.tool(title="Hand in a task")
+def submit_task(
+    request_id: int,
+    brief: dict[str, Any],
+    task: dict[str, Any],
+    solver_code: str,
+    self_check: dict[str, Any],
+    language: str,
+    ctx: Context,
+) -> dict[str, Any]:
+    """Hand in the task you wrote for a get_next_task request with source "generate". brief, task and self_check
+    follow the formats returned by get_next_task; solver_code prints the JSON list of correct options as its last
+    line; language is the task's two-letter code. The server checks structure, runs the program, reads the
+    self-check, readability and near duplicates. status "accepted": the task is in the bank and issued to the
+    student; show it. status "rejected": fix every reason and call again with the same request_id while
+    attempts_left > 0."""
+    client = client_info(ctx)
+    with tool_errors(), service.connect() as conn:
+        return service.submit_task(conn, request_id, brief, task, solver_code, self_check, language, load_params(),
+                                   client=client)  # fmt: skip
 
 
 def main() -> None:

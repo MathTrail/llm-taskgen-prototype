@@ -130,6 +130,12 @@ def test_hard_text_fails_grade_4():
     assert result.fk_grade > 7 and not result.ok
 
 
+def test_flesch_kincaid_applies_only_to_english():
+    # An English formula; other languages keep only the sentence limit (D42).
+    assert filters.readability(HARD, 4, THRESHOLDS, language="ru").ok
+    assert not filters.readability(LONG_SENTENCE, 1, THRESHOLDS, language="ru").ok
+
+
 # Near duplicates (SPEC 6, condition 6), on the test database from conftest.py
 
 
