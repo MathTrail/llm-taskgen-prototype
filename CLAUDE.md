@@ -7,7 +7,7 @@ Prototype: an MCP server lets the chat client's own model (Claude, ChatGPT and o
 - [SPEC.md](SPEC.md) — what we build. The source of truth.
 - [RUN.md](RUN.md) — implementation plan: tasks T01–T24, run one at a time. Full executor rules are in its «Как пользоваться» section.
 - [docs/decisions.md](docs/decisions.md) — decision log: what was decided, why, and which alternatives were rejected. Read it before proposing design changes.
-- [docs/architecture/](docs/architecture/) — diagrams. Each file ends with a «Замечания к SPEC» section. Diagrams 01, 02 and 04 describe the old Claude API pipeline (see D42); 01 is redrawn in T19.
+- [docs/architecture/](docs/architecture/) — diagrams. Each file ends with a «Замечания к SPEC» section. Diagram 01 shows the MCP server (redrawn in T19); 02 and 04 describe the old Claude API pipeline and are kept as history (D42).
 - [research/](research/) — pre-prototype research; summary in [research/11-spec-recommendations.md](research/11-spec-recommendations.md).
 
 Project context lives in these files, not in chat history: Claude sessions on the host and in the devcontainer cannot see each other.

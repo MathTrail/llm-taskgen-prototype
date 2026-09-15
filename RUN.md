@@ -46,7 +46,7 @@
 | [x] | T16 | JSON-схемы ТЗ, задачи, самопроверки | Claude | T08 |
 | [x] | T17 | Методист-правило | Claude | T13, T16 |
 | [x] | T18 | Переход на MCP: документы и чистка | Claude | T17 |
-| [ ] | T19 | Каркас MCP-сервера: профиль и прогресс | Claude | T18 |
+| [x] | T19 | Каркас MCP-сервера: профиль и прогресс | Claude | T18 |
 | [ ] | T20 | Выдача задачи: `get_next_task` | Claude | T19 |
 | [ ] | T21 | Приём задачи: `submit_task` | Claude | T14, T15, T20 |
 | [ ] | T22 | Ответ ученика: `submit_answer` | Claude | T13, T21 |
@@ -271,7 +271,7 @@
   - инструменты `get_student_profile` и `get_progress` (SPEC 5.8);
   - перерисовать `docs/architecture/01-context.md` под MCP.
 - **Тесты:** функции `service` на тестовой базе; у сервера зарегистрированы нужные инструменты.
-- **Как проверить:** `uv run pytest`; `uv run mcp dev src/taskgen/mcp_server.py` открывает сервер в MCP Inspector; в Claude Code `/mcp` показывает сервер, а просьба «покажи профиль masha» вызывает инструмент.
+- **Как проверить:** `uv run pytest` — в том числе сервер отвечает по stdio так же, как его запускает Claude Code; `claude mcp list` показывает `taskgen`; в Claude Code `/mcp` показывает сервер, а просьба «покажи профиль masha» вызывает инструмент. MCP Inspector (`uv run mcp dev`) требует Node.js, в devcontainer его нет.
 - **SPEC:** 5.8, 8, 10.
 
 ### T20. Выдача задачи: `get_next_task`

@@ -7,7 +7,8 @@ import pytest
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-MODULES = ["tutor_rule", "rating", "sandbox", "db", "seed", "catalogs", "apply_schema", "validate_examples", "filters"]
+MODULES = ["tutor_rule", "rating", "sandbox", "db", "seed", "catalogs", "apply_schema", "validate_examples", "filters",
+           "service", "mcp_server"]
 
 
 def load_config():
