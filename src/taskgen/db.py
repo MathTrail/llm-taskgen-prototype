@@ -460,3 +460,29 @@ def load_issued(conn: psycopg.Connection, student_id: str, task_id: str) -> dict
         return cursor.execute(
             "SELECT * FROM student_tasks WHERE student_id = %s AND task_id = %s FOR UPDATE", (student_id, task_id)
         ).fetchone()
+
+
+def request_answers(conn: psycopg.Connection, request_ids: list[int]) -> dict[int, dict]:
+    """The issued-task row of each request that gave a task, by request_id; requests without one are left out.
+
+    A row belongs to the latest request of that student and task opened before it was issued. After
+    `seed --student` deletes a student's rows and the bank gives the same task again, the new row goes to the new
+    request and the old request stays without an answer instead of borrowing it.
+    """
+    with conn.cursor(row_factory=dict_row) as cursor:
+        rows = cursor.execute(
+            """
+            SELECT r.request_id, st.*
+            FROM requests r
+            JOIN student_tasks st
+              ON st.student_id = r.student_id AND st.task_id = r.task_id AND st.issued_at >= r.created_at
+            WHERE r.request_id = ANY(%s)
+              AND NOT EXISTS (
+                SELECT 1 FROM requests later
+                WHERE later.student_id = r.student_id AND later.task_id = r.task_id
+                  AND later.created_at > r.created_at AND later.created_at <= st.issued_at
+              )
+            """,
+            (request_ids,),
+        ).fetchall()
+    return {row["request_id"]: row for row in rows}

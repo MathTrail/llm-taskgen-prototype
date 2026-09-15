@@ -14,9 +14,14 @@ import psycopg
 from psycopg.rows import dict_row
 
 from taskgen import sandbox, service
-from taskgen.db import database_url
+from taskgen.db import database_url, request_answers
 
-WINDOW_SQL = "created_at > now() - make_interval(hours => %(hours)s) AND (%(student)s::text IS NULL OR student_id = %(student)s)"
+# make_interval takes whole hours, so a fractional --hours goes in as seconds.
+WINDOW_SQL = "created_at > now() - make_interval(secs => %(seconds)s) AND (%(student)s::text IS NULL OR student_id = %(student)s)"
+
+
+def window_params(student: str | None, hours: float) -> dict:
+    return {"seconds": hours * 3600, "student": student}
 
 
 # check
@@ -62,7 +67,7 @@ def answer_text(row: dict | None) -> str:
 
 def log_lines(conn: psycopg.Connection, student: str | None = None, hours: float = 24) -> list[str]:
     """One block per request, oldest first, and a summary."""
-    window = {"hours": hours, "student": student}
+    window = window_params(student, hours)
     with conn.cursor(row_factory=dict_row) as cursor:
         requests = cursor.execute(f"SELECT * FROM requests WHERE {WINDOW_SQL} ORDER BY created_at, request_id",
                                   window).fetchall()  # fmt: skip
@@ -70,13 +75,10 @@ def log_lines(conn: psycopg.Connection, student: str | None = None, hours: float
         attempts = cursor.execute(
             "SELECT * FROM attempts WHERE request_id = ANY(%s) ORDER BY request_id, attempt_no", (ids,)
         ).fetchall()
-        answers = cursor.execute(
-            "SELECT * FROM student_tasks WHERE task_id = ANY(%s)", ([r["task_id"] for r in requests if r["task_id"]],)
-        ).fetchall()
+    answers = request_answers(conn, ids)
     by_request: dict[int, list[dict]] = {}
     for attempt in attempts:
         by_request.setdefault(attempt["request_id"], []).append(attempt)
-    answer_of = {(row["student_id"], row["task_id"]): row for row in answers}
 
     lines = []
     for request in requests:
@@ -95,8 +97,8 @@ def log_lines(conn: psycopg.Connection, student: str | None = None, hours: float
             reason = f": {attempt['reason']}" if attempt["reason"] else ""
             lines.append(f"    attempt {attempt['attempt_no']} {attempt['status']}{reason}")
         if request["task_id"]:
-            lines.append(f"    answer: {answer_text(answer_of.get((request['student_id'], request['task_id'])))}")
-    return lines + [""] + summary_lines(requests, attempts, answer_of.values())
+            lines.append(f"    answer: {answer_text(answers.get(request['request_id']))}")
+    return lines + [""] + summary_lines(requests, attempts, answers.values())
 
 
 def summary_lines(requests: list[dict], attempts: list[dict], answers) -> list[str]:
@@ -120,7 +122,7 @@ def summary_lines(requests: list[dict], attempts: list[dict], answers) -> list[s
 
 def tasks_lines(conn: psycopg.Connection, student: str | None = None, hours: float = 24) -> list[str]:
     """Every task the model wrote in the window, in full, for the manual review (SPEC 9)."""
-    window = {"hours": hours, "student": student}
+    window = window_params(student, hours)
     with conn.cursor(row_factory=dict_row) as cursor:
         rows = cursor.execute(
             f"""

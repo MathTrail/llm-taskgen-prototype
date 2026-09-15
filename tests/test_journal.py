@@ -49,6 +49,29 @@ def test_log_tells_the_story_of_the_run(conn):
     assert "rejections: readability 1" in text and "answers: wrong 1" in text
 
 
+def test_log_accepts_a_fractional_window(conn):
+    # make_interval takes whole hours: --hours 1.5 used to fail in Postgres, not in the tests.
+    live_run(conn)
+    assert any("sasha" in line for line in journal.log_lines(conn, hours=1.5))
+    assert journal.tasks_lines(conn, hours=0.25)[0].startswith("t-")
+
+
+def test_a_reset_student_does_not_borrow_the_repeat_answer(conn):
+    # seed --student deletes the issued rows, then the bank gives the same task to a new request (T23 finding).
+    task_id = live_run(conn)
+    old = conn.execute("SELECT request_id FROM requests WHERE task_id = %s", (task_id,)).fetchone()[0]
+    conn.execute("UPDATE requests SET created_at = created_at - interval '1 hour' WHERE student_id = 'sasha'")
+    seed_student(conn, json.loads((SEED_DIR / "sasha.json").read_text(encoding="utf-8")), load_params())
+    repeat = db.create_request(conn, "sasha", "rule", BRIEF)
+    row_id = db.issue_task(conn, "sasha", task_id)
+    db.close_request(conn, repeat, "bank", task_id)
+    db.save_answer(conn, row_id, correct=True, chosen_option="C", pace="fast")
+    answers = db.request_answers(conn, [old, repeat])
+    assert old not in answers and answers[repeat]["correct"] is True
+    text = "\n".join(journal.log_lines(conn, hours=24))
+    assert f"from the bank: {task_id}" in text and "answer: not answered" in text
+
+
 def test_log_filters_by_student(conn):
     live_run(conn)
     assert journal.log_lines(conn, student="masha", hours=24)[0] == ""  # nothing but the empty summary
