@@ -1,0 +1,1702 @@
+[
+  {
+    "id": "tri-12-d1-1",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "What is 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9?",
+    "options": {
+      "A": "9",
+      "B": "45",
+      "C": "10",
+      "D": "36",
+      "E": "55"
+    },
+    "correct_answer": "B",
+    "solution": "Make pairs that give 10: 1 + 9, 2 + 8, 3 + 7 and 4 + 6. Four tens are 40, and the 5 in the middle makes 45.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "9 is how many numbers you add, not their sum."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "10 is only one pair, 1 + 9. There are four such pairs and a 5 in the middle."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "36 is 1 + 2 + ... + 8: you forgot the 9."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "55 is 1 + 2 + ... + 10: you added one number too many."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d1-2",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "Tom thought of a number and added 5 to it. He got 12. What number did Tom think of?",
+    "options": {
+      "A": "5",
+      "B": "12",
+      "C": "7",
+      "D": "17",
+      "E": "60"
+    },
+    "correct_answer": "C",
+    "solution": "To undo adding 5, take 5 away: 12 - 5 = 7. Check: 7 + 5 = 12.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "5 is the number Tom added."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "12 is what Tom got, not what he thought of."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "To undo adding 5, take 5 away instead of adding it again."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 12 by 5."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d1-3",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "What is 38 + 27 + 2?",
+    "options": {
+      "A": "40",
+      "B": "63",
+      "C": "65",
+      "D": "67",
+      "E": "69"
+    },
+    "correct_answer": "D",
+    "solution": "Add 38 and 2 first: 40. Then 40 + 27 = 67.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "40 is only 38 + 2; you still have to add 27."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "You took 2 away instead of adding it."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "65 is 38 + 27: you forgot to add 2."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "You added 2 twice."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d1-4",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "Masha thought of a number and took 4 away from it. She got 6. What number did Masha think of?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "6",
+      "D": "24",
+      "E": "10"
+    },
+    "correct_answer": "E",
+    "solution": "To undo taking 4 away, add 4: 6 + 4 = 10. Check: 10 - 4 = 6.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "To undo taking 4 away, add 4 instead of taking it away again."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "4 is the number Masha took away."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "6 is what Masha got."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 6 by 4."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d1-5",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "What is 9 + 9 + 9 + 1 + 1 + 1?",
+    "options": {
+      "A": "30",
+      "B": "10",
+      "C": "27",
+      "D": "29",
+      "E": "40"
+    },
+    "correct_answer": "A",
+    "solution": "Make pairs: 9 + 1 = 10, three times. 10 + 10 + 10 = 30.",
+    "distractors": {
+      "B": {
+        "trap": "answered_other_question",
+        "text": "10 is one pair, 9 + 1. There are three such pairs."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "27 is only the three nines."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "29 leaves out one of the 1s."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "There are three pairs of 9 + 1, not four."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d2-1",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "What is 25 + 36 + 75?",
+    "options": {
+      "A": "61",
+      "B": "100",
+      "C": "136",
+      "D": "111",
+      "E": "175"
+    },
+    "correct_answer": "C",
+    "solution": "25 + 75 = 100, and 100 + 36 = 136.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "61 is only 25 + 36; you still have to add 75."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "100 is only 25 + 75; you still have to add 36."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "111 is 36 + 75: you forgot 25."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "You added 75 twice."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d2-2",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Kate thought of a number. She added 3 to it and then added 3 again. She got 15. What number did Kate think of?",
+    "options": {
+      "A": "6",
+      "B": "12",
+      "C": "15",
+      "D": "9",
+      "E": "21"
+    },
+    "correct_answer": "D",
+    "solution": "Kate added 3 + 3 = 6 in all. 15 - 6 = 9. Check: 9 + 3 + 3 = 15.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "6 is how much Kate added in all."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "12 undoes only one of the two 3s."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "15 is what Kate got."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "To undo adding, take away: 15 - 3 - 3 = 9."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d2-3",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "What is 10 - 9 + 8 - 7 + 6 - 5 + 4 - 3 + 2 - 1?",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "10",
+      "D": "55",
+      "E": "5"
+    },
+    "correct_answer": "E",
+    "solution": "Group in pairs: (10 - 9) + (8 - 7) + (6 - 5) + (4 - 3) + (2 - 1). Each pair is 1, and there are 5 pairs: 5.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "Each pair like 10 - 9 gives 1, not 0."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "1 is only the first pair, 10 - 9. There are 5 pairs."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "10 is the first number."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "55 is what you get if every sign is a plus."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d2-4",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "What is 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 - 5?",
+    "options": {
+      "A": "45",
+      "B": "5",
+      "C": "10",
+      "D": "50",
+      "E": "55"
+    },
+    "correct_answer": "A",
+    "solution": "Ten fives make 50. Taking one 5 away leaves 45.",
+    "distractors": {
+      "B": {
+        "trap": "number_from_text",
+        "text": "5 is the number that is added."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "10 is how many fives are added."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "50 is the ten fives: you forgot to take the last 5 away."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "The last 5 is taken away, not added."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d2-5",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Masha thought of a number. She added 7 to it and then took 7 away. She got 12. What number did Masha think of?",
+    "options": {
+      "A": "0",
+      "B": "12",
+      "C": "5",
+      "D": "19",
+      "E": "26"
+    },
+    "correct_answer": "B",
+    "solution": "Adding 7 and then taking 7 away gives back the same number. So Masha thought of 12.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "Masha got 12, and 0 + 7 - 7 is 0, not 12."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "Adding 7 and taking 7 away cancel out, so the number does not change."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "19 undoes only one of the two steps."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "26 is 12 + 7 + 7: you added both times."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d3-1",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "What is 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19?",
+    "options": {
+      "A": "45",
+      "B": "105",
+      "C": "120",
+      "D": "135",
+      "E": "150"
+    },
+    "correct_answer": "D",
+    "solution": "Make pairs that give 30: 11 + 19, 12 + 18, 13 + 17 and 14 + 16. Four pairs make 120, and the 15 in the middle makes 135.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "45 is only the ones, 1 + 2 + ... + 9; each number also has a ten."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "You took 15 away instead of adding it."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "120 is the four pairs; you forgot the 15 in the middle."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "15 is only one number, not a pair that makes 30."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d3-2",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Ben thought of a number. He added 8 to it and then took 3 away. He got 20. What number did Ben think of?",
+    "options": {
+      "A": "9",
+      "B": "20",
+      "C": "23",
+      "D": "25",
+      "E": "15"
+    },
+    "correct_answer": "E",
+    "solution": "Adding 8 and taking 3 away is the same as adding 5. 20 - 5 = 15. Check: 15 + 8 = 23, 23 - 3 = 20.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "To undo taking 3 away, add 3 back; do not take it away."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "20 is what Ben got."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "23 undoes only taking 3 away; you still have to undo adding 8."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You did the same steps again instead of undoing them: 20 + 8 - 3."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d3-3",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "What is 99 + 98 + 2 + 1?",
+    "options": {
+      "A": "200",
+      "B": "100",
+      "C": "197",
+      "D": "199",
+      "E": "201"
+    },
+    "correct_answer": "A",
+    "solution": "99 + 1 = 100 and 98 + 2 = 100. 100 + 100 = 200.",
+    "distractors": {
+      "B": {
+        "trap": "stopped_early",
+        "text": "100 is only 99 + 1."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "197 is 99 + 98; you forgot 2 + 1."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "99 + 1 is exactly 100, and 98 + 2 is exactly 100."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "The two pairs make exactly 100 each, so the sum is 200."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d3-4",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "A number plus the same number again is 18. What is the number?",
+    "options": {
+      "A": "6",
+      "B": "9",
+      "C": "8",
+      "D": "18",
+      "E": "36"
+    },
+    "correct_answer": "B",
+    "solution": "Two equal numbers make 18, so each is half of 18: 9. Check: 9 + 9 = 18.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "6 + 6 = 12, not 18."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "8 + 8 = 16, not 18."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "18 is the sum, not the number."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You doubled 18 instead of halving it."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d3-5",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "What is 37 + 45 + 63 + 55?",
+    "options": {
+      "A": "100",
+      "B": "145",
+      "C": "200",
+      "D": "155",
+      "E": "255"
+    },
+    "correct_answer": "C",
+    "solution": "37 + 63 = 100 and 45 + 55 = 100. 100 + 100 = 200.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "100 is only one pair, 37 + 63 or 45 + 55."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "145 is 37 + 45 + 63: you forgot 55."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "155 is 37 + 63 + 55: you forgot 45."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "You added 55 twice."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d4-1",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Kim thought of a number. She doubled it and then added 4. She got 20. What number did Kim think of?",
+    "options": {
+      "A": "6",
+      "B": "10",
+      "C": "16",
+      "D": "44",
+      "E": "8"
+    },
+    "correct_answer": "E",
+    "solution": "Undo the last step first: 20 - 4 = 16. Then halve it: 8. Check: 8 + 8 = 16, 16 + 4 = 20.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "You undid the steps in the wrong order: first take 4 away, then halve."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "10 is half of 20, but you forgot the 4 that was added."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "16 undoes only adding 4; you still have to halve it."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You did the steps again instead of undoing them: 20 doubled, plus 4."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d4-2",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "What is 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1?",
+    "options": {
+      "A": "100",
+      "B": "45",
+      "C": "55",
+      "D": "90",
+      "E": "110"
+    },
+    "correct_answer": "A",
+    "solution": "1 + 2 + ... + 9 = 45, and these numbers appear twice: 45 + 45 = 90. With the 10 in the middle the sum is 100.",
+    "distractors": {
+      "B": {
+        "trap": "stopped_early",
+        "text": "45 is only one half, 9 + 8 + ... + 1."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "55 is only 1 + 2 + ... + 10, the first part."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "90 leaves out the 10 in the middle."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "The 10 is written only once."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d4-3",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "What is 2 × 7 × 5?",
+    "options": {
+      "A": "7",
+      "B": "70",
+      "C": "14",
+      "D": "35",
+      "E": "140"
+    },
+    "correct_answer": "B",
+    "solution": "Multiply 2 × 5 first: 10. Then 10 × 7 = 70.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "7 is one of the numbers."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "14 is 2 + 7 + 5: you added instead of multiplying."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "35 is only 7 × 5; you still have to multiply by 2."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "You multiplied by 2 twice."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d4-4",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Ann thought of a number. She added 6 to it and then took 10 away. She got 5. What number did Ann think of?",
+    "options": {
+      "A": "1",
+      "B": "5",
+      "C": "9",
+      "D": "15",
+      "E": "21"
+    },
+    "correct_answer": "C",
+    "solution": "Adding 6 and taking 10 away is the same as taking 4 away. 5 + 4 = 9. Check: 9 + 6 = 15, 15 - 10 = 5.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "To undo, add the 10 back and take the 6 away: 5 + 10 - 6 = 9."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "5 is what Ann got."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "15 undoes only taking 10 away; you still have to undo adding 6."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "21 is 5 + 10 + 6: you added the 6 instead of taking it away."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d4-5",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "What is 50 - 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9?",
+    "options": {
+      "A": "14",
+      "B": "41",
+      "C": "45",
+      "D": "5",
+      "E": "95"
+    },
+    "correct_answer": "D",
+    "solution": "1 + 2 + ... + 9 = 45 is taken away in all. 50 - 45 = 5.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "14 is 50 - 36: you forgot to take the 9 away."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "41 is 50 - 9: you took away only the 9."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "45 is how much is taken away in all."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "The numbers are taken away, not added."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d5-1",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "What is the sum of all the numbers from 1 to 20, that is 1 + 2 + 3 + ... + 19 + 20?",
+    "options": {
+      "A": "210",
+      "B": "20",
+      "C": "190",
+      "D": "200",
+      "E": "420"
+    },
+    "correct_answer": "A",
+    "solution": "Make pairs: 1 + 20, 2 + 19, ..., 10 + 11. Each pair is 21, and there are 10 pairs: 210.",
+    "distractors": {
+      "B": {
+        "trap": "number_from_text",
+        "text": "20 is the last number."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "190 is 1 + 2 + ... + 19: you forgot 20."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "Each pair, like 1 + 20 or 2 + 19, makes 21, not 20."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "There are 10 pairs of 21, not 20."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d5-2",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Lena thought of a number. If she adds 5 to it, she gets the same as if she doubles it. What number did Lena think of?",
+    "options": {
+      "A": "0",
+      "B": "5",
+      "C": "2",
+      "D": "10",
+      "E": "15"
+    },
+    "correct_answer": "B",
+    "solution": "Doubling a number means adding the same number to it. So adding 5 is the same as adding the number itself, and the number is 5. Check: 5 + 5 = 10, and 5 doubled is 10.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "0 + 5 = 5, but 0 doubled is 0."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "2 + 5 = 7, but 2 doubled is 4."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "10 is what Lena gets, not the number she thought of."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "15 + 5 = 20, but 15 doubled is 30."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d5-3",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "What is 11 + 22 + 33 + 44 + 55 + 66 + 77 + 88 + 99?",
+    "options": {
+      "A": "45",
+      "B": "440",
+      "C": "495",
+      "D": "450",
+      "E": "550"
+    },
+    "correct_answer": "C",
+    "solution": "The pairs 11 + 99, 22 + 88, 33 + 77 and 44 + 66 each make 110: 440 in all. With 55 in the middle the sum is 495.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "45 is 1 + 2 + ... + 9; each number here is 11 times bigger."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "440 is the four pairs; you forgot the 55 in the middle."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 45 by 10, but each number is 11 times bigger."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "55 is only one number, not a pair that makes 110."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d5-4",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Masha had some sweets. She gave half of them to Ann, and then she gave 1 sweet to Ben. Now she has 4 sweets. How many sweets did Masha have at first?",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "8",
+      "D": "10",
+      "E": "9"
+    },
+    "correct_answer": "D",
+    "solution": "Before giving 1 sweet to Ben, Masha had 4 + 1 = 5. That is the half she kept, so at first she had 5 + 5 = 10.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "4 is how many sweets Masha has now."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "5 is how many she had before giving 1 to Ben; she also gave half away."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "8 forgets the sweet Masha gave to Ben."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You undid the steps in the wrong order: 4 doubled, plus 1."
+      }
+    }
+  },
+  {
+    "id": "tri-12-d5-5",
+    "topic": "arithmetic.tricks",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "What is 100 - 99 + 98 - 97 + 96 - 95 + ... + 4 - 3 + 2 - 1?",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "49",
+      "D": "100",
+      "E": "50"
+    },
+    "correct_answer": "E",
+    "solution": "Group in pairs: (100 - 99) + (98 - 97) + ... + (2 - 1). Each pair is 1, and the 100 numbers make 50 pairs: 50.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "Each pair like 100 - 99 is 1, not 0."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "1 is only one pair, 100 - 99."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "The numbers from 100 down to 1 make 50 pairs, not 49."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "100 is the first number."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d1-1",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "What is 25 × 7 × 4?",
+    "options": {
+      "A": "36",
+      "B": "100",
+      "C": "175",
+      "D": "700",
+      "E": "2800"
+    },
+    "correct_answer": "D",
+    "solution": "Multiply 25 × 4 first: 100. Then 100 × 7 = 700.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "36 is 25 + 7 + 4: you added instead of multiplying."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "100 is 25 × 4: you forgot to multiply by 7."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "175 is only 25 × 7; you still have to multiply by 4."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "You multiplied by 4 twice."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d1-2",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "Dan thought of a number and multiplied it by 3. He got 27. What number did Dan think of?",
+    "options": {
+      "A": "3",
+      "B": "24",
+      "C": "30",
+      "D": "81",
+      "E": "9"
+    },
+    "correct_answer": "E",
+    "solution": "To undo multiplying by 3, divide by 3: 27 ÷ 3 = 9. Check: 9 × 3 = 27.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "3 is the number Dan multiplied by."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "To undo multiplying by 3, divide by 3; do not take 3 away."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "To undo multiplying by 3, divide by 3; do not add 3."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 27 by 3 instead of dividing."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d1-3",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "What is 48 + 76 + 52 + 24?",
+    "options": {
+      "A": "200",
+      "B": "100",
+      "C": "152",
+      "D": "176",
+      "E": "224"
+    },
+    "correct_answer": "A",
+    "solution": "48 + 52 = 100 and 76 + 24 = 100. The sum is 200.",
+    "distractors": {
+      "B": {
+        "trap": "stopped_early",
+        "text": "100 is only one pair, 48 + 52 or 76 + 24."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "152 is 76 + 52 + 24: you forgot 48."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "176 is 48 + 76 + 52: you forgot 24."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "You added 24 twice."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d1-4",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "What is 999 + 99 + 9 + 3?",
+    "options": {
+      "A": "1011",
+      "B": "1110",
+      "C": "1098",
+      "D": "1107",
+      "E": "1113"
+    },
+    "correct_answer": "B",
+    "solution": "Split 3 into 1 + 1 + 1: 999 + 1 = 1000, 99 + 1 = 100 and 9 + 1 = 10. 1000 + 100 + 10 = 1110.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "1011 is 999 + 9 + 3: you forgot 99."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "1098 is only 999 + 99."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "1107 is 999 + 99 + 9: you forgot 3."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "You added 3 twice."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d1-5",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "What is 5 × 17 × 2?",
+    "options": {
+      "A": "24",
+      "B": "34",
+      "C": "170",
+      "D": "85",
+      "E": "340"
+    },
+    "correct_answer": "C",
+    "solution": "5 × 2 = 10, and 10 × 17 = 170.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "24 is 5 + 17 + 2: you added instead of multiplying."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "34 is 17 × 2: you forgot to multiply by 5."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "85 is only 5 × 17; you still have to multiply by 2."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "You multiplied by 2 twice."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d2-1",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "What is 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19?",
+    "options": {
+      "A": "10",
+      "B": "81",
+      "C": "190",
+      "D": "200",
+      "E": "100"
+    },
+    "correct_answer": "E",
+    "solution": "Make pairs: 1 + 19, 3 + 17, 5 + 15, 7 + 13 and 9 + 11. Each pair is 20, and there are 5 pairs: 100.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "10 is how many numbers there are."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "81 is the sum up to 17: you forgot 19."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "190 is 1 + 2 + ... + 19, with the even numbers too."
+      },
+      "D": {
+        "trap": "double_count",
+        "text": "There are 5 pairs of 20, not 10."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d2-2",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "Eva thought of a number. She divided it by 4 and then added 6. She got 11. What number did Eva think of?",
+    "options": {
+      "A": "20",
+      "B": "5",
+      "C": "11",
+      "D": "38",
+      "E": "68"
+    },
+    "correct_answer": "A",
+    "solution": "Undo the last step first: 11 - 6 = 5. Then undo dividing by 4: 5 × 4 = 20. Check: 20 ÷ 4 = 5, 5 + 6 = 11.",
+    "distractors": {
+      "B": {
+        "trap": "stopped_early",
+        "text": "5 undoes only adding 6; you still have to multiply by 4."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "11 is what Eva got."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You undid the steps in the wrong order: 11 × 4 - 6."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "To undo adding 6, take 6 away: (11 - 6) × 4 = 20."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d2-3",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "What is 4 × 13 × 25?",
+    "options": {
+      "A": "42",
+      "B": "1300",
+      "C": "52",
+      "D": "100",
+      "E": "325"
+    },
+    "correct_answer": "B",
+    "solution": "4 × 25 = 100, and 100 × 13 = 1300.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "42 is 4 + 13 + 25: you added instead of multiplying."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "52 is only 4 × 13; you still have to multiply by 25."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "100 is 4 × 25: you forgot to multiply by 13."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "325 is 13 × 25: you forgot to multiply by 4."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d2-4",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "What is 36 + 37 + 38 + 39 + 40 + 41 + 42 + 43 + 44?",
+    "options": {
+      "A": "9",
+      "B": "44",
+      "C": "360",
+      "D": "320",
+      "E": "400"
+    },
+    "correct_answer": "C",
+    "solution": "The pairs 36 + 44, 37 + 43, 38 + 42 and 39 + 41 each make 80: 320 in all. With 40 in the middle the sum is 360.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "9 is how many numbers there are."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "44 is the biggest number."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "320 is the four pairs of 80; you forgot the 40 in the middle."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "40 is only one number, not a pair that makes 80."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d2-5",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "What is 17 × 4 + 17 × 6?",
+    "options": {
+      "A": "27",
+      "B": "68",
+      "C": "102",
+      "D": "170",
+      "E": "340"
+    },
+    "correct_answer": "D",
+    "solution": "4 seventeens and 6 seventeens make 10 seventeens: 17 × 10 = 170.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "27 is 17 + 4 + 6: you added instead of multiplying."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "68 is only 17 × 4; you still have to add 17 × 6."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "102 is only 17 × 6: you forgot 17 × 4."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "4 + 6 is 10, so there are 10 seventeens, not 20."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d3-1",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "Fay thought of a number. She multiplied it by 5 and then took 7 away. She got 23. What number did Fay think of?",
+    "options": {
+      "A": "6",
+      "B": "7",
+      "C": "16",
+      "D": "30",
+      "E": "150"
+    },
+    "correct_answer": "A",
+    "solution": "Undo the last step first: 23 + 7 = 30. Then 30 ÷ 5 = 6. Check: 6 × 5 = 30, 30 - 7 = 23.",
+    "distractors": {
+      "B": {
+        "trap": "number_from_text",
+        "text": "7 is the number Fay took away."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "To undo taking 7 away, add 7; do not take it away again."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "30 undoes only taking 7 away; you still have to divide by 5."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 30 by 5 instead of dividing."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d3-2",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "What is the sum of all the numbers from 1 to 30?",
+    "options": {
+      "A": "30",
+      "B": "465",
+      "C": "435",
+      "D": "450",
+      "E": "930"
+    },
+    "correct_answer": "B",
+    "solution": "The pairs 1 + 30, 2 + 29, ..., 15 + 16 each make 31, and there are 15 pairs: 15 × 31 = 465.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "30 is the last number."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "435 is the sum from 1 to 29: you forgot 30."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "Each pair, like 1 + 30, makes 31, not 30."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "There are 15 pairs of 31, not 30."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d3-3",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "What is 999 × 5 + 5?",
+    "options": {
+      "A": "1000",
+      "B": "1009",
+      "C": "5000",
+      "D": "4990",
+      "E": "4995"
+    },
+    "correct_answer": "C",
+    "solution": "999 fives and one more five make 1000 fives: 1000 × 5 = 5000.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "1000 is how many fives there are; you still have to multiply by 5."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "1009 is 999 + 5 + 5: you added instead of multiplying."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "The last 5 is added, not taken away."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "4995 is only 999 × 5; you still have to add 5."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d3-4",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "Gleb thought of a number. If he adds 12 to it, he gets three times the number. What number did Gleb think of?",
+    "options": {
+      "A": "4",
+      "B": "12",
+      "C": "18",
+      "D": "6",
+      "E": "36"
+    },
+    "correct_answer": "D",
+    "solution": "Three times the number is the number plus two more of it. So two of the number make 12, and the number is 6. Check: 6 + 12 = 18, and 3 × 6 = 18.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "4 + 12 = 16, but 3 × 4 = 12."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "12 + 12 = 24, but 3 × 12 = 36."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "18 is what Gleb gets, not the number he thought of."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 12 by 3."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d3-5",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "What is 1 + 2 - 3 + 4 + 5 - 6 + 7 + 8 - 9 + 10 + 11 - 12?",
+    "options": {
+      "A": "0",
+      "B": "9",
+      "C": "12",
+      "D": "78",
+      "E": "18"
+    },
+    "correct_answer": "E",
+    "solution": "Group by three: (1 + 2 - 3) + (4 + 5 - 6) + (7 + 8 - 9) + (10 + 11 - 12) = 0 + 3 + 6 + 9 = 18.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "0 is only the first group, 1 + 2 - 3."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "9 is only the last group, 10 + 11 - 12."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "12 is the last number."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "78 is what you get if every sign is a plus."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d4-1",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "What is 25 × 32?",
+    "options": {
+      "A": "57",
+      "B": "800",
+      "C": "100",
+      "D": "750",
+      "E": "3200"
+    },
+    "correct_answer": "B",
+    "solution": "32 = 4 × 8. 25 × 4 = 100, and 100 × 8 = 800.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "57 is 25 + 32: you added instead of multiplying."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "25 × 4 = 100, but 32 is 4 × 8, so you still have to multiply by 8."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "750 is only 25 × 30; you forgot 25 × 2."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "You multiplied by 4 twice."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d4-2",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Ivan thought of a number. He added 7 to it and then multiplied the result by 2. He got 30. What number did Ivan think of?",
+    "options": {
+      "A": "15",
+      "B": "22",
+      "C": "8",
+      "D": "30",
+      "E": "74"
+    },
+    "correct_answer": "C",
+    "solution": "Undo the last step first: 30 ÷ 2 = 15. Then 15 - 7 = 8. Check: 8 + 7 = 15, 15 × 2 = 30.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "15 undoes only multiplying by 2; you still have to take 7 away."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "To undo adding 7, take 7 away: 15 - 7 = 8."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "30 is what Ivan got."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You did the steps again instead of undoing them: (30 + 7) × 2."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d4-3",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "What is 101 × 23?",
+    "options": {
+      "A": "124",
+      "B": "230",
+      "C": "2300",
+      "D": "2323",
+      "E": "2346"
+    },
+    "correct_answer": "D",
+    "solution": "101 × 23 = 100 × 23 + 23 = 2300 + 23 = 2323.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "124 is 101 + 23: you added instead of multiplying."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "230 is 10 × 23, but 101 has 100 in it, not 10."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "2300 is 100 × 23; one more 23 is needed."
+      },
+      "E": {
+        "trap": "double_count",
+        "text": "101 × 23 is 100 × 23 plus one 23, not two."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d4-4",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "What is the sum of all the even numbers from 2 to 40?",
+    "options": {
+      "A": "210",
+      "B": "380",
+      "C": "400",
+      "D": "840",
+      "E": "420"
+    },
+    "correct_answer": "E",
+    "solution": "There are 20 even numbers. The pairs 2 + 40, 4 + 38, ..., 20 + 22 each make 42, and there are 10 pairs: 420.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "210 is 1 + 2 + ... + 20; each even number here is twice as big."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "380 is the sum up to 38: you forgot 40."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Each pair, like 2 + 40, makes 42, not 40."
+      },
+      "D": {
+        "trap": "double_count",
+        "text": "There are 10 pairs of 42, not 20."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d4-5",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Yana thought of a number. If she takes it away from 50, she gets the same as if she adds 14 to it. What number did Yana think of?",
+    "options": {
+      "A": "18",
+      "B": "25",
+      "C": "32",
+      "D": "36",
+      "E": "64"
+    },
+    "correct_answer": "A",
+    "solution": "50 is the number, plus the number again, plus 14. So two of the number make 50 - 14 = 36, and the number is 18. Check: 50 - 18 = 32 and 18 + 14 = 32.",
+    "distractors": {
+      "B": {
+        "trap": "ignored_condition",
+        "text": "25 is half of 50, but 50 - 25 = 25 and 25 + 14 = 39."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "32 is what Yana gets, not the number she thought of."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "36 is 50 - 14; it is two of the number, so halve it."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "64 is 50 + 14."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d5-1",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "What is (1 + 3 + 5 + ... + 97 + 99) - (2 + 4 + 6 + ... + 96 + 98)?",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "50",
+      "D": "49",
+      "E": "99"
+    },
+    "correct_answer": "C",
+    "solution": "Write it as 1 + (3 - 2) + (5 - 4) + ... + (99 - 98). There are 49 brackets, each equal to 1, plus the 1 at the start: 50.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "The odd numbers go further, up to 99, so their sum is bigger."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "1 is only one step like 3 - 2; there are 49 such steps and the 1 at the start."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "Do not forget the 1 at the start: 1 + 49 = 50."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "99 is the last odd number."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d5-2",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Olga thought of a number. She added 3, multiplied the result by 3, took 3 away and divided the result by 3. She got 8. What number did Olga think of?",
+    "options": {
+      "A": "3",
+      "B": "8",
+      "C": "9",
+      "D": "6",
+      "E": "24"
+    },
+    "correct_answer": "D",
+    "solution": "Undo from the end: 8 × 3 = 24, 24 + 3 = 27, 27 ÷ 3 = 9, 9 - 3 = 6. Check: 6 + 3 = 9, 9 × 3 = 27, 27 - 3 = 24, 24 ÷ 3 = 8.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "3 is the number used in every step."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "8 is what Olga got."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "9 is the number after adding 3; you still have to take the 3 away."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "24 undoes only the last step."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d5-3",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Five whole numbers that follow each other, like 7, 8, 9, 10, 11, add up to 100. What is the biggest of them?",
+    "options": {
+      "A": "18",
+      "B": "20",
+      "C": "24",
+      "D": "25",
+      "E": "22"
+    },
+    "correct_answer": "E",
+    "solution": "The middle number is 100 ÷ 5 = 20, so the numbers are 18, 19, 20, 21 and 22. The biggest is 22.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "18 is the smallest of them, not the biggest."
+      },
+      "B": {
+        "trap": "answered_other_question",
+        "text": "20 is the middle number."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "20, 21, 22, 23 and 24 add up to 110, not 100."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "25 is 100 ÷ 4, but there are 5 numbers."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d5-4",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Kolya multiplies all the numbers from 1 to 15: 1 × 2 × 3 × ... × 15. How many zeros are at the end of the answer?",
+    "options": {
+      "A": "3",
+      "B": "1",
+      "C": "2",
+      "D": "4",
+      "E": "15"
+    },
+    "correct_answer": "A",
+    "solution": "A zero at the end comes from 2 × 5. There are plenty of even numbers, and the numbers with a 5 inside are 5, 10 and 15, one 5 each. So there are 3 zeros.",
+    "distractors": {
+      "B": {
+        "trap": "missed_case",
+        "text": "Not only 10 gives a zero: 5 and 15 each give one together with an even number."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "You forgot 15: together with an even number it gives one more zero."
+      },
+      "D": {
+        "trap": "double_count",
+        "text": "10 gives only one zero, not two."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "15 is the last number."
+      }
+    }
+  },
+  {
+    "id": "tri-34-d5-5",
+    "topic": "arithmetic.tricks",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "What is (2 × 4 × 6 × 8 × 10) ÷ (1 × 2 × 3 × 4 × 5)?",
+    "options": {
+      "A": "2",
+      "B": "32",
+      "C": "10",
+      "D": "16",
+      "E": "3840"
+    },
+    "correct_answer": "B",
+    "solution": "Split it into 2 ÷ 1, 4 ÷ 2, 6 ÷ 3, 8 ÷ 4 and 10 ÷ 5. Each is 2, so the answer is 2 × 2 × 2 × 2 × 2 = 32.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Each part like 4 ÷ 2 is 2, but there are five parts: 2 × 2 × 2 × 2 × 2."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You added the five 2s instead of multiplying them."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "There are five parts, not four: 2 × 2 × 2 × 2 × 2 = 32."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "3840 is only the top part; you still have to divide."
+      }
+    }
+  }
+]

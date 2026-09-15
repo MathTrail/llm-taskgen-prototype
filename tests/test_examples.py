@@ -4,9 +4,9 @@ import copy
 
 import pytest
 
-from taskgen.validate_examples import examples_errors, load_examples
+from taskgen.validate_examples import examples_errors, load_example_files, load_examples, placement_errors
 
-# A fixed valid task, so the tests do not depend on what the author writes into data/examples/tasks.json.
+# A fixed valid task, so the tests do not depend on the reference tasks in data/examples/.
 VALID = {
     "id": "gaps-posts-test",
     "topic": "counting.gaps",
@@ -33,6 +33,21 @@ def errors_after(change):
 
 def test_real_examples_are_valid():
     assert examples_errors(load_examples()) == []
+
+
+def test_real_files_hold_their_topic():
+    assert placement_errors(load_example_files()) == []
+
+
+def test_task_in_wrong_file_is_rejected():
+    errors = placement_errors({"time.clocks.json": [VALID]})
+    assert any("expected 'time.clocks'" in error for error in errors)
+
+
+def test_grade_level_outside_topic_levels_is_rejected():
+    # logic.knights_liars is listed for grades 3-4 only; VALID is a 1-2 task.
+    errors = errors_after(lambda task: task.update(topic="logic.knights_liars"))
+    assert any("grade_level" in error for error in errors)
 
 
 def test_valid_task_passes():

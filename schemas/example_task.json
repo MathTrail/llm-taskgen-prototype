@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Reference task (SPEC 4.3)",
-  "description": "One of our own hand-written reference tasks in data/examples/tasks.json. Field names match the Generator output (SPEC 5.2). Catalog ids and option rules are checked by taskgen.validate_examples.",
+  "description": "One reference task in data/examples/<topic>.json. Field names match the Generator output (SPEC 5.2). Catalog ids and option rules are checked by taskgen.validate_examples.",
   "type": "object",
   "additionalProperties": false,
   "required": [

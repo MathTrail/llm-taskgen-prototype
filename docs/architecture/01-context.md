@@ -33,7 +33,7 @@ flowchart LR
         cfg["config.yaml"]
         prompts["prompts/*.md<br/>schemas/*.json"]
         catalogs["data/catalogs/<br/>topics.json · skills.json · traps.json"]
-        examples["data/examples/tasks.json"]
+        examples["data/examples/*.json"]
         seeds["data/seed/*.json"]
         evalset["data/eval/"]
     end
@@ -105,7 +105,7 @@ flowchart LR
 | `config.yaml` | Модели и `effort` агентов, лимит попыток, пороги `pace`, рейтинги, песочница, фильтры | 8 |
 | `prompts/`, `schemas/` | Промпты агентов и JSON-схемы их ответов | 5, 8 |
 | `data/catalogs/` — `topics.json`, `skills.json`, `traps.json` | Закрытые каталоги тем, навыков и ловушек | 4.2, 4.4, 4.5 |
-| `data/examples/tasks.json` | ~30 эталонных задач, пишу я | 4.3 |
+| `data/examples/<тема>.json` | 450 эталонных задач (T11) | 4.3 |
 | `data/seed/*.json` | 5 стартовых профилей | 4.1 |
 | `data/eval/` | Фиксированный набор для оценки | 9 |
 | PostgreSQL (`docker-compose.yml`, `db/schema.sql`) | Все данные: профили, история, рейтинги, банк задач, журналы, view датасетов | 7 |

@@ -1,0 +1,1702 @@
+[
+  {
+    "id": "cal-12-d1-1",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "Today is Monday. What day of the week will it be the day after tomorrow?",
+    "options": {
+      "A": "Sunday",
+      "B": "Wednesday",
+      "C": "Monday",
+      "D": "Tuesday",
+      "E": "Thursday"
+    },
+    "correct_answer": "B",
+    "solution": "Tomorrow is Tuesday, and the day after tomorrow is Wednesday.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "Sunday was yesterday. The question asks about a later day."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "Monday is today."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "Tuesday is tomorrow. The day after tomorrow is one day later."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "Thursday is three days after Monday, not two."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d1-2",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "Tom is 6 years old. How old will he be in 3 years?",
+    "options": {
+      "A": "3",
+      "B": "6",
+      "C": "9",
+      "D": "8",
+      "E": "18"
+    },
+    "correct_answer": "C",
+    "solution": "Each year Tom gets one year older: 7, 8, 9. In 3 years he will be 9.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "3 is the number of years that pass."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "6 is Tom's age now."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "Count on 3 years from 6: 7, 8, 9."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 6 by 3. Add 3 years instead."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d1-3",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "Yesterday was Friday. What day of the week is it today?",
+    "options": {
+      "A": "Thursday",
+      "B": "Friday",
+      "C": "Sunday",
+      "D": "Saturday",
+      "E": "Monday"
+    },
+    "correct_answer": "D",
+    "solution": "The day after Friday is Saturday, so today is Saturday.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "Thursday comes before Friday. Today comes after yesterday."
+      },
+      "B": {
+        "trap": "answered_other_question",
+        "text": "Friday was yesterday."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Sunday is tomorrow."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "Monday is the day after tomorrow."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d1-4",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "A week has 7 days. How many days are there in 2 weeks?",
+    "options": {
+      "A": "2",
+      "B": "7",
+      "C": "9",
+      "D": "21",
+      "E": "14"
+    },
+    "correct_answer": "E",
+    "solution": "Two weeks are 7 + 7 = 14 days.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "2 is the number of weeks."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "7 days is only one week."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You added 7 and 2. Add 7 days for each week."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "21 days is 3 weeks."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d1-5",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "Anna is 8 years old and her brother is 5. How many years older than her brother is Anna?",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "8",
+      "D": "13",
+      "E": "40"
+    },
+    "correct_answer": "A",
+    "solution": "8 - 5 = 3. Anna is 3 years older.",
+    "distractors": {
+      "B": {
+        "trap": "number_from_text",
+        "text": "5 is her brother's age."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "8 is Anna's age."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You added the ages. Take the smaller from the bigger."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You multiplied the ages."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d2-1",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Today is Wednesday. What day of the week was it 3 days ago?",
+    "options": {
+      "A": "Saturday",
+      "B": "Monday",
+      "C": "Sunday",
+      "D": "Tuesday",
+      "E": "Thursday"
+    },
+    "correct_answer": "C",
+    "solution": "Going back from Wednesday: Tuesday, Monday, Sunday. 3 days ago it was Sunday.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "Saturday is 3 days after Wednesday. The question asks about 3 days ago."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Monday was 2 days ago."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "Tuesday was yesterday, only 1 day ago."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "Thursday is tomorrow."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d2-2",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "In 4 years Mia will be 11 years old. How old is she now?",
+    "options": {
+      "A": "4",
+      "B": "11",
+      "C": "15",
+      "D": "7",
+      "E": "44"
+    },
+    "correct_answer": "D",
+    "solution": "Now she is 4 years younger than she will be: 11 - 4 = 7.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "4 is the number of years."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "11 is her age in 4 years, not now."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "Now she is younger than in 4 years, so take 4 away."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 11 by 4."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d2-3",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "The holidays last from Monday to the next Sunday, including both of these days. How many days do the holidays last?",
+    "options": {
+      "A": "2",
+      "B": "6",
+      "C": "8",
+      "D": "14",
+      "E": "7"
+    },
+    "correct_answer": "E",
+    "solution": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday: that is 7 days.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "2 is the number of days named in the question."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Both Monday and Sunday are holidays, so count them both: 7 days."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "From Monday to the next Sunday there are 7 days, not 8."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You doubled 7. The holidays last one week."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d2-4",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Kate's birthday is on 5 May. Today is 28 April. April has 30 days. How many days are left until her birthday?",
+    "options": {
+      "A": "7",
+      "B": "5",
+      "C": "6",
+      "D": "8",
+      "E": "23"
+    },
+    "correct_answer": "A",
+    "solution": "From 28 April to 30 April is 2 days, and from 30 April to 5 May is 5 more days. 2 + 5 = 7 days.",
+    "distractors": {
+      "B": {
+        "trap": "number_from_text",
+        "text": "5 is the date of the birthday."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Count the days: 29 and 30 April, then 1 to 5 May. That is 7."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "April has 30 days, not 31."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You took 5 from 28. The dates are in different months."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d2-5",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Grandpa is 60 years old. Dad is 35. How old was Grandpa when Dad was born?",
+    "options": {
+      "A": "30",
+      "B": "25",
+      "C": "35",
+      "D": "60",
+      "E": "95"
+    },
+    "correct_answer": "B",
+    "solution": "Grandpa is 60 - 35 = 25 years older than Dad. When Dad was born, Grandpa was 25.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "You took 30 from 60. The difference between the ages is 60 - 35."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "35 is Dad's age now."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "60 is Grandpa's age now."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You added the ages."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d3-1",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Today is Tuesday. What day of the week will it be in 10 days?",
+    "options": {
+      "A": "Wednesday",
+      "B": "Thursday",
+      "C": "Saturday",
+      "D": "Friday",
+      "E": "Sunday"
+    },
+    "correct_answer": "D",
+    "solution": "In 7 days it will be Tuesday again. 3 more days give Wednesday, Thursday, Friday. So it will be Friday.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Wednesday is only 1 day after Tuesday."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "You counted today as the first day. In 10 days it will be Friday."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "In 7 days it is Tuesday again, then 3 more days: Friday."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "10 days is one week and 3 days, not one week and 5 days."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d3-2",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Ann is 3 years older than Ben. In 5 years Ben will be 12. How old is Ann now?",
+    "options": {
+      "A": "7",
+      "B": "12",
+      "C": "15",
+      "D": "20",
+      "E": "10"
+    },
+    "correct_answer": "E",
+    "solution": "Ben is 12 - 5 = 7 now. Ann is 3 years older: 7 + 3 = 10.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "7 is Ben's age now. Ann is 3 years older."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "12 is Ben's age in 5 years."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "15 is Ann's age in 5 years, not now."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You added 12, 5 and 3. Ben is younger now, so take 5 away."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d3-3",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "A month has 30 days, and its 1st day is a Monday. What day of the week is the 15th?",
+    "options": {
+      "A": "Monday",
+      "B": "Sunday",
+      "C": "Tuesday",
+      "D": "Wednesday",
+      "E": "Friday"
+    },
+    "correct_answer": "A",
+    "solution": "The 8th is a Monday, one week after the 1st. The 15th is one more week later: also a Monday.",
+    "distractors": {
+      "B": {
+        "trap": "off_by_one",
+        "text": "The 15th is exactly 2 weeks after the 1st, so it is a Monday."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "You added 15 days to the 1st. The 15th is only 14 days after the 1st."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "Count by weeks: the 1st, 8th and 15th are all Mondays."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The 1st is a Monday, so every 7 days later is a Monday too."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d3-4",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Olya goes swimming every 3 days: on the 2nd, the 5th, the 8th and so on. How many times does she go swimming in a month of 30 days?",
+    "options": {
+      "A": "9",
+      "B": "10",
+      "C": "11",
+      "D": "15",
+      "E": "30"
+    },
+    "correct_answer": "B",
+    "solution": "The days are 2, 5, 8, 11, 14, 17, 20, 23, 26 and 29. That is 10 times.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "List the days: 2, 5, ..., 29. There are 10 of them."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "The next day would be the 32nd, which is not in the month."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You halved 30. She goes every 3 days, not every 2."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "30 is the number of days in the month."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d3-5",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Sasha was born in 2019. In which year will Sasha turn 10?",
+    "options": {
+      "A": "2009",
+      "B": "2019",
+      "C": "2029",
+      "D": "2020",
+      "E": "2030"
+    },
+    "correct_answer": "C",
+    "solution": "Sasha turns 10 ten years after being born: 2019 + 10 = 2029.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "2009 is 10 years before Sasha was born."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "2019 is the year Sasha was born."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "In 2020 Sasha turns 1."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "In 2030 Sasha turns 11."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d4-1",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Today is Sunday. What day of the week will it be in 20 days?",
+    "options": {
+      "A": "Friday",
+      "B": "Sunday",
+      "C": "Monday",
+      "D": "Tuesday",
+      "E": "Saturday"
+    },
+    "correct_answer": "E",
+    "solution": "In 14 days, two weeks, it is Sunday again. 6 more days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "20 days is 2 weeks and 6 days, not 2 weeks and 5 days."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "21 days would give Sunday again; 20 days is one day earlier."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Monday is 22 days after Sunday."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "20 days is 2 weeks and 6 days. Count the 6 extra days from Sunday."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d4-2",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "The ages of two sisters add up to 15. What will their ages add up to in 3 years?",
+    "options": {
+      "A": "21",
+      "B": "15",
+      "C": "18",
+      "D": "24",
+      "E": "45"
+    },
+    "correct_answer": "A",
+    "solution": "In 3 years each sister will be 3 years older, so the sum grows by 3 + 3 = 6: 15 + 6 = 21.",
+    "distractors": {
+      "B": {
+        "trap": "number_from_text",
+        "text": "15 is the sum now."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "Each of the two sisters gets 3 years older, not only one."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "The sum grows by 3 for each sister: 6, not 9."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 15 by 3."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d4-3",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "A month has 31 days, and its 1st day is a Saturday. How many Sundays are there in this month?",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "4",
+      "D": "6",
+      "E": "31"
+    },
+    "correct_answer": "B",
+    "solution": "The Sundays are the 2nd, 9th, 16th, 23rd and 30th. That is 5 Sundays.",
+    "distractors": {
+      "A": {
+        "trap": "missed_case",
+        "text": "List them: 2, 9, 16, 23, 30."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "You forgot the 30th."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "The next Sunday after the 30th would be the 37th."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "31 is the number of days."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d4-4",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Ben is 5 years old and his mum is 29. In how many years will Mum be exactly 3 times as old as Ben?",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "7",
+      "D": "9",
+      "E": "24"
+    },
+    "correct_answer": "C",
+    "solution": "Try year by year. In 7 years Ben will be 12 and Mum will be 36, and 36 = 3 × 12.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "3 is how many times older Mum will be."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "5 is Ben's age now."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "In 9 years Ben is 14 and Mum is 38, which is not 3 × 14."
+      },
+      "E": {
+        "trap": "answered_other_question",
+        "text": "24 is how many years older Mum is than Ben."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d4-5",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "A school trip starts on a Thursday and lasts 5 days, counting the first day. On which day of the week does it end?",
+    "options": {
+      "A": "Saturday",
+      "B": "Sunday",
+      "C": "Tuesday",
+      "D": "Monday",
+      "E": "Wednesday"
+    },
+    "correct_answer": "D",
+    "solution": "The days are Thursday, Friday, Saturday, Sunday and Monday. It ends on Monday.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Saturday is only the 3rd day of the trip."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Sunday is the 4th day. Count 5 days: Thursday to Monday."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "The first day, Thursday, is already one of the 5 days."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "Wednesday would be the 7th day of the trip."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d5-1",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Today is Friday. What day of the week was it 100 days ago?",
+    "options": {
+      "A": "Wednesday",
+      "B": "Tuesday",
+      "C": "Thursday",
+      "D": "Saturday",
+      "E": "Sunday"
+    },
+    "correct_answer": "A",
+    "solution": "98 days are exactly 14 weeks, so 98 days ago it was also Friday. 2 more days back: Thursday, Wednesday.",
+    "distractors": {
+      "B": {
+        "trap": "off_by_one",
+        "text": "100 days is 14 weeks and 2 days, not 3 days."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "100 days is 14 weeks and 2 days, not 1 day."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "Ago means going back, not forward."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "Sunday is 100 days after Friday, not before."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d5-2",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Kolya is 8 and his sister is 3. How old will Kolya be when he is exactly twice as old as his sister?",
+    "options": {
+      "A": "5",
+      "B": "10",
+      "C": "6",
+      "D": "12",
+      "E": "16"
+    },
+    "correct_answer": "B",
+    "solution": "Kolya is always 5 years older than his sister. He is twice as old as her when she is 5 and he is 10.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "5 is how many years older Kolya is."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "6 is twice his sister's age now, not Kolya's age."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "At 12 his sister would be 7, and 12 is not twice 7."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You doubled Kolya's age now. His sister grows older too."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d5-3",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "In some year, 1 January was a Monday. January has 31 days. What day of the week was 1 February?",
+    "options": {
+      "A": "Monday",
+      "B": "Tuesday",
+      "C": "Thursday",
+      "D": "Wednesday",
+      "E": "Friday"
+    },
+    "correct_answer": "C",
+    "solution": "28 days after 1 January, on 29 January, it is Monday again. 1 February is 3 days later: Thursday.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "31 days is not a whole number of weeks: 4 weeks and 3 days."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "31 days is 4 weeks and 3 days: you added only 1 day."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "31 days is 4 weeks and 3 days, not 2 days."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "31 days is 4 weeks and 3 days, not 4 days."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d5-4",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Twins Ann and Kate and their brother Tom are 23 years old altogether. Tom is 5 years older than each twin. How old is Tom?",
+    "options": {
+      "A": "6",
+      "B": "9",
+      "C": "12",
+      "D": "11",
+      "E": "18"
+    },
+    "correct_answer": "D",
+    "solution": "If Tom were 5 years younger, all three would be the same age and together 23 - 5 = 18. So each twin is 6, and Tom is 6 + 5 = 11.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "6 is the age of each twin. Tom is 5 years older."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "You shared 18 between 2 children, but there are 3."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "If Tom were 12, the twins would be 7 and the total would be 26."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "18 is the total of three equal ages, not Tom's age."
+      }
+    }
+  },
+  {
+    "id": "cal-12-d5-5",
+    "topic": "time.calendar",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "This year Masha's birthday is on a Wednesday. Next year her birthday comes 365 days later. On which day of the week will it be?",
+    "options": {
+      "A": "Tuesday",
+      "B": "Wednesday",
+      "C": "Friday",
+      "D": "Saturday",
+      "E": "Thursday"
+    },
+    "correct_answer": "E",
+    "solution": "365 days are 52 weeks and 1 day. After 52 weeks it is Wednesday again, and 1 more day gives Thursday.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "The birthday moves forward, not back."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "365 days are not a whole number of weeks: 52 weeks and 1 day."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "That would be after 366 days, in a leap year."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "365 days are 52 weeks and 1 day, not 3 days."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d1-1",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "Today is Thursday. What day of the week will it be in 15 days?",
+    "options": {
+      "A": "Wednesday",
+      "B": "Thursday",
+      "C": "Saturday",
+      "D": "Friday",
+      "E": "Monday"
+    },
+    "correct_answer": "D",
+    "solution": "In 14 days, two weeks, it is Thursday again. 1 more day gives Friday.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "The day comes after today, not before."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "15 days is 2 weeks and 1 day, not a whole number of weeks."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "15 days is 2 weeks and 1 day, not 2 weeks and 2 days."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You added 5 days for the 15. Count weeks: 2 weeks and 1 day."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d1-2",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "Dad is 36 years old and his son is 9. How many times as old as his son is Dad?",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "27",
+      "D": "45",
+      "E": "4"
+    },
+    "correct_answer": "E",
+    "solution": "36 ÷ 9 = 4. Dad is 4 times as old as his son.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "3 × 9 = 27, not 36."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "5 × 9 = 45, not 36."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "27 is how many years older Dad is."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You added the ages."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d1-3",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "How many days are there in March, April and May together?",
+    "options": {
+      "A": "92",
+      "B": "3",
+      "C": "90",
+      "D": "91",
+      "E": "93"
+    },
+    "correct_answer": "A",
+    "solution": "March has 31 days, April 30 and May 31. 31 + 30 + 31 = 92.",
+    "distractors": {
+      "B": {
+        "trap": "number_from_text",
+        "text": "3 is the number of months."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "March and May have 31 days, not 30."
+      },
+      "D": {
+        "trap": "missed_case",
+        "text": "Only April has 30 days; March and May have 31 each."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "April has 30 days, not 31."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d1-4",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "A leap year has 366 days. How many full weeks are there in a leap year?",
+    "options": {
+      "A": "12",
+      "B": "52",
+      "C": "51",
+      "D": "53",
+      "E": "366"
+    },
+    "correct_answer": "B",
+    "solution": "52 weeks are 364 days. 366 - 364 = 2 days are left, which is not a full week. So there are 52 full weeks.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "12 is the number of months."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "51 weeks are only 357 days; one more full week fits."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "53 weeks would be 371 days, more than 366."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "366 is the number of days."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d1-5",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "Grandma was born in 1958. How old will she be on her birthday in 2026?",
+    "options": {
+      "A": "58",
+      "B": "67",
+      "C": "68",
+      "D": "69",
+      "E": "78"
+    },
+    "correct_answer": "C",
+    "solution": "2026 - 1958 = 68. On her birthday in 2026 she turns 68.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "58 is the end of her birth year, not her age."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "2026 - 1958 = 68, not 67."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "2026 - 1958 = 68, not 69."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "Check the subtraction: 1958 + 68 = 2026."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d2-1",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "1 September is a Monday. September has 30 days. What day of the week is 1 October?",
+    "options": {
+      "A": "Monday",
+      "B": "Tuesday",
+      "C": "Thursday",
+      "D": "Saturday",
+      "E": "Wednesday"
+    },
+    "correct_answer": "E",
+    "solution": "28 days after 1 September, on 29 September, it is Monday again. 1 October is 2 days later: Wednesday.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "30 days are 4 weeks and 2 days, not whole weeks."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "30 days are 4 weeks and 2 days, not 1 day."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "September has 30 days, not 31."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "30 days are 4 weeks and 2 days. Count 2 days on from Monday."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d2-2",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "Three years ago Vera was 7. How old will she be in 4 years?",
+    "options": {
+      "A": "14",
+      "B": "4",
+      "C": "7",
+      "D": "10",
+      "E": "11"
+    },
+    "correct_answer": "A",
+    "solution": "Now Vera is 7 + 3 = 10. In 4 years she will be 10 + 4 = 14.",
+    "distractors": {
+      "B": {
+        "trap": "number_from_text",
+        "text": "4 is the number of years ahead."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "7 was her age three years ago."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "10 is her age now."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You added only 4 to 7. First find her age now."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d2-3",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "A festival lasts from 25 June to 5 July, including both days. June has 30 days. How many days does the festival last?",
+    "options": {
+      "A": "10",
+      "B": "11",
+      "C": "12",
+      "D": "20",
+      "E": "30"
+    },
+    "correct_answer": "B",
+    "solution": "From 25 to 30 June there are 6 days, and from 1 to 5 July there are 5 days. 6 + 5 = 11.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "Both 25 June and 5 July count: 6 + 5 = 11."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "June has 30 days, not 31."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You took 5 from 25. The dates are in different months."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "30 is the number of days in June."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d2-4",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "Mum is 4 times as old as Petya. Together they are 40 years old. How old is Petya?",
+    "options": {
+      "A": "4",
+      "B": "10",
+      "C": "8",
+      "D": "32",
+      "E": "36"
+    },
+    "correct_answer": "C",
+    "solution": "Mum's age is 4 parts and Petya's is 1 part: 5 parts make 40, so 1 part is 8. Petya is 8.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "4 is how many times as old Mum is."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "You divided 40 by 4, but together they make 5 parts."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "32 is Mum's age."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You took 4 from 40."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d2-5",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "The 1st of a month is a Sunday. On which date is the third Wednesday of the month?",
+    "options": {
+      "A": "11",
+      "B": "17",
+      "C": "21",
+      "D": "18",
+      "E": "25"
+    },
+    "correct_answer": "D",
+    "solution": "The first Wednesday is the 4th. The second is the 11th, and the third is the 18th.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "The 11th is the second Wednesday."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "The 17th is a Tuesday."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 3 by 7. The first Wednesday is the 4th, not the 7th."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "The 25th is the fourth Wednesday."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d3-1",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "In some year 1 March is a Tuesday. What day of the week is 1 June of the same year?",
+    "options": {
+      "A": "Wednesday",
+      "B": "Monday",
+      "C": "Tuesday",
+      "D": "Thursday",
+      "E": "Friday"
+    },
+    "correct_answer": "A",
+    "solution": "March has 31 days, April 30 and May 31: 92 days in all. 91 days are 13 weeks, so 1 June is 1 day after Tuesday: Wednesday.",
+    "distractors": {
+      "B": {
+        "trap": "reversed_relation",
+        "text": "Count forward from March to June, not back."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "92 days are 13 weeks and 1 day, not whole weeks."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "April has 30 days, not 31."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "92 days are 13 weeks and 1 day. Add just 1 day."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d3-2",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "Olya is now 3 times as old as her brother. In 4 years she will be twice as old as him. How old is Olya now?",
+    "options": {
+      "A": "4",
+      "B": "12",
+      "C": "8",
+      "D": "16",
+      "E": "24"
+    },
+    "correct_answer": "B",
+    "solution": "Try the brother's age. If he is 4, Olya is 12. In 4 years he is 8 and she is 16, which is twice 8. So Olya is 12.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "4 is her brother's age."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "8 is her brother's age in 4 years."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "16 is Olya's age in 4 years, not now."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "If Olya were 24, her brother would be 8; in 4 years 28 is not twice 12."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d3-3",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "What is the greatest number of Saturdays that one month can have?",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "5",
+      "D": "7",
+      "E": "31"
+    },
+    "correct_answer": "C",
+    "solution": "A month has at most 31 days: 4 weeks and 3 days. So a day of the week can appear at most 5 times.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "A month has more than 28 days, so some days of the week appear 5 times."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "6 Saturdays need at least 36 days."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "7 is the number of days in a week."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "31 is the number of days in the longest months."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d3-4",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "Anya was born on 29 February 2016. This date exists only in leap years: 2020, 2024 and every fourth year after that. How many birthdays on the real date will she have from 2017 to 2032, including 2032?",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "8",
+      "D": "4",
+      "E": "16"
+    },
+    "correct_answer": "D",
+    "solution": "The leap years are 2020, 2024, 2028 and 2032. That is 4 birthdays.",
+    "distractors": {
+      "A": {
+        "trap": "missed_case",
+        "text": "2032 counts too."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "2016 is the year she was born, not a birthday."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "Leap years come every 4 years, not every 2."
+      },
+      "E": {
+        "trap": "answered_other_question",
+        "text": "16 is the number of years from 2016 to 2032."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d3-5",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "The day before yesterday was Thursday. What day of the week will it be the day after tomorrow?",
+    "options": {
+      "A": "Friday",
+      "B": "Saturday",
+      "C": "Sunday",
+      "D": "Tuesday",
+      "E": "Monday"
+    },
+    "correct_answer": "E",
+    "solution": "Yesterday was Friday, so today is Saturday. Tomorrow is Sunday, and the day after tomorrow is Monday.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "Friday was yesterday."
+      },
+      "B": {
+        "trap": "answered_other_question",
+        "text": "Saturday is today."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "Sunday is tomorrow."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "Tuesday is 3 days after today."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d4-1",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "In a year that is not a leap year, 1 January is a Friday. What day of the week is 31 December?",
+    "options": {
+      "A": "Thursday",
+      "B": "Friday",
+      "C": "Saturday",
+      "D": "Sunday",
+      "E": "Monday"
+    },
+    "correct_answer": "B",
+    "solution": "31 December is 364 days after 1 January. 364 days are exactly 52 weeks, so it is also a Friday.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "364 days are exactly 52 weeks, so the day of the week does not change."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Saturday would be 365 days later, but 31 December is 364 days after 1 January."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "364 days are exactly 52 weeks."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "From 1 January to 31 December there are 364 days: 52 whole weeks."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d4-2",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Three brothers are 5, 8 and 11 years old. In how many years will their ages add up to 60?",
+    "options": {
+      "A": "13",
+      "B": "20",
+      "C": "12",
+      "D": "36",
+      "E": "60"
+    },
+    "correct_answer": "C",
+    "solution": "Now their ages add up to 24. Every year the sum grows by 3. It must grow by 60 - 24 = 36, which takes 36 ÷ 3 = 12 years.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "In 13 years the sum would be 24 + 39 = 63."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "You divided 60 by 3. Start from the sum now, 24."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "36 is how much the sum must grow. Each year it grows by 3."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "60 is the sum they must reach."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d4-3",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "A month has 5 Fridays and 5 Saturdays, but only 4 Thursdays and 4 Sundays. What day of the week is the 1st of this month?",
+    "options": {
+      "A": "Thursday",
+      "B": "Saturday",
+      "C": "Sunday",
+      "D": "Friday",
+      "E": "Monday"
+    },
+    "correct_answer": "D",
+    "solution": "A month is 4 full weeks plus 0 to 3 extra days, and only the days of the week of the extra days appear 5 times. Here only Friday and Saturday appear 5 times, so the month has 30 days and starts on a Friday.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "If the 1st were a Thursday, there would be 5 Thursdays."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "If the 1st were a Saturday, there would be 5 Sundays instead of 5 Fridays."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "If the 1st were a Sunday, there would be 5 Sundays."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "If the 1st were a Monday, Friday and Saturday could not both appear 5 times."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d4-4",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Masha's grandma is 7 times as old as Masha. In 5 years she will be 5 times as old as Masha. How old is Masha now?",
+    "options": {
+      "A": "5",
+      "B": "15",
+      "C": "60",
+      "D": "70",
+      "E": "10"
+    },
+    "correct_answer": "E",
+    "solution": "Try Masha's age. If she is 10, Grandma is 70. In 5 years Masha is 15 and Grandma is 75, and 75 = 5 × 15. So Masha is 10.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "5 is the number of years."
+      },
+      "B": {
+        "trap": "answered_other_question",
+        "text": "15 is Masha's age in 5 years."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "60 is how many years older Grandma is."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "70 is Grandma's age now."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d4-5",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "School holidays start on Saturday, 26 October, and last 9 days, counting the first day. October has 31 days. On which day do the holidays end?",
+    "options": {
+      "A": "Sunday, 3 November",
+      "B": "Saturday, 2 November",
+      "C": "Sunday, 4 November",
+      "D": "Monday, 4 November",
+      "E": "Saturday, 26 October"
+    },
+    "correct_answer": "A",
+    "solution": "The holidays are 26, 27, 28, 29, 30 and 31 October, then 1, 2 and 3 November: 9 days. 26 October is a Saturday, so 2 November is a Saturday too and 3 November is a Sunday.",
+    "distractors": {
+      "B": {
+        "trap": "off_by_one",
+        "text": "That is only the 8th day of the holidays."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "October has 31 days, so the 9th day is 3 November."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "That would be the 10th day of the holidays."
+      },
+      "E": {
+        "trap": "answered_other_question",
+        "text": "That is when the holidays start."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d5-1",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "1 January 2026 is a Thursday. The years 2026 and 2027 have 365 days each, and 2028 is a leap year with 366 days. What day of the week is 1 January 2029?",
+    "options": {
+      "A": "Sunday",
+      "B": "Tuesday",
+      "C": "Monday",
+      "D": "Wednesday",
+      "E": "Thursday"
+    },
+    "correct_answer": "C",
+    "solution": "365 days are 52 weeks and 1 day, and 366 days are 52 weeks and 2 days. From 1 January 2026 to 1 January 2029 the day moves on 1 + 1 + 2 = 4 days: Friday, Saturday, Sunday, Monday.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "2028 is a leap year, so it moves the day by 2, not 1."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "The day moves by 1 + 1 + 2 = 4, not 5."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Only 2028 is a leap year; 2026 and 2027 move the day by 1 each."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "365 days are 52 weeks and 1 day, so the day of the week changes every year."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d5-2",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "A boy is as many months old as his grandfather is years old. Together they are 65 years old. How old is the boy in years?",
+    "options": {
+      "A": "6",
+      "B": "12",
+      "C": "13",
+      "D": "5",
+      "E": "60"
+    },
+    "correct_answer": "D",
+    "solution": "A year has 12 months, so the grandfather is 12 times as old as the boy. Their ages are 1 part and 12 parts, 13 parts in all. 65 ÷ 13 = 5. The boy is 5 and the grandfather is 60.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "If the boy were 6, the grandfather would be 72 and together they would be 78."
+      },
+      "B": {
+        "trap": "time_unit_mixup",
+        "text": "12 is how many months are in a year, not the boy's age."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "13 is the number of equal parts, not the age."
+      },
+      "E": {
+        "trap": "answered_other_question",
+        "text": "60 is the grandfather's age."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d5-3",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "In some year, 10 March is a Tuesday. March has 31 days and April has 30. What day of the week is 10 May of the same year?",
+    "options": {
+      "A": "Saturday",
+      "B": "Monday",
+      "C": "Tuesday",
+      "D": "Thursday",
+      "E": "Sunday"
+    },
+    "correct_answer": "E",
+    "solution": "From 10 March to 10 April is 31 days, and from 10 April to 10 May is 30 days: 61 days. 56 days are 8 weeks, so 10 May is 5 days after Tuesday: Sunday.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "61 days are 8 weeks and 5 days, not 4 days."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "April has 30 days, not 31."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "61 days are not a whole number of weeks."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You moved 2 days for the 2 months. Count all 61 days."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d5-4",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Four children were born exactly one year apart. Their ages now add up to 42. How old is the oldest child?",
+    "options": {
+      "A": "12",
+      "B": "9",
+      "C": "10",
+      "D": "11",
+      "E": "13"
+    },
+    "correct_answer": "A",
+    "solution": "If all four were as old as the youngest, the sum would be 42 - (1 + 2 + 3) = 36, so the youngest is 9. The others are 10, 11 and 12. The oldest is 12.",
+    "distractors": {
+      "B": {
+        "trap": "answered_other_question",
+        "text": "9 is the youngest child."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You shared 42 equally among 4 children, but their ages are different."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "11 is the second oldest child."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "If the oldest were 13, the ages 10, 11, 12 and 13 would add up to 46."
+      }
+    }
+  },
+  {
+    "id": "cal-34-d5-5",
+    "topic": "time.calendar",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "In a leap year of 366 days, 1 January is a Saturday. How many Saturdays are there in this year?",
+    "options": {
+      "A": "51",
+      "B": "53",
+      "C": "52",
+      "D": "54",
+      "E": "366"
+    },
+    "correct_answer": "B",
+    "solution": "366 days are 52 weeks and 2 days. The 52 weeks hold 52 Saturdays, and the 2 extra days at the end are a Saturday and a Sunday. 52 + 1 = 53.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "52 full weeks already give 52 Saturdays."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "2 days are left after 52 weeks, and one of them is a Saturday."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "Only one of the two extra days is a Saturday."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "366 is the number of days."
+      }
+    }
+  }
+]

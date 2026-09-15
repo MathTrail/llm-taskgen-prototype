@@ -1,0 +1,1702 @@
+[
+  {
+    "id": "par-12-d1-1",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "Which of these numbers is even?",
+    "options": {
+      "A": "7",
+      "B": "12",
+      "C": "9",
+      "D": "15",
+      "E": "21"
+    },
+    "correct_answer": "B",
+    "solution": "Even numbers end in 0, 2, 4, 6 or 8. Only 12 ends in 2, so 12 is even.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "7 is odd: 7 things cannot all be put into pairs."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "9 is odd: it ends in 9."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "15 is odd: it ends in 5."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "21 is odd: it ends in 1."
+      }
+    }
+  },
+  {
+    "id": "par-12-d1-2",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "Beads on a string go red, blue, red, blue, and so on. The first bead is red. What colour is the 9th bead?",
+    "options": {
+      "A": "blue",
+      "B": "green",
+      "C": "red",
+      "D": "red or blue",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "C",
+    "solution": "The beads in odd places, the 1st, 3rd, 5th, 7th and 9th, are red. So the 9th bead is red.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "Blue beads are in even places: 2nd, 4th, 6th, 8th. 9 is odd."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "There are only red and blue beads."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "The pattern tells exactly which one: odd places are red."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The pattern repeats, so every place has a known colour."
+      }
+    }
+  },
+  {
+    "id": "par-12-d1-3",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "9 children want to stand in pairs. How many children are left without a pair?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "4",
+      "D": "1",
+      "E": "9"
+    },
+    "correct_answer": "D",
+    "solution": "4 pairs use 8 children. 9 - 8 = 1 child is left without a pair.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "9 is odd, so one child is always left over."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "2 children would make one more pair."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "4 is the number of pairs."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "9 is the number of children."
+      }
+    }
+  },
+  {
+    "id": "par-12-d1-4",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "A lamp is off. Masha presses its switch again and again. After which press is the lamp on?",
+    "options": {
+      "A": "2nd",
+      "B": "4th",
+      "C": "6th",
+      "D": "8th",
+      "E": "9th"
+    },
+    "correct_answer": "E",
+    "solution": "The 1st press turns the lamp on, the 2nd turns it off, the 3rd on, and so on. After an odd number of presses it is on. Only 9 is odd.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "After 2 presses the lamp is off again."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "After 4 presses the lamp is off: every second press turns it off."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "6 is even, so after 6 presses the lamp is off."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "8 is even, so after 8 presses the lamp is off."
+      }
+    }
+  },
+  {
+    "id": "par-12-d1-5",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "The houses on one side of a street have odd numbers: 1, 3, 5 and so on. What is the number of the 6th house?",
+    "options": {
+      "A": "11",
+      "B": "6",
+      "C": "10",
+      "D": "12",
+      "E": "13"
+    },
+    "correct_answer": "A",
+    "solution": "The houses are numbered 1, 3, 5, 7, 9, 11. The 6th house is number 11.",
+    "distractors": {
+      "B": {
+        "trap": "number_from_text",
+        "text": "6 is the place of the house in the row, not its number."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "The houses on this side have odd numbers, and 10 is even."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "12 is even, and this side has odd numbers."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "13 is the 7th house: 1, 3, 5, 7, 9, 11, 13."
+      }
+    }
+  },
+  {
+    "id": "par-12-d2-1",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Ann writes all the even numbers from 2 to 20, including 2 and 20. How many numbers does she write?",
+    "options": {
+      "A": "9",
+      "B": "11",
+      "C": "10",
+      "D": "18",
+      "E": "20"
+    },
+    "correct_answer": "C",
+    "solution": "The numbers are 2, 4, 6, 8, 10, 12, 14, 16, 18 and 20. That is 10 numbers.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "Count them again, from 2 up to 20: there are 10."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Only even numbers count: 2, 4, ..., 20 are 10 numbers."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You took 2 from 20. Count the numbers instead."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "20 is the last number, not how many numbers there are."
+      }
+    }
+  },
+  {
+    "id": "par-12-d2-2",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "10 children stand in a circle: a boy, a girl, a boy, a girl, and so on all the way round. How many girls are there?",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "10",
+      "D": "5",
+      "E": "20"
+    },
+    "correct_answer": "D",
+    "solution": "Boys and girls take turns, so half of the children are girls: 10 ÷ 2 = 5.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "Boys and girls take turns, so there are as many girls as boys: 5 each."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "In a circle of 10 children taking turns there are 5 girls and 5 boys."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "10 is the number of all children."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You doubled 10. Half of the children are girls."
+      }
+    }
+  },
+  {
+    "id": "par-12-d2-3",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "A frog starts on stone 0 and always jumps 2 stones forward: 0, 2, 4, and so on. On which of these stones can it land?",
+    "options": {
+      "A": "7",
+      "B": "9",
+      "C": "15",
+      "D": "17",
+      "E": "12"
+    },
+    "correct_answer": "E",
+    "solution": "The frog lands only on even stones: 0, 2, 4, 6, 8, 10, 12, ... Only 12 is even.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "7 is odd, and the frog lands only on even stones."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "9 is odd, and the frog lands only on even stones."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "15 is odd, and the frog lands only on even stones."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "17 is odd, and the frog lands only on even stones."
+      }
+    }
+  },
+  {
+    "id": "par-12-d2-4",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Masha has some sweets. She can share them equally between 2 friends, and also equally between 5 friends, with none left over. How many sweets can she have?",
+    "options": {
+      "A": "20",
+      "B": "12",
+      "C": "15",
+      "D": "18",
+      "E": "25"
+    },
+    "correct_answer": "A",
+    "solution": "The number must split into 2 equal parts, so it is even, and into 5 equal parts, so it ends in 0 or 5. Only 20 does both.",
+    "distractors": {
+      "B": {
+        "trap": "ignored_condition",
+        "text": "12 cannot be shared equally between 5 friends."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "15 is odd, so it cannot be shared equally between 2 friends."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "18 cannot be shared equally between 5 friends."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "25 is odd, so it cannot be shared equally between 2 friends."
+      }
+    }
+  },
+  {
+    "id": "par-12-d2-5",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Flags hang in a row: red, white, red, white, and so on. The first flag and the last flag are both red. How many flags can there be?",
+    "options": {
+      "A": "8",
+      "B": "11",
+      "C": "10",
+      "D": "12",
+      "E": "14"
+    },
+    "correct_answer": "B",
+    "solution": "Red flags are in odd places: 1st, 3rd, 5th and so on. The last flag is red, so its place is odd. Only 11 is odd.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "With 8 flags the last one would be white."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "With 10 flags the last one would be white."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "With 12 flags the last one would be white."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "With 14 flags the last one would be white."
+      }
+    }
+  },
+  {
+    "id": "par-12-d3-1",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Lena goes to the pool every second day: on 1 March, 3 March, 5 March and so on. On which of these days does she go to the pool?",
+    "options": {
+      "A": "2 March",
+      "B": "10 March",
+      "C": "20 March",
+      "D": "15 March",
+      "E": "28 March"
+    },
+    "correct_answer": "D",
+    "solution": "She goes on odd dates: 1, 3, 5, ..., 13, 15. Only 15 is odd.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "She goes only on odd dates, and 2 is even."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "She goes only on odd dates, and 10 is even."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "She goes only on odd dates, and 20 is even."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "She goes only on odd dates, and 28 is even."
+      }
+    }
+  },
+  {
+    "id": "par-12-d3-2",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "15 children stand in a row. Boys and girls take turns, and the first child is a boy. How many boys are there?",
+    "options": {
+      "A": "7",
+      "B": "9",
+      "C": "15",
+      "D": "16",
+      "E": "8"
+    },
+    "correct_answer": "E",
+    "solution": "Boys stand in the odd places: 1, 3, 5, ..., 15. That is 8 places, so there are 8 boys.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "The row starts and ends with a boy, so there is one more boy than girls."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Boys stand in places 1, 3, ..., 15: that is 8 places, not 9."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "15 is the number of all children."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "16 is more than the number of children in the row."
+      }
+    }
+  },
+  {
+    "id": "par-12-d3-3",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "20 lockers are numbered from 1 to 20, and all of them are closed. Anna opens every locker with an even number. How many lockers stay closed?",
+    "options": {
+      "A": "10",
+      "B": "9",
+      "C": "11",
+      "D": "19",
+      "E": "20"
+    },
+    "correct_answer": "A",
+    "solution": "The even numbers from 1 to 20 are 2, 4, ..., 20: 10 lockers. The other 10 lockers stay closed.",
+    "distractors": {
+      "B": {
+        "trap": "off_by_one",
+        "text": "The odd lockers are 1, 3, ..., 19: there are 10 of them."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Half of the 20 lockers are odd: 10, not 11."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "19 is the number of the last odd locker, not how many lockers stay closed."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "20 is the number of all lockers."
+      }
+    }
+  },
+  {
+    "id": "par-12-d3-4",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Sasha has only 2-cent coins. Which of these amounts can he pay exactly?",
+    "options": {
+      "A": "7 cents",
+      "B": "16 cents",
+      "C": "11 cents",
+      "D": "15 cents",
+      "E": "19 cents"
+    },
+    "correct_answer": "B",
+    "solution": "Any number of 2-cent coins makes an even amount: 2, 4, 6, and so on. Only 16 is even.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "2-cent coins always make an even amount, and 7 is odd."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "2-cent coins always make an even amount, and 11 is odd."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "2-cent coins always make an even amount, and 15 is odd."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "2-cent coins always make an even amount, and 19 is odd."
+      }
+    }
+  },
+  {
+    "id": "par-12-d3-5",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Ann, Ben and Kim throw a ball to each other in turn: Ann to Ben, Ben to Kim, Kim to Ann, and so on. Ann makes the 1st throw. Who makes the 10th throw?",
+    "options": {
+      "A": "Ben",
+      "B": "Kim",
+      "C": "Ann",
+      "D": "Ann or Ben",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "C",
+    "solution": "The throwers go Ann, Ben, Kim, Ann, Ben, Kim, and so on. Ann makes the 1st, 4th, 7th and 10th throws.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "Ben makes the 2nd, 5th, 8th and 11th throws."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Kim makes the 3rd, 6th and 9th throws."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "The order repeats every 3 throws, so the 10th thrower is known exactly."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The order repeats every 3 throws."
+      }
+    }
+  },
+  {
+    "id": "par-12-d4-1",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Beads on a string go red, red, blue, red, red, blue, and so on. What colour is the 20th bead?",
+    "options": {
+      "A": "blue",
+      "B": "green",
+      "C": "red or blue",
+      "D": "It is impossible to tell",
+      "E": "red"
+    },
+    "correct_answer": "E",
+    "solution": "The pattern repeats every 3 beads. The 18th bead ends a group, so the 19th and 20th beads are the first two of a new group: red, red.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "The blue beads are the 3rd, 6th, ..., 18th and 21st."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "There are only red and blue beads."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "The pattern tells exactly: the 20th bead is red."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "The pattern repeats every 3 beads."
+      }
+    }
+  },
+  {
+    "id": "par-12-d4-2",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Tom writes the numbers 1, 2, 3 and so on up to 15. How many odd numbers does he write?",
+    "options": {
+      "A": "8",
+      "B": "7",
+      "C": "9",
+      "D": "15",
+      "E": "30"
+    },
+    "correct_answer": "A",
+    "solution": "The odd numbers are 1, 3, 5, 7, 9, 11, 13 and 15. That is 8 numbers.",
+    "distractors": {
+      "B": {
+        "trap": "off_by_one",
+        "text": "Both 1 and 15 are odd: there are 8 odd numbers."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "List them: 1, 3, 5, 7, 9, 11, 13, 15."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "15 is the last number."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You doubled 15."
+      }
+    }
+  },
+  {
+    "id": "par-12-d4-3",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Children stand in a circle holding hands. Boys and girls take turns all the way round, so every boy stands between two girls and every girl between two boys. How many children can there be?",
+    "options": {
+      "A": "7",
+      "B": "12",
+      "C": "9",
+      "D": "11",
+      "E": "13"
+    },
+    "correct_answer": "B",
+    "solution": "Going round the circle, the children are boy, girl, boy, girl, ..., and the last child is next to the first. So there are as many boys as girls, and the number of children is even. Only 12 is even.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "With 7 children, two children of the same kind would stand together somewhere."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "With 9 children, two children of the same kind would stand together somewhere."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "With 11 children, two children of the same kind would stand together somewhere."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "With 13 children, two children of the same kind would stand together somewhere."
+      }
+    }
+  },
+  {
+    "id": "par-12-d4-4",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "3 coins lie heads up. In each move Kate turns over exactly one coin. After which of these numbers of moves can all three coins be tails up?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "5",
+      "D": "6",
+      "E": "8"
+    },
+    "correct_answer": "C",
+    "solution": "Each move changes the number of heads by one, from odd to even or from even to odd. At the start there are 3 heads, an odd number. To reach 0 heads, an even number, she needs an odd number of moves, and at least 3. Only 5 works.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "2 moves are too few: each of the 3 coins must be turned."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "After an even number of moves the number of heads is still odd."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "6 is even, so after 6 moves the number of heads is still odd."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "8 is even, so after 8 moves the number of heads is still odd."
+      }
+    }
+  },
+  {
+    "id": "par-12-d4-5",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Which of these numbers can be the sum of 4 odd numbers?",
+    "options": {
+      "A": "17",
+      "B": "19",
+      "C": "21",
+      "D": "22",
+      "E": "23"
+    },
+    "correct_answer": "D",
+    "solution": "Two odd numbers add up to an even number. So 4 odd numbers make two even sums, and their total is even. Only 22 is even, and it works: 1 + 3 + 7 + 11 = 22.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "The sum of 4 odd numbers is even, and 17 is odd."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "The sum of 4 odd numbers is even, and 19 is odd."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "The sum of 4 odd numbers is even, and 21 is odd."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "The sum of 4 odd numbers is even, and 23 is odd."
+      }
+    }
+  },
+  {
+    "id": "par-12-d5-1",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Kolya writes the numbers 1 to 10 in a row and puts a plus or a minus sign between every two neighbours. Which of these results can he get?",
+    "options": {
+      "A": "5",
+      "B": "0",
+      "C": "2",
+      "D": "4",
+      "E": "10"
+    },
+    "correct_answer": "A",
+    "solution": "1 + 2 + ... + 10 = 55 is odd. Turning a plus into a minus takes that number away twice, and taking away an even amount does not change odd into even. So the result is always odd. Only 5 is odd, and it works: 1 + 2 + 3 + 4 + 5 - 6 + 7 + 8 - 9 - 10 = 5.",
+    "distractors": {
+      "B": {
+        "trap": "wrong_parity",
+        "text": "The result is always odd, and 0 is even."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "The result is always odd, and 2 is even."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "The result is always odd, and 4 is even."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "The result is always odd, and 10 is even."
+      }
+    }
+  },
+  {
+    "id": "par-12-d5-2",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "3 glasses stand upside down. In one move you turn over exactly 2 of them. What is the smallest number of moves needed to make all three glasses stand the right way up?",
+    "options": {
+      "A": "1",
+      "B": "It can never be done",
+      "C": "2",
+      "D": "3",
+      "E": "4"
+    },
+    "correct_answer": "B",
+    "solution": "Each move turns 2 glasses, so the number of upside-down glasses changes by 2 or stays the same: it goes 3, 1, 3, 1, ... and is always odd. It can never become 0, so it can never be done.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "One move turns only 2 glasses; the third stays upside down."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "After any number of moves an odd number of glasses is upside down."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "3 moves turn 6 glasses in all, but some glass is turned twice and ends upside down again."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "The number of upside-down glasses is always odd, so it cannot be 0."
+      }
+    }
+  },
+  {
+    "id": "par-12-d5-3",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Kate writes the numbers 1 to 20 on the board. Then again and again she rubs out any two numbers and writes their sum instead, until only one number is left. Is that last number even or odd?",
+    "options": {
+      "A": "odd",
+      "B": "sometimes even, sometimes odd",
+      "C": "even",
+      "D": "It is impossible to tell",
+      "E": "It is always 0"
+    },
+    "correct_answer": "C",
+    "solution": "Writing the sum of two numbers instead of them does not change the total of all numbers on the board. At the start the total is 1 + 2 + ... + 20 = 210. So the last number is 210, which is even.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "The last number is 210, and 210 is even."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "The total never changes, so the last number is always the same: 210."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "The total of all numbers never changes, so you can tell."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "Adding numbers never gives 0 here; the last number is 210."
+      }
+    }
+  },
+  {
+    "id": "par-12-d5-4",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Six children, Ann, Ben, Kim, Dan, Eva and Fay, stand in a circle in this order. Going round the circle and starting with Ben, every second child steps out: first Ben, then Dan, and so on, until one child is left. Who is left?",
+    "options": {
+      "A": "Ann",
+      "B": "Ben",
+      "C": "Kim",
+      "D": "Eva",
+      "E": "Fay"
+    },
+    "correct_answer": "D",
+    "solution": "First Ben, Dan and Fay step out. Then the circle is Ann, Kim, Eva, and the counting goes on: Kim steps out, then Ann. Eva is left.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Ann is the last but one to step out."
+      },
+      "B": {
+        "trap": "answered_other_question",
+        "text": "Ben is the first to step out."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Kim steps out right after Fay."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "Fay steps out in the first round."
+      }
+    }
+  },
+  {
+    "id": "par-12-d5-5",
+    "topic": "parity.alternation",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "In a book, each sheet has two pages: an odd page on the front and the next even page on the back, like pages 7 and 8. Tom tears 3 sheets out of a book of 50 pages. Which of these can be the sum of the 6 page numbers on the torn sheets?",
+    "options": {
+      "A": "60",
+      "B": "80",
+      "C": "90",
+      "D": "100",
+      "E": "77"
+    },
+    "correct_answer": "E",
+    "solution": "The two pages of a sheet, like 7 and 8, always add up to an odd number. Three odd numbers add up to an odd number. Only 77 is odd, and it works: pages 1, 2, 3, 4, 33 and 34 add up to 77.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "The pages of 3 sheets add up to an odd number, and 60 is even."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "The pages of 3 sheets add up to an odd number, and 80 is even."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "The pages of 3 sheets add up to an odd number, and 90 is even."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "The pages of 3 sheets add up to an odd number, and 100 is even."
+      }
+    }
+  },
+  {
+    "id": "par-34-d1-1",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "The sum of two whole numbers is odd. One of them is 14. Which of these can the other number be?",
+    "options": {
+      "A": "6",
+      "B": "10",
+      "C": "20",
+      "D": "13",
+      "E": "28"
+    },
+    "correct_answer": "D",
+    "solution": "An even number plus an even number is even. To get an odd sum with 14, the other number must be odd. Only 13 is odd.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "14 + 6 = 20 is even, not odd."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "14 + 10 = 24 is even, not odd."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "14 + 20 = 34 is even, not odd."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "14 + 28 = 42 is even, not odd."
+      }
+    }
+  },
+  {
+    "id": "par-34-d1-2",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "How many odd numbers are there from 1 to 99, including 1 and 99?",
+    "options": {
+      "A": "49",
+      "B": "51",
+      "C": "98",
+      "D": "99",
+      "E": "50"
+    },
+    "correct_answer": "E",
+    "solution": "The numbers from 1 to 98 make 49 pairs: 1 and 2, 3 and 4, ..., 97 and 98, each with one odd number. Then comes 99, which is odd too. 49 + 1 = 50.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "Do not forget 99 itself."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "There are 49 pairs with one odd number each, plus 99: 50, not 51."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "98 is 99 - 1. Count the odd numbers instead."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "99 is the last number, not how many odd numbers there are."
+      }
+    }
+  },
+  {
+    "id": "par-34-d1-3",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "Beads on a string go red, red, white, red, red, white, and so on. What colour is the 50th bead?",
+    "options": {
+      "A": "red",
+      "B": "white",
+      "C": "green",
+      "D": "red or white",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "A",
+    "solution": "The pattern repeats every 3 beads. 48 beads make 16 full groups, so the 49th and 50th beads start a new group: red, red.",
+    "distractors": {
+      "B": {
+        "trap": "off_by_one",
+        "text": "White beads are in places 3, 6, ..., 48 and 51."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "There are only red and white beads."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "The pattern tells exactly: the 50th bead is red."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The pattern repeats every 3 beads."
+      }
+    }
+  },
+  {
+    "id": "par-34-d1-4",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "Two whole numbers are multiplied, and the answer is odd. What can you say about the two numbers?",
+    "options": {
+      "A": "Both are even",
+      "B": "Both are odd",
+      "C": "One is even and one is odd",
+      "D": "At least one is even",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "B",
+    "solution": "If one of the numbers is even, the product is even: for example 2 × 7 = 14. So both numbers must be odd, like 3 × 5 = 15.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "Two even numbers give an even product, like 2 × 4 = 8."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "An even number times any number is even, like 2 × 3 = 6."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "If one number is even, the product is even."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The odd product tells you: both numbers are odd."
+      }
+    }
+  },
+  {
+    "id": "par-34-d1-5",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "A traffic light shows green, yellow, red, yellow, green, yellow, red, yellow, and so on. What colour does it show the 30th time?",
+    "options": {
+      "A": "green",
+      "B": "red",
+      "C": "yellow",
+      "D": "green or red",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "C",
+    "solution": "The colours repeat every 4 times: green, yellow, red, yellow. Every even-numbered time is yellow, and 30 is even.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "Green is shown the 1st, 5th, 9th, ... times: always an odd time."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "Red is shown the 3rd, 7th, 11th, ... times: always an odd time."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "Every even-numbered time is yellow."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The colours repeat every 4 times."
+      }
+    }
+  },
+  {
+    "id": "par-34-d2-1",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "A pen costs an odd number of cents. Masha buys 7 such pens. Which of these amounts can she pay?",
+    "options": {
+      "A": "42 cents",
+      "B": "56 cents",
+      "C": "70 cents",
+      "D": "84 cents",
+      "E": "63 cents"
+    },
+    "correct_answer": "E",
+    "solution": "7 is odd and the price is odd, and an odd number times an odd number is odd. Only 63 is odd, and it works: 7 pens at 9 cents cost 63 cents.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "7 times an odd price is odd, and 42 is even."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "7 times an odd price is odd, and 56 is even."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "7 times an odd price is odd, and 70 is even."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "7 times an odd price is odd, and 84 is even."
+      }
+    }
+  },
+  {
+    "id": "par-34-d2-2",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "Anya adds up all the odd numbers from 1 to 20. Borya adds up all the even numbers from 1 to 20. How much bigger is Borya's sum?",
+    "options": {
+      "A": "10",
+      "B": "0",
+      "C": "1",
+      "D": "20",
+      "E": "110"
+    },
+    "correct_answer": "A",
+    "solution": "Pair the numbers: 2 is 1 more than 1, 4 is 1 more than 3, and so on up to 20 and 19. There are 10 pairs, so Borya's sum is 10 bigger.",
+    "distractors": {
+      "B": {
+        "trap": "ignored_condition",
+        "text": "Each even number is 1 more than the odd number before it, so the sums are not equal."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "Each pair differs by 1, and there are 10 pairs."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "Each of the 10 pairs differs by 1, not by 2."
+      },
+      "E": {
+        "trap": "answered_other_question",
+        "text": "110 is Borya's sum, not the difference."
+      }
+    }
+  },
+  {
+    "id": "par-34-d2-3",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "15 children stand in a circle holding hands. Can boys and girls take turns all the way round the circle?",
+    "options": {
+      "A": "Yes",
+      "B": "No",
+      "C": "Only if there are 8 girls",
+      "D": "Only if there are 7 girls",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "B",
+    "solution": "If boys and girls take turns all the way round, they come in boy-girl pairs, so the number of children must be even. 15 is odd, so it is not possible.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "In a circle, taking turns needs as many boys as girls, so an even number of children."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "With 8 girls and 7 boys, two girls would stand together somewhere."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "With 7 girls and 8 boys, two boys would stand together somewhere."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "15 is odd, so it is never possible."
+      }
+    }
+  },
+  {
+    "id": "par-34-d2-4",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "7 coins lie heads up. In one move you turn over exactly 2 coins. What is the smallest number of moves needed to make all 7 coins tails up?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "It can never be done",
+      "D": "7",
+      "E": "14"
+    },
+    "correct_answer": "C",
+    "solution": "Each move changes the number of heads by 2 or not at all. It starts at 7, an odd number, so it always stays odd and can never become 0.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "3 moves turn only 6 coins, and the number of heads always stays odd."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "4 moves turn 8 coins in all, so some coin is turned twice and ends heads up."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "The number of heads always stays odd, so it cannot become 0."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You doubled 7. But the number of heads always stays odd."
+      }
+    }
+  },
+  {
+    "id": "par-34-d2-5",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "Masha writes the numbers 1 to 11 in a row and puts a plus or a minus sign between every two neighbours. Which of these results can she get?",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "7",
+      "D": "0",
+      "E": "9"
+    },
+    "correct_answer": "D",
+    "solution": "1 + 2 + ... + 11 = 66 is even. Turning a plus into a minus takes that number away twice, so the result stays even. Only 0 is even, and it works: 1 + 2 - 3 + 4 + 5 + 6 + 7 + 8 - 9 - 10 - 11 = 0.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "The result is always even, and 3 is odd."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "The result is always even, and 5 is odd."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "The result is always even, and 7 is odd."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "The result is always even, and 9 is odd."
+      }
+    }
+  },
+  {
+    "id": "par-34-d3-1",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "Petya added up five odd numbers. Which of these can his answer be?",
+    "options": {
+      "A": "35",
+      "B": "20",
+      "C": "30",
+      "D": "40",
+      "E": "50"
+    },
+    "correct_answer": "A",
+    "solution": "Two odd numbers make an even sum, so four odd numbers make an even sum, and adding a fifth odd number makes it odd. Only 35 is odd.",
+    "distractors": {
+      "B": {
+        "trap": "wrong_parity",
+        "text": "The sum of five odd numbers is odd, and 20 is even."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "The sum of five odd numbers is odd, and 30 is even."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "The sum of five odd numbers is odd, and 40 is even."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "The sum of five odd numbers is odd, and 50 is even."
+      }
+    }
+  },
+  {
+    "id": "par-34-d3-2",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "25 children stand in a line. Boys and girls take turns, and there are more girls than boys. How many girls are there?",
+    "options": {
+      "A": "12",
+      "B": "13",
+      "C": "14",
+      "D": "24",
+      "E": "25"
+    },
+    "correct_answer": "B",
+    "solution": "In a line of 25 children taking turns, the children in places 1, 3, ..., 25 are of one kind: 13 of them. The other 12 are of the other kind. There are more girls, so there are 13 girls.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "12 is the smaller group, but there are more girls than boys."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Places 1, 3, ..., 25 are 13 places, not 14."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "24 is 25 - 1. Count the places 1, 3, ..., 25 instead."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "25 is the number of all children."
+      }
+    }
+  },
+  {
+    "id": "par-34-d3-3",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "The numbers 1 to 100 are written on cards. Ann takes all the cards with odd numbers. Then Ben takes from Ann every card whose number ends in 5. How many cards does Ann have left?",
+    "options": {
+      "A": "10",
+      "B": "45",
+      "C": "40",
+      "D": "50",
+      "E": "90"
+    },
+    "correct_answer": "C",
+    "solution": "There are 50 odd numbers from 1 to 100. The odd numbers that end in 5 are 5, 15, ..., 95: 10 of them. 50 - 10 = 40.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "10 is how many cards Ben takes."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "Ben takes 10 cards, not 5."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "Ann has 50 cards before Ben takes his."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Ann had only the odd cards, 50 of them."
+      }
+    }
+  },
+  {
+    "id": "par-34-d3-4",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "A grasshopper sits at 0 on a number line. It makes 9 jumps, and each jump is 1 step to the left or 1 step to the right. Where can it end up?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "4",
+      "D": "7",
+      "E": "10"
+    },
+    "correct_answer": "D",
+    "solution": "Each jump changes the position from even to odd or from odd to even. After 9 jumps, an odd number, the grasshopper is on an odd number. Only 7 is odd, and it works: 8 jumps to the right and 1 to the left.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "After 9 jumps the grasshopper is on an odd number, and 0 is even."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "After 9 jumps the grasshopper is on an odd number, and 2 is even."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "After 9 jumps the grasshopper is on an odd number, and 4 is even."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "9 jumps of 1 step cannot reach 10."
+      }
+    }
+  },
+  {
+    "id": "par-34-d3-5",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "9 lamps in a row are numbered 1 to 9, and all of them are off. Anna switches every lamp whose number is even. Then Ben switches every lamp whose number can be divided by 3. How many lamps are on now?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "6",
+      "D": "7",
+      "E": "5"
+    },
+    "correct_answer": "E",
+    "solution": "After Anna, lamps 2, 4, 6 and 8 are on. Ben switches lamps 3, 6 and 9: lamps 3 and 9 go on, and lamp 6 goes off. Now lamps 2, 3, 4, 8 and 9 are on: 5 lamps.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "3 is how many lamps Ben switches."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "4 lamps are on after Anna, but Ben switches some lamps too."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "Lamp 6 was switched twice, so it is off again."
+      },
+      "D": {
+        "trap": "double_count",
+        "text": "Lamp 6 was switched by both, so it is off; do not count it at all."
+      }
+    }
+  },
+  {
+    "id": "par-34-d4-1",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "In a group of friends, each friend shook hands with exactly 3 others. Which of these can be the number of friends?",
+    "options": {
+      "A": "5",
+      "B": "8",
+      "C": "7",
+      "D": "9",
+      "E": "11"
+    },
+    "correct_answer": "B",
+    "solution": "Count the hands used: each friend used a hand 3 times, and each handshake uses 2 hands. So 3 × (the number of friends) must be even, and the number of friends must be even. Only 8 is even, and it works: 8 friends in a circle each shake hands with both neighbours and with the friend opposite.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "3 × 5 = 15 hand uses cannot make whole handshakes of 2 hands."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "3 × 7 = 21 hand uses cannot make whole handshakes of 2 hands."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "3 × 9 = 27 hand uses cannot make whole handshakes of 2 hands."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "3 × 11 = 33 hand uses cannot make whole handshakes of 2 hands."
+      }
+    }
+  },
+  {
+    "id": "par-34-d4-2",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "5 coins lie heads up. In one move you turn over exactly 3 coins. What is the smallest number of moves needed to make all 5 coins tails up?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "5",
+      "E": "It can never be done"
+    },
+    "correct_answer": "C",
+    "solution": "Every coin must be turned an odd number of times, so the total number of turns is odd. Each move gives 3 turns, so the number of moves must be odd. 1 move is too few, but 3 moves work: turn coins 1, 2 and 3, then 1, 2 and 4, then 1, 2 and 5.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "One move turns only 3 of the 5 coins."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "After 2 moves some coin is turned an even number of times and is heads up again."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "5 moves would also work, but 3 moves are already enough."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "It can be done: the number of moves just has to be odd, and 3 moves work."
+      }
+    }
+  },
+  {
+    "id": "par-34-d4-3",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "The numbers 1 to 20 are written on the board. In one step you rub out two numbers and write their difference, the bigger minus the smaller. After 19 steps one number is left. Which of these can it be?",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "5",
+      "D": "2",
+      "E": "7"
+    },
+    "correct_answer": "D",
+    "solution": "When two numbers are replaced by their difference, the total of all numbers on the board goes down by twice the smaller number, which is an even amount. So an even total stays even. At the start the total is 210, which is even, so the last number is even. Only 2 is even.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "The last number is always even, and 1 is odd."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "The last number is always even, and 3 is odd."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "The last number is always even, and 5 is odd."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "The last number is always even, and 7 is odd."
+      }
+    }
+  },
+  {
+    "id": "par-34-d4-4",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "12 children stand in a circle and are numbered 1 to 12 in order. The ball starts with child 1 and is always passed 4 places on: from 1 to 5, from 5 to 9, and so on. How many different children hold the ball before it comes back to child 1, counting child 1?",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "12",
+      "D": "48",
+      "E": "3"
+    },
+    "correct_answer": "E",
+    "solution": "The ball goes from 1 to 5, then to 9, and 4 places on from 9 is child 1 again. So only 3 children hold it.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "4 is how many places the ball moves each time."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "You halved 12. Follow the ball: 1, 5, 9, then back to 1."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "The ball comes back to child 1 before reaching everyone."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 12 by 4."
+      }
+    }
+  },
+  {
+    "id": "par-34-d4-5",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Tom wants to split a set of number cards into two piles with equal sums. Which of these sets can he split?",
+    "options": {
+      "A": "cards 1 to 8",
+      "B": "cards 1 to 5",
+      "C": "cards 1 to 6",
+      "D": "cards 1 to 9",
+      "E": "cards 1 to 10"
+    },
+    "correct_answer": "A",
+    "solution": "Two equal piles need an even total. The totals are 15, 21, 36, 45 and 55. Only 36 is even, and cards 1 to 8 can really be split: 1, 2, 7, 8 and 3, 4, 5, 6 both add up to 18.",
+    "distractors": {
+      "B": {
+        "trap": "wrong_parity",
+        "text": "Cards 1 to 5 add up to 15, which is odd, so two equal piles are impossible."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "Cards 1 to 6 add up to 21, which is odd, so two equal piles are impossible."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "Cards 1 to 9 add up to 45, which is odd, so two equal piles are impossible."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "Cards 1 to 10 add up to 55, which is odd, so two equal piles are impossible."
+      }
+    }
+  },
+  {
+    "id": "par-34-d5-1",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "6 glasses stand in a row, all upside down. In one move you turn over exactly 4 of them. What is the smallest number of moves needed to make all 6 glasses stand the right way up?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4",
+      "E": "It can never be done"
+    },
+    "correct_answer": "C",
+    "solution": "Every glass must be turned an odd number of times. In 2 moves each glass is turned at most twice, so every glass would be turned exactly once: that is only 6 turns, but 2 moves make 8. So 2 moves are not enough. 3 moves work: turn glasses 1, 2, 3, 4, then 1, 2, 3, 5, then 1, 2, 3, 6.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "One move turns only 4 of the 6 glasses."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "In 2 moves some glass is turned twice and ends upside down again."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "4 moves are not needed: 3 moves already work."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "It can be done: 3 moves turn glasses 1, 2 and 3 three times and the others once."
+      }
+    }
+  },
+  {
+    "id": "par-34-d5-2",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "In a class, every pupil has an odd number of friends in the class, and friendship always goes both ways. Which of these can be the number of pupils in the class?",
+    "options": {
+      "A": "21",
+      "B": "23",
+      "C": "25",
+      "D": "26",
+      "E": "27"
+    },
+    "correct_answer": "D",
+    "solution": "Add up the numbers of friends of all pupils: each friendship is counted twice, so the total is even. An odd number of odd numbers adds up to an odd total, so the number of pupils must be even. Only 26 is even, and it works: the pupils can be friends in 13 pairs, one friend each.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "21 odd numbers of friends add up to an odd total, but each friendship is counted twice, so the total must be even."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "23 odd numbers of friends add up to an odd total, but the total must be even."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "25 odd numbers of friends add up to an odd total, but the total must be even."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "27 odd numbers of friends add up to an odd total, but the total must be even."
+      }
+    }
+  },
+  {
+    "id": "par-34-d5-3",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Vera writes the numbers 1 to 9 in a row and puts a plus or a minus sign between every two neighbours. Which of these results can she get?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "4",
+      "D": "6",
+      "E": "3"
+    },
+    "correct_answer": "E",
+    "solution": "1 + 2 + ... + 9 = 45 is odd, and turning a plus into a minus takes that number away twice, so the result is always odd. Only 3 is odd, and it works: 1 + 2 + 3 - 4 + 5 + 6 + 7 - 8 - 9 = 3.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "The result is always odd, and 0 is even."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "The result is always odd, and 2 is even."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "The result is always odd, and 4 is even."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "The result is always odd, and 6 is even."
+      }
+    }
+  },
+  {
+    "id": "par-34-d5-4",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "The digits 1, 2, 3, 4, 5 and 6 are written in some order. Kolya adds the digits in the 1st, 3rd and 5th places and takes away the digits in the 2nd, 4th and 6th places. Which of these results can he get?",
+    "options": {
+      "A": "5",
+      "B": "0",
+      "C": "2",
+      "D": "4",
+      "E": "8"
+    },
+    "correct_answer": "A",
+    "solution": "All six digits add up to 21, which is odd. The result is 21 minus twice the digits taken away, so it is always odd. Only 5 is odd, and it works: 6 - 1 + 4 - 2 + 3 - 5 = 5.",
+    "distractors": {
+      "B": {
+        "trap": "wrong_parity",
+        "text": "The result is always odd, and 0 is even."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "The result is always odd, and 2 is even."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "The result is always odd, and 4 is even."
+      },
+      "E": {
+        "trap": "wrong_parity",
+        "text": "The result is always odd, and 8 is even."
+      }
+    }
+  },
+  {
+    "id": "par-34-d5-5",
+    "topic": "parity.alternation",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Anya and Borya have a chocolate bar of 4 rows with 6 squares in each row. They take turns: in each turn a player breaks one piece into two smaller pieces along a line between the squares. The player who cannot make a move loses. Anya goes first. Who wins?",
+    "options": {
+      "A": "Borya always wins",
+      "B": "Anya always wins",
+      "C": "It depends on how they play",
+      "D": "Nobody wins",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "B",
+    "solution": "Every break makes one more piece. The game starts with 1 piece and ends with 24 single squares, so there are always exactly 23 breaks, however they play. 23 is odd, so Anya makes the 1st, 3rd, ..., 23rd breaks: she makes the last move, and then Borya cannot move.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_parity",
+        "text": "There are 23 breaks, an odd number, so the first player makes the last break."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "The number of breaks is always 23, whatever they do."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "The game always ends: after 23 breaks one player cannot move and loses."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Count the breaks: there are always 23."
+      }
+    }
+  }
+]

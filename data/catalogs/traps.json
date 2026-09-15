@@ -22,5 +22,37 @@
   {
     "id": "stopped_early",
     "description": "Stopped at an intermediate result instead of finishing the solution."
+  },
+  {
+    "id": "wrong_operation",
+    "description": "Used the wrong operation: added instead of subtracting, multiplied instead of dividing."
+  },
+  {
+    "id": "reversed_relation",
+    "description": "Reversed a comparison: taller and shorter, before and after, more and less."
+  },
+  {
+    "id": "best_case_not_worst",
+    "description": "Counted the lucky case instead of the worst case when the answer must be certain."
+  },
+  {
+    "id": "trusted_statement",
+    "description": "Took a statement as true without checking whether the speaker may be lying."
+  },
+  {
+    "id": "time_unit_mixup",
+    "description": "Mixed up hours and minutes, or counted 100 minutes in an hour."
+  },
+  {
+    "id": "number_from_text",
+    "description": "Answered with a number from the question without computing anything."
+  },
+  {
+    "id": "wrong_parity",
+    "description": "Got the parity wrong, for example thought that odd plus odd is odd."
+  },
+  {
+    "id": "ignored_condition",
+    "description": "Ignored one of the conditions, such as \"different\", \"exactly once\" or \"at both ends\"."
   }
 ]

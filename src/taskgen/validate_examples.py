@@ -1,7 +1,7 @@
-"""Validate the reference tasks in data/examples/tasks.json against schemas/example_task.json (T10, SPEC 4.3).
+"""Validate the reference tasks in data/examples/<topic>.json against schemas/example_task.json (T10, T11, SPEC 4.3).
 
 Run: uv run python -m taskgen.validate_examples. Exit code 1 if any task is invalid.
-On success it prints how many tasks each topic has, towards the goal of 3 per topic (T11).
+On success it prints, per topic and grade level, how many tasks each difficulty 1-5 has (target: 5 per cell, T11).
 """
 
 import json
@@ -13,17 +13,33 @@ from jsonschema import Draft202012Validator
 from taskgen import ROOT
 from taskgen.catalogs import load_catalog
 
-EXAMPLES = ROOT / "data" / "examples" / "tasks.json"
+EXAMPLES_DIR = ROOT / "data" / "examples"
 TASK_SCHEMA = json.loads((ROOT / "schemas" / "example_task.json").read_text(encoding="utf-8"))
 LETTERS = {"A", "B", "C", "D", "E"}
-TASKS_PER_TOPIC = 3
+DIFFICULTIES = range(1, 6)
+TASKS_PER_CELL = 5
+
+
+def load_example_files() -> dict[str, object]:
+    """Parsed content of every file in data/examples/, keyed by file name; one file per topic."""
+    files = {}
+    for path in sorted(EXAMPLES_DIR.glob("*.json")):
+        try:
+            files[path.name] = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as error:
+            raise ValueError(f"{path.name}: invalid JSON: {error}") from error
+    return files
 
 
 def load_examples() -> list[dict]:
-    return json.loads(EXAMPLES.read_text(encoding="utf-8"))
+    """All reference tasks from data/examples/, in file order."""
+    tasks = []
+    for content in load_example_files().values():
+        tasks += content if isinstance(content, list) else [content]
+    return tasks
 
 
-def task_errors(task: object, topic_ids: set[str], trap_ids: set[str]) -> list[str]:
+def task_errors(task: object, topic_levels: dict[str, list[str]], trap_ids: set[str]) -> list[str]:
     """Schema violations and broken option rules of one task; an empty list means the task is valid."""
     errors = [
         f"{'/'.join(map(str, error.absolute_path)) or '(root)'}: {error.message}"
@@ -32,8 +48,12 @@ def task_errors(task: object, topic_ids: set[str], trap_ids: set[str]) -> list[s
     if errors:
         return errors
 
-    if task["topic"] not in topic_ids:
+    if task["topic"] not in topic_levels:
         errors.append(f"topic {task['topic']!r} is not in data/catalogs/topics.json")
+    elif task["grade_level"] not in topic_levels[task["topic"]]:
+        errors.append(
+            f"grade_level {task['grade_level']!r} is not listed for topic {task['topic']!r} in data/catalogs/topics.json"
+        )
 
     options = [text.strip().lower() for text in task["options"].values()]
     if len(set(options)) != len(options):
@@ -51,17 +71,17 @@ def task_errors(task: object, topic_ids: set[str], trap_ids: set[str]) -> list[s
 
 
 def examples_errors(tasks: object) -> list[str]:
-    """Errors of the whole file, each prefixed with the task id or its position."""
+    """Errors of all tasks, each prefixed with the task id or its position."""
     if not isinstance(tasks, list):
         return ["the file must hold a JSON array of tasks"]
 
-    topic_ids = {entry["id"] for entry in load_catalog("topics")}
+    topic_levels = {entry["id"]: entry["grade_levels"] for entry in load_catalog("topics")}
     trap_ids = {entry["id"] for entry in load_catalog("traps")}
     errors, seen = [], set()
     for index, task in enumerate(tasks):
         task_id = task.get("id") if isinstance(task, dict) else None
         name = task_id if isinstance(task_id, str) else f"#{index}"
-        errors += [f"{name}: {error}" for error in task_errors(task, topic_ids, trap_ids)]
+        errors += [f"{name}: {error}" for error in task_errors(task, topic_levels, trap_ids)]
         if isinstance(task_id, str):
             if task_id in seen:
                 errors.append(f"{name}: duplicate id")
@@ -69,24 +89,42 @@ def examples_errors(tasks: object) -> list[str]:
     return errors
 
 
+def placement_errors(files: dict[str, object]) -> list[str]:
+    """Every file holds an array of tasks of the topic it is named after, e.g. counting.gaps.json."""
+    errors = []
+    for name, content in files.items():
+        if not isinstance(content, list):
+            errors.append(f"{name}: the file must hold a JSON array of tasks")
+            continue
+        topic = name.removesuffix(".json")
+        for task in content:
+            if isinstance(task, dict) and task.get("topic") != topic:
+                errors.append(f"{name}: task {task.get('id')!r} has topic {task.get('topic')!r}, expected {topic!r}")
+    return errors
+
+
 def main() -> None:
     try:
-        tasks = load_examples()
-    except json.JSONDecodeError as error:
-        sys.exit(f"{EXAMPLES.relative_to(ROOT)}: invalid JSON: {error}")
+        files = load_example_files()
+    except ValueError as error:
+        sys.exit(str(error))
 
-    errors = examples_errors(tasks)
+    tasks = load_examples()
+    errors = placement_errors(files) + examples_errors(tasks)
     for error in errors:
         print(error)
     if errors:
         sys.exit(1)
 
-    counts = Counter(task["topic"] for task in tasks)
-    drafts = Counter(task["topic"] for task in tasks if task.get("draft"))
-    for topic in (entry["id"] for entry in load_catalog("topics")):
-        note = f" ({drafts[topic]} draft)" if drafts[topic] else ""
-        print(f"{topic}: {counts[topic]}/{TASKS_PER_TOPIC}{note}")
-    print(f"{len(tasks)} tasks OK, {sum(drafts.values())} of them drafts")
+    cells = Counter((task["topic"], task["grade_level"], task["difficulty"]) for task in tasks)
+    print(f"tasks per difficulty {DIFFICULTIES.start}-{DIFFICULTIES.stop - 1}, target {TASKS_PER_CELL} each:")
+    for topic in load_catalog("topics"):
+        levels = [
+            f"{level}: " + " ".join(str(cells[(topic["id"], level, difficulty)]) for difficulty in DIFFICULTIES)
+            for level in topic["grade_levels"]
+        ]
+        print(f"  {topic['id']}  " + "  |  ".join(levels))
+    print(f"{len(tasks)} tasks OK in {len(files)} files")
 
 
 if __name__ == "__main__":

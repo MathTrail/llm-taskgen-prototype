@@ -1,0 +1,1702 @@
+[
+  {
+    "id": "clk-12-d1-1",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "A cartoon starts at 4 o'clock and lasts 1 hour. At what time does it end?",
+    "options": {
+      "A": "1 o'clock",
+      "B": "5 o'clock",
+      "C": "3 o'clock",
+      "D": "4 o'clock",
+      "E": "6 o'clock"
+    },
+    "correct_answer": "B",
+    "solution": "One hour after 4 o'clock it is 5 o'clock.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "1 is how long the cartoon lasts, not a time."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "The cartoon ends after it starts, so the time is later, not earlier."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "4 o'clock is when the cartoon starts."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "1 hour after 4 o'clock is 5 o'clock, not 6."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d1-2",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "Lunch is at 12 o'clock. Tom's walk starts 2 hours before lunch. At what time does the walk start?",
+    "options": {
+      "A": "9 o'clock",
+      "B": "11 o'clock",
+      "C": "10 o'clock",
+      "D": "12 o'clock",
+      "E": "2 o'clock"
+    },
+    "correct_answer": "C",
+    "solution": "11 o'clock is one hour before 12 o'clock, and 10 o'clock is two hours before it.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "9 o'clock is 3 hours before lunch."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "11 o'clock is only 1 hour before lunch."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "12 o'clock is lunch time."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "2 o'clock is 2 hours after lunch. The walk is before lunch."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d1-3",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "A film starts at 3 o'clock and ends at 5 o'clock. How many hours long is the film?",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "5",
+      "D": "2",
+      "E": "8"
+    },
+    "correct_answer": "D",
+    "solution": "From 3 o'clock to 4 o'clock is 1 hour, and from 4 o'clock to 5 o'clock is 1 more hour. That is 2 hours.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "From 3 to 5 o'clock is 2 hours: 3 to 4 and 4 to 5."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "3 o'clock is when the film starts."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "5 o'clock is when the film ends."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You added 3 and 5. Count the hours from 3 to 5."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d1-4",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "It is 7 o'clock. What time will it be in half an hour?",
+    "options": {
+      "A": "6:30",
+      "B": "7:15",
+      "C": "7:50",
+      "D": "8:00",
+      "E": "7:30"
+    },
+    "correct_answer": "E",
+    "solution": "Half an hour is 30 minutes. 30 minutes after 7:00 it is 7:30.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "In half an hour means later, not earlier."
+      },
+      "B": {
+        "trap": "time_unit_mixup",
+        "text": "15 minutes is a quarter of an hour. Half an hour is 30 minutes."
+      },
+      "C": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, not 100, so half an hour is 30 minutes."
+      },
+      "D": {
+        "trap": "time_unit_mixup",
+        "text": "8:00 is a whole hour later. Half an hour is 30 minutes."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d1-5",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "A lesson starts at 10:00 and lasts 45 minutes. At what time does it end?",
+    "options": {
+      "A": "10:45",
+      "B": "9:15",
+      "C": "10:00",
+      "D": "10:15",
+      "E": "11:45"
+    },
+    "correct_answer": "A",
+    "solution": "45 minutes after 10:00 it is 10:45.",
+    "distractors": {
+      "B": {
+        "trap": "reversed_relation",
+        "text": "The lesson ends after it starts, not before."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "10:00 is when the lesson starts."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You added 15 minutes, not 45."
+      },
+      "E": {
+        "trap": "time_unit_mixup",
+        "text": "The lesson lasts 45 minutes, not 1 hour and 45 minutes."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d2-1",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "A bus leaves at 9:30 and arrives at 10:00. How many minutes does the trip take?",
+    "options": {
+      "A": "10",
+      "B": "60",
+      "C": "30",
+      "D": "70",
+      "E": "100"
+    },
+    "correct_answer": "C",
+    "solution": "From 9:30 to 10:00 is half an hour, which is 30 minutes.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "10 is the hour when the bus arrives."
+      },
+      "B": {
+        "trap": "time_unit_mixup",
+        "text": "From 9:30 to 10:00 is half an hour, not a whole hour."
+      },
+      "D": {
+        "trap": "time_unit_mixup",
+        "text": "You took 30 from 100, but an hour has 60 minutes."
+      },
+      "E": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, not 100, and the trip is only half an hour."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d2-2",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Tim went to bed at 9 o'clock in the evening and got up at 7 o'clock in the morning. How many hours did he sleep?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "12",
+      "D": "10",
+      "E": "16"
+    },
+    "correct_answer": "D",
+    "solution": "From 9 in the evening to 12 at midnight is 3 hours. From midnight to 7 in the morning is 7 hours. 3 + 7 = 10 hours.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "You took 7 from 9. Count the hours through midnight."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "3 hours take you only to midnight. Then there are 7 more hours."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "12 hours would be from 9 in the evening to 9 in the morning."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You added 9 and 7. Count the hours from 9 in the evening."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d2-3",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "The clock shows 5:45. What time will it be in 15 minutes?",
+    "options": {
+      "A": "5:30",
+      "B": "5:60",
+      "C": "6:15",
+      "D": "6:45",
+      "E": "6:00"
+    },
+    "correct_answer": "E",
+    "solution": "45 minutes and 15 more minutes make 60 minutes, which is a whole hour. So it will be 6:00.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "In 15 minutes means later, not earlier."
+      },
+      "B": {
+        "trap": "time_unit_mixup",
+        "text": "After 59 minutes a new hour begins, so 5:60 is really 6:00."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You added 30 minutes, not 15."
+      },
+      "D": {
+        "trap": "time_unit_mixup",
+        "text": "You added 1 hour, not 15 minutes."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d2-4",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "A clock strikes once at 1 o'clock, twice at 2 o'clock, 3 times at 3 o'clock, and so on. How many times does it strike at 1, 2, 3 and 4 o'clock altogether?",
+    "options": {
+      "A": "10",
+      "B": "4",
+      "C": "7",
+      "D": "9",
+      "E": "12"
+    },
+    "correct_answer": "A",
+    "solution": "1 + 2 + 3 + 4 = 10 strikes.",
+    "distractors": {
+      "B": {
+        "trap": "number_from_text",
+        "text": "4 is the last hour, not the number of strikes."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "You added only the strikes at 3 and 4 o'clock."
+      },
+      "D": {
+        "trap": "missed_case",
+        "text": "You forgot the 1 strike at 1 o'clock."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 3 by 4. Add 1 + 2 + 3 + 4."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d2-5",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Anna's watch is 10 minutes fast. It shows 8:20. What is the real time?",
+    "options": {
+      "A": "8:00",
+      "B": "8:10",
+      "C": "8:20",
+      "D": "8:30",
+      "E": "9:20"
+    },
+    "correct_answer": "B",
+    "solution": "A fast watch shows a later time than the real one. The real time is 10 minutes earlier: 8:10.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "You took away 20 minutes, not 10."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "8:20 is what the watch shows, not the real time."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "A fast watch is ahead, so the real time is earlier, not later."
+      },
+      "E": {
+        "trap": "time_unit_mixup",
+        "text": "The watch is 10 minutes fast, not 1 hour, and the real time is earlier."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d3-1",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "A cartoon lasts 25 minutes and ends at 5:10. At what time did it start?",
+    "options": {
+      "A": "4:15",
+      "B": "4:55",
+      "C": "4:85",
+      "D": "4:45",
+      "E": "5:35"
+    },
+    "correct_answer": "D",
+    "solution": "From 5:10 go back 10 minutes to 5:00, then 15 more minutes to 4:45. 10 + 15 = 25 minutes.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "4:15 is 55 minutes before 5:10."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "4:55 is only 15 minutes before 5:10."
+      },
+      "C": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, not 100, so there is no 4:85."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "The cartoon started before it ended, so go back, not forward."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d3-2",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Lessons start at 8:30. There are 3 lessons of 40 minutes, with a 10-minute break between every two lessons. At what time does the third lesson end?",
+    "options": {
+      "A": "9:70",
+      "B": "10:00",
+      "C": "10:30",
+      "D": "11:00",
+      "E": "10:50"
+    },
+    "correct_answer": "E",
+    "solution": "Three lessons take 3 × 40 = 120 minutes, and there are 2 breaks between them: 20 minutes. In all 140 minutes, which is 2 hours 20 minutes. 8:30 + 2 hours 20 minutes = 10:50.",
+    "distractors": {
+      "A": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, so there is no 9:70."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "10:00 is when the second lesson ends."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "You forgot the breaks between the lessons."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "There are only 2 breaks between 3 lessons, not 3."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d3-3",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Now it is 11:40. What time was it 50 minutes ago?",
+    "options": {
+      "A": "10:50",
+      "B": "10:10",
+      "C": "10:90",
+      "D": "11:10",
+      "E": "12:30"
+    },
+    "correct_answer": "A",
+    "solution": "Going back 40 minutes from 11:40 gives 11:00. Going back 10 more minutes gives 10:50.",
+    "distractors": {
+      "B": {
+        "trap": "wrong_operation",
+        "text": "10:10 is 90 minutes before 11:40."
+      },
+      "C": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, not 100, so there is no 10:90."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You went back only 30 minutes."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "50 minutes ago means earlier, not later."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d3-4",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "It takes 3 minutes to boil an egg. How many minutes does it take to boil 3 eggs together in one pot?",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "6",
+      "D": "9",
+      "E": "12"
+    },
+    "correct_answer": "B",
+    "solution": "All three eggs boil at the same time, so it still takes 3 minutes.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "You divided 3 by 3. More eggs do not boil faster."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You added 3 and 3. The eggs boil at the same time."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "The eggs boil together in one pot, not one after another."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "The eggs boil together, so the time does not grow."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d3-5",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Kolya walks to school in 20 minutes. He must arrive by 8:15. What is the latest time he can leave home?",
+    "options": {
+      "A": "7:45",
+      "B": "7:95",
+      "C": "7:55",
+      "D": "8:05",
+      "E": "8:35"
+    },
+    "correct_answer": "C",
+    "solution": "Go back 15 minutes from 8:15 to 8:00, then 5 more minutes to 7:55. 15 + 5 = 20 minutes.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "7:45 is 30 minutes before 8:15."
+      },
+      "B": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, not 100, so there is no 7:95."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "8:05 is only 10 minutes before 8:15."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "He must leave before the time he arrives, not after."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d4-1",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Kate's watch is 5 minutes slow, and Tom's watch is 5 minutes fast. Tom's watch shows 3:10. What does Kate's watch show?",
+    "options": {
+      "A": "3:05",
+      "B": "3:10",
+      "C": "3:15",
+      "D": "3:20",
+      "E": "3:00"
+    },
+    "correct_answer": "E",
+    "solution": "Tom's watch is 5 minutes ahead, so the real time is 3:05. Kate's watch is 5 minutes behind the real time: 3:00.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "3:05 is the real time. Kate's watch is 5 minutes behind it."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "3:10 is what Tom's watch shows."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "A slow watch is behind, so Kate's watch shows less than the real time."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "Tom's watch is ahead and Kate's is behind, so Kate's shows 10 minutes less than Tom's, not more."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d4-2",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "A film starts at 6:40 and lasts 1 hour 30 minutes. At what time does it end?",
+    "options": {
+      "A": "8:10",
+      "B": "5:10",
+      "C": "7:10",
+      "D": "7:70",
+      "E": "8:40"
+    },
+    "correct_answer": "A",
+    "solution": "1 hour after 6:40 it is 7:40. 30 minutes later it is 8:10.",
+    "distractors": {
+      "B": {
+        "trap": "reversed_relation",
+        "text": "The film ends after it starts, so count forward."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "You added only the 30 minutes. Add the hour too."
+      },
+      "D": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, so 7:70 is really 8:10."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You added 2 hours, not 1 hour 30 minutes."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d4-3",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "A clock strikes once at 1 o'clock, twice at 2 o'clock, and so on up to 12 times at 12 o'clock. How many times does it strike at 9, 10, 11 and 12 o'clock altogether?",
+    "options": {
+      "A": "4",
+      "B": "42",
+      "C": "21",
+      "D": "33",
+      "E": "108"
+    },
+    "correct_answer": "B",
+    "solution": "9 + 10 + 11 + 12 = 42 strikes.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "4 is how many hours strike, not how many strikes."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "You added only 9 and 12. Add 10 and 11 too."
+      },
+      "D": {
+        "trap": "missed_case",
+        "text": "You forgot the 9 strikes at 9 o'clock."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 9 by 12. Add the four numbers."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d4-4",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Masha started her homework at 4:50 and finished at 6:10. How long did it take?",
+    "options": {
+      "A": "40 minutes",
+      "B": "1 hour 10 minutes",
+      "C": "1 hour 20 minutes",
+      "D": "1 hour 60 minutes",
+      "E": "2 hours 20 minutes"
+    },
+    "correct_answer": "C",
+    "solution": "From 4:50 to 5:00 is 10 minutes. From 5:00 to 6:10 is 1 hour 10 minutes. In all 1 hour 20 minutes.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "You took 10 from 50. Count from 4:50 to 6:10."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "From 5:00 to 6:10 is 1 hour 10 minutes, but she started 10 minutes before 5:00."
+      },
+      "D": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, so 6:10 minus 4:50 is not 1 hour 60 minutes."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "From 4 to 6 would be 2 hours only if she had started at 4:00."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d4-5",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "A train leaves at 11:45. The trip takes 35 minutes. At what time does the train arrive?",
+    "options": {
+      "A": "11:10",
+      "B": "11:80",
+      "C": "12:10",
+      "D": "12:20",
+      "E": "12:35"
+    },
+    "correct_answer": "D",
+    "solution": "15 minutes after 11:45 it is 12:00. The other 20 minutes take it to 12:20. 15 + 20 = 35.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "The train arrives after it leaves, so count forward."
+      },
+      "B": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, so 11:80 is really 12:20."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "12:10 is only 25 minutes after 11:45."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "The 35 minutes are added to 11:45, not to 12:00."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d5-1",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Grandma's clock strikes once at every half hour. At every full hour it strikes as many times as the hour: once at 1 o'clock, twice at 2 o'clock, and so on. How many times does it strike from 1:15 to 3:15?",
+    "options": {
+      "A": "7",
+      "B": "4",
+      "C": "5",
+      "D": "6",
+      "E": "8"
+    },
+    "correct_answer": "A",
+    "solution": "It strikes once at 1:30, twice at 2:00, once at 2:30 and 3 times at 3:00. 1 + 2 + 1 + 3 = 7.",
+    "distractors": {
+      "B": {
+        "trap": "answered_other_question",
+        "text": "4 is how many times the clock rings out, not how many strikes there are."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "You forgot the half-hour strikes at 1:30 and 2:30."
+      },
+      "D": {
+        "trap": "missed_case",
+        "text": "You missed one of the half-hour strikes."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "1 o'clock is before 1:15, so it does not count."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d5-2",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "A merry-go-round ride lasts 5 minutes, and there is a 2-minute break before every next ride. The first ride starts at 3:00. At what time does the fourth ride end?",
+    "options": {
+      "A": "3:05",
+      "B": "3:26",
+      "C": "3:20",
+      "D": "3:21",
+      "E": "3:28"
+    },
+    "correct_answer": "B",
+    "solution": "Four rides take 4 × 5 = 20 minutes, and there are 3 breaks between them: 6 minutes. 3:00 + 26 minutes = 3:26.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "3:05 is when the first ride ends."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "You forgot the breaks between rides."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "3:21 is when the fourth ride starts, not when it ends."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "There are 3 breaks between 4 rides, not 4."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d5-3",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Tom's clock goes 2 minutes too fast every hour. He sets it right at 8:00 in the morning. What does it show when the real time is 12:00 noon?",
+    "options": {
+      "A": "11:52",
+      "B": "12:02",
+      "C": "12:08",
+      "D": "12:10",
+      "E": "12:24"
+    },
+    "correct_answer": "C",
+    "solution": "From 8:00 to 12:00 there are 4 hours. Each hour the clock gets 2 minutes ahead, so it is 8 minutes ahead: 12:08.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "A fast clock is ahead, so it shows more than 12:00."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "2 minutes is for one hour. There are 4 hours."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "From 8:00 to 12:00 there are 4 hours, not 5."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 2 by 12. Count only the hours since 8:00."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d5-4",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "A film started at 5:35 and ended at 7:15. How many minutes long was it?",
+    "options": {
+      "A": "60",
+      "B": "120",
+      "C": "140",
+      "D": "100",
+      "E": "180"
+    },
+    "correct_answer": "D",
+    "solution": "From 5:35 to 6:35 is 60 minutes, and from 6:35 to 7:15 is 40 more. 60 + 40 = 100 minutes.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "From 5:35 to 6:35 is only 60 minutes; the film went on until 7:15."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "7 - 5 = 2 hours, but the minutes matter too."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "It is 2 hours minus 20 minutes, not 2 hours plus 20 minutes."
+      },
+      "E": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, so you cannot just take 535 from 715."
+      }
+    }
+  },
+  {
+    "id": "clk-12-d5-5",
+    "topic": "time.clocks",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Mum puts a cake in the oven at 4:50. It must bake for 1 hour 25 minutes. At what time should she take it out?",
+    "options": {
+      "A": "3:25",
+      "B": "5:15",
+      "C": "5:75",
+      "D": "6:25",
+      "E": "6:15"
+    },
+    "correct_answer": "E",
+    "solution": "1 hour after 4:50 it is 5:50. 10 more minutes give 6:00, and 15 more give 6:15. 10 + 15 = 25 minutes.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "The cake comes out after it goes in, so count forward."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "You added only the 25 minutes. Add the hour too."
+      },
+      "C": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, so 5:75 is really 6:15."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You added 1 hour 35 minutes, not 1 hour 25 minutes."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d1-1",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "A lesson starts at 10:55 and lasts 45 minutes. At what time does it end?",
+    "options": {
+      "A": "10:10",
+      "B": "10:100",
+      "C": "11:00",
+      "D": "11:40",
+      "E": "11:45"
+    },
+    "correct_answer": "D",
+    "solution": "5 minutes after 10:55 it is 11:00. The other 40 minutes take it to 11:40.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "The lesson ends after it starts, so count forward."
+      },
+      "B": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, so 10:100 is not a time."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "11:00 is only 5 minutes after the start."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "11:45 is 50 minutes after 10:55."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d1-2",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "A train leaves at 13:20 and arrives at 15:05 on the same day. How long is the trip?",
+    "options": {
+      "A": "1 hour 15 minutes",
+      "B": "1 hour 85 minutes",
+      "C": "2 hours 15 minutes",
+      "D": "2 hours 45 minutes",
+      "E": "1 hour 45 minutes"
+    },
+    "correct_answer": "E",
+    "solution": "From 13:20 to 15:20 would be 2 hours. The train arrives 15 minutes earlier, so the trip is 1 hour 45 minutes.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "1 hour 15 minutes after 13:20 is only 14:35."
+      },
+      "B": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, so you cannot just take 1320 from 1505."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You took 5 from 20 instead of counting on from 13:20."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "2 hours 45 minutes after 13:20 is 16:05."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d1-3",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "How many minutes are there in two and a half hours?",
+    "options": {
+      "A": "150",
+      "B": "120",
+      "C": "130",
+      "D": "180",
+      "E": "250"
+    },
+    "correct_answer": "A",
+    "solution": "Two hours are 120 minutes and half an hour is 30 minutes. 120 + 30 = 150.",
+    "distractors": {
+      "B": {
+        "trap": "stopped_early",
+        "text": "120 minutes are only the 2 hours. Add the half hour."
+      },
+      "C": {
+        "trap": "time_unit_mixup",
+        "text": "Half an hour is 30 minutes, not 10."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "180 minutes is 3 hours, not two and a half."
+      },
+      "E": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, not 100."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d1-4",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "Masha went to sleep at 21:30 and woke up at 7:00 the next morning. How long did she sleep?",
+    "options": {
+      "A": "8 hours 30 minutes",
+      "B": "9 hours 30 minutes",
+      "C": "9 hours",
+      "D": "10 hours 30 minutes",
+      "E": "14 hours 30 minutes"
+    },
+    "correct_answer": "B",
+    "solution": "From 21:30 to midnight is 2 hours 30 minutes. From midnight to 7:00 is 7 hours. In all 9 hours 30 minutes.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "From 21:30 to midnight is 2 hours 30 minutes, not 1 hour 30 minutes."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "You dropped the half hour: she went to sleep at 21:30."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "From midnight to 7:00 is 7 hours, not 8."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You took 7 from 21. Count forward through midnight."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d1-5",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "A clock strikes once at 1 o'clock, twice at 2 o'clock, and so on up to 12 times at 12 o'clock. How many times does it strike from 1 o'clock to 12 o'clock, including both?",
+    "options": {
+      "A": "12",
+      "B": "66",
+      "C": "78",
+      "D": "77",
+      "E": "144"
+    },
+    "correct_answer": "C",
+    "solution": "1 + 2 + ... + 12 = 78. Pair the numbers: 1 + 12, 2 + 11 and so on give six pairs of 13, and 6 × 13 = 78.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "12 is how many hours strike, not how many strikes."
+      },
+      "B": {
+        "trap": "missed_case",
+        "text": "You forgot the 12 strikes at 12 o'clock."
+      },
+      "D": {
+        "trap": "missed_case",
+        "text": "You forgot the 1 strike at 1 o'clock."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 12 by 12. Add 1 + 2 + ... + 12."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d2-1",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "A watch loses 3 minutes every hour. It was set right at 9:00. What does it show when the real time is 13:00?",
+    "options": {
+      "A": "12:45",
+      "B": "12:57",
+      "C": "13:03",
+      "D": "13:12",
+      "E": "12:48"
+    },
+    "correct_answer": "E",
+    "solution": "From 9:00 to 13:00 there are 4 hours. The watch loses 3 minutes each hour: 12 minutes. It shows 13:00 minus 12 minutes = 12:48.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "From 9:00 to 13:00 there are 4 hours, not 5."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "3 minutes is the loss for one hour. There are 4 hours."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "A watch that loses time is behind, so it shows less than 13:00."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "Losing time means the watch is behind, not ahead."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d2-2",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "A bus leaves every 12 minutes. The first bus leaves at 6:00. At what time does the sixth bus leave?",
+    "options": {
+      "A": "7:00",
+      "B": "6:48",
+      "C": "6:60",
+      "D": "7:12",
+      "E": "7:24"
+    },
+    "correct_answer": "A",
+    "solution": "Between the first and the sixth bus there are 5 gaps of 12 minutes: 60 minutes. So the sixth bus leaves at 7:00.",
+    "distractors": {
+      "B": {
+        "trap": "off_by_one",
+        "text": "6:48 is when the fifth bus leaves."
+      },
+      "C": {
+        "trap": "time_unit_mixup",
+        "text": "60 minutes make a whole hour, so 6:60 is really 7:00."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "Six buses have 5 gaps between them, not 6."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "7:24 is when the eighth bus leaves."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d2-3",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "The clock shows 8:40. What time was it 2 hours 55 minutes ago?",
+    "options": {
+      "A": "5:15",
+      "B": "5:45",
+      "C": "5:85",
+      "D": "6:45",
+      "E": "11:35"
+    },
+    "correct_answer": "B",
+    "solution": "2 hours ago it was 6:40. 40 more minutes back gives 6:00, and 15 more gives 5:45. 40 + 15 = 55 minutes.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "5:15 is 3 hours 25 minutes before 8:40."
+      },
+      "C": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, so there is no 5:85."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "6:45 is only 1 hour 55 minutes before 8:40."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "Ago means earlier, so count back, not forward."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d2-4",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "School starts at 8:00. Each lesson lasts 45 minutes, and after each lesson there is a 10-minute break. How many lessons end before 12:00?",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "4",
+      "D": "6",
+      "E": "12"
+    },
+    "correct_answer": "C",
+    "solution": "Lessons end at 8:45, 9:40, 10:35, 11:30 and 12:25. Four of them end before 12:00.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "List the end times: 8:45, 9:40, 10:35 and 11:30. That is four."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "Remember the 10-minute breaks between lessons."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You divided 4 hours by 40 minutes. List the end times instead."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "12 is the hour, not the number of lessons."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d2-5",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "A plane takes off at 22:40 and lands at 1:15 the next day. How long is the flight?",
+    "options": {
+      "A": "2 hours 25 minutes",
+      "B": "2 hours 75 minutes",
+      "C": "3 hours 35 minutes",
+      "D": "2 hours 35 minutes",
+      "E": "21 hours 25 minutes"
+    },
+    "correct_answer": "D",
+    "solution": "From 22:40 to midnight is 1 hour 20 minutes. From midnight to 1:15 is 1 hour 15 minutes. In all 2 hours 35 minutes.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "From 22:40 to midnight is 1 hour 20 minutes, not 1 hour 10 minutes."
+      },
+      "B": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, so 75 minutes is really 1 hour 15 minutes."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "From 22:40 to midnight is 1 hour 20 minutes, not 2 hours 20 minutes."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You took 1:15 away from 22:40. Count forward through midnight."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d3-1",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "A clock strikes once at every half hour. At every full hour it strikes as many times as the hour, from 1 to 12. How many times does it strike in 12 hours?",
+    "options": {
+      "A": "90",
+      "B": "78",
+      "C": "84",
+      "D": "91",
+      "E": "156"
+    },
+    "correct_answer": "A",
+    "solution": "The full hours give 1 + 2 + ... + 12 = 78 strikes. There are 12 half hours with 1 strike each. 78 + 12 = 90.",
+    "distractors": {
+      "B": {
+        "trap": "missed_case",
+        "text": "You forgot the half-hour strikes."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "There are 12 half-hour strikes in 12 hours, not 6."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "In 12 hours there are 12 half hours, not 13."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You doubled 78. The half hours strike only once each."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d3-2",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "One clock is 7 minutes fast, and another is 5 minutes slow. The fast clock shows 10:02. What does the slow clock show?",
+    "options": {
+      "A": "9:55",
+      "B": "9:50",
+      "C": "9:57",
+      "D": "10:00",
+      "E": "10:14"
+    },
+    "correct_answer": "B",
+    "solution": "The real time is 7 minutes earlier than the fast clock: 9:55. The slow clock is 5 minutes behind the real time: 9:50.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "9:55 is the real time. The slow clock is 5 more minutes behind."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You took away only 5 minutes from the fast clock."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You took away the difference, 2 minutes. The clocks differ by 7 + 5 = 12 minutes."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "The slow clock shows less than the fast one, not more."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d3-3",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "A film is 1 hour 50 minutes long. It must end by 21:30. What is the latest time it can start?",
+    "options": {
+      "A": "19:20",
+      "B": "19:80",
+      "C": "19:40",
+      "D": "20:40",
+      "E": "23:20"
+    },
+    "correct_answer": "C",
+    "solution": "Going back 1 hour from 21:30 gives 20:30. Going back 50 more minutes: 30 minutes to 20:00 and 20 more to 19:40.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "19:20 is 2 hours 10 minutes before 21:30."
+      },
+      "B": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, so there is no 19:80."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "You went back only 50 minutes. Go back the hour too."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "The film starts before it ends, so count back."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d3-4",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "A candle burns for 50 minutes. Katya lights 3 candles one after another: she lights the next candle as soon as the previous one goes out. She lights the first candle at 18:40. At what time does the last candle go out?",
+    "options": {
+      "A": "19:30",
+      "B": "20:20",
+      "C": "20:90",
+      "D": "21:10",
+      "E": "21:40"
+    },
+    "correct_answer": "D",
+    "solution": "Three candles burn for 3 × 50 = 150 minutes, which is 2 hours 30 minutes. 18:40 + 2 hours 30 minutes = 21:10.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "19:30 is when the first candle goes out."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "20:20 is when the second candle goes out."
+      },
+      "C": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, so there is no 20:90."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You added 3 hours, not 2 hours 30 minutes."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d3-5",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "From 9:15 to 11:45 a school has 3 lessons of the same length, with a 15-minute break between every two lessons. How many minutes long is one lesson?",
+    "options": {
+      "A": "30",
+      "B": "35",
+      "C": "45",
+      "D": "50",
+      "E": "40"
+    },
+    "correct_answer": "E",
+    "solution": "From 9:15 to 11:45 is 150 minutes. There are 2 breaks: 30 minutes. 150 - 30 = 120 minutes for 3 lessons, so one lesson is 40 minutes.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "30 minutes is the time of both breaks, not of a lesson."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "There are 2 breaks between 3 lessons, not 3."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You took away only one break."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "You forgot the breaks."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d4-1",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "A clock gains 3 minutes every hour. It was set right at 8:00. Now the clock shows 12:12. What is the real time?",
+    "options": {
+      "A": "11:48",
+      "B": "12:00",
+      "C": "12:09",
+      "D": "12:12",
+      "E": "12:24"
+    },
+    "correct_answer": "B",
+    "solution": "In each real hour the clock moves on 63 minutes. It has moved from 8:00 to 12:12, which is 252 minutes = 4 × 63. So 4 real hours have passed: it is 12:00.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "You took away 24 minutes, but the clock is only 12 minutes ahead."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "The clock gains 3 minutes each hour for 4 hours: 12 minutes, not 3."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "12:12 is what the fast clock shows."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "A fast clock is ahead, so the real time is earlier."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d4-2",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Trains leave a station every 25 minutes, starting at 6:10. How many trains leave from 7:00 to 9:00, counting a train that leaves exactly at 7:00?",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "5",
+      "D": "7",
+      "E": "25"
+    },
+    "correct_answer": "C",
+    "solution": "The trains leave at 6:10, 6:35, 7:00, 7:25, 7:50, 8:15, 8:40 and 9:05. From 7:00 to 9:00 they are 7:00, 7:25, 7:50, 8:15 and 8:40: 5 trains.",
+    "distractors": {
+      "A": {
+        "trap": "missed_case",
+        "text": "The train at 7:00 counts too."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "The next train after 8:40 leaves at 9:05, which is after 9:00."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "7 trains leave before 9:00 in all, but the two before 7:00 do not count."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "25 is the number of minutes between trains."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d4-3",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "It is 14:25 now. What time will it be in 100 minutes?",
+    "options": {
+      "A": "15:05",
+      "B": "15:25",
+      "C": "15:65",
+      "D": "16:05",
+      "E": "16:25"
+    },
+    "correct_answer": "D",
+    "solution": "100 minutes is 1 hour 40 minutes. 14:25 + 1 hour = 15:25. 35 more minutes give 16:00, and 5 more give 16:05.",
+    "distractors": {
+      "A": {
+        "trap": "wrong_operation",
+        "text": "15:05 is only 40 minutes after 14:25."
+      },
+      "B": {
+        "trap": "time_unit_mixup",
+        "text": "100 minutes is not 1 hour: an hour has 60 minutes."
+      },
+      "C": {
+        "trap": "time_unit_mixup",
+        "text": "An hour has 60 minutes, so there is no 15:65."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You added 2 hours, not 1 hour 40 minutes."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d4-4",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Petya's watch is 10 minutes slow, but he thinks it is 10 minutes fast. He wants to arrive at school at 9:00, and the walk takes 20 minutes. He leaves home when he believes the real time is 8:40. How many minutes late does he arrive?",
+    "options": {
+      "A": "0",
+      "B": "10",
+      "C": "30",
+      "D": "40",
+      "E": "20"
+    },
+    "correct_answer": "E",
+    "solution": "He thinks the real time is 10 minutes less than his watch, so he leaves when the watch shows 8:50. But the watch is 10 minutes slow, so the real time is then 9:00. He arrives at 9:20: 20 minutes late.",
+    "distractors": {
+      "A": {
+        "trap": "trusted_statement",
+        "text": "Petya is wrong about his watch, so he does not arrive on time."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "There are two 10-minute mistakes, not one."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "The walk itself is not lateness; only the two 10-minute mistakes count."
+      },
+      "D": {
+        "trap": "double_count",
+        "text": "Each mistake is 10 minutes; together they make 20, not 40."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d4-5",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "A digital clock shows hours and minutes from 00:00 to 23:59. How many times in one day does it show four equal digits, like 11:11?",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "4",
+      "D": "6",
+      "E": "24"
+    },
+    "correct_answer": "A",
+    "solution": "The times are 00:00, 11:11 and 22:22. There is no 33:33, because hours go only up to 23. So there are 3 times.",
+    "distractors": {
+      "B": {
+        "trap": "missed_case",
+        "text": "00:00 counts too."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "There is no 33:33: hours go only up to 23."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Hours go only up to 23 and minutes up to 59; only 00:00, 11:11 and 22:22 work."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "24 is the number of hours in a day."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d5-1",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "A wall clock with 12 hours on its face goes 6 minutes too fast every day. At noon today it shows the right time. After how many days will it next show the right time?",
+    "options": {
+      "A": "10",
+      "B": "12",
+      "C": "120",
+      "D": "60",
+      "E": "240"
+    },
+    "correct_answer": "C",
+    "solution": "The clock shows the right time again when it is exactly 12 hours ahead. 12 hours = 720 minutes. 720 ÷ 6 = 120 days.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "After 10 days the clock is only 1 hour ahead."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "12 is the number of hours on the face."
+      },
+      "D": {
+        "trap": "time_unit_mixup",
+        "text": "12 hours are 720 minutes, not 360."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The face has 12 hours, so being 12 hours ahead is enough; 24 hours is not needed."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d5-2",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "A clock strikes once at a quarter past, at half past and at a quarter to every hour. At every full hour it strikes as many times as the hour, from 1 to 12. How many times does it strike in a whole day of 24 hours?",
+    "options": {
+      "A": "150",
+      "B": "156",
+      "C": "204",
+      "D": "228",
+      "E": "252"
+    },
+    "correct_answer": "D",
+    "solution": "In 12 hours the full hours give 1 + 2 + ... + 12 = 78 strikes, so 156 in a day. Every hour has 3 quarter strikes: 3 × 24 = 72. 156 + 72 = 228.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "The full hours strike twice a day: 78 + 78 = 156, not 78."
+      },
+      "B": {
+        "trap": "missed_case",
+        "text": "You forgot the quarter strikes."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "There are 3 quarter strikes each hour, not 2."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "At the full hour the clock strikes the hour, not an extra quarter: 3 quarter strikes per hour, not 4."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d5-3",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "The train Swift leaves at 7:50 and arrives at 10:35. The train Pony takes 25 minutes longer for its trip and leaves at 8:20. At what time does Pony arrive?",
+    "options": {
+      "A": "11:00",
+      "B": "11:05",
+      "C": "11:55",
+      "D": "12:30",
+      "E": "11:30"
+    },
+    "correct_answer": "E",
+    "solution": "Swift's trip from 7:50 to 10:35 takes 2 hours 45 minutes. Pony's trip is 25 minutes longer: 3 hours 10 minutes. 8:20 + 3 hours 10 minutes = 11:30.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Pony also leaves 30 minutes later than Swift, so add those 30 minutes too."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "Pony's trip is 25 minutes longer than Swift's."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "11:55 is 3 hours 35 minutes after 8:20."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You added one hour too many."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d5-4",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "A digital clock shows hours and minutes from 00:00 to 23:59. How many times in a day does it show the same number for the hours and for the minutes, like 05:05 or 12:12?",
+    "options": {
+      "A": "24",
+      "B": "12",
+      "C": "23",
+      "D": "60",
+      "E": "1440"
+    },
+    "correct_answer": "A",
+    "solution": "The hours go from 00 to 23, and each hour has one matching minute: 00:00, 01:01, ..., 23:23. That is 24 times.",
+    "distractors": {
+      "B": {
+        "trap": "ignored_condition",
+        "text": "The clock shows 24 hours, not 12."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "00:00 counts too."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "60 is the number of minutes in an hour."
+      },
+      "E": {
+        "trap": "answered_other_question",
+        "text": "1440 is the number of minutes in a whole day."
+      }
+    }
+  },
+  {
+    "id": "clk-34-d5-5",
+    "topic": "time.clocks",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Sasha's watch was 2 minutes slow at 8:00 on Monday. Every day it loses 3 more minutes. What does it show when the real time is 8:00 on Friday of the same week?",
+    "options": {
+      "A": "7:43",
+      "B": "7:46",
+      "C": "7:48",
+      "D": "7:49",
+      "E": "8:14"
+    },
+    "correct_answer": "B",
+    "solution": "From Monday 8:00 to Friday 8:00 there are 4 days. The watch loses 4 × 3 = 12 more minutes, so it is 2 + 12 = 14 minutes slow: 7:46.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "From Monday to Friday there are 4 days, not 5."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "The watch was already 2 minutes slow on Monday."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "From Monday to Friday there are 4 days, not 3."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "A slow watch is behind, so it shows less than 8:00."
+      }
+    }
+  }
+]
