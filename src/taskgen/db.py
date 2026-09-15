@@ -45,8 +45,15 @@ def grade_level(grade: int) -> str:
 # Students
 
 
-def load_student(conn: psycopg.Connection, student_id: str, history_limit: int = HISTORY_LIMIT) -> dict | None:
+def list_students(conn: psycopg.Connection) -> list[str]:
+    """Ids of all students, sorted."""
+    return [row[0] for row in conn.execute("SELECT student_id FROM students ORDER BY student_id").fetchall()]
+
+
+def load_student(conn: psycopg.Connection, student_id: str, history_limit: int | None = HISTORY_LIMIT) -> dict | None:
     """Profile, overall rating, per-topic offsets and the last history rows (oldest first); None if unknown.
+
+    history_limit=None gives the whole history, as the rule tutor needs.
 
     topic_ratings maps a topic id to {"offset": delta, "answers_count": n}; a topic without a row has offset 0.
     """

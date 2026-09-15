@@ -114,6 +114,14 @@ def test_history_limit_is_a_parameter(conn):
     assert [row["difficulty"] for row in db.load_student(conn, "masha", history_limit=2)["history"]] == [2, 3]
 
 
+def test_whole_history_and_student_list(conn):
+    history = [{"topic": TOPIC, "difficulty": level, "correct": True} for level in (1, 2, 3, 4, 5, 1, 2)]
+    add_student(conn, "petya", history=history)
+    add_student(conn, "masha")
+    assert len(db.load_student(conn, "petya", history_limit=None)["history"]) == 7
+    assert db.list_students(conn) == ["masha", "petya"]
+
+
 def test_unknown_student_is_none(conn):
     assert db.load_student(conn, "nobody") is None
 

@@ -44,7 +44,7 @@
 | [x] | T14 | `sandbox.py` | Claude | T06 |
 | [x] | T15 | Фильтры: структура, читаемость, дубли | Claude | T12 |
 | [x] | T16 | JSON-схемы агентов | Claude | T08 |
-| [ ] | T17 | Методист-правило | Claude | T13, T16 |
+| [x] | T17 | Методист-правило | Claude | T13, T16 |
 | [ ] | T18 | `llm.py` — обёртка Claude API | Claude | T06 |
 | [ ] | T19 | Методист (LLM) | Claude | T13, T16, T18 |
 | [ ] | T20 | Генератор | Claude | T19, T11 |
