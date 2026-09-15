@@ -648,9 +648,11 @@ src/taskgen/           — весь код, пакет Python; запуск: pyt
   apply_schema.py      — пересоздать схему БД из db/schema.sql
   catalogs.py          — загрузка и проверка каталогов
   validate_examples.py — проверка эталонных задач (схема schemas/example_task.json)
+  journal.py           — проверка готовности и журнал живого прогона: запросы, попытки, ответы, задачи (T23)
+  play.py              — чат ученика для живого прогона: Claude Code только с сервером taskgen (T23)
   report.py            — метрики раздела 9 (T24)
 tests/                 — тесты pytest, в том числе проверка ответов эталонов (tests/example_checks/)
-prompts/               — mcp_instructions.md: порядок работы для модели клиента
+prompts/               — инструкции для модели клиента: mcp_instructions.md, task_writing.md; play_session.md для живого прогона
 schemas/               — JSON-схемы ТЗ, задачи и самопроверки; эталонной задачи; профиля; каталогов
 data/                  — данные, которые я пишу руками:
   catalogs/            — topics.json (темы), skills.json (навыки для excluded_skills), traps.json (ловушки, 4.5)

@@ -1,0 +1,70 @@
+[
+  {
+    "student": "masha",
+    "grade": 3,
+    "why": "two failures in a row: the rule reinforces time.clocks",
+    "expect_first": {"goal": "reinforce", "topic": "time.clocks", "difficulty": 1, "source": "generate"},
+    "steps": [
+      "ask for a task",
+      "answer with a wrong option on purpose",
+      "ask for the next task",
+      "say you do not understand",
+      "ask for the next task and answer correctly",
+      "ask how you are doing"
+    ],
+    "watch": [
+      "the explanation of the wrong answer starts from the trap text",
+      "after three failures the coach considers an easier task and gives a reason",
+      "the answer is never shown before the child answers"
+    ]
+  },
+  {
+    "student": "sasha",
+    "grade": 4,
+    "why": "a new student: the rule starts the first topic of the catalog",
+    "expect_first": {"goal": "new_topic", "topic": "logic.ordering", "difficulty": 2, "source": "generate"},
+    "steps": [
+      "ask for a task",
+      "ask for a hint, then answer correctly",
+      "ask for the next task and answer it"
+    ],
+    "watch": ["hint_used is recorded", "a correct answer moves on to a new topic"]
+  },
+  {
+    "student": "dima",
+    "grade": 1,
+    "why": "a first-grader with many excluded skills",
+    "expect_first": {"goal": "new_topic", "topic": "combinatorics.enumeration", "difficulty": 2, "source": "generate"},
+    "steps": ["ask for a task", "wait more than three minutes, then answer"],
+    "watch": [
+      "sentences of at most 20 words",
+      "no numbers above 20, no multiplication or division",
+      "pace is recorded as struggled"
+    ]
+  },
+  {
+    "student": "olya",
+    "grade": 2,
+    "why": "no failure now: the rule starts logic.ordering, never given yet",
+    "expect_first": {"goal": "new_topic", "topic": "logic.ordering", "difficulty": 2, "source": "generate"},
+    "steps": ["ask for a harder task than usual", "answer it"],
+    "watch": ["the coach passes difficulty with a reason: the request is logged as llm"]
+  },
+  {
+    "student": "petya",
+    "grade": 3,
+    "why": "a strong student: the rule starts time.clocks, never given yet",
+    "expect_first": {"goal": "new_topic", "topic": "time.clocks", "difficulty": 2, "source": "generate"},
+    "steps": ["chat in English: ask for a task", "answer it", "ask how you are doing"],
+    "watch": ["an English task passes the Flesch-Kincaid limit of grade 6", "progress uses the 1500 scale"]
+  },
+  {
+    "student": "sasha",
+    "grade": 4,
+    "why": "bank reuse: reset sasha and ask again in the same language as her first run",
+    "before": "uv run python -m taskgen.seed --student sasha",
+    "expect_first": {"goal": "new_topic", "topic": "logic.ordering", "difficulty": 2, "source": "bank"},
+    "steps": ["ask for a task", "answer it"],
+    "watch": ["the task comes from the bank without writing a new one", "the coach learns the answer only from submit_answer"]
+  }
+]
