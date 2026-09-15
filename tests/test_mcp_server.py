@@ -1,4 +1,4 @@
-"""mcp_server.py (T19) through a real MCP client: in process, and over stdio as Claude Code starts it."""
+"""mcp_server.py (T19, T20) through a real MCP client: in process, and over stdio as Claude Code starts it."""
 
 import json
 import sys
@@ -27,7 +27,9 @@ def probe_student(test_url, monkeypatch):
         seed_student(conn, profile)
     yield STUDENT
     with psycopg.connect(test_url) as conn:
-        for table in ("student_tasks", "student_topic_ratings", "students"):
+        conn.execute("DELETE FROM attempts WHERE request_id IN (SELECT request_id FROM requests WHERE student_id = %s)",
+                     (STUDENT,))  # fmt: skip
+        for table in ("requests", "student_tasks", "student_topic_ratings", "students"):
             conn.execute(f"DELETE FROM {table} WHERE student_id = %s", (STUDENT,))
 
 
@@ -35,8 +37,9 @@ def probe_student(test_url, monkeypatch):
 async def test_tools_are_registered():
     async with Client(mcp_server.server) as client:
         tools = {tool.name: tool for tool in (await client.list_tools()).tools}
-    assert {"get_student_profile", "get_progress"} <= set(tools)
+    assert {"get_student_profile", "get_progress", "get_next_task"} <= set(tools)
     assert "student_id" in json.dumps(tools["get_student_profile"].input_schema)
+    assert {"language", "topic", "difficulty", "reason"} <= set(tools["get_next_task"].input_schema["properties"])
 
 
 @pytest.mark.anyio
@@ -57,11 +60,27 @@ async def test_progress_through_mcp(probe_student):
 
 
 @pytest.mark.anyio
+async def test_next_task_through_mcp(probe_student):
+    async with Client(mcp_server.server) as client:
+        result = await client.call_tool("get_next_task", {"student_id": probe_student, "language": "en"})
+    assert not result.is_error
+    assert result.structured_content["source"] == "generate"  # no bank tasks in the test database
+    assert result.structured_content["brief"]["target_concept"] == "time.clocks"
+
+
+@pytest.mark.anyio
 async def test_unknown_student_is_a_tool_error(probe_student):
     async with Client(mcp_server.server) as client:
         result = await client.call_tool("get_progress", {"student_id": "nobody"})
     assert result.is_error
     assert "nobody" in result.content[0].text and probe_student in result.content[0].text
+
+
+@pytest.mark.anyio
+async def test_bad_arguments_are_a_tool_error(probe_student):
+    async with Client(mcp_server.server) as client:
+        result = await client.call_tool("get_next_task", {"student_id": probe_student, "language": "english"})
+    assert result.is_error and "ISO 639-1" in result.content[0].text
 
 
 @pytest.mark.anyio

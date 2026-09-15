@@ -251,11 +251,13 @@ def save_task(
     grade_level: str,
     attempt_count: int,
     rating: float,
+    language: str = "en",
 ) -> str:
     """Put an accepted task into the bank; returns its new task_id.
 
-    Topic, difficulty, setting and excluded skills come from the Methodist brief the task was generated for,
-    traps from the Generator's distractors. The starting rating beta is passed in: it is computed in rating.py.
+    Topic, difficulty, setting and excluded skills come from the brief the task was written for, traps from its
+    distractors. The starting rating beta is passed in: it is computed in rating.py. language is the ISO 639-1 code
+    of the task's text; English, the language of the reference examples, by default.
     """
     if grade_level not in ("1-2", "3-4"):
         raise ValueError(f"grade_level must be '1-2' or '3-4', got {grade_level!r}")
@@ -263,15 +265,16 @@ def save_task(
     traps = sorted({distractor["trap"] for distractor in task["distractors"].values()})
     conn.execute(
         """
-        INSERT INTO tasks (task_id, topic, difficulty, grade_level, setting, excluded_skills, traps,
+        INSERT INTO tasks (task_id, topic, difficulty, grade_level, language, setting, excluded_skills, traps,
                            brief, task, analyst, skeptic, attempt_count, rating)
-        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
         """,
         (
             task_id,
             brief["target_concept"],
             brief["difficulty"],
             grade_level,
+            language,
             brief.get("setting"),
             brief["excluded_skills"],
             traps,
@@ -293,10 +296,12 @@ def bank_candidates(
     beta_range: tuple[float, float],
     setting: str | None = None,
     traps_to_use: list[str] | tuple[str, ...] = (),
+    language: str = "en",
 ) -> list[dict]:
     """Bank tasks that fit the brief under the SPEC 5.5 conditions, best first; an empty list means generate.
 
-    student is a load_student() result; beta_range is the student's corridor for the topic, bounds included.
+    student is a load_student() result; beta_range is the student's corridor for the topic, bounds included;
+    language is the chat language: only tasks written in it are served.
     """
     beta_min, beta_max = beta_range
     with conn.cursor(row_factory=dict_row) as cursor:
@@ -307,6 +312,7 @@ def bank_candidates(
             WHERE t.topic = %(topic)s
               AND t.rating BETWEEN %(beta_min)s AND %(beta_max)s
               AND t.grade_level = %(grade_level)s
+              AND t.language = %(language)s
               AND t.excluded_skills @> %(excluded_skills)s::text[]
               AND NOT EXISTS (
                 SELECT 1 FROM student_tasks s WHERE s.student_id = %(student_id)s AND s.task_id = t.task_id
@@ -317,11 +323,20 @@ def bank_candidates(
                 "beta_min": beta_min,
                 "beta_max": beta_max,
                 "grade_level": grade_level(student["grade"]),
+                "language": language,
                 "excluded_skills": student["excluded_skills"],
                 "student_id": student["student_id"],
             },
         ).fetchall()
     return rank_candidates(candidates, setting, traps_to_use)
+
+
+def task_questions(conn: psycopg.Connection, task_ids: list[str]) -> dict[str, str]:
+    """The question text of each bank task that exists, by task_id."""
+    rows = conn.execute(
+        "SELECT task_id, task ->> 'question' FROM tasks WHERE task_id = ANY(%s)", (list(task_ids),)
+    ).fetchall()
+    return dict(rows)
 
 
 def rank_candidates(candidates: list[dict], setting: str | None, traps_to_use) -> list[dict]:

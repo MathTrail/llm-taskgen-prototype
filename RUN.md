@@ -47,7 +47,7 @@
 | [x] | T17 | Методист-правило | Claude | T13, T16 |
 | [x] | T18 | Переход на MCP: документы и чистка | Claude | T17 |
 | [x] | T19 | Каркас MCP-сервера: профиль и прогресс | Claude | T18 |
-| [ ] | T20 | Выдача задачи: `get_next_task` | Claude | T19 |
+| [x] | T20 | Выдача задачи: `get_next_task` | Claude | T19 |
 | [ ] | T21 | Приём задачи: `submit_task` | Claude | T14, T15, T20 |
 | [ ] | T22 | Ответ ученика: `submit_answer` | Claude | T13, T21 |
 | [ ] | T23 | Живой прогон в Claude Code | Claude + я | T22 |

@@ -31,13 +31,14 @@ CREATE TABLE tasks (                -- task bank
   topic           text   NOT NULL,  -- topic id from topics.json
   difficulty      int    NOT NULL,  -- level 1-5 within the grade level (SPEC 4.3)
   grade_level     text   NOT NULL,  -- '1-2' or '3-4'
+  language        text   NOT NULL,  -- ISO 639-1 code of the task's language: the chat language (SPEC 1)
   setting         text,
-  excluded_skills text[] NOT NULL,  -- restrictions from the brief the task was generated for
+  excluded_skills text[] NOT NULL,  -- restrictions from the brief the task was written for
   traps           text[] NOT NULL,
-  brief           jsonb  NOT NULL,  -- Methodist brief
-  task            jsonb  NOT NULL,  -- Generator JSON
-  analyst         jsonb  NOT NULL,  -- Analyst output, including the walkthrough for the student
-  skeptic         jsonb  NOT NULL,
+  brief           jsonb  NOT NULL,  -- final brief (SPEC 5.1)
+  task            jsonb  NOT NULL,  -- the task the client's model handed in (SPEC 5.2)
+  analyst         jsonb  NOT NULL,  -- solver program and its result (SPEC 5.3)
+  skeptic         jsonb  NOT NULL,  -- the model's self-check (SPEC 5.4)
   attempt_count   int    NOT NULL,
   rating          real   NOT NULL,  -- difficulty beta (SPEC 5.6), starts at difficulty - 3
   rating_count    int    NOT NULL DEFAULT 0
@@ -93,7 +94,7 @@ CREATE TABLE attempts (             -- every generation attempt
 CREATE VIEW finetune_solver AS      -- solver dataset
   SELECT task_id,
          jsonb_build_object('question', task -> 'question', 'options', task -> 'options') AS prompt,
-         analyst AS completion
+         jsonb_build_object('solution', task -> 'solution', 'answer', task -> 'correct_answer') AS completion
   FROM tasks;
 
 CREATE VIEW finetune_generator AS   -- generator dataset

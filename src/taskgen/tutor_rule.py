@@ -73,6 +73,17 @@ def choose_topic(student: dict, topics: list[dict]) -> tuple[str, str, str]:
     return topic, "new_topic", f"no failure now; {topic} is the unmastered topic {when}"
 
 
+def pick_traps(student: dict, topic: str) -> list[str]:
+    """TRAP_COUNT traps: the student's most frequent trap_hit in the topic, topped up from the reference examples."""
+    traps = student_traps(student["history"], topic)[:TRAP_COUNT]
+    for trap in example_traps(topic, grade_level(student["grade"])):
+        if len(traps) == TRAP_COUNT:
+            break
+        if trap not in traps:
+            traps.append(trap)
+    return traps
+
+
 def make_brief(student: dict, params: Params, topics: list[dict] | None = None) -> dict:
     """A brief for the student; student is a db.load_student() result with the whole history (history_limit=None)."""
     topics = load_catalog("topics") if topics is None else topics
@@ -81,12 +92,7 @@ def make_brief(student: dict, params: Params, topics: list[dict] | None = None) 
     offset = student["topic_ratings"].get(topic, {"offset": 0.0})["offset"]
     fit = corridor(student["rating"] + offset, params.corridor)
 
-    traps = student_traps(student["history"], topic)[:TRAP_COUNT]
-    for trap in example_traps(topic, grade_level(student["grade"])):
-        if len(traps) == TRAP_COUNT:
-            break
-        if trap not in traps:
-            traps.append(trap)
+    traps = pick_traps(student, topic)
 
     interests = student["interests"]
     if not interests:

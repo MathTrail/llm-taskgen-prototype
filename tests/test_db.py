@@ -362,3 +362,28 @@ def test_similarities_to_outside_texts(conn):
     assert scores[0] == pytest.approx(1.0)
     assert scores[1] < 0.3
     assert scores[2] == 0
+
+
+# Language of tasks (T20)
+
+
+def test_bank_serves_tasks_in_the_chat_language(conn):
+    student = add_student(conn)
+    english = add_task(conn)  # English by default, the language of the reference examples
+    russian = db.save_task(conn, brief=make_brief(), task=make_task(question="Сколько пар?"), analyst={},
+                           skeptic={}, grade_level="3-4", attempt_count=1, rating=0.0, language="ru")  # fmt: skip
+    assert [row["task_id"] for row in db.bank_candidates(conn, student, TOPIC, (-1, 1))] == [english]
+    assert [row["task_id"] for row in db.bank_candidates(conn, student, TOPIC, (-1, 1), language="ru")] == [russian]
+    assert conn.execute("SELECT language FROM tasks WHERE task_id = %s", (russian,)).fetchone()[0] == "ru"
+
+
+def test_task_questions(conn):
+    task_id = add_task(conn, question="How many pairs?")
+    assert db.task_questions(conn, [task_id, "t-missing"]) == {task_id: "How many pairs?"}
+    assert db.task_questions(conn, []) == {}
+
+
+def test_solver_dataset_view_holds_the_solution(conn):
+    task_id = add_task(conn)
+    completion = conn.execute("SELECT completion FROM finetune_solver WHERE task_id = %s", (task_id,)).fetchone()[0]
+    assert completion == {"solution": "List the pairs.", "answer": "C"}
