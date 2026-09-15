@@ -618,11 +618,19 @@ CREATE VIEW finetune_generator AS   -- датасет генератора
 | Скептик | Claude Sonnet 5, свой промпт | Не та модель, что у Генератора: задачу не проверяют теми же весами, которые её написали |
 
 ```yaml
-agents:
-  tutor:     { provider: anthropic, model: claude-haiku-4-5 }
-  generator: { provider: anthropic, model: claude-opus-5, effort: high }
-  analyst:   { provider: anthropic, model: claude-sonnet-5, effort: medium }
-  skeptic:   { provider: anthropic, model: claude-sonnet-5, effort: medium }
+agents:               # thinking и effort — у моделей Claude 5; Haiku 4.5 не принимает ни то, ни другое
+  tutor:     { provider: anthropic, model: claude-haiku-4-5, max_tokens: 4096 }
+  generator: { provider: anthropic, model: claude-opus-5, effort: high, thinking: adaptive, fallbacks: default, max_tokens: 32000 }
+  analyst:   { provider: anthropic, model: claude-sonnet-5, effort: medium, thinking: adaptive, max_tokens: 16000 }
+  skeptic:   { provider: anthropic, model: claude-sonnet-5, effort: medium, thinking: adaptive, max_tokens: 16000 }
+llm:
+  max_retries: 4      # SDK повторяет запрос при ошибках соединения, 408, 409, 429 и 5xx
+  timeout_sec: 600
+prices:               # USD за миллион токенов; cache_write — запись в 5-минутный кэш
+  claude-opus-5:    { input: 5.00, cache_write: 6.25, cache_read: 0.50, output: 25.00 }
+  claude-opus-4-8:  { input: 5.00, cache_write: 6.25, cache_read: 0.50, output: 25.00 }
+  claude-sonnet-5:  { input: 2.00, cache_write: 2.50, cache_read: 0.20, output: 10.00 }
+  claude-haiku-4-5: { input: 1.00, cache_write: 1.25, cache_read: 0.10, output: 5.00 }
 max_attempts: 3
 pace:                 # пороги для тега pace в режиме --answer, значения примерные
   fast_below_sec: 60

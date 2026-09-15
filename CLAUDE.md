@@ -46,7 +46,6 @@ We work from the devcontainer (`.devcontainer/`): Python 3.12, `uv`, Docker insi
 
 Progress is tracked in the `RUN.md` summary table.
 
-The phase 0 checkpoint has not been passed: `docs/architecture/01…05` hold 20 remarks on SPEC, 14 still open (03-1 resolved in T09, see D34; 05-1…05-4 in T13, see D37; 01-1 in T15, see D38; 03-3 and 03-4 added in T12, 04-7 in T14). Some are needed earlier than others:
+The phase 0 checkpoint has not been passed: `docs/architecture/01…05` hold 20 remarks on SPEC, 13 still open (03-1 resolved in T09, see D34; 05-1…05-4 in T13, see D37; 01-1 in T15, see D38; 01-3 in T18, see D41; 03-3 and 03-4 added in T12, 04-7 in T14). Some are needed earlier than others:
 
-- model prices in `config.yaml` — before T18;
 - reason codes `bad_structure` and `fix_changed_task`, the code for bad solver output, check order — before T23.

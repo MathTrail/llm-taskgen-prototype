@@ -7,7 +7,7 @@ import pytest
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-MODULES = ["main", "agents", "tutor_rule", "rating", "sandbox", "llm", "db", "seed", "catalogs", "apply_schema", "validate_examples", "filters"]
+MODULES = ["main", "agents", "tutor_rule", "rating", "sandbox", "llm", "db", "seed", "catalogs", "apply_schema", "validate_examples", "filters", "try_llm"]
 
 
 @pytest.mark.parametrize("name", MODULES)
@@ -30,3 +30,5 @@ def test_config_has_spec_keys():
     assert {"image", "timeout_sec", "memory_mb", "cpus"} <= set(config["sandbox"])
     assert {"max_grade_margin", "max_sentence_words"} <= set(config["readability"])
     assert "max_similarity" in config["near_duplicate"]
+    assert {"max_retries", "timeout_sec"} <= set(config["llm"])
+    assert {agent["model"] for agent in config["agents"].values()} <= set(config["prices"])
