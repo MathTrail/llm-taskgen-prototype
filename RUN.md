@@ -39,7 +39,7 @@
 | [x] | T09 | Seed-профили и `seed.py` | Claude | T07, T08 |
 | [x] | T10 | Формат и валидатор эталонных задач | Claude | T08 |
 | [x] | T11 | Эталонные задачи (450) | Claude, проверяю **я** | T10 |
-| [ ] | T12 | `db.py` | Claude | T07 |
+| [x] | T12 | `db.py` | Claude | T07 |
 | [ ] | T13 | `rating.py` | Claude | T05, T12 |
 | [ ] | T14 | `sandbox.py` | Claude | T06 |
 | [ ] | T15 | Фильтры: структура, читаемость, дубли | Claude | T12 |

@@ -46,7 +46,7 @@ We work from the devcontainer (`.devcontainer/`): Python 3.12, `uv`, Docker insi
 
 Progress is tracked in the `RUN.md` summary table.
 
-The phase 0 checkpoint has not been passed: `docs/architecture/01…05` hold 17 remarks on SPEC, 16 still open (03-1 resolved in T09, see D34). Some are needed earlier than others:
+The phase 0 checkpoint has not been passed: `docs/architecture/01…05` hold 19 remarks on SPEC, 18 still open (03-1 resolved in T09, see D34; 03-3 and 03-4 added in T12). Some are needed earlier than others:
 
 - a module for checks (structure, readability, duplicates) — before T15;
 - empty difficulty corridor and separate K₀ values — before T13 and T17;
