@@ -1,0 +1,58 @@
+{
+  "title": "Skeptic review (SPEC 5.4)",
+  "description": "Defects of the task first, then a solution. Sent as is to output_config.format, so it uses only keywords that structured outputs support (D39).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["issues", "option_check", "final_answer"],
+  "properties": {
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "severity", "comment"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "ambiguous",
+              "missing_data",
+              "multiple_correct",
+              "no_correct",
+              "too_hard_for_grade",
+              "needs_picture",
+              "factual_error"
+            ]
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["blocking", "minor"],
+            "description": "blocking: the task is rejected; minor: the task is kept and the remark is saved."
+          },
+          "comment": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Every defect found; an empty list if there are none."
+    },
+    "option_check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["A", "B", "C", "D", "E"],
+      "properties": {
+        "A": { "type": "string" },
+        "B": { "type": "string" },
+        "C": { "type": "string" },
+        "D": { "type": "string" },
+        "E": { "type": "string" }
+      },
+      "description": "For each option: \"correct\" or \"wrong because ...\"."
+    },
+    "final_answer": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "E", "UNSOLVABLE"],
+      "description": "UNSOLVABLE if the task cannot be solved as written."
+    }
+  }
+}

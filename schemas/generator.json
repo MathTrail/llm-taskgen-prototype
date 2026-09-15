@@ -1,0 +1,84 @@
+{
+  "title": "Generator task (SPEC 5.2)",
+  "description": "A task written to the Methodist brief. Sent as is to output_config.format, so it uses only keywords that structured outputs support (D39). What the schema cannot say, filters.structure_errors checks: five different options, distractors for exactly the four wrong options, a non-empty hint, trap ids from the catalog.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "core_idea",
+    "design_thought_process",
+    "question",
+    "options",
+    "correct_answer",
+    "solution",
+    "hint",
+    "distractors"
+  ],
+  "properties": {
+    "core_idea": {
+      "type": "string",
+      "description": "The mathematical core before the story: the idea and why the answer is what it is."
+    },
+    "design_thought_process": {
+      "type": "string",
+      "description": "How the story and each trap were designed."
+    },
+    "question": {
+      "type": "string",
+      "description": "The task text the student reads."
+    },
+    "options": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["A", "B", "C", "D", "E"],
+      "properties": {
+        "A": { "type": "string" },
+        "B": { "type": "string" },
+        "C": { "type": "string" },
+        "D": { "type": "string" },
+        "E": { "type": "string" }
+      },
+      "description": "Five different answer options."
+    },
+    "correct_answer": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "E"]
+    },
+    "solution": {
+      "type": "string",
+      "description": "Short solution in plain language."
+    },
+    "hint": {
+      "type": "string",
+      "description": "One leading question or first step; it must not give the answer away."
+    },
+    "distractors": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "A": { "$ref": "#/$defs/distractor" },
+        "B": { "$ref": "#/$defs/distractor" },
+        "C": { "$ref": "#/$defs/distractor" },
+        "D": { "$ref": "#/$defs/distractor" },
+        "E": { "$ref": "#/$defs/distractor" }
+      },
+      "description": "One entry for each of the four wrong options, none for correct_answer."
+    }
+  },
+  "$defs": {
+    "distractor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["trap", "text"],
+      "properties": {
+        "trap": {
+          "type": "string",
+          "description": "Trap id from the trap catalog: the mistake that leads to this option."
+        },
+        "text": {
+          "type": "string",
+          "description": "Shown to the student after choosing this wrong option."
+        }
+      }
+    }
+  }
+}

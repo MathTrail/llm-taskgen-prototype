@@ -1,0 +1,21 @@
+{
+  "title": "Analyst solution (SPEC 5.3)",
+  "description": "A blind solution from the question and options only. Sent as is to output_config.format, so it uses only keywords that structured outputs support (D39).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["solving_thought_process", "final_answer", "solver_code"],
+  "properties": {
+    "solving_thought_process": {
+      "type": "string",
+      "description": "Step-by-step solution in plain language, as a coach explains it to a student of grades 1-4. The student sees it after answering."
+    },
+    "final_answer": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "E"]
+    },
+    "solver_code": {
+      "type": "string",
+      "description": "A short Python program that checks every option A-E by brute force from the conditions of the task and prints a JSON list of the correct options as its last line, e.g. [\"C\"]. It runs without network and with a time limit."
+    }
+  }
+}
