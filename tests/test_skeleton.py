@@ -26,7 +26,7 @@ def test_config_has_spec_keys():
 
     assert config["max_attempts"] == 3
     assert {"fast_below_sec", "struggled_above_sec"} <= set(config["pace"])
-    assert {"k0", "decay", "corridor"} <= set(config["rating"])
+    assert {"k0_student", "k0_topic", "k0_task", "decay", "corridor"} <= set(config["rating"])
     assert {"timeout_sec", "memory_mb"} <= set(config["sandbox"])
     assert "max_grade_margin" in config["readability"]
     assert "max_similarity" in config["near_duplicate"]

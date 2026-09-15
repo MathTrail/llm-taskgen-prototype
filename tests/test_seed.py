@@ -1,11 +1,14 @@
-"""Seed profile checks for T09: the five starting profiles are valid and broken profiles are rejected."""
+"""Seed profile checks: the five starting profiles are valid and broken profiles are rejected (T09);
+seeding writes the ratings replayed from the starting history (T13, on the test database from conftest.py)."""
 
 import copy
 import json
 
 import pytest
 
-from taskgen.seed import SEED_DIR, profile_errors
+from taskgen.db import load_student
+from taskgen.rating import load_params, replay_history
+from taskgen.seed import SEED_DIR, profile_errors, seed_student
 
 PATHS = sorted(SEED_DIR.glob("*.json"))
 
@@ -18,6 +21,34 @@ def errors_after(change, name="masha"):
     profile = copy.deepcopy(load(name))
     change(profile)
     return profile_errors(profile, name)
+
+
+def test_seed_writes_ratings_replayed_from_history(conn):
+    profile = load("olya")  # three topics, one of them answered three times
+    params = load_params()
+    seed_student(conn, profile, params)
+
+    student = load_student(conn, "olya")
+    expected = replay_history(profile["history"], params)
+    assert student["rating"] == pytest.approx(expected.theta, abs=1e-6)
+    assert student["answers_count"] == len(profile["history"])
+    assert {topic: (row["offset"], row["answers_count"]) for topic, row in student["topic_ratings"].items()} == {
+        topic: (pytest.approx(offset, abs=1e-6), answers) for topic, (offset, answers) in expected.topics.items()
+    }
+
+
+def test_reseeding_resets_ratings(conn):
+    profile = load("masha")
+    first = seed_student(conn, profile)
+    conn.execute("UPDATE students SET rating = 3 WHERE student_id = 'masha'")
+    seed_student(conn, profile)
+    assert load_student(conn, "masha")["rating"] == pytest.approx(first.theta, abs=1e-6)
+
+
+def test_new_student_keeps_zero_ratings(conn):
+    seed_student(conn, load("sasha"))  # empty history
+    student = load_student(conn, "sasha")
+    assert (student["rating"], student["answers_count"], student["topic_ratings"]) == (0, 0, {})
 
 
 @pytest.mark.parametrize("path", PATHS, ids=lambda path: path.stem)

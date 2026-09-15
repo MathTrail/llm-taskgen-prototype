@@ -1,47 +1,12 @@
-"""db.py on a real PostgreSQL (T12).
-
-The tests use a separate database, taskgen_test, on the server from DATABASE_URL: the fixture creates it if needed
-and recreates its schema from db/schema.sql once per run. Every test works in its own transaction that is rolled
-back, so tests do not see each other's rows. Without a reachable server the tests are skipped.
-"""
+"""db.py on a real PostgreSQL (T12); the separate test database and its fixtures are in conftest.py."""
 
 import psycopg
 import pytest
-from psycopg import sql
-from psycopg.conninfo import conninfo_to_dict, make_conninfo
 
 from taskgen import db
-from taskgen.apply_schema import apply_schema
 from taskgen.seed import seed_student
 
-TEST_DB = "taskgen_test"
 TOPIC = "combinatorics.enumeration"
-
-
-@pytest.fixture(scope="session")
-def test_url():
-    try:
-        main_url = db.database_url()
-    except SystemExit:
-        pytest.skip("DATABASE_URL is not set")
-    params = conninfo_to_dict(main_url)
-    assert params.get("dbname") != TEST_DB, "DATABASE_URL must point to the working database, not the test one"
-    url = make_conninfo(main_url, dbname=TEST_DB)
-    try:
-        with psycopg.connect(main_url, autocommit=True, connect_timeout=3) as admin:
-            if not admin.execute("SELECT 1 FROM pg_database WHERE datname = %s", (TEST_DB,)).fetchone():
-                admin.execute(sql.SQL("CREATE DATABASE {}").format(sql.Identifier(TEST_DB)))
-    except psycopg.OperationalError as error:
-        pytest.skip(f"PostgreSQL is not reachable: {error}")
-    apply_schema(url, force=True)
-    return url
-
-
-@pytest.fixture
-def conn(test_url):
-    with psycopg.connect(test_url) as connection:
-        yield connection
-        connection.rollback()
 
 
 def add_student(conn, student_id="masha", grade=3, excluded_skills=("fractions",), consecutive_failures=0, history=()):
@@ -102,7 +67,7 @@ def add_task(conn, rating=0.0, grade_level="3-4", **brief_fields):
 
 
 def test_tests_use_the_separate_database(conn):
-    assert conn.info.dbname == TEST_DB
+    assert conn.info.dbname == "taskgen_test"
 
 
 @pytest.mark.parametrize(("grade", "level"), [(1, "1-2"), (2, "1-2"), (3, "3-4"), (4, "3-4")])
@@ -123,10 +88,8 @@ def test_load_student_returns_profile_ratings_and_last_history(conn):
         {"topic": TOPIC, "difficulty": level, "correct": True, "pace": "normal"} for level in (1, 2, 3, 4, 5)
     ] + [{"topic": "time.clocks", "difficulty": 2, "correct": False, "chosen_option": "B", "trap_hit": "off_by_one"}]
     add_student(conn, grade=3, consecutive_failures=1, history=history)
-    conn.execute(
-        "INSERT INTO student_topic_ratings (student_id, topic, topic_offset, answers_count) VALUES (%s, %s, %s, %s)",
-        ("masha", TOPIC, -0.25, 5),
-    )
+    db.save_student_rating(conn, "masha", 0.5, 6)
+    db.save_topic_rating(conn, "masha", TOPIC, -0.25, 5)
 
     student = db.load_student(conn, "masha")
 
@@ -134,8 +97,9 @@ def test_load_student_returns_profile_ratings_and_last_history(conn):
     assert student["interests"] == ["space"]
     assert student["excluded_skills"] == ["fractions"]
     assert student["consecutive_failures"] == 1
-    assert student["rating"] == 0 and student["answers_count"] == 0
-    assert student["topic_ratings"] == {TOPIC: {"offset": -0.25, "answers_count": 5}}
+    assert (student["rating"], student["answers_count"]) == (0.5, 6)
+    assert student["topic_ratings"][TOPIC] == {"offset": -0.25, "answers_count": 5}
+    assert student["topic_ratings"].keys() == {TOPIC, "time.clocks"}  # seed replays the history for both topics
     # The last 5 of 6 rows, oldest first.
     assert [(row["topic"], row["difficulty"]) for row in student["history"]] == [
         (TOPIC, 2), (TOPIC, 3), (TOPIC, 4), (TOPIC, 5), ("time.clocks", 2)
@@ -166,6 +130,27 @@ def test_consecutive_failures(conn):
 def test_consecutive_failures_of_unknown_student(conn):
     with pytest.raises(LookupError):
         db.update_consecutive_failures(conn, "nobody", True)
+
+
+def test_save_ratings(conn):
+    add_student(conn)
+    db.save_topic_rating(conn, "masha", TOPIC, 0.5, 1)
+    db.save_topic_rating(conn, "masha", TOPIC, 0.25, 2)  # a later answer updates the same row
+    db.save_student_rating(conn, "masha", -0.75, 2)
+    student = db.load_student(conn, "masha")
+    assert (student["rating"], student["answers_count"]) == (-0.75, 2)
+    assert student["topic_ratings"] == {TOPIC: {"offset": 0.25, "answers_count": 2}}
+
+    task_id = add_task(conn, rating=0.0)
+    db.save_task_rating(conn, task_id, 0.5, 1)
+    assert conn.execute("SELECT rating, rating_count FROM tasks WHERE task_id = %s", (task_id,)).fetchone() == (0.5, 1)
+
+
+def test_save_ratings_of_unknown_rows(conn):
+    with pytest.raises(LookupError):
+        db.save_student_rating(conn, "nobody", 0.0, 0)
+    with pytest.raises(LookupError):
+        db.save_task_rating(conn, "t-missing", 0.0, 0)
 
 
 # Requests and attempts

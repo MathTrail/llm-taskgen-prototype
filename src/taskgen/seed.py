@@ -2,7 +2,7 @@
 
 Every run resets the chosen students to their starting state: history and topic ratings are deleted and written
 again from the JSON file, so rerunning never duplicates data. Request and attempt logs are kept.
-Ratings are not computed yet (T13): theta stays 0 and there are no per-topic offsets.
+Ratings come from replaying the starting history through rating.py: theta and the per-topic offsets delta (SPEC 5.6).
 
 Run: uv run python -m taskgen.seed [--student masha]
 """
@@ -18,7 +18,8 @@ from jsonschema import Draft202012Validator
 
 from taskgen import ROOT
 from taskgen.catalogs import load_catalog
-from taskgen.db import database_url
+from taskgen.db import database_url, save_student_rating, save_topic_rating
+from taskgen.rating import Params, Ratings, corridor, elo, load_params, replay_history
 
 SEED_DIR = ROOT / "data" / "seed"
 PROFILE_SCHEMA = json.loads((ROOT / "schemas" / "profile.json").read_text(encoding="utf-8"))
@@ -67,8 +68,8 @@ def profile_errors(profile: object, stem: str) -> list[str]:
     return errors
 
 
-def seed_student(conn: psycopg.Connection, profile: dict) -> None:
-    """Write the profile and its starting history, replacing whatever the student had."""
+def seed_student(conn: psycopg.Connection, profile: dict, params: Params | None = None) -> Ratings:
+    """Write the profile, its starting history and the ratings replayed from it, replacing whatever the student had."""
     student_id = profile["id"]
     conn.execute(
         """
@@ -127,6 +128,12 @@ def seed_student(conn: psycopg.Connection, profile: dict) -> None:
                 rows,
             )
 
+    ratings = replay_history(history, params or load_params())
+    save_student_rating(conn, student_id, ratings.theta, ratings.answers)
+    for topic, (offset, answers) in ratings.topics.items():
+        save_topic_rating(conn, student_id, topic, offset, answers)
+    return ratings
+
 
 def seed_paths(student: str | None) -> list[Path]:
     if student:
@@ -162,10 +169,21 @@ def main() -> None:
     if failed:
         sys.exit(1)
 
+    params = load_params()
     with psycopg.connect(database_url()) as conn:
         for profile in profiles:
-            seed_student(conn, profile)
-            print(f"{profile['id']}: grade {profile['grade']}, {len(profile['history'])} history rows")
+            ratings = seed_student(conn, profile, params)
+            print(
+                f"{profile['id']}: grade {profile['grade']}, {len(profile['history'])} history rows, "
+                f"theta {ratings.theta:+.3f} (R {elo(ratings.theta):.0f})"
+            )
+            for topic, (offset, answers) in sorted(ratings.topics.items()):
+                level = ratings.theta + offset
+                fit = corridor(level, params.corridor)
+                print(
+                    f"  {topic}: delta {offset:+.3f} after {answers} answers, level {level:+.3f} "
+                    f"(R {elo(level):.0f}), recommended difficulty {fit.recommended} ({fit.fit})"
+                )
 
 
 if __name__ == "__main__":

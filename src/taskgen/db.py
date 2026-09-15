@@ -1,7 +1,7 @@
 """PostgreSQL access: profiles, history, task bank, request and attempt logs (SPEC 5.5, 7).
 
 Every function takes an open connection and never commits: the caller owns the transaction, so the rows of one
-step are written together or not at all. Ratings are only read here; their math is in rating.py (T13).
+step are written together or not at all. Ratings are read and stored here; their math is in rating.py.
 """
 
 import os
@@ -91,6 +91,42 @@ def update_consecutive_failures(conn: psycopg.Connection, student_id: str, corre
     if row is None:
         raise LookupError(f"no student {student_id!r}")
     return row[0]
+
+
+# Ratings (SPEC 5.6): each value is stored with its own answer count n
+
+
+def save_student_rating(conn: psycopg.Connection, student_id: str, theta: float, answers_count: int) -> None:
+    """Store the student's overall level theta and answer count."""
+    cursor = conn.execute(
+        "UPDATE students SET rating = %s, answers_count = %s WHERE student_id = %s",
+        (theta, answers_count, student_id),
+    )
+    if cursor.rowcount != 1:
+        raise LookupError(f"no student {student_id!r}")
+
+
+def save_topic_rating(conn: psycopg.Connection, student_id: str, topic: str, offset: float, answers_count: int) -> None:
+    """Store the student's offset delta for a topic and its answer count; the row appears with the first answer."""
+    conn.execute(
+        """
+        INSERT INTO student_topic_ratings (student_id, topic, topic_offset, answers_count)
+        VALUES (%s, %s, %s, %s)
+        ON CONFLICT (student_id, topic) DO UPDATE SET
+          topic_offset = EXCLUDED.topic_offset,
+          answers_count = EXCLUDED.answers_count
+        """,
+        (student_id, topic, offset, answers_count),
+    )
+
+
+def save_task_rating(conn: psycopg.Connection, task_id: str, beta: float, rating_count: int) -> None:
+    """Store a bank task's difficulty beta and answer count."""
+    cursor = conn.execute(
+        "UPDATE tasks SET rating = %s, rating_count = %s WHERE task_id = %s", (beta, rating_count, task_id)
+    )
+    if cursor.rowcount != 1:
+        raise LookupError(f"no task {task_id!r} in the bank")
 
 
 # Requests and attempts
