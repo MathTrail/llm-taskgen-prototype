@@ -171,28 +171,27 @@ def test_request_with_attempts(conn):
         "failed", None
     )
 
-    db.record_attempt(conn, request_id, 1, "rejected", "p-1", reason="answers_differ",
-                      generator=make_task(), analyst={"final_answer": "B"}, skeptic={"final_answer": "C"},
-                      solver_result=["B"], models={"generator": "claude-opus-5"}, tokens=1200, cost_usd=0.15,
-                      duration_ms=9000)
-    db.record_attempt(conn, request_id, 2, "accepted", "p-1", generator=make_task(), tokens=1000, cost_usd=0.12)
+    client = {"name": "claude-code", "version": "2.1.270"}  # clientInfo of the MCP client (SPEC 7)
+    db.record_attempt(conn, request_id, 1, "rejected", "p-1", reason="solver_disagrees",
+                      generator=make_task(), analyst={"solver_code": "print('[\"B\"]')"},
+                      skeptic={"final_answer": "C"}, solver_result=["B"], models=client, duration_ms=9000)
+    db.record_attempt(conn, request_id, 2, "accepted", "p-1", generator=make_task(), models=client)
     task_id = add_task(conn)
-    db.close_request(conn, request_id, "generated", task_id, attempt_count=2, tokens=2200, cost_usd=0.27,
-                     duration_ms=20000)
+    db.close_request(conn, request_id, "generated", task_id, attempt_count=2, duration_ms=20000)
 
     request = conn.execute(
-        "SELECT source, task_id, attempt_count, tokens, cost_usd FROM requests WHERE request_id = %s", (request_id,)
+        "SELECT source, task_id, attempt_count, tokens, cost_usd, duration_ms FROM requests WHERE request_id = %s",
+        (request_id,),
     ).fetchone()
-    assert request[:4] == ("generated", task_id, 2, 2200)
-    assert float(request[4]) == pytest.approx(0.27)
+    assert request == ("generated", task_id, 2, None, None, 20000)  # no LLM calls of our own (D42)
     attempts = conn.execute(
         "SELECT attempt_no, status, reason, solver_result, models FROM attempts WHERE request_id = %s "
         "ORDER BY attempt_no",
         (request_id,),
     ).fetchall()
     assert attempts == [
-        (1, "rejected", "answers_differ", ["B"], {"generator": "claude-opus-5"}),
-        (2, "accepted", None, None, None),
+        (1, "rejected", "solver_disagrees", ["B"], client),
+        (2, "accepted", None, None, client),
     ]
 
 

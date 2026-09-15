@@ -1,6 +1,6 @@
 {
   "title": "Generator task (SPEC 5.2)",
-  "description": "A task written to the Methodist brief. Sent as is to output_config.format, so it uses only keywords that structured outputs support (D39). What the schema cannot say, filters.structure_errors checks: five different options, distractors for exactly the four wrong options, a non-empty hint, trap ids from the catalog.",
+  "description": "A task the client's model writes to the brief and hands in with submit_task (SPEC 5.2, D42). What the schema cannot say, filters.structure_errors checks: five different options, distractors for exactly the four wrong options, a non-empty hint, trap ids from the catalog.",
   "type": "object",
   "additionalProperties": false,
   "required": [

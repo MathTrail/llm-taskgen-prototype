@@ -1,6 +1,6 @@
 {
-  "title": "Skeptic review (SPEC 5.4)",
-  "description": "Defects of the task first, then a solution. Sent as is to output_config.format, so it uses only keywords that structured outputs support (D39).",
+  "title": "Self-check of a task (SPEC 5.4)",
+  "description": "The client's model reviews its own task by the checklist: defects first, then a solution. Handed in with submit_task as self_check; a blocking issue rejects the task (D42).",
   "type": "object",
   "additionalProperties": false,
   "required": ["issues", "option_check", "final_answer"],

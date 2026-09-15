@@ -1,4 +1,5 @@
-"""Prototype package: LLM agents generate olympiad-style math tasks for grades 1-4 (see SPEC.md)."""
+"""Prototype package: an MCP server lets the chat client's model generate olympiad-style math tasks for grades 1-4
+(see SPEC.md)."""
 
 from pathlib import Path
 

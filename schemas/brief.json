@@ -1,6 +1,6 @@
 {
   "title": "Methodist brief (SPEC 5.1)",
-  "description": "What task to give the student now. Sent as is to output_config.format, so it uses only keywords that structured outputs support (D39); catalog ids are checked in code.",
+  "description": "What task to give the student now: the rule's recommendation, possibly changed by the client's model (SPEC 5.1, 5.7). The MCP server checks it with jsonschema; catalog ids are checked in code (D42).",
   "type": "object",
   "additionalProperties": false,
   "required": [

@@ -1,11 +1,10 @@
 [project]
 name = "llm-taskgen-prototype"
 version = "0.1.0"
-description = "Prototype: LLM agents generate olympiad-style math tasks for grades 1-4 (see SPEC.md)"
+description = "Prototype MCP server: the chat client's model generates olympiad-style math tasks for grades 1-4 (see SPEC.md)"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
-    "anthropic",
     "jsonschema",
     "psycopg[binary]",
     "pyyaml",
