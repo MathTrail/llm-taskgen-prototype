@@ -632,9 +632,11 @@ rating:               # Эло + IRT (5.6), значения примерные;
   k0_task: 0.4
   decay: 0.05
   corridor: [0.70, 0.85]
-sandbox:
+sandbox:              # Docker без сети (5.3), образ закреплён по дайджесту
+  image: python:3.12.14-slim-trixie@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
   timeout_sec: 10
   memory_mb: 256
+  cpus: 1
 readability:
   max_grade_margin: 1 # Флеш-Кинкейд не выше класса ученика + 1
 near_duplicate:

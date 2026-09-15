@@ -19,9 +19,11 @@ rating:               # Elo + IRT (SPEC 5.6): each parameter has its own K = k0 
   decay: 0.05
   corridor: [0.70, 0.85]
 
-sandbox:
-  timeout_sec: 10
+sandbox:              # solver_code runs here without network (SPEC 5.3)
+  image: python:3.12.14-slim-trixie@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+  timeout_sec: 10     # counts from docker run, container start included
   memory_mb: 256
+  cpus: 1
 
 readability:
   max_grade_margin: 1 # Flesch-Kincaid grade at most the student's grade + 1
