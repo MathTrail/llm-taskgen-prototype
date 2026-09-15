@@ -446,3 +446,17 @@ def save_answer(
     )
     if cursor.rowcount != 1:
         raise LookupError(f"no issued task {student_task_id}")
+
+
+def load_task(conn: psycopg.Connection, task_id: str) -> dict | None:
+    """A bank task row with its JSON, rating and answer count; None if unknown."""
+    with conn.cursor(row_factory=dict_row) as cursor:
+        return cursor.execute("SELECT * FROM tasks WHERE task_id = %s", (task_id,)).fetchone()
+
+
+def load_issued(conn: psycopg.Connection, student_id: str, task_id: str) -> dict | None:
+    """The student's row for an issued bank task, locked for this transaction; None if it was not issued to them."""
+    with conn.cursor(row_factory=dict_row) as cursor:
+        return cursor.execute(
+            "SELECT * FROM student_tasks WHERE student_id = %s AND task_id = %s FOR UPDATE", (student_id, task_id)
+        ).fetchone()

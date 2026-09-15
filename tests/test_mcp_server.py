@@ -1,4 +1,4 @@
-"""mcp_server.py (T19–T21) through a real MCP client: in process, and over stdio as Claude Code starts it."""
+"""mcp_server.py (T19–T22) through a real MCP client: in process, and over stdio as Claude Code starts it."""
 
 import json
 import sys
@@ -7,7 +7,7 @@ import psycopg
 import pytest
 from mcp import Client, StdioServerParameters
 
-from taskgen import mcp_server, service
+from taskgen import db, mcp_server, service
 from taskgen.seed import SEED_DIR, seed_student
 
 STUDENT = "mcpprobe"  # a committed student only these tests use; removed afterwards
@@ -28,7 +28,10 @@ def probe_student(test_url, monkeypatch):
     yield STUDENT
     with psycopg.connect(test_url) as conn:
         tasks = [row[0] for row in conn.execute(
-            "SELECT task_id FROM requests WHERE student_id = %s AND task_id IS NOT NULL", (STUDENT,))]  # fmt: skip
+            "SELECT task_id FROM requests WHERE student_id = %s AND task_id IS NOT NULL "
+            "UNION SELECT task_id FROM student_tasks WHERE student_id = %s AND task_id IS NOT NULL",
+            (STUDENT, STUDENT),
+        )]  # fmt: skip
         conn.execute("DELETE FROM attempts WHERE request_id IN (SELECT request_id FROM requests WHERE student_id = %s)",
                      (STUDENT,))  # fmt: skip
         for table in ("requests", "student_tasks", "student_topic_ratings", "students"):
@@ -40,12 +43,13 @@ def probe_student(test_url, monkeypatch):
 async def test_tools_are_registered():
     async with Client(mcp_server.server) as client:
         tools = {tool.name: tool for tool in (await client.list_tools()).tools}
-    assert {"get_student_profile", "get_progress", "get_next_task", "submit_task"} <= set(tools)
+    assert {"get_student_profile", "get_progress", "get_next_task", "submit_task", "submit_answer"} <= set(tools)
     assert "student_id" in json.dumps(tools["get_student_profile"].input_schema)
     assert {"language", "topic", "difficulty", "reason"} <= set(tools["get_next_task"].input_schema["properties"])
     submit = tools["submit_task"].input_schema["properties"]
     assert {"request_id", "brief", "task", "solver_code", "self_check", "language"} <= set(submit)
     assert "ctx" not in submit  # the context is injected by the server, not passed by the model
+    assert {"student_id", "task_id", "answer", "hint_used"} <= set(tools["submit_answer"].input_schema["properties"])
 
 
 @pytest.mark.anyio
@@ -90,6 +94,33 @@ async def test_submit_task_records_the_client(probe_student, test_url):
     with psycopg.connect(test_url) as conn:
         models = conn.execute("SELECT models FROM attempts WHERE request_id = %s", (request_id,)).fetchone()[0]
     assert models and models["name"]  # clientInfo of the in-process client
+
+
+@pytest.mark.anyio
+async def test_submit_answer_through_mcp(probe_student, test_url):
+    brief = {
+        "rationale": "Test.", "pedagogical_goal": "reinforce", "target_concept": "time.clocks", "difficulty": 1,
+        "setting": "robots", "traps_to_use": ["off_by_one"], "constraints": [],
+        "excluded_skills": ["division_with_remainder", "fractions"], "profile_fields_used": ["history"],
+    }  # fmt: skip
+    task = {
+        "core_idea": "Add hours.", "design_thought_process": "Plot: robots.", "question": "It is 3 o'clock. "
+        "What time is it 2 hours later?", "options": {"A": "1", "B": "4", "C": "5", "D": "2", "E": "6"},
+        "correct_answer": "C", "solution": "3 + 2 = 5.", "hint": "Count on from 3.",
+        "distractors": {letter: {"trap": "off_by_one", "text": "Count again."} for letter in "ABDE"},
+    }  # fmt: skip
+    with psycopg.connect(test_url) as conn:
+        task_id = db.save_task(conn, brief=brief, task=task, analyst={}, skeptic={}, grade_level="3-4",
+                               attempt_count=1, rating=-2.0)  # fmt: skip
+        db.issue_task(conn, probe_student, task_id)
+    async with Client(mcp_server.server) as client:
+        result = await client.call_tool("submit_answer", {"student_id": probe_student, "task_id": task_id,
+                                                          "answer": "B", "hint_used": True})  # fmt: skip
+        again = await client.call_tool("submit_answer", {"student_id": probe_student, "task_id": task_id,
+                                                         "answer": "C"})  # fmt: skip
+    assert not result.is_error
+    assert (result.structured_content["result"], result.structured_content["trap"]["id"]) == ("wrong", "off_by_one")
+    assert again.is_error and "already answered" in again.content[0].text
 
 
 @pytest.mark.anyio

@@ -97,6 +97,16 @@ def submit_task(
                                    client=client)  # fmt: skip
 
 
+@server.tool(title="Record an answer")
+def submit_answer(student_id: str, task_id: str, answer: str, hint_used: bool = False) -> dict[str, Any]:
+    """Record the child's answer to a task they were given: answer is the letter A-E, or "?" when the child says
+    they do not understand the task; hint_used is true if you gave them the hint. Returns whether it is correct,
+    the correct answer, the trap text of a wrong option and the solution, so you can explain; also updates the
+    child's history and ratings."""
+    with tool_errors(), service.connect() as conn:
+        return service.submit_answer(conn, student_id, task_id, answer, hint_used, load_params())
+
+
 def main() -> None:
     server.run("stdio")
 

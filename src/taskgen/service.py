@@ -29,14 +29,21 @@ from taskgen.db import (
     grade_level,
     issue_task,
     list_students,
+    load_issued,
     load_request,
     load_student,
+    load_task,
     record_attempt,
+    save_answer,
+    save_student_rating,
     save_task,
+    save_task_rating,
+    save_topic_rating,
     task_questions,
+    update_consecutive_failures,
 )
 from taskgen.filters import load_thresholds, near_duplicate, readability, structure_errors
-from taskgen.rating import DIFFICULTIES, Params, corridor, difficulty_to_beta, elo
+from taskgen.rating import DIFFICULTIES, Params, corridor, difficulty_to_beta, elo, update
 from taskgen.tutor_rule import make_brief, pick_traps
 from taskgen.validate_examples import load_examples
 
@@ -467,4 +474,79 @@ def submit_task(conn: psycopg.Connection, request_id: int, brief: dict, task: di
         "attempt": attempt_no,
         "minor_issues": [issue for issue in self_check["issues"] if issue["severity"] == "minor"],
         "next": ACCEPTED_NOTE,
+    }
+
+
+# submit_answer
+
+OPTIONS = ("A", "B", "C", "D", "E")
+DID_NOT_UNDERSTAND = "?"
+NOT_UNDERSTOOD_FEEDBACK = "didn't understand the question"  # the same text as in the starting profiles (SPEC 4.1)
+ANSWER_NOTES = {
+    "correct": "Praise the child briefly; go through the solution if it helps. Then offer the next task.",
+    "wrong": ("Start from trap.text: it names the mistake. Then walk through the solution step by step, kindly. "
+              "Then offer the next task."),
+    "did not understand": ("Explain the task again more simply, step by step, using the solution. Then offer the "
+                           "next task, perhaps an easier one."),
+}  # fmt: skip
+
+
+def pace_tag(seconds: float) -> str:
+    """fast, normal or struggled by the thresholds in config.yaml; the hint time counts too (SPEC 3)."""
+    pace = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))["pace"]
+    if seconds < pace["fast_below_sec"]:
+        return "fast"
+    if seconds > pace["struggled_above_sec"]:
+        return "struggled"
+    return "normal"
+
+
+def submit_answer(conn: psycopg.Connection, student_id: str, task_id: str, answer: str, hint_used: bool,
+                  params: Params) -> dict:
+    """Record the child's answer to an issued task and update the ratings (SPEC 3, 5.6); return what to explain."""
+    choice = (answer or "").strip().upper()
+    if choice not in OPTIONS and choice != DID_NOT_UNDERSTAND:
+        raise InvalidRequest(f"answer must be one of A-E, or '?' when the child does not understand; got {answer!r}")
+    student = require_student(conn, student_id)
+    issued = load_issued(conn, student_id, task_id)
+    if issued is None:
+        raise InvalidRequest(f"task {task_id!r} was not given to {student_id!r}; answer only tasks that "
+                             "get_next_task or an accepted submit_task gave to this student")  # fmt: skip
+    if issued["correct"] is not None or issued["chosen_option"] is not None or issued["feedback"] is not None:
+        raise InvalidRequest(f"task {task_id!r} is already answered; call get_next_task for a new one")
+
+    bank = load_task(conn, task_id)
+    task = bank["task"]
+    correct = None if choice == DID_NOT_UNDERSTAND else choice == task["correct_answer"]
+    trap = task["distractors"].get(choice) if correct is False else None
+    feedback = NOT_UNDERSTOOD_FEEDBACK if correct is None else None
+    pace = pace_tag((datetime.now(timezone.utc) - issued["issued_at"]).total_seconds())
+    save_answer(conn, issued["id"], correct=correct, chosen_option=None if correct is None else choice,
+                trap_hit=trap["trap"] if trap else None, feedback=feedback, hint_used=hint_used,
+                pace=pace)  # fmt: skip
+    failures = update_consecutive_failures(conn, student_id, correct)
+
+    topic = bank["topic"]
+    topic_rating = student["topic_ratings"].get(topic, {"offset": 0.0, "answers_count": 0})
+    delta, topic_answers = topic_rating["offset"], topic_rating["answers_count"]
+    step = update(student["rating"], delta, bank["rating"], correct=correct, student_answers=student["answers_count"],
+                  topic_answers=topic_answers, task_answers=bank["rating_count"], params=params)  # fmt: skip
+    save_student_rating(conn, student_id, step.theta, student["answers_count"] + 1)
+    save_topic_rating(conn, student_id, topic, step.delta, topic_answers + 1)
+    save_task_rating(conn, task_id, step.beta, bank["rating_count"] + 1)
+
+    result = answer_result({"correct": correct, "feedback": feedback})
+    return {
+        "result": result,
+        "correct": correct,
+        "correct_answer": task["correct_answer"],
+        "chosen_option": None if correct is None else choice,
+        "trap": {"id": trap["trap"], "text": trap["text"]} if trap else None,
+        "solution": task["solution"],
+        "hint_used": hint_used,
+        "pace": pace,
+        "topic": topic,
+        "topic_rating": {"before": round(elo(student["rating"] + delta)), "after": round(elo(step.theta + step.delta))},
+        "failures_in_a_row": failures,
+        "next": ANSWER_NOTES[result],
     }
