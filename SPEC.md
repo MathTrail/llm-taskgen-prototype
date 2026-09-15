@@ -637,8 +637,9 @@ sandbox:              # Docker без сети (5.3), образ закрепл�
   timeout_sec: 10
   memory_mb: 256
   cpus: 1
-readability:
-  max_grade_margin: 1 # Флеш-Кинкейд не выше класса ученика + 1
+readability:          # по тексту условия (question)
+  max_grade_margin: 3 # Флеш-Кинкейд не выше класса ученика + 3
+  max_sentence_words: { "1-2": 20, "3-4": 25 }  # самое длинное предложение, по уровню класса
 near_duplicate:
   max_similarity: 0.6 # pg_trgm
 ```
@@ -694,6 +695,7 @@ src/taskgen/           — весь код, пакет Python; запуск: pyt
   seed.py              — загрузить или сбросить стартовые профили в БД
   apply_schema.py      — пересоздать схему БД из db/schema.sql
   catalogs.py          — загрузка и проверка каталогов
+  filters.py           — фильтры без LLM: структура задачи, читаемость, близкие дубли (6)
   validate_examples.py — проверка эталонных задач (схема schemas/example_task.json)
 tests/                 — тесты pytest, в том числе проверка ответов эталонов (tests/example_checks/)
 prompts/               — tutor.md, generator.md, analyst.md, skeptic.md

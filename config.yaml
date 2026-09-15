@@ -25,8 +25,9 @@ sandbox:              # solver_code runs here without network (SPEC 5.3)
   memory_mb: 256
   cpus: 1
 
-readability:
-  max_grade_margin: 1 # Flesch-Kincaid grade at most the student's grade + 1
+readability:          # measured on the question text (D38)
+  max_grade_margin: 3 # Flesch-Kincaid grade at most the student's grade + 3
+  max_sentence_words: { "1-2": 20, "3-4": 25 }  # longest sentence, by grade level
 
 near_duplicate:
   max_similarity: 0.6 # pg_trgm similarity threshold

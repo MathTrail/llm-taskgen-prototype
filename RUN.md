@@ -42,7 +42,7 @@
 | [x] | T12 | `db.py` | Claude | T07 |
 | [x] | T13 | `rating.py` | Claude | T05, T12 |
 | [x] | T14 | `sandbox.py` | Claude | T06 |
-| [ ] | T15 | Фильтры: структура, читаемость, дубли | Claude | T12 |
+| [x] | T15 | Фильтры: структура, читаемость, дубли | Claude | T12 |
 | [ ] | T16 | JSON-схемы агентов | Claude | T08 |
 | [ ] | T17 | Методист-правило | Claude | T13, T16 |
 | [ ] | T18 | `llm.py` — обёртка Claude API | Claude | T06 |

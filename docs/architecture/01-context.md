@@ -22,7 +22,7 @@ flowchart LR
             skeptic["Скептик"]
         end
         rating["rating.py<br/>Эло + IRT · коридор"]
-        checks["проверки: структура,<br/>читаемость, дубли<br/>(модуль не назван в SPEC 10)"]
+        filters["filters.py<br/>структура, читаемость, дубли"]
         llm["llm.py<br/>обёртка Claude API"]
         db["db.py<br/>доступ к БД"]
         sandbox["sandbox.py<br/>запуск solver_code"]
@@ -41,7 +41,7 @@ flowchart LR
     subgraph docker["Docker (локально)"]
         direction TB
         pg[("PostgreSQL + pg_trgm<br/>docker-compose.yml · db/schema.sql")]
-        box[["Контейнер без сети<br/>python:3.12-slim"]]
+        box[["Контейнер без сети<br/>python:3.12.14-slim"]]
     end
 
     claude(["Claude API<br/>Haiku 4.5 · Opus 5 · Sonnet 5"])
@@ -55,7 +55,7 @@ flowchart LR
     main --> analyst
     main --> skeptic
     main --> rating
-    main --> checks
+    main --> filters
     main --> sandbox
     main --> db
 
@@ -65,7 +65,7 @@ flowchart LR
     seed --> rating
     seed --> db
     rule --> rating
-    checks --> db
+    filters --> db
     db -- "SQL" --> pg
     sandbox -- "без сети, с лимитами" --> box
 
@@ -73,18 +73,14 @@ flowchart LR
     prompts -.-> llm
     catalogs -.-> main
     examples -.-> gen
-    examples -.-> checks
+    examples -.-> filters
     seeds -.-> seed
     evalset -.-> main
-
-    classDef gap stroke-dasharray: 5 5
-    class checks gap
 ```
 
 **Как читать:**
 - Сплошная стрелка — вызов или запрос.
 - Пунктирная стрелка — чтение файла или необязательный режим.
-- Пунктирная рамка — компонент, для которого в SPEC 10 не назван модуль (см. «Замечания к SPEC»).
 
 ## Компоненты
 
@@ -97,10 +93,10 @@ flowchart LR
 | `agents.py` · Скептик | Поиск дефектов условия по чек-листу | 5.4 |
 | `tutor_rule.py` | Методист-правило без LLM, базовая линия | 5.7 |
 | `rating.py` | Вероятность P, обновление θ, δ, β, коридор сложности | 5.6 |
-| проверки (модуль не назван) | Структура ответа Генератора, читаемость, близкие дубли | 6 |
+| `filters.py` | Структура ответа Генератора, читаемость условия, близкие дубли в банке и среди эталонов | 6 |
 | `llm.py` | Вызовы Claude: structured outputs, `effort`, кэш, токены и стоимость, `prompt_version` | 8 |
 | `db.py` | Всё чтение и запись PostgreSQL, поиск в банке, похожесть через `pg_trgm` | 5.5, 7 |
-| `sandbox.py` | Выполнение `solver_code` в контейнере без сети, с лимитами времени и памяти | 5.3, 6 |
+| `sandbox.py` | Выполнение `solver_code` в контейнере без сети, с лимитами времени, памяти и CPU | 5.3, 6 |
 | `seed.py` | Загрузка и сброс стартовых профилей, пересчёт рейтингов по стартовой истории | 3, 4.1 |
 | `config.yaml` | Модели и `effort` агентов, лимит попыток, пороги `pace`, рейтинги, песочница, фильтры | 8 |
 | `prompts/`, `schemas/` | Промпты агентов и JSON-схемы их ответов | 5, 8 |
@@ -122,6 +118,6 @@ flowchart LR
 
 Найдены при построении схемы. SPEC в этой задаче не меняю — решение за мной на точке проверки фазы 0.
 
-1. **Модуль для проверок не назван.** Структурная проверка, фильтр читаемости и поиск близких дублей (SPEC 6) есть в логике, но не в SPEC 10. Предложение: `checks.py`.
+1. **Модуль для проверок не назван.** Структурная проверка, фильтр читаемости и поиск близких дублей (SPEC 6) есть в логике, но не в SPEC 10. Предложение: `checks.py`. **Решено в T15:** модуль назван `filters.py`, как задача и тест в RUN; добавлен в SPEC 10 — см. D38 в [decisions.md](../decisions.md).
 2. **Не указано, где лежат списки для «зерна» Генератора** (SPEC 5.2: типы сюжета, структуры условия, персонажи). Предложение: `story_seeds.json` рядом с каталогами.
 3. **Нет цен моделей для учёта стоимости.** `llm.py` считает стоимость (SPEC 8), но цен в `config.yaml` из SPEC 8 нет. Предложение: секция `prices` в `config.yaml`.

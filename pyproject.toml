@@ -9,6 +9,7 @@ dependencies = [
     "jsonschema",
     "psycopg[binary]",
     "pyyaml",
+    "textstat",
 ]
 
 [dependency-groups]
