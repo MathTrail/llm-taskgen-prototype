@@ -1,0 +1,27 @@
+# Prototype settings (SPEC 8). Values are rough and get tuned after the first runs.
+
+max_attempts: 3       # submit_task attempts per task request (SPEC 6); the client's model writes the text (D42)
+
+pace:                 # thresholds for the pace tag: time from issuing a task to the answer (SPEC 3)
+  fast_below_sec: 60
+  struggled_above_sec: 180
+
+rating:               # Elo + IRT (SPEC 5.6): each parameter has its own K = k0 / (1 + decay * n)
+  k0_student: 0.2     # overall level theta: slower than the topic offset (D37)
+  k0_topic: 0.4       # topic offset delta
+  k0_task: 0.4        # task difficulty beta
+  decay: 0.05
+  corridor: [0.70, 0.85]
+
+sandbox:              # solver_code runs here without network (SPEC 5.3)
+  image: python:3.12.14-slim-trixie@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+  timeout_sec: 10     # counts from docker run, container start included
+  memory_mb: 256
+  cpus: 1
+
+readability:          # measured on the question text (D38)
+  max_grade_margin: 3 # Flesch-Kincaid grade at most the student's grade + 3
+  max_sentence_words: { "1-2": 20, "3-4": 25 }  # longest sentence, by grade level
+
+near_duplicate:
+  max_similarity: 0.6 # pg_trgm similarity threshold

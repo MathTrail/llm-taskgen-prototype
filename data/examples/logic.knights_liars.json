@@ -1,0 +1,852 @@
+[
+  {
+    "id": "kl-34-d1-1",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Which of these sentences can no islander ever say?",
+    "options": {
+      "A": "I am a knight.",
+      "B": "2 + 2 = 4.",
+      "C": "2 + 2 = 5.",
+      "D": "I am a liar.",
+      "E": "I am not a liar."
+    },
+    "correct_answer": "D",
+    "solution": "A knight cannot say 'I am a liar', because it would be false. A liar cannot say it either, because it would be true. Every other sentence can be said: a knight can say a true one, a liar a false one, and both can say 'I am a knight' or 'I am not a liar'.",
+    "distractors": {
+      "A": {
+        "trap": "trusted_statement",
+        "text": "Both can say it: a knight truthfully, a liar falsely."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "A knight can say it, because it is true."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "A liar can say it, because it is false."
+      },
+      "E": {
+        "trap": "trusted_statement",
+        "text": "Both can say it: a knight truthfully, a liar falsely."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d1-2",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says: '2 + 2 = 5.' Ben says: 'Ann is a knight.' Who are Ann and Ben?",
+    "options": {
+      "A": "Both are knights",
+      "B": "Ann is a knight, Ben is a liar",
+      "C": "Ann is a liar, Ben is a knight",
+      "D": "It is impossible to tell",
+      "E": "Both are liars"
+    },
+    "correct_answer": "E",
+    "solution": "2 + 2 = 5 is false, so Ann is a liar. Then Ben's words 'Ann is a knight' are false, so Ben is a liar too.",
+    "distractors": {
+      "A": {
+        "trap": "trusted_statement",
+        "text": "Ann said something false, so she cannot be a knight."
+      },
+      "B": {
+        "trap": "trusted_statement",
+        "text": "Ann's words are false, so Ann is a liar, not a knight."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "Ann is a liar, and then Ben's words about her are false too."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Ann's false words show she is a liar, and that tells us about Ben as well."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d1-3",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says: 'A week has 7 days.' Ben says: 'Ann is a liar.' Who are Ann and Ben?",
+    "options": {
+      "A": "Ann is a knight, Ben is a liar",
+      "B": "Both are knights",
+      "C": "Both are liars",
+      "D": "Ann is a liar, Ben is a knight",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "A",
+    "solution": "A week has 7 days, so Ann told the truth and is a knight. Ben's words 'Ann is a liar' are false, so Ben is a liar.",
+    "distractors": {
+      "B": {
+        "trap": "stopped_early",
+        "text": "Ann is a knight, but then Ben's words about her are false."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "Ann said something true, so she is a knight."
+      },
+      "D": {
+        "trap": "trusted_statement",
+        "text": "You believed Ben, but Ann's words are true, so she is a knight."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Ann's true words show she is a knight, and then Ben's words are false."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d1-4",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says: 'Ben is a liar.' Ben says: '10 is more than 7.' Who are Ann and Ben?",
+    "options": {
+      "A": "Both are knights",
+      "B": "Ann is a liar, Ben is a knight",
+      "C": "Both are liars",
+      "D": "Ann is a knight, Ben is a liar",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "B",
+    "solution": "10 is more than 7, so Ben told the truth and is a knight. Ann's words 'Ben is a liar' are false, so Ann is a liar.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Ben is a knight, but then Ann's words about him are false."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "Ben said something true, so he is a knight."
+      },
+      "D": {
+        "trap": "trusted_statement",
+        "text": "You believed Ann, but Ben's words are true, so he is a knight."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Ben's true words show he is a knight, and then Ann's words are false."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d1-5",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. A traveller asks every islander: 'Are you a knight?' What answers does he get?",
+    "options": {
+      "A": "Knights say yes, liars say no",
+      "B": "Knights say no, liars say yes",
+      "C": "Everybody says yes",
+      "D": "Everybody says no",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "C",
+    "solution": "A knight is a knight and says so truthfully: yes. A liar is not a knight, but he lies, so he also says yes.",
+    "distractors": {
+      "A": {
+        "trap": "trusted_statement",
+        "text": "A liar lies, so he does not admit that he is not a knight: he says yes."
+      },
+      "B": {
+        "trap": "reversed_relation",
+        "text": "A knight tells the truth, so he says yes."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "A knight says yes truthfully, and a liar says yes falsely."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Knights always tell the truth and liars always lie, so each answer is known."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d2-1",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says: 'Ben and I are both liars.' Who are Ann and Ben?",
+    "options": {
+      "A": "Both are knights",
+      "B": "Both are liars",
+      "C": "Ann is a knight, Ben is a liar",
+      "D": "It is impossible to tell",
+      "E": "Ann is a liar, Ben is a knight"
+    },
+    "correct_answer": "E",
+    "solution": "A knight cannot say that she is a liar, so Ann is a liar. Then her words are false, so Ann and Ben are not both liars: Ben is a knight.",
+    "distractors": {
+      "A": {
+        "trap": "trusted_statement",
+        "text": "A knight could not call herself a liar."
+      },
+      "B": {
+        "trap": "trusted_statement",
+        "text": "You believed Ann. She is a liar, so her words are false and Ben is not a liar."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "A knight would not say she is a liar, so Ann is the liar."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "Once you know Ann is a liar, her false words tell you about Ben too."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d2-2",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says: 'Ben is a liar.' Ben says: 'I am a knight.' Who are Ann and Ben?",
+    "options": {
+      "A": "It is impossible to tell",
+      "B": "Both are knights",
+      "C": "Both are liars",
+      "D": "Ann is a knight, Ben is a liar",
+      "E": "Ann is a liar, Ben is a knight"
+    },
+    "correct_answer": "A",
+    "solution": "If Ann is a knight, Ben is a liar, and a liar can say 'I am a knight'. If Ann is a liar, Ben is a knight, and a knight can say it too. Both cases work, so it is impossible to tell.",
+    "distractors": {
+      "B": {
+        "trap": "ignored_condition",
+        "text": "If both were knights, Ann's words 'Ben is a liar' would be false."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "If both were liars, Ann's words 'Ben is a liar' would be true."
+      },
+      "D": {
+        "trap": "missed_case",
+        "text": "This works, but so does the other case: Ann a liar and Ben a knight."
+      },
+      "E": {
+        "trap": "missed_case",
+        "text": "This works, but so does the other case: Ann a knight and Ben a liar."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d2-3",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says: 'Ben is a liar.' Ben says: 'Kim is a liar.' Kim says: '2 + 2 = 4.' How many knights are among Ann, Ben and Kim?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "1",
+      "D": "3",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "B",
+    "solution": "Kim told the truth, so she is a knight. Then Ben's words are false, so Ben is a liar. Then Ann's words are true, so Ann is a knight. Ann and Kim are knights: 2.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "Kim said something true, so she is a knight."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "Kim is a knight, but Ann is a knight too: her words about Ben are true."
+      },
+      "D": {
+        "trap": "trusted_statement",
+        "text": "If everyone were a knight, Ben's words about Kim would be false."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Start from Kim: her words are true, and then everyone is known."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d2-4",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says: 'Ben is a knight.' Ben says: 'Kim is a knight.' Kim says: '2 + 2 = 5.' How many knights are among Ann, Ben and Kim?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "0",
+      "D": "3",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "C",
+    "solution": "Kim said something false, so she is a liar. Then Ben's words 'Kim is a knight' are false, so Ben is a liar. Then Ann's words are false too, so Ann is a liar. There are no knights.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Kim is a liar, and then Ben and Ann are liars too."
+      },
+      "B": {
+        "trap": "trusted_statement",
+        "text": "You believed Ann and Ben, but their words are false."
+      },
+      "D": {
+        "trap": "trusted_statement",
+        "text": "Kim said 2 + 2 = 5, so she is not a knight."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Start from Kim: her words are false, and then everyone is known."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d2-5",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says: 'Ben is a knight.' Ben says: 'One of us two is a knight and the other is a liar.' Who are Ann and Ben?",
+    "options": {
+      "A": "Both are knights",
+      "B": "Ann is a knight, Ben is a liar",
+      "C": "Ann is a liar, Ben is a knight",
+      "D": "Both are liars",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "D",
+    "solution": "If Ann were a knight, Ben would be a knight too, but then his words 'one of us is a liar' would be false. So Ann is a liar, and her words are false: Ben is a liar. Then Ben's words are indeed false: they are both liars, not one of each.",
+    "distractors": {
+      "A": {
+        "trap": "trusted_statement",
+        "text": "If both were knights, Ben's words 'one of us is a liar' would be false."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "If Ann were a knight, Ben would be a knight too, as she says."
+      },
+      "C": {
+        "trap": "trusted_statement",
+        "text": "If Ben were a knight, Ann's words would be true, so she would be a knight too, and then Ben's words would be false."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "Try both cases for Ann: only one of them works."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d3-1",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Three islanders each say: 'Exactly one of us three is a knight.' How many knights are among them?",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "3",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "A",
+    "solution": "If there were exactly one knight, the words would be true, and the two liars could not say them. If there were 2 or 3 knights, the knights would be saying something false. So there are no knights: all three are liars, and their words are indeed false.",
+    "distractors": {
+      "B": {
+        "trap": "trusted_statement",
+        "text": "With one knight the words are true, but then the two liars could not say them."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "With two knights the words are false, and a knight cannot say them."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "With three knights the words are false, and a knight cannot say them."
+      },
+      "E": {
+        "trap": "missed_case",
+        "text": "Try every number of knights: only 0 works."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d3-2",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Four islanders sit at a round table. Each of them says: 'My neighbour on the left is a liar.' How many knights are at the table?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "1",
+      "D": "3",
+      "E": "4"
+    },
+    "correct_answer": "B",
+    "solution": "A knight's left neighbour is a liar, and a liar's left neighbour is a knight. So knights and liars take turns around the table, and 4 people make 2 knights and 2 liars.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "If all were liars, each would be telling the truth about the left neighbour."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Knights and liars take turns around the table, so there are as many knights as liars."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "Knights and liars take turns around the table, so there are as many knights as liars."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "If all were knights, each would be saying something false."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d3-3",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says: 'Ben and Kim are both knights.' Ben says: 'Kim is a liar.' How many knights are among Ann, Ben and Kim?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "1",
+      "D": "3",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "C",
+    "solution": "If Ann were a knight, Ben and Kim would be knights, but then Ben's words 'Kim is a liar' would be false. So Ann is a liar. If Ben is a knight, Kim is a liar; if Ben is a liar, Kim is a knight. Either way there is exactly 1 knight.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "If Ben is a liar, his words are false and Kim is a knight, so there is always one knight."
+      },
+      "B": {
+        "trap": "trusted_statement",
+        "text": "Ann is a liar, so Ben and Kim are not both knights."
+      },
+      "D": {
+        "trap": "trusted_statement",
+        "text": "You believed Ann, but then Ben's words about Kim would be false."
+      },
+      "E": {
+        "trap": "missed_case",
+        "text": "We do not know who the knight is, but in both cases there is exactly 1."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d3-4",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says to Ben: 'At least one of us two is a liar.' Who are Ann and Ben?",
+    "options": {
+      "A": "Both are knights",
+      "B": "Both are liars",
+      "C": "Ann is a liar, Ben is a knight",
+      "D": "Ann is a knight, Ben is a liar",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "D",
+    "solution": "If Ann were a liar, her words would be true, because she herself is a liar. That cannot be, so Ann is a knight. Then her words are true: one of them is a liar, and it must be Ben.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "If both were knights, Ann's words would be false."
+      },
+      "B": {
+        "trap": "trusted_statement",
+        "text": "If Ann were a liar, her words would be true, and a liar cannot say something true."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "If Ann were a liar, her words would be true: she herself is a liar."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "Try both cases for Ann: only one of them works."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d3-5",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says: 'Ben is a liar.' Ben says: 'Kim is a liar.' Kim says: 'Ann and Ben are both liars.' How many knights are among Ann, Ben and Kim?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "3",
+      "D": "It is impossible to tell",
+      "E": "1"
+    },
+    "correct_answer": "E",
+    "solution": "If Ann were a knight, Ben would be a liar and Kim a knight, but Kim's words would be false because Ann is a knight. So Ann is a liar. Then Ben is a knight and Kim is a liar, and Kim's words are indeed false because Ben is a knight. There is 1 knight: Ben.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "If all were liars, Ann's words 'Ben is a liar' would be true."
+      },
+      "B": {
+        "trap": "trusted_statement",
+        "text": "If Ann were a knight, Kim would be a knight too, and Kim's words would be false."
+      },
+      "C": {
+        "trap": "trusted_statement",
+        "text": "If all were knights, Ann's words 'Ben is a liar' would be false."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "Try both cases for Ann: only one of them works."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d4-1",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Five islanders stand in a row. The first says: 'Exactly 1 of us is a liar.' The second says: 'Exactly 2 of us are liars.' The third says: 'Exactly 3 of us are liars.' The fourth says: 'Exactly 4 of us are liars.' The fifth says: 'Exactly 5 of us are liars.' How many knights are there?",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "4",
+      "E": "5"
+    },
+    "correct_answer": "B",
+    "solution": "The five sentences name different numbers, so at most one of them is true, and at most one islander is a knight. If there were no knights, there would be 5 liars and the fifth sentence would be true, but a liar cannot say it. So there is exactly 1 knight and 4 liars: the fourth islander is the knight.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "With no knights there would be 5 liars, and the fifth sentence would be true."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "The sentences name different numbers, so at most one of them is true."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "4 is the number of liars, not knights."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "5 is how many islanders there are."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d4-2",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says: 'Exactly one of us three is a liar.' Ben says: 'Exactly two of us three are liars.' Kim says: 'All three of us are liars.' How many knights are among Ann, Ben and Kim?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "1",
+      "D": "3",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "C",
+    "solution": "Kim cannot be a knight: then she would be a liar too. So Kim is a liar, and not all three are liars. If Ann were a knight, there would be exactly one liar, Kim, so Ben would be a knight too, but then Ben's words would be false. So Ann is a liar. Then Ann and Kim are liars, and Ben's words are true: Ben is the only knight.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "If all three were liars, Kim's words would be true."
+      },
+      "B": {
+        "trap": "trusted_statement",
+        "text": "Ann and Ben name different numbers, so they cannot both be right."
+      },
+      "D": {
+        "trap": "trusted_statement",
+        "text": "If all were knights, Kim would be calling herself a liar."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "Check each case: only Ben as the knight works."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d4-3",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Five islanders sit at a round table. Each of them says: 'Both my neighbours are liars.' How many knights are at the table?",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "3",
+      "D": "2",
+      "E": "5"
+    },
+    "correct_answer": "D",
+    "solution": "Two knights cannot sit side by side, so there are at most 2 knights among 5 people at a round table. Every liar must have a knight next to him, or his words would be true. With only 1 knight, the two liars sitting farthest from him would be next to each other with no knight beside them. With 2 knights it works: knight, liar, knight, liar, liar.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "If all were liars, their words would be true."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "With one knight, the two liars far from him would sit together, and one of them would be telling the truth."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "Among 5 people at a round table, 3 knights would have two of them side by side."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "If all were knights, their words would be false."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d4-4",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says: 'Ben is a liar.' Ben says: 'Ann and Kim are both liars.' Kim says: 'Ben is a knight.' Who is a knight?",
+    "options": {
+      "A": "only Ben",
+      "B": "only Kim",
+      "C": "Ann and Kim",
+      "D": "nobody",
+      "E": "only Ann"
+    },
+    "correct_answer": "E",
+    "solution": "If Ann were a liar, Ben would be a knight, and his words would make Kim a liar; but then Kim's words 'Ben is a knight' would be true. So Ann is a knight and Ben is a liar. Kim's words 'Ben is a knight' are false, so Kim is a liar. Ben's words are indeed false, because Ann is a knight.",
+    "distractors": {
+      "A": {
+        "trap": "trusted_statement",
+        "text": "If Ben were a knight, Kim would be a liar who says something true."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "Kim's words 'Ben is a knight' are false, so Kim is a liar."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "Kim says Ben is a knight, but Ann, a knight, says he is a liar."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "If all were liars, Ann's words 'Ben is a liar' would be true."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d4-5",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Six islanders sit at a round table. Each of them says: 'My neighbour on the right is a knight, and my neighbour on the left is a liar.' How many knights are at the table?",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "3",
+      "E": "6"
+    },
+    "correct_answer": "A",
+    "solution": "If someone were a knight, the person on his right would be a knight too, and so would the next one, all the way round the table. Then everyone would be a knight, and nobody would have a liar on the left. So there are no knights. If all are liars, every sentence is false, which fits.",
+    "distractors": {
+      "B": {
+        "trap": "stopped_early",
+        "text": "A knight's right neighbour is a knight too, so there cannot be just one knight."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "A knight's right neighbour is a knight, and then everyone around the table would be a knight."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Knights and liars cannot take turns: a knight's right neighbour must be a knight."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "If all were knights, nobody would have a liar on the left."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d5-1",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ten islanders sit at a round table. Each of them says: 'Both my neighbours are liars.' What is the largest number of knights that can be at the table?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6",
+      "E": "10"
+    },
+    "correct_answer": "C",
+    "solution": "Two knights cannot sit side by side, so at most every second seat has a knight: 5 knights. And 5 works: knight, liar, knight, liar, and so on. Each liar then has knights next to him, so his words are false.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "More knights are possible: 5 of them can take every second seat."
+      },
+      "B": {
+        "trap": "answered_other_question",
+        "text": "4 is the smallest possible number of knights, not the largest."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "With 6 knights, two of them would sit side by side."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "If all were knights, their words would be false."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d5-2",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Twelve islanders stand in a line. Each of them except the first says: 'The person just before me is a liar.' The first says nothing. How many knights are in the line?",
+    "options": {
+      "A": "5",
+      "B": "7",
+      "C": "11",
+      "D": "6",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "D",
+    "solution": "A knight stands right after a liar, and a liar right after a knight, so knights and liars take turns. We do not know who the first person is, but either way 12 people taking turns make 6 knights.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "Knights and liars take turns, and 12 is even: there are 6 of each."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Knights and liars take turns, and 12 is even: there are 6 of each."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "11 is how many people speak."
+      },
+      "E": {
+        "trap": "missed_case",
+        "text": "We do not know who the first person is, but in both cases there are 6 knights."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d5-3",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Six islanders stand in a row. The first says: 'At least 1 of us is a liar.' The second says: 'At least 2 of us are liars.' And so on: the sixth says: 'At least 6 of us are liars.' How many knights are there?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "4",
+      "D": "6",
+      "E": "3"
+    },
+    "correct_answer": "E",
+    "solution": "Say there are some number of liars. Then exactly that many sentences are true, the first ones, so that many people are knights. So there are as many knights as liars: 3 and 3. Check: with 3 liars, 'at least 1, 2, 3 liars' are true and the first three are knights, while 'at least 4, 5, 6' are false and the last three are liars.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "If all were liars, the first sentence would be true."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "With 2 knights there would be 4 liars, and the third and fourth sentences would be true too."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "With 4 knights there would be only 2 liars, and the fourth sentence would be false."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "If all were knights, there would be no liars, and the first sentence would be false."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d5-4",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. A traveller asks Ann: 'Are you a knight or a liar?' Ann answers, but the traveller does not hear her. Ben says: 'Ann said that she is a liar.' Kim says: 'Ben is lying.' Who are Ben and Kim?",
+    "options": {
+      "A": "Ben is a liar, Kim is a knight",
+      "B": "Both are knights",
+      "C": "Both are liars",
+      "D": "Ben is a knight, Kim is a liar",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "A",
+    "solution": "Nobody on the island can say 'I am a liar': a knight would be lying and a liar would be telling the truth. So Ann said 'I am a knight', and Ben's words are false: Ben is a liar. Then Kim's words 'Ben is lying' are true, so Kim is a knight.",
+    "distractors": {
+      "B": {
+        "trap": "trusted_statement",
+        "text": "Ben's words cannot be true: nobody on the island says 'I am a liar'."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "Ben is lying, so Kim's words are true."
+      },
+      "D": {
+        "trap": "trusted_statement",
+        "text": "You believed Ben, but nobody on the island says 'I am a liar'."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "We do not know who Ann is, but whatever she is, she said 'I am a knight'."
+      }
+    }
+  },
+  {
+    "id": "kl-34-d5-5",
+    "topic": "logic.knights_liars",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "On an island, knights always tell the truth and liars always lie. Every islander is a knight or a liar. Ann says: 'Ben is a liar.' Ben says: 'Kim is a liar.' Kim says: 'Dan is a liar.' Dan says: 'Ann and Ben are both liars.' How many knights are among the four of them?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "1",
+      "D": "3",
+      "E": "4"
+    },
+    "correct_answer": "B",
+    "solution": "If Ann were a liar, then Ben would be a knight, Kim a liar and Dan a knight; but Dan's words would be false, because Ben is a knight. So Ann is a knight. Then Ben is a liar, Kim is a knight and Dan is a liar, and Dan's words are indeed false. The knights are Ann and Kim: 2.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "If all were liars, Ann's words 'Ben is a liar' would be true."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "Ann is a knight, but so is Kim: Ben's words about her are false."
+      },
+      "D": {
+        "trap": "trusted_statement",
+        "text": "Dan is a liar, so his words are false."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "If all were knights, Ann's words 'Ben is a liar' would be false."
+      }
+    }
+  }
+]

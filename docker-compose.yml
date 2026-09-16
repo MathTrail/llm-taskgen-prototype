@@ -1,0 +1,24 @@
+# PostgreSQL for the prototype (SPEC 7).
+# Start: `docker compose up -d --wait`, then create the schema: `uv run python -m taskgen.apply_schema`.
+services:
+  db:
+    # Exact versions only: the tag is pinned by the digest of its multi-arch image.
+    image: postgres:17.11-trixie@sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675
+    environment:
+      # Local development credentials; they match DATABASE_URL in .env.example.
+      POSTGRES_USER: taskgen
+      POSTGRES_PASSWORD: taskgen
+      POSTGRES_DB: taskgen
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U taskgen -d taskgen"]
+      interval: 2s
+      timeout: 5s
+      retries: 15
+    restart: unless-stopped
+
+volumes:
+  pgdata:

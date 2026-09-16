@@ -1,0 +1,1702 @@
+[
+  {
+    "id": "ord-12-d1-1",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "Ann is taller than Ben. Ben is taller than Kim. Who is the shortest?",
+    "options": {
+      "A": "Ann",
+      "B": "Kim",
+      "C": "Ben",
+      "D": "Ben and Kim",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "B",
+    "solution": "Ann is taller than Ben, and Ben is taller than Kim. So from the tallest: Ann, Ben, Kim. Kim is the shortest.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "Ann is the tallest, not the shortest."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "Ben is shorter than Ann, but Kim is even shorter than Ben."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "Ben and Kim are both shorter than Ann, but only one child is the shortest."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Put the two facts together: Ann, then Ben, then Kim."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d1-2",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "A hare, a fox and a mouse run a race. The hare finishes before the fox. The fox finishes before the mouse. Who finishes last?",
+    "options": {
+      "A": "the hare",
+      "B": "the fox",
+      "C": "the mouse",
+      "D": "the fox and the mouse",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "C",
+    "solution": "The hare is before the fox, and the fox is before the mouse. So the order is hare, fox, mouse, and the mouse is last.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "The hare finishes first, not last."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "The fox is before the mouse, so the fox is not last."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Only one animal can be last."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Put the two facts together: hare, then fox, then mouse."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d1-3",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "Tom has more sweets than Sam. Sam has more sweets than Leo. How many of the three boys have fewer sweets than Tom?",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "3",
+      "D": "2",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "D",
+    "solution": "Tom has more than Sam, and Sam has more than Leo, so Tom has more than Leo too. Both Sam and Leo have fewer sweets than Tom: 2 boys.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "Tom has the most sweets, so the other two have fewer."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "Leo has fewer than Sam, so he also has fewer than Tom."
+      },
+      "C": {
+        "trap": "double_count",
+        "text": "Tom himself does not count."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The two facts are enough: Tom, then Sam, then Leo."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d1-4",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "Mia is older than Zoe but younger than Lily. Who is the oldest?",
+    "options": {
+      "A": "Mia",
+      "B": "Zoe",
+      "C": "Mia and Lily",
+      "D": "It is impossible to tell",
+      "E": "Lily"
+    },
+    "correct_answer": "E",
+    "solution": "Lily is older than Mia, and Mia is older than Zoe. So Lily is the oldest.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Mia is older than Zoe, but Lily is older than Mia."
+      },
+      "B": {
+        "trap": "reversed_relation",
+        "text": "Zoe is the youngest."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "Mia is younger than Lily, so they are not both the oldest."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Both facts together give the order: Lily, Mia, Zoe."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d1-5",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "The red box is heavier than the blue box. The green box is lighter than the blue box. Which box is the lightest?",
+    "options": {
+      "A": "the green box",
+      "B": "the red box",
+      "C": "the blue box",
+      "D": "the blue box and the green box",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "A",
+    "solution": "The red box is heavier than the blue box, and the blue box is heavier than the green box. So the green box is the lightest.",
+    "distractors": {
+      "B": {
+        "trap": "reversed_relation",
+        "text": "The red box is the heaviest."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "The blue box is lighter than the red box, but the green box is lighter still."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Only one box can be the lightest."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Put the facts together: red, then blue, then green."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d2-1",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Four children stand in a line. Kim stands first and Dan stands last. Ann stands right behind Ben. Who stands second?",
+    "options": {
+      "A": "Ann",
+      "B": "Kim",
+      "C": "Ben",
+      "D": "Dan",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "C",
+    "solution": "Kim is first and Dan is last, so Ann and Ben take places 2 and 3. Ann is right behind Ben, so Ben is second and Ann is third.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "Ann stands behind Ben, so Ben comes first of the two."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "Kim stands first, not second."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Dan stands last."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "The middle places go to Ben and Ann, and Ann is behind Ben."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d2-2",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Leo is the 3rd tallest in a group of 5 friends. How many friends are shorter than Leo?",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "4",
+      "D": "2",
+      "E": "5"
+    },
+    "correct_answer": "D",
+    "solution": "2 friends are taller than Leo. With Leo that is 3 children, so 5 - 3 = 2 friends are shorter.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "Count again: 2 are taller, then Leo, then 2 more are shorter."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "3 is Leo's place, not the number of shorter friends."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "4 is the number of friends other than Leo."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "5 is the number of friends in the whole group."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d2-3",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Rex is bigger than Spot. Spot is bigger than Max. Max is bigger than Bo. Which dog is the second biggest?",
+    "options": {
+      "A": "Rex",
+      "B": "Max",
+      "C": "Bo",
+      "D": "It is impossible to tell",
+      "E": "Spot"
+    },
+    "correct_answer": "E",
+    "solution": "From the biggest: Rex, Spot, Max, Bo. The second biggest is Spot.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "Rex is the biggest. The question asks about the second biggest."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Max is the third biggest."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "Bo is the smallest dog."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "The three facts give the whole order: Rex, Spot, Max, Bo."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d2-4",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "In a race, Eva finished before Tom, and Tom finished before Max. Leo finished after Max. Who finished third?",
+    "options": {
+      "A": "Max",
+      "B": "Eva",
+      "C": "Tom",
+      "D": "Leo",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "A",
+    "solution": "The order is Eva, Tom, Max, Leo. Max finished third.",
+    "distractors": {
+      "B": {
+        "trap": "answered_other_question",
+        "text": "Eva finished first."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Tom finished second."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "Leo finished after Max, so he was last."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The facts give the whole order: Eva, Tom, Max, Leo."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d2-5",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "Grandma is older than Mum. Mum is older than Kate. Dad is older than Mum but younger than Grandma. How many of them are older than Kate?",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "2",
+      "D": "4",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "B",
+    "solution": "From the oldest: Grandma, Dad, Mum, Kate. Three people are older than Kate.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Mum is older than Kate, and so are Dad and Grandma."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "You forgot someone: Grandma, Dad and Mum are all older than Kate."
+      },
+      "D": {
+        "trap": "double_count",
+        "text": "Kate herself does not count."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Dad is older than Mum, so he is older than Kate too."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d3-1",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Five friends stand in a line. Ann is first. Kim stands right behind Ann. Ben stands right behind Kim. Dan is last. In which place is Eva?",
+    "options": {
+      "A": "1st",
+      "B": "2nd",
+      "C": "3rd",
+      "D": "4th",
+      "E": "5th"
+    },
+    "correct_answer": "D",
+    "solution": "Ann is 1st, Kim is 2nd, Ben is 3rd and Dan is 5th. The only place left for Eva is 4th.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "Ann stands first."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "Kim stands right behind Ann, in the 2nd place."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "Ben is right behind Kim, so Ben is 3rd."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Dan stands last."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d3-2",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Tom is taller than Sam but shorter than Leo. Max is shorter than Sam. Who is the second tallest?",
+    "options": {
+      "A": "Leo",
+      "B": "Sam",
+      "C": "Max",
+      "D": "It is impossible to tell",
+      "E": "Tom"
+    },
+    "correct_answer": "E",
+    "solution": "From the tallest: Leo, Tom, Sam, Max. The second tallest is Tom.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "Leo is the tallest."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Sam is the third tallest."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "Max is the shortest."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "All the facts together give the order: Leo, Tom, Sam, Max."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d3-3",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Nina, Olga, Pete and Rita ran a race. Nina was not first and not last. Olga finished right before Nina. Pete finished after Nina. Rita was last. Who won?",
+    "options": {
+      "A": "Olga",
+      "B": "Nina",
+      "C": "Pete",
+      "D": "Rita",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "A",
+    "solution": "Rita is last, so Pete, who is after Nina, must be 3rd, and Nina is 2nd. Olga is right before Nina, so Olga is 1st: she won.",
+    "distractors": {
+      "B": {
+        "trap": "ignored_not",
+        "text": "Nina was not first."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "Pete finished after Nina, so he did not win."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Rita was last."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "Rita is last, so Pete is 3rd and Nina 2nd; that leaves 1st for Olga."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d3-4",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Four books stand on a shelf. The red book is to the left of the blue book. The green book is to the right of the blue book. The yellow book is to the left of the red book. Which book is at the right end?",
+    "options": {
+      "A": "the red book",
+      "B": "the green book",
+      "C": "the blue book",
+      "D": "the yellow book",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "B",
+    "solution": "From left to right: yellow, red, blue, green. The green book is at the right end.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "The red book is to the left of the blue book."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "The green book is to the right of the blue book."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "The yellow book is at the left end."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The three facts give the whole order: yellow, red, blue, green."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d3-5",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "Leo has more stickers than Max but fewer than Sam. Tom has more stickers than Sam. How many boys have more stickers than Max?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "C",
+    "solution": "From the most: Tom, Sam, Leo, Max. Three boys have more stickers than Max.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Leo has more than Max, and so do Sam and Tom."
+      },
+      "B": {
+        "trap": "missed_case",
+        "text": "Tom has more than Sam, so Tom also has more than Max."
+      },
+      "D": {
+        "trap": "double_count",
+        "text": "Max himself does not count."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The facts give the whole order: Tom, Sam, Leo, Max."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d4-1",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Five girls ran a race. Ann finished before Bea but after Cleo. Dora finished right after Bea. Emma finished last. Who finished second?",
+    "options": {
+      "A": "Bea",
+      "B": "Cleo",
+      "C": "Dora",
+      "D": "Emma",
+      "E": "Ann"
+    },
+    "correct_answer": "E",
+    "solution": "Emma is 5th. Cleo is before Ann, Ann is before Bea, and Dora is right after Bea, so the first four are Cleo, Ann, Bea, Dora. Ann is second.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "Ann finished before Bea, so Bea is after Ann."
+      },
+      "B": {
+        "trap": "answered_other_question",
+        "text": "Cleo won the race."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "Dora is right after Bea, so she is 4th."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Emma was last."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d4-2",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Nora is the oldest of four girls. Kim is older than Lily and older than Mia. Lily is not the youngest. Who is the youngest?",
+    "options": {
+      "A": "Mia",
+      "B": "Kim",
+      "C": "Lily",
+      "D": "Nora",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "A",
+    "solution": "Nora is the oldest. Kim is older than both Lily and Mia, so Kim is second. Lily is not the youngest, so Mia is.",
+    "distractors": {
+      "B": {
+        "trap": "reversed_relation",
+        "text": "Kim is older than Lily and Mia."
+      },
+      "C": {
+        "trap": "ignored_not",
+        "text": "Lily is not the youngest."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "Nora is the oldest."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "Kim is second, and Lily is not last, so Mia must be last."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d4-3",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Five children stand in a line. Tom stands somewhere in front of Sam, with exactly 2 children between them. In how many different places can Tom stand?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4",
+      "E": "5"
+    },
+    "correct_answer": "B",
+    "solution": "Tom and Sam are 3 places apart. Tom can be 1st with Sam 4th, or 2nd with Sam 5th. That is 2 places.",
+    "distractors": {
+      "A": {
+        "trap": "missed_case",
+        "text": "Tom can be 1st with Sam 4th, and also 2nd with Sam 5th."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "There must be exactly 2 children between them, so Tom cannot be 3rd."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "Tom stands in front of Sam, so he cannot be behind him."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "5 is the number of children."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d4-4",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Four jars stand on a shelf: jam, honey, salt and pickles. The salt is at the left end. The honey is not at either end. The jam stands just to the right of the honey. The pickles are not next to the salt. Which jar is at the right end?",
+    "options": {
+      "A": "the jam",
+      "B": "the honey",
+      "C": "the pickles",
+      "D": "the salt",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "C",
+    "solution": "The salt is 1st. The pickles are not next to the salt, so the 2nd jar is the honey or the jam. The jam is just to the right of the honey, so the honey is 2nd and the jam is 3rd. The pickles are at the right end.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "The jam is right after the honey, but the pickles cannot stand next to the salt, so they go to the right end."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "The honey is not at either end."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "The salt is at the left end."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Use the fact about the pickles: then only one order is left."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d4-5",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Ann has 2 more stamps than Ben. Ben has 3 fewer stamps than Kim. Who has the most stamps?",
+    "options": {
+      "A": "Ann",
+      "B": "Ben",
+      "C": "Ann and Kim have the same",
+      "D": "Kim",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "D",
+    "solution": "Kim has 3 more stamps than Ben, and Ann has only 2 more than Ben. So Kim has the most.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Ann has 2 more than Ben, but Kim has 3 more than Ben."
+      },
+      "B": {
+        "trap": "reversed_relation",
+        "text": "Ben has the fewest stamps."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "Kim has 3 more than Ben and Ann only 2 more, so they are not equal."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Compare Ann and Kim with Ben: that is enough."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d5-1",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Five children stand in a line. Kim is last, and Dan stands right in front of Kim. Ann is not first and not last. Ben stands right in front of Ann. Eva is not first. In which place is Eva?",
+    "options": {
+      "A": "3rd",
+      "B": "1st",
+      "C": "2nd",
+      "D": "4th",
+      "E": "5th"
+    },
+    "correct_answer": "A",
+    "solution": "Kim is 5th and Dan is 4th. Ann can be 2nd or 3rd, with Ben right in front of her. If Ann were 3rd, Ben would be 2nd and Eva 1st, but Eva is not first. So Ben is 1st, Ann 2nd and Eva 3rd.",
+    "distractors": {
+      "B": {
+        "trap": "ignored_not",
+        "text": "Eva is not first."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "Ben stands in front of Ann, so Ann is 2nd, not Eva."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Dan stands 4th, right in front of Kim."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Kim is last."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d5-2",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Leo is taller than Max. Nick is shorter than Oleg. Max is taller than Oleg. Who is the shortest?",
+    "options": {
+      "A": "Leo",
+      "B": "Nick",
+      "C": "Max",
+      "D": "Oleg",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "B",
+    "solution": "Leo is taller than Max, Max is taller than Oleg, and Oleg is taller than Nick. So Nick is the shortest.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "Leo is the tallest."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "Max is taller than Oleg and Nick."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "Oleg is shorter than Max, but Nick is shorter than Oleg."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Join the facts: Leo, Max, Oleg, Nick."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d5-3",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Five houses stand in a row: red, blue, green, yellow and white. The yellow house is at the left end. The white house is next to the yellow one. The red house is next to the white one. The green house is between the red and the blue houses, next to both. Which house is at the right end?",
+    "options": {
+      "A": "the red house",
+      "B": "the green house",
+      "C": "the blue house",
+      "D": "the yellow house",
+      "E": "the white house"
+    },
+    "correct_answer": "C",
+    "solution": "From the left: yellow, then white, then red. Green is next to red and to blue, so green is 4th and blue is 5th, at the right end.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "The red house is 3rd, next to the white one."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "The green house is next to the blue one, and blue is further right."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "The yellow house is at the left end."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The white house is 2nd, next to the yellow one."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d5-4",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Sam, Tom, Ula and Vera sit on a bench. Sam sits at one end. Tom sits next to Sam. Vera does not sit next to Tom. Who sits at the other end?",
+    "options": {
+      "A": "Sam",
+      "B": "Tom",
+      "C": "Ula",
+      "D": "Vera",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "D",
+    "solution": "Say Sam sits at the left end. Tom is next to him, in the 2nd seat. Vera is not next to Tom, so she is not in the 3rd seat: she is at the right end. It works the same way if Sam is at the right end.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "Sam sits at one end; the question asks about the other end."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "Tom sits next to Sam, in the 2nd seat."
+      },
+      "C": {
+        "trap": "ignored_not",
+        "text": "Vera does not sit next to Tom, so she cannot be in the 3rd seat."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "Try both ends for Sam: either way Vera is at the other end."
+      }
+    }
+  },
+  {
+    "id": "ord-12-d5-5",
+    "topic": "logic.ordering",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Ann is 2 years older than Ben. Ben is 3 years younger than Kim. Kim is 1 year older than Dan. Who is the youngest?",
+    "options": {
+      "A": "Ann",
+      "B": "Kim",
+      "C": "Dan",
+      "D": "Ann and Dan",
+      "E": "Ben"
+    },
+    "correct_answer": "E",
+    "solution": "Start from Ben. Ann is 2 years older, Kim is 3 years older, and Dan is 1 year younger than Kim, so 2 years older than Ben. Everyone is older than Ben.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "Ann is 2 years older than Ben."
+      },
+      "B": {
+        "trap": "reversed_relation",
+        "text": "Kim is the oldest."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "Dan is younger than Kim, but still 2 years older than Ben."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "Ann and Dan are the same age, but they are not the youngest."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d1-1",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "Ann is taller than Ben. Ben is taller than Kim. Kim is taller than Dan. Dan is taller than Eva. Who is in the middle by height?",
+    "options": {
+      "A": "Ann",
+      "B": "Ben",
+      "C": "Dan",
+      "D": "Kim",
+      "E": "Eva"
+    },
+    "correct_answer": "D",
+    "solution": "From the tallest: Ann, Ben, Kim, Dan, Eva. The middle one of five is the 3rd: Kim.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "Ann is the tallest."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Ben is 2nd; the middle of five is 3rd."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Dan is 4th; the middle of five is 3rd."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "Eva is the shortest."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d1-2",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "In a race, Leo finished 3 places ahead of Max. Max finished 7th. In which place did Leo finish?",
+    "options": {
+      "A": "3rd",
+      "B": "7th",
+      "C": "10th",
+      "D": "21st",
+      "E": "4th"
+    },
+    "correct_answer": "E",
+    "solution": "Ahead means a smaller place number: 7 - 3 = 4. Leo finished 4th.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "3 is how many places ahead Leo was, not his place."
+      },
+      "B": {
+        "trap": "answered_other_question",
+        "text": "7th is Max's place."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "Ahead means a smaller place number: 7 - 3, not 7 + 3."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 3 by 7."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d1-3",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "Five boxes weigh 1, 2, 3, 4 and 5 kilograms. The red box is heavier than the green box but lighter than the blue box. The green box weighs 3 kilograms. How many kilograms does the red box weigh?",
+    "options": {
+      "A": "4",
+      "B": "2",
+      "C": "3",
+      "D": "5",
+      "E": "6"
+    },
+    "correct_answer": "A",
+    "solution": "The red box is heavier than 3 kg, so it weighs 4 or 5 kg. The blue box is heavier still, so blue is 5 kg and red is 4 kg.",
+    "distractors": {
+      "B": {
+        "trap": "reversed_relation",
+        "text": "The red box is heavier than the green box, not lighter."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "3 kg is the green box."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "5 kg is the blue box, which is heavier than the red one."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The boxes weigh only 1 to 5 kilograms."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d1-4",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "Seven children stand in a row by height, from the tallest to the shortest. Nina is 5th. How many children are taller than Nina?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "3",
+      "D": "5",
+      "E": "7"
+    },
+    "correct_answer": "B",
+    "solution": "The children in places 1, 2, 3 and 4 are taller than Nina: 4 children.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "2 children are shorter than Nina, not taller."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Places 1 to 4 are in front of Nina: that is 4 children."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "5 is Nina's place."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "7 is the number of children."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d1-5",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "Tom is older than Sam. Leo is younger than Sam. Max is older than Tom. Who is the youngest?",
+    "options": {
+      "A": "Tom",
+      "B": "Sam",
+      "C": "Leo",
+      "D": "Max",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "C",
+    "solution": "From the oldest: Max, Tom, Sam, Leo. Leo is the youngest.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "Tom is older than Sam and Leo."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "Sam is younger than Tom, but Leo is younger than Sam."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "Max is the oldest."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The facts give the whole order: Max, Tom, Sam, Leo."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d2-1",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "Four villages, Oak, Pine, Reed and Stone, lie along a straight road. Pine lies between Oak and Reed. Stone lies at one end of the road, right next to Reed. Which village lies at the other end of the road?",
+    "options": {
+      "A": "Pine",
+      "B": "Reed",
+      "C": "Stone",
+      "D": "It is impossible to tell",
+      "E": "Oak"
+    },
+    "correct_answer": "E",
+    "solution": "Stone is at one end with Reed next to it. Pine lies between Oak and Reed, so going away from Stone the order is Reed, Pine, Oak. Oak is at the other end.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "Pine lies between Oak and Reed, so it is not at an end."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "Reed is right next to Stone, near the same end."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "Stone is at one end; the question asks about the other end."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "The facts leave only one order: Stone, Reed, Pine, Oak."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d2-2",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "Five runners finished a race. Hal won. Dan finished after Eva but before Fay. Gil finished right after Fay. Who finished third?",
+    "options": {
+      "A": "Dan",
+      "B": "Eva",
+      "C": "Fay",
+      "D": "Gil",
+      "E": "Hal"
+    },
+    "correct_answer": "A",
+    "solution": "Hal is 1st. Eva, Dan and Fay come in this order, and Gil is right after Fay. So the order is Hal, Eva, Dan, Fay, Gil, and Dan is third.",
+    "distractors": {
+      "B": {
+        "trap": "reversed_relation",
+        "text": "Eva finished before Dan, so she was 2nd."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "Gil comes right after Fay, so Fay is 4th."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "Gil finished right after Fay, at the end."
+      },
+      "E": {
+        "trap": "answered_other_question",
+        "text": "Hal won the race; the question asks who was third."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d2-3",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "The red box is heavier than the blue box. The green box is lighter than the blue box. The white box is heavier than the red box. How many boxes are lighter than the red box?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "1",
+      "D": "3",
+      "E": "4"
+    },
+    "correct_answer": "B",
+    "solution": "From the heaviest: white, red, blue, green. Two boxes, blue and green, are lighter than the red box.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "Only the white box is heavier than the red one; the others are lighter."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "The green box is lighter than the blue box, so it is also lighter than the red box."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "The white box is heavier than the red box, so it does not count."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "4 is the number of boxes."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d2-4",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "Five friends compare how many books they have read. Oleg read more than Petr but fewer than Rita. Sasha read fewer than Petr. Tanya read more than Rita. Who read the fewest books?",
+    "options": {
+      "A": "Oleg",
+      "B": "Petr",
+      "C": "Sasha",
+      "D": "Rita",
+      "E": "Tanya"
+    },
+    "correct_answer": "C",
+    "solution": "From the most: Tanya, Rita, Oleg, Petr, Sasha. Sasha read the fewest.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "Oleg read more than Petr."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "Petr read fewer than Oleg, but Sasha read fewer than Petr."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "Rita read more than Oleg and Petr."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "Tanya read the most."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d2-5",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "Kim, Lea and Mo sit on chairs number 1, 2 and 3. Mo is not on chair 2. Lea sits on the chair whose number is one more than Mo's. Kim is not on chair 1. Who sits on chair 2?",
+    "options": {
+      "A": "Kim",
+      "B": "Mo",
+      "C": "Kim or Lea",
+      "D": "Lea",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "D",
+    "solution": "Lea's chair number is one more than Mo's, so Mo is not on chair 3, and Mo is not on chair 2. So Mo is on chair 1, Lea on chair 2 and Kim on chair 3.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "Lea's chair is right after Mo's, so Lea takes chair 2."
+      },
+      "B": {
+        "trap": "ignored_not",
+        "text": "Mo is not on chair 2."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "It can only be Lea: her chair number is one more than Mo's."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The facts leave one seating: Mo, Lea, Kim."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d3-1",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "Six children stand in a line. Dan is first and Eva is last. Fay stands right behind Dan. Ann stands right behind Ben, and Kim stands right behind Ann. Who is fifth?",
+    "options": {
+      "A": "Kim",
+      "B": "Ann",
+      "C": "Ben",
+      "D": "Fay",
+      "E": "Eva"
+    },
+    "correct_answer": "A",
+    "solution": "Dan is 1st and Fay 2nd. Ben, Ann and Kim stand together in this order in places 3, 4 and 5. Eva is 6th. So Kim is fifth.",
+    "distractors": {
+      "B": {
+        "trap": "off_by_one",
+        "text": "Ann is 4th, right in front of Kim."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "Ben is in front of Ann and Kim, in 3rd place."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Fay stands right behind Dan, in 2nd place."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Eva is last, in 6th place."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d3-2",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "Anna, Boris, Vera and Gleb all have different heights. Anna is taller than Boris. Vera is shorter than Gleb. Boris is taller than Gleb. Who is the third tallest?",
+    "options": {
+      "A": "Anna",
+      "B": "Gleb",
+      "C": "Boris",
+      "D": "Vera",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "B",
+    "solution": "From the tallest: Anna, Boris, Gleb, Vera. Gleb is the third tallest.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "Anna is the tallest."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Boris is the second tallest."
+      },
+      "D": {
+        "trap": "reversed_relation",
+        "text": "Vera is shorter than Gleb, so she is the shortest."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The three facts link everyone: Anna, Boris, Gleb, Vera."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d3-3",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "In a contest, Team Red finished 2 places ahead of Team Blue. Team Green finished 3 places behind Team Blue. Team Green finished 6th. In which place did Team Red finish?",
+    "options": {
+      "A": "2nd",
+      "B": "3rd",
+      "C": "1st",
+      "D": "4th",
+      "E": "5th"
+    },
+    "correct_answer": "C",
+    "solution": "Green is 6th and 3 places behind Blue, so Blue is 3rd. Red is 2 places ahead of Blue, so Red is 1st.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "Blue is 3rd, and 2 places ahead of 3rd is 1st."
+      },
+      "B": {
+        "trap": "answered_other_question",
+        "text": "3rd is Blue's place."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "Find Blue first: Blue is 3 places ahead of Green, in 3rd place."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "Ahead means a smaller place number."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d3-4",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "Five pencils have different lengths. The yellow pencil is longer than the red one. The red pencil is longer than the green one. The blue pencil is shorter than the green one. The white pencil is longer than the yellow one. Which pencil is the third longest?",
+    "options": {
+      "A": "the white pencil",
+      "B": "the yellow pencil",
+      "C": "the green pencil",
+      "D": "the red pencil",
+      "E": "the blue pencil"
+    },
+    "correct_answer": "D",
+    "solution": "From the longest: white, yellow, red, green, blue. The red pencil is third.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "The white pencil is the longest."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "The yellow pencil is second."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "The green pencil is fourth."
+      },
+      "E": {
+        "trap": "reversed_relation",
+        "text": "The blue pencil is the shortest."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d3-5",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "Four girls, Lena, Masha, Nadya and Olya, are all of different ages. Masha is the oldest. Lena is older than exactly one of the other girls. Nadya is younger than Olya. Who is the youngest?",
+    "options": {
+      "A": "Lena",
+      "B": "Masha",
+      "C": "Olya",
+      "D": "It is impossible to tell",
+      "E": "Nadya"
+    },
+    "correct_answer": "E",
+    "solution": "Lena is older than exactly one girl, so she is 3rd by age. Masha is 1st. Olya and Nadya take places 2 and 4, and Nadya is younger, so Nadya is the youngest.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Lena is older than one girl, so she is 3rd, not last."
+      },
+      "B": {
+        "trap": "reversed_relation",
+        "text": "Masha is the oldest."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "Nadya is younger than Olya."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Lena's fact fixes her place; then Olya and Nadya are placed by their fact."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d4-1",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Five children stand in a line. Dan is first. Kim stands right behind Ben. Ann stands somewhere in front of Ben. There are exactly two children between Ann and Kim. In which place does Eva stand?",
+    "options": {
+      "A": "1st",
+      "B": "3rd",
+      "C": "2nd",
+      "D": "4th",
+      "E": "5th"
+    },
+    "correct_answer": "B",
+    "solution": "Ann is in front of Ben and Kim is right behind Ben, so Ann is in front of Kim with two children between them. Dan is 1st, so Ann can only be 2nd and Kim 5th, with Ben 4th. Eva takes the 3rd place.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "Dan is first."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "Ann is 2nd; Eva fills the free place between Ann and Ben."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "Ben is 4th, right in front of Kim; the free place is 3rd."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Kim is 5th."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d4-2",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Six runners finished a race without ties. Pavel beat Ruslan, Ruslan beat Semyon, Semyon beat Timur, and Timur beat Uliana. Vika beat Pavel. How many runners finished between Vika and Timur?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "3",
+      "D": "5",
+      "E": "6"
+    },
+    "correct_answer": "C",
+    "solution": "The order is Vika, Pavel, Ruslan, Semyon, Timur, Uliana. Between Vika and Timur are Pavel, Ruslan and Semyon: 3 runners.",
+    "distractors": {
+      "A": {
+        "trap": "missed_case",
+        "text": "Pavel, Ruslan and Semyon are all between them."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Do not count Vika or Timur themselves."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "5 is Timur's place."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "6 is the number of runners."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d4-3",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Five books stand on a shelf: maths, history, music, English and art. The art book is at the right end, and the English book is next to it. The history book stands just to the right of the maths book. The music book is not next to the maths book. Which book is in the middle?",
+    "options": {
+      "A": "the maths book",
+      "B": "the history book",
+      "C": "the English book",
+      "D": "the music book",
+      "E": "the art book"
+    },
+    "correct_answer": "D",
+    "solution": "Art is 5th and English 4th. Maths and history stand together, history on the right. If they were 2nd and 3rd, music would be 1st, next to maths. So maths is 1st, history 2nd, and music is in the middle.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "Maths and history take the first two places."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "History is 2nd; the middle place goes to music."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "English is 4th, next to art."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Art is at the right end."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d4-4",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Seven children stand in a line. The number of children in front of Sasha is twice the number of children behind her. In which place is Sasha?",
+    "options": {
+      "A": "3rd",
+      "B": "4th",
+      "C": "6th",
+      "D": "7th",
+      "E": "5th"
+    },
+    "correct_answer": "E",
+    "solution": "Besides Sasha there are 6 children. If 2 stand behind her, 4 stand in front, and 4 is twice 2. So Sasha is 5th.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "You swapped front and back: 4 are in front of Sasha and 2 behind her."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "4 children are in front of Sasha, so she is the next one: 5th."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "With 5 children in front and 1 behind, the front would be five times the back."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "7 is the number of children."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d4-5",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Four friends are 128, 131, 134 and 137 centimetres tall. Ira is taller than Kolya. Lida is shorter than Kolya. Misha is 131 centimetres tall and is taller than Lida. How many centimetres tall is Ira?",
+    "options": {
+      "A": "137",
+      "B": "128",
+      "C": "131",
+      "D": "134",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "A",
+    "solution": "Only 128 cm is shorter than Misha, so Lida is 128 cm. Kolya is taller than Lida and Ira is taller than Kolya, so Kolya is 134 cm and Ira is 137 cm.",
+    "distractors": {
+      "B": {
+        "trap": "reversed_relation",
+        "text": "128 cm is the shortest: that is Lida."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "131 cm is Misha's height."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "134 cm is Kolya's height, and Ira is taller than Kolya."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Misha's height tells you that Lida is 128 cm; then the rest follows."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d5-1",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Six children stand in a row. Kim stands at the right end. There are exactly 2 children between Ben and Kim, and exactly 1 child between Ann and Ben. Ann does not stand at an end. In which place from the left is Ann?",
+    "options": {
+      "A": "1st",
+      "B": "2nd",
+      "C": "5th",
+      "D": "4th",
+      "E": "6th"
+    },
+    "correct_answer": "C",
+    "solution": "Kim is 6th, and with 2 children between Ben and Kim, Ben is 3rd. With 1 child between Ann and Ben, Ann is 1st or 5th. Ann is not at an end, so she is 5th.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_not",
+        "text": "Ann does not stand at an end."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "There must be exactly 1 child between Ann and Ben, not 0."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "Place 4 is right next to Ben; there must be one child between them."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Kim stands at the right end."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d5-2",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Five friends ran a race. Eva was neither first nor last. Fedor finished right after Eva. Gosha finished before Eva. Ivan finished right after Gosha. Hanna finished after Fedor. Who finished fourth?",
+    "options": {
+      "A": "Eva",
+      "B": "Gosha",
+      "C": "Hanna",
+      "D": "Fedor",
+      "E": "Ivan"
+    },
+    "correct_answer": "D",
+    "solution": "If Eva were 2nd, Gosha would be 1st and Ivan would have to be 2nd too, which is impossible. So Eva is 3rd and Fedor 4th. Gosha and Ivan are 1st and 2nd, and Hanna is last.",
+    "distractors": {
+      "A": {
+        "trap": "off_by_one",
+        "text": "Eva is 3rd, right before Fedor."
+      },
+      "B": {
+        "trap": "answered_other_question",
+        "text": "Gosha won the race."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "Hanna finished after Fedor, so she is 5th."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "Ivan is 2nd, right after Gosha."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d5-3",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Four children, Lev, Mira, Nika and Oleg, all have different heights. Lev is taller than exactly two of the others. Mira is shorter than Lev. Nika is shorter than Mira. Who is the tallest?",
+    "options": {
+      "A": "Lev",
+      "B": "Mira",
+      "C": "Nika",
+      "D": "It is impossible to tell",
+      "E": "Oleg"
+    },
+    "correct_answer": "E",
+    "solution": "Lev is taller than exactly two children, so he is 2nd. Mira and Nika are both shorter than Lev, so they are 3rd and 4th. The only child left for 1st place is Oleg.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Lev is taller than only two children, so one child is taller than Lev."
+      },
+      "B": {
+        "trap": "reversed_relation",
+        "text": "Mira is shorter than Lev."
+      },
+      "C": {
+        "trap": "reversed_relation",
+        "text": "Nika is the shortest."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "The facts leave only the top place for Oleg."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d5-4",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Six runners finished a race without ties. Kolya finished ahead of exactly 4 runners. Dima finished behind exactly 3 runners. How many runners finished between Kolya and Dima?",
+    "options": {
+      "A": "1",
+      "B": "0",
+      "C": "2",
+      "D": "3",
+      "E": "4"
+    },
+    "correct_answer": "A",
+    "solution": "Kolya is ahead of 4 runners, so he is 2nd. Dima has 3 runners ahead of him, so he is 4th. Only the runner in 3rd place is between them.",
+    "distractors": {
+      "B": {
+        "trap": "reversed_relation",
+        "text": "Behind exactly 3 runners means Dima is 4th, not 3rd."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Only the runner in 3rd place is between 2nd and 4th."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "3 is how many runners are ahead of Dima."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "4 is how many runners Kolya beat."
+      }
+    }
+  },
+  {
+    "id": "ord-34-d5-5",
+    "topic": "logic.ordering",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Five houses in a row are painted red, blue, green, white and yellow. The green house is second from the left. The white house is at the right end and is not next to the red one. The yellow house is next to the green one. The red house is next to the blue one. What colour is the house in the middle?",
+    "options": {
+      "A": "blue",
+      "B": "red",
+      "C": "green",
+      "D": "white",
+      "E": "yellow"
+    },
+    "correct_answer": "B",
+    "solution": "Green is 2nd and white is 5th. Red is not next to white, so red is not 4th. Red is next to blue, so red cannot be 1st, because blue would then have to be 2nd. So red is 3rd, blue is 4th and yellow is 1st.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_not",
+        "text": "The red house is not next to the white one, so red cannot be 4th."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "Green is second from the left."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "White is at the right end."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "Yellow is next to green, but on the other side: 1st from the left."
+      }
+    }
+  }
+]

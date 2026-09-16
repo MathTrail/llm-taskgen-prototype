@@ -1,0 +1,1702 @@
+[
+  {
+    "id": "pig-12-d1-1",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "A box has lots of red balls and lots of blue balls. Without looking, you take some balls out. How many balls must you take to be sure that two of them are the same colour?",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "2",
+      "D": "4",
+      "E": "It is never sure"
+    },
+    "correct_answer": "B",
+    "solution": "With 2 balls you may get one red and one blue. The 3rd ball is red or blue, so it matches one of them. 3 balls are enough.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "One ball cannot be two balls of the same colour."
+      },
+      "C": {
+        "trap": "best_case_not_worst",
+        "text": "2 balls can be one red and one blue."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You doubled the number of colours. 3 balls are already enough."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "With 3 balls, the third always matches one of the first two."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d1-2",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "A bag has 3 red apples and 3 green apples. Without looking, Tim takes apples out of the bag. How many apples must he take to be sure that he has a red one?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "4",
+      "D": "3",
+      "E": "6"
+    },
+    "correct_answer": "C",
+    "solution": "Tim may be unlucky and take the 3 green apples first. The next apple must be red. So he needs 4 apples.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "The first apple could be green."
+      },
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "Both apples could be green."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "All 3 apples could be green."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You added 3 and 3. After 3 green apples the next one is always red."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d1-3",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "4 rabbits sit in 3 cages. At least how many rabbits must be in the cage with the most rabbits?",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "3",
+      "D": "2",
+      "E": "4"
+    },
+    "correct_answer": "D",
+    "solution": "If every cage had at most 1 rabbit, only 3 rabbits would fit. There are 4, so some cage has at least 2.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "All 4 rabbits sit somewhere."
+      },
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "Only 3 rabbits fit if each cage has one; the 4th must join another rabbit."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "The rabbits can spread out: 2, 1 and 1."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "4 is the number of rabbits."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d1-4",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "A box has 5 blue pencils and 1 red pencil. Without looking, how many pencils must you take to be sure to get the red one?",
+    "options": {
+      "A": "1",
+      "B": "5",
+      "C": "7",
+      "D": "It is never sure",
+      "E": "6"
+    },
+    "correct_answer": "E",
+    "solution": "You may take all 5 blue pencils first. Then only the red one is left, so 6 pencils are enough.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "The first pencil could be blue."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "All 5 pencils could be blue."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "There are only 6 pencils in the box."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "If you take all 6 pencils, the red one is surely among them."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d1-5",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 1,
+    "question": "A box has 4 green counters and 4 yellow counters. Without looking, how many counters must you take to be sure to get a yellow one?",
+    "options": {
+      "A": "5",
+      "B": "1",
+      "C": "4",
+      "D": "8",
+      "E": "9"
+    },
+    "correct_answer": "A",
+    "solution": "The first 4 counters could all be green. The 5th must be yellow.",
+    "distractors": {
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "The first counter could be green."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "All 4 counters could be green."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "You do not need all the counters: after 4 green ones, the next is yellow."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "There are only 8 counters in the box."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d2-1",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "A bag has lots of red, blue and green marbles. Without looking, how many marbles must you take to be sure that two of them are the same colour?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "4",
+      "D": "3",
+      "E": "6"
+    },
+    "correct_answer": "C",
+    "solution": "3 marbles can be all different colours. The 4th marble matches one of them.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "One marble cannot make a pair."
+      },
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "2 marbles can be different colours."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "3 marbles can be red, blue and green, all different."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 3 colours by 2."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d2-2",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "A box has 4 red balls and 3 blue balls. Without looking, how many balls must you take to be sure to get 2 red balls?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "6",
+      "D": "5",
+      "E": "7"
+    },
+    "correct_answer": "D",
+    "solution": "You may first take all 3 blue balls. Then you need 2 more balls, and they are red. 3 + 2 = 5.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "Both balls could be blue."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "4 balls could be 3 blue and only 1 red."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "After the 3 blue balls, 2 more are enough."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "You do not need all 7 balls."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d2-3",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "There are 13 children in a class. A year has 12 months. At least how many of the children must have their birthday in the same month?",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "12",
+      "D": "13",
+      "E": "2"
+    },
+    "correct_answer": "E",
+    "solution": "12 children could all have birthdays in different months. The 13th child shares a month with one of them. So at least 2 children have the same birthday month.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "13 children cannot all be in different months: there are only 12 months."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "The children can spread out so that only one month has 2 birthdays."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "12 is the number of months."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "13 is the number of children."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d2-4",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "A drawer has 3 pairs of socks, all mixed up: 2 white, 2 grey and 2 black socks. In the dark, how many socks must you take to be sure of 2 socks of the same colour?",
+    "options": {
+      "A": "4",
+      "B": "2",
+      "C": "3",
+      "D": "5",
+      "E": "6"
+    },
+    "correct_answer": "A",
+    "solution": "3 socks can be white, grey and black. The 4th sock matches one of them.",
+    "distractors": {
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "2 socks can be different colours."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "3 socks can all be different colours."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "After 3 different socks, the very next sock matches, so 4 are enough."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "6 is the number of socks in the drawer."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d2-5",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 2,
+    "question": "A box has 2 red, 3 blue and 4 green pencils. Without looking, how many pencils must you take to be sure to get a green one?",
+    "options": {
+      "A": "1",
+      "B": "6",
+      "C": "4",
+      "D": "5",
+      "E": "9"
+    },
+    "correct_answer": "B",
+    "solution": "You may first take all 2 red and 3 blue pencils: 5 pencils. The 6th must be green.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "The first pencil could be red or blue."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "4 is the number of green pencils."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "5 pencils could be all the red and blue ones."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "You do not need all 9 pencils: after the 5 others, the next is green."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d3-1",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "A box has 5 red, 5 blue and 5 green balls. Without looking, how many balls must you take to be sure to have at least one ball of each colour?",
+    "options": {
+      "A": "3",
+      "B": "6",
+      "C": "10",
+      "D": "11",
+      "E": "15"
+    },
+    "correct_answer": "D",
+    "solution": "You may be unlucky and take all 5 red and all 5 blue balls first: 10 balls, and still no green. The 11th ball must be green. So 11 balls are needed.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "3 balls could all be the same colour."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "You took 2 of each colour, but the balls come in any order."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "10 balls could be all the red and blue ones."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "You do not need all 15 balls."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d3-2",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "A drawer has 4 white socks and 6 black socks. In the dark, how many socks must you take to be sure of 2 socks of the same colour?",
+    "options": {
+      "A": "2",
+      "B": "5",
+      "C": "7",
+      "D": "10",
+      "E": "3"
+    },
+    "correct_answer": "E",
+    "solution": "2 socks can be one white and one black. The 3rd sock matches one of them.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "2 socks can be one white and one black."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "The numbers of socks do not matter here: there are only 2 colours."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "7 socks make you sure of a white sock, but the question asks for any two alike."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "10 is the number of socks in the drawer."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d3-3",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "9 children sit on 4 benches. At least how many children must sit on the bench with the most children?",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "4",
+      "D": "5",
+      "E": "9"
+    },
+    "correct_answer": "A",
+    "solution": "If each bench had at most 2 children, only 8 children would fit. There are 9, so some bench has at least 3.",
+    "distractors": {
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "4 benches with 2 children each hold only 8 children."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "4 is the number of benches."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "The children can spread out: 3, 2, 2 and 2."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "9 is the number of children."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d3-4",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "A bag has 3 red, 3 blue and 3 green balls. Without looking, how many balls must you take to be sure to have 2 balls of different colours?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "3",
+      "D": "7",
+      "E": "9"
+    },
+    "correct_answer": "B",
+    "solution": "You may first take the 3 balls of one colour. The 4th ball must be a different colour.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "2 balls can be the same colour."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "3 balls can all be the same colour."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "7 balls make you sure of all three colours, but you need only two."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "9 is the number of balls in the bag."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d3-5",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 3,
+    "question": "10 sweets are shared among 3 children, and every sweet is given out. At least how many sweets does the child with the most sweets get?",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "4",
+      "D": "7",
+      "E": "10"
+    },
+    "correct_answer": "C",
+    "solution": "If each child got at most 3 sweets, only 9 sweets would be given out. There are 10, so someone gets at least 4.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "3 children with 3 sweets each get only 9 sweets."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "The sweets can be shared 4, 3 and 3."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You took 3 from 10."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "10 is the number of sweets."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d4-1",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "A box has 4 red, 5 blue and 6 green balls. Without looking, how many balls must you take to be sure to have 3 balls of the same colour?",
+    "options": {
+      "A": "3",
+      "B": "6",
+      "C": "9",
+      "D": "12",
+      "E": "7"
+    },
+    "correct_answer": "E",
+    "solution": "You may take 2 balls of each colour: 6 balls, and no 3 alike. The 7th ball makes 3 of one colour.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "3 balls can be all different colours."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "6 balls can be 2 of each colour."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 3 by 3. Think of the unlucky case: 2 of each colour."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "12 balls make you sure of 3 green balls, but any colour will do."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d4-2",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "A drawer has 5 pairs of socks, each pair a different colour, all mixed up. In the dark, how many socks must you take to be sure of 2 socks of the same colour?",
+    "options": {
+      "A": "6",
+      "B": "2",
+      "C": "5",
+      "D": "10",
+      "E": "11"
+    },
+    "correct_answer": "A",
+    "solution": "5 socks can all be different colours. The 6th sock matches one of them.",
+    "distractors": {
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "2 socks can be different colours."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "5 socks can be one of each colour."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "10 is the number of socks in the drawer."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "There are only 10 socks, and 6 are already enough."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d4-3",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "A bag has 6 red and 6 blue marbles. Without looking, how many marbles must you take to be sure to have 2 marbles of each colour?",
+    "options": {
+      "A": "4",
+      "B": "8",
+      "C": "6",
+      "D": "7",
+      "E": "12"
+    },
+    "correct_answer": "B",
+    "solution": "You may first take all 6 red marbles. Then you need 2 more, and they are blue. 6 + 2 = 8.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "4 marbles could all be red."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "6 marbles could all be red."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "After 6 red marbles you need 2 blue ones, not 1."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "You do not need all 12 marbles."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d4-4",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "A box has 10 cards with the numbers 1 to 10. Without looking, how many cards must you take to be sure that one of them has an even number?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "6",
+      "D": "5",
+      "E": "10"
+    },
+    "correct_answer": "C",
+    "solution": "The odd numbers are 1, 3, 5, 7 and 9: 5 cards. You may take all 5 first. The 6th card must be even.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "The first card could be odd."
+      },
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "Both cards could be odd."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "5 cards could be all the odd ones."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "You do not need all the cards."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d4-5",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 4,
+    "question": "Each child in a group likes one colour best: red, blue or green. At least how many children must be in the group to be sure that 3 of them like the same colour best?",
+    "options": {
+      "A": "3",
+      "B": "6",
+      "C": "9",
+      "D": "7",
+      "E": "10"
+    },
+    "correct_answer": "D",
+    "solution": "6 children can be 2 for each colour. With 7 children, some colour has 3.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "3 children can like three different colours."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "6 children can be 2 for each colour."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 3 by 3."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "7 children are already enough."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d5-1",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "A box has 3 red, 4 blue and 5 green balls. Without looking, how many balls must you take to be sure to have at least one ball of each colour?",
+    "options": {
+      "A": "10",
+      "B": "3",
+      "C": "6",
+      "D": "9",
+      "E": "12"
+    },
+    "correct_answer": "A",
+    "solution": "The unlucky case: all 5 green and all 4 blue balls come first, 9 balls with no red. The 10th ball must be red. So 10 balls are needed.",
+    "distractors": {
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "3 balls could all be the same colour."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You took 2 of each colour, but the balls come in any order."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "9 balls could be all the green and blue ones."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "You do not need all 12 balls."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d5-2",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "A drawer has 3 pairs of red gloves and 3 pairs of blue gloves, all mixed up. Every pair has a left glove and a right glove. In the dark, how many gloves must you take to be sure of a left and a right glove of the same colour?",
+    "options": {
+      "A": "2",
+      "B": "7",
+      "C": "3",
+      "D": "4",
+      "E": "12"
+    },
+    "correct_answer": "B",
+    "solution": "You may be unlucky and take all 6 left gloves: 3 red and 3 blue. Then the 7th glove is a right glove, and it matches a left glove of its colour. So 7 gloves are needed.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "2 gloves could both be left gloves."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "You need a left and a right glove, not just two of the same colour."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "4 gloves could all be left gloves."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "12 is the number of gloves in the drawer."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d5-3",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "Masha writes the numbers 1 to 20 on 20 cards. Without looking, how many cards must she take to be sure that two of her cards add up to 21?",
+    "options": {
+      "A": "2",
+      "B": "10",
+      "C": "11",
+      "D": "20",
+      "E": "21"
+    },
+    "correct_answer": "C",
+    "solution": "The numbers make 10 pairs that add up to 21: 1 and 20, 2 and 19, ..., 10 and 11. She could take one card from each pair: 10 cards. The 11th card completes a pair.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "2 cards may not add up to 21."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "10 cards can be one from each pair, like 1 to 10."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "You do not need all the cards."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "21 is the sum, not the number of cards."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d5-4",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "A bag has 2 red, 2 blue, 2 green and 2 yellow balls. Without looking, how many balls must you take to be sure to have 2 balls of the same colour?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "5",
+      "E": "8"
+    },
+    "correct_answer": "D",
+    "solution": "4 balls can be one of each colour. The 5th ball matches one of them.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "2 balls can be different colours."
+      },
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "3 balls can all be different colours."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "4 balls can be one of each colour."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "8 is the number of balls in the bag."
+      }
+    }
+  },
+  {
+    "id": "pig-12-d5-5",
+    "topic": "pigeonhole.basic",
+    "grade_level": "1-2",
+    "difficulty": 5,
+    "question": "A box has 4 apples. Some are red and the others are green. Whichever 3 apples you take, there is at least one red and at least one green apple among them. How many red apples are in the box?",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "3",
+      "D": "4",
+      "E": "2"
+    },
+    "correct_answer": "E",
+    "solution": "If there were 3 red apples, you could take 3 red ones with no green. So there are at most 2 red apples, and in the same way at most 2 green ones. There are 4 apples in all, so 2 of them are red.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "Every 3 apples have a red one, so there are red apples."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "With only 1 red apple, the other 3 would be green, and you could take them."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "With 3 red apples, you could take 3 red ones and no green."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Some apples are green."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d1-1",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "A drawer has 10 black socks and 10 white socks. In the dark, how many socks must you take to be sure of 2 socks of the same colour?",
+    "options": {
+      "A": "2",
+      "B": "11",
+      "C": "20",
+      "D": "3",
+      "E": "21"
+    },
+    "correct_answer": "D",
+    "solution": "2 socks can be one black and one white. The 3rd sock matches one of them.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "2 socks can be one black and one white."
+      },
+      "B": {
+        "trap": "answered_other_question",
+        "text": "11 socks make you sure of a sock of each colour, but you need two alike."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "20 is the number of socks in the drawer."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "There are only 20 socks, and 3 are already enough."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d1-2",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "A class has 25 pupils. At least how many of them must have their birthday in the same month?",
+    "options": {
+      "A": "2",
+      "B": "12",
+      "C": "13",
+      "D": "25",
+      "E": "3"
+    },
+    "correct_answer": "E",
+    "solution": "If every month had at most 2 birthdays, only 24 pupils would fit. There are 25, so some month has at least 3.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "12 months with 2 birthdays each hold only 24 pupils."
+      },
+      "B": {
+        "trap": "number_from_text",
+        "text": "12 is the number of months."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You took 12 from 25."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "25 is the number of pupils."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d1-3",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "A bag has 7 red balls and 7 blue balls. Without looking, how many balls must you take to be sure to have 2 red balls?",
+    "options": {
+      "A": "9",
+      "B": "2",
+      "C": "7",
+      "D": "8",
+      "E": "14"
+    },
+    "correct_answer": "A",
+    "solution": "You may first take all 7 blue balls. Then 2 more balls, which are red. 7 + 2 = 9.",
+    "distractors": {
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "Both balls could be blue."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "7 balls could all be blue."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "After 7 blue balls you need 2 red ones, not 1."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "You do not need all 14 balls."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d1-4",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "A box has red, yellow, green and blue pencils, 10 of each colour. Without looking, how many pencils must you take to be sure that two of them are the same colour?",
+    "options": {
+      "A": "2",
+      "B": "5",
+      "C": "4",
+      "D": "8",
+      "E": "11"
+    },
+    "correct_answer": "B",
+    "solution": "4 pencils can be one of each colour. The 5th pencil matches one of them.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "2 pencils can be different colours."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "4 pencils can be one of each colour."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 4 colours by 2."
+      },
+      "E": {
+        "trap": "answered_other_question",
+        "text": "11 pencils make you sure of two different colours, but you need two alike."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d1-5",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "There are 13 children at a party. Can you be sure that at least 2 of them have their birthday in the same month?",
+    "options": {
+      "A": "No, never",
+      "B": "Only if two of them are twins",
+      "C": "Yes, always",
+      "D": "Only if the party is in December",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "C",
+    "solution": "There are only 12 months. Even if 12 children had birthdays in 12 different months, the 13th child would share a month with someone. So yes, always.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "Even in the luckiest case only 12 children can have different months."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "Twins are not needed: 13 children and 12 months are enough."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "The date of the party does not matter."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "13 children and only 12 months: two must share a month."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d2-1",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "A box has 5 red, 7 blue and 9 green balls. Without looking, how many balls must you take to be sure that two of them are the same colour?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "13",
+      "D": "21",
+      "E": "4"
+    },
+    "correct_answer": "E",
+    "solution": "3 balls can be red, blue and green. The 4th ball matches one of them.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "2 balls can be different colours."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "3 balls can all be different colours."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "13 balls make you sure of a green ball, but any colour will do."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "21 is the number of balls in the box."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d2-2",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "37 pupils take part in a school play. At least how many of them were born on the same day of the week?",
+    "options": {
+      "A": "6",
+      "B": "5",
+      "C": "7",
+      "D": "30",
+      "E": "37"
+    },
+    "correct_answer": "A",
+    "solution": "If every day of the week had at most 5 pupils, only 35 pupils would fit. There are 37, so some day has at least 6.",
+    "distractors": {
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "7 days with 5 pupils each hold only 35 pupils."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "7 is the number of days in a week."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You took 7 from 37."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "37 is the number of pupils."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d2-3",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "A box has 10 red, 10 blue and 10 green pencils. Without looking, how many pencils must you take to be sure to get a blue one?",
+    "options": {
+      "A": "1",
+      "B": "21",
+      "C": "10",
+      "D": "11",
+      "E": "20"
+    },
+    "correct_answer": "B",
+    "solution": "You may first take all 10 red and all 10 green pencils: 20 pencils. The 21st must be blue.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "The first pencil could be red or green."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "10 is the number of blue pencils."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "11 pencils could be all 10 red ones and 1 green."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "20 pencils could be all the red and green ones."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d2-4",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "The numbers 1 to 10 are written on 10 cards. Without looking, how many cards must you take to be sure that two of them add up to 11?",
+    "options": {
+      "A": "2",
+      "B": "5",
+      "C": "6",
+      "D": "10",
+      "E": "11"
+    },
+    "correct_answer": "C",
+    "solution": "The numbers make 5 pairs that add up to 11: 1 and 10, 2 and 9, 3 and 8, 4 and 7, 5 and 6. You could take one card from each pair: 5 cards. The 6th card completes a pair.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "2 cards may not add up to 11."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "5 cards can be one from each pair, like 1 to 5."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "You do not need all the cards."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "11 is the sum, not the number of cards."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d2-5",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "30 pupils wrote a test. Each pupil got one of four marks: 2, 3, 4 or 5. At least how many pupils got the same mark?",
+    "options": {
+      "A": "4",
+      "B": "7",
+      "C": "26",
+      "D": "8",
+      "E": "30"
+    },
+    "correct_answer": "D",
+    "solution": "If each mark went to at most 7 pupils, only 28 pupils would fit. There are 30, so some mark went to at least 8 pupils.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "4 is the number of different marks."
+      },
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "4 marks with 7 pupils each cover only 28 pupils."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You took 4 from 30."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "30 is the number of pupils."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d3-1",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "A box has 4 red, 6 blue and 8 green balls. Without looking, how many balls must you take to be sure to have 3 balls of the same colour?",
+    "options": {
+      "A": "7",
+      "B": "3",
+      "C": "6",
+      "D": "9",
+      "E": "13"
+    },
+    "correct_answer": "A",
+    "solution": "You may take 2 balls of each colour: 6 balls, and no 3 alike. The 7th ball makes 3 of one colour.",
+    "distractors": {
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "3 balls can be all different colours."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "6 balls can be 2 of each colour."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 3 by 3. Think of the unlucky case: 2 of each colour."
+      },
+      "E": {
+        "trap": "answered_other_question",
+        "text": "13 balls make you sure of 3 green balls, but any colour will do."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d3-2",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "A bag has 5 red, 5 blue and 5 green balls. Without looking, how many balls must you take to be sure to have 2 red balls?",
+    "options": {
+      "A": "2",
+      "B": "12",
+      "C": "7",
+      "D": "11",
+      "E": "15"
+    },
+    "correct_answer": "B",
+    "solution": "The unlucky case: all 5 blue and all 5 green balls come first, 10 balls with no red. Then 2 more balls, both red. 10 + 2 = 12.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "Both balls could be blue or green."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "You counted only one other colour. Both the blue and the green balls can come first."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "After 10 other balls you need 2 red ones, not 1."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "You do not need all 15 balls."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d3-3",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "A drawer has 6 pairs of socks, each pair a different colour, all mixed up. In the dark, how many socks must you take to be sure of 2 matching pairs?",
+    "options": {
+      "A": "4",
+      "B": "7",
+      "C": "8",
+      "D": "12",
+      "E": "13"
+    },
+    "correct_answer": "C",
+    "solution": "The unlucky case: one full pair and one sock of each of the other 5 colours, 7 socks with only one pair. The 8th sock completes a second pair.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "4 socks can all be different colours."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "7 socks make you sure of one pair, not two."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "You do not need all 12 socks."
+      },
+      "E": {
+        "trap": "off_by_one",
+        "text": "There are only 12 socks."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d3-4",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "35 pupils each read between 0 and 9 books during the summer. At least how many pupils read the same number of books?",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "10",
+      "D": "4",
+      "E": "35"
+    },
+    "correct_answer": "D",
+    "solution": "There are 10 possible numbers of books: 0, 1, ..., 9. If each number belonged to at most 3 pupils, only 30 pupils would fit. There are 35, so some number belongs to at least 4 pupils.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "10 numbers with 3 pupils each cover only 30 pupils."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "The pupils can spread out so that no number has 5 of them."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "10 is how many different numbers of books there can be."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "35 is the number of pupils."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d3-5",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "A box has 20 red balls, 20 green balls and 1 white ball. Without looking, how many balls must you take to be sure that two of them are the same colour?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "21",
+      "D": "41",
+      "E": "4"
+    },
+    "correct_answer": "E",
+    "solution": "3 balls can be red, green and white, all different. The 4th ball is red or green, so it matches.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "2 balls can be different colours."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "3 balls can be red, green and white."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "21 balls make you sure of two different colours, but you need two alike."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "41 is the number of balls in the box."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d4-1",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "A bag has 10 red, 10 blue and 10 green balls. Without looking, how many balls must you take to be sure to have 10 balls of the same colour?",
+    "options": {
+      "A": "10",
+      "B": "28",
+      "C": "21",
+      "D": "27",
+      "E": "30"
+    },
+    "correct_answer": "B",
+    "solution": "The unlucky case: 9 balls of each colour, 27 balls with no 10 alike. The 28th ball makes 10 of one colour.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "10 balls could be of different colours."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "21 balls make you sure of one blue ball, not of 10 alike."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "27 balls can be 9 of each colour."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "You do not need all 30 balls."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d4-2",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "How many whole numbers must you choose to be sure that two of them end in the same digit?",
+    "options": {
+      "A": "2",
+      "B": "9",
+      "C": "11",
+      "D": "10",
+      "E": "100"
+    },
+    "correct_answer": "C",
+    "solution": "A number can end in one of 10 digits: 0 to 9. 10 numbers can all end in different digits. The 11th must repeat one.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "2 numbers can end in different digits."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "There are 10 possible last digits, 0 to 9, not 9."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "10 numbers can end in 10 different digits."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "Only the last digit matters, and there are just 10 of them."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d4-3",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "A drawer has 4 red left gloves, 4 red right gloves, 4 blue left gloves and 4 blue right gloves. In the dark, how many gloves must you take to be sure of a left and a right glove of the same colour?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "5",
+      "D": "9",
+      "E": "16"
+    },
+    "correct_answer": "D",
+    "solution": "Without a matching pair you could have, for example, all 4 red left gloves and all 4 blue right gloves: 8 gloves. The 9th glove always completes a pair of the same colour.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "2 gloves can be a red left and a blue right."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "You need a left and a right glove of the same colour, not just the same colour."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "5 gloves could be 4 red left gloves and 1 blue right glove."
+      },
+      "E": {
+        "trap": "number_from_text",
+        "text": "16 is the number of gloves."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d4-4",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "A school has 400 pupils. A year has at most 366 days. At least how many pupils must have their birthday on the same day of the year?",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "34",
+      "D": "400",
+      "E": "2"
+    },
+    "correct_answer": "E",
+    "solution": "If every day had at most one birthday, only 366 pupils would fit. There are 400, so some day has at least 2 birthdays.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "Only 366 pupils can have different birthdays."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "The pupils can spread out so that no day has 3 birthdays."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "34 is how many more pupils than days there are."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "400 is the number of pupils."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d4-5",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "A box has 4 white, 3 black and 2 red balls. Without looking, how many balls must you take to be sure to have at least one ball of each colour?",
+    "options": {
+      "A": "8",
+      "B": "3",
+      "C": "5",
+      "D": "7",
+      "E": "9"
+    },
+    "correct_answer": "A",
+    "solution": "The unlucky case: all 4 white and all 3 black balls come first, 7 balls with no red. The 8th ball must be red.",
+    "distractors": {
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "3 balls could all be white."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "5 balls make you sure of two colours, but you need all three."
+      },
+      "D": {
+        "trap": "stopped_early",
+        "text": "7 balls could be all the white and black ones."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "You do not need all 9 balls."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d5-1",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "A box has 10 red, 8 blue, 6 green and 4 yellow balls. Without looking, how many balls must you take to be sure to have 5 balls of the same colour?",
+    "options": {
+      "A": "5",
+      "B": "16",
+      "C": "17",
+      "D": "20",
+      "E": "21"
+    },
+    "correct_answer": "C",
+    "solution": "Yellow has only 4 balls, so it can never give 5. The unlucky case: 4 red, 4 blue, 4 green and all 4 yellow, 16 balls with no 5 alike. The 17th ball is red, blue or green and makes 5.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "5 balls could be of different colours."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "16 balls can be 4 of each colour."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 4 colours by 5."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "There are only 4 yellow balls, so the unlucky case has 16 balls, not 20."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d5-2",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Each pupil in a group names a favourite day of the week. What is the smallest number of pupils in the group for which you can be sure that 4 of them name the same day?",
+    "options": {
+      "A": "4",
+      "B": "21",
+      "C": "28",
+      "D": "22",
+      "E": "29"
+    },
+    "correct_answer": "D",
+    "solution": "With 21 pupils, each of the 7 days could be named by exactly 3 pupils. With 22 pupils, some day is named by at least 4.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "4 pupils can name 4 different days."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "21 pupils can be 3 for each of the 7 days."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 7 by 4. Think of 3 for each day plus one more."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "7 × 4 + 1 is more than you need; 7 × 3 + 1 = 22 is enough."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d5-3",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "What is the smallest number of pupils in a class for which you can be sure that at least 4 of them have their birthday in the same month?",
+    "options": {
+      "A": "13",
+      "B": "36",
+      "C": "48",
+      "D": "49",
+      "E": "37"
+    },
+    "correct_answer": "E",
+    "solution": "36 pupils could be 3 for each of the 12 months. With 37 pupils, some month has at least 4.",
+    "distractors": {
+      "A": {
+        "trap": "answered_other_question",
+        "text": "13 pupils make you sure of 2 in the same month, not 4."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "36 pupils can be 3 for each month."
+      },
+      "C": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 12 by 4. Think of 3 for each month plus one more."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "12 × 4 + 1 is more than you need; 12 × 3 + 1 = 37 is enough."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d5-4",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "A drawer has socks of 4 colours, many of each colour. In the dark, how many socks must you take to be sure to have 2 pairs? A pair is 2 socks of the same colour, and the two pairs may be of the same colour or of different colours.",
+    "options": {
+      "A": "7",
+      "B": "4",
+      "C": "5",
+      "D": "6",
+      "E": "8"
+    },
+    "correct_answer": "A",
+    "solution": "The unlucky case: 3 socks of one colour and 1 sock of each other colour, 6 socks with only one pair. The 7th sock makes a second pair.",
+    "distractors": {
+      "B": {
+        "trap": "best_case_not_worst",
+        "text": "4 socks can be 4 different colours."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "5 socks make you sure of one pair, not two."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "6 socks can be 3 of one colour and 1 of each other colour: only one pair."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "You multiplied 4 by 2. 7 socks are already enough."
+      }
+    }
+  },
+  {
+    "id": "pig-34-d5-5",
+    "topic": "pigeonhole.basic",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "In a tournament, 6 teams play some games. Two teams play each other at most once, and no team plays itself. Can you be sure that two teams have played the same number of games?",
+    "options": {
+      "A": "No, never",
+      "B": "Yes, always",
+      "C": "Only if every team has played",
+      "D": "Only if some team has played no games",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "B",
+    "solution": "Each team has played 0 to 5 games: 6 possible numbers for 6 teams. But 0 and 5 cannot both happen: a team with 5 games has played everyone, so no team has 0. So only 5 numbers are possible for 6 teams, and two teams must share one.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "Even in the luckiest case the 6 teams cannot all have different numbers of games."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "It is true in every case, also when some team has played no games."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "It is true in every case, also when every team has played."
+      },
+      "E": {
+        "trap": "stopped_early",
+        "text": "0 and 5 games cannot both happen, so 6 teams share only 5 possible numbers."
+      }
+    }
+  }
+]

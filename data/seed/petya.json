@@ -1,0 +1,52 @@
+{
+  "id": "petya",
+  "grade": 3,
+  "interests": ["football", "dinosaurs"],
+  "cognitive_profile": [
+    "solves quickly and likes tricky logic questions",
+    "sometimes stops at an intermediate result and picks it as the answer"
+  ],
+  "mastered_topics": ["logic.ordering", "counting.gaps", "arithmetic.tricks"],
+  "excluded_skills": ["numbers_above_1000"],
+  "consecutive_failures": 0,
+  "history": [
+    {
+      "topic": "logic.ordering",
+      "difficulty": 3,
+      "correct": true,
+      "pace": "fast"
+    },
+    {
+      "topic": "counting.gaps",
+      "difficulty": 3,
+      "correct": true,
+      "pace": "normal"
+    },
+    {
+      "topic": "arithmetic.tricks",
+      "difficulty": 4,
+      "correct": true,
+      "pace": "normal"
+    },
+    {
+      "topic": "combinatorics.enumeration",
+      "difficulty": 4,
+      "correct": false,
+      "chosen_option": "D",
+      "trap_hit": "stopped_early",
+      "pace": "fast"
+    },
+    {
+      "topic": "logic.knights_liars",
+      "difficulty": 3,
+      "correct": true,
+      "pace": "normal"
+    },
+    {
+      "topic": "pigeonhole.basic",
+      "difficulty": 3,
+      "correct": true,
+      "pace": "fast"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "masha",
+  "grade": 3,
+  "interests": ["space", "robots"],
+  "cognitive_profile": [
+    "doesn't read long questions to the end and loses interest",
+    "off-by-one when counting gaps",
+    "misses the word \"not\" in the question"
+  ],
+  "mastered_topics": ["logic.knights_liars"],
+  "excluded_skills": ["division_with_remainder", "fractions"],
+  "consecutive_failures": 2,
+  "history": [
+    {
+      "topic": "logic.knights_liars",
+      "difficulty": 2,
+      "correct": true,
+      "pace": "fast"
+    },
+    {
+      "topic": "combinatorics.enumeration",
+      "difficulty": 3,
+      "correct": false,
+      "chosen_option": "B",
+      "trap_hit": "missed_case",
+      "hint_used": true,
+      "pace": "struggled"
+    },
+    {
+      "topic": "time.clocks",
+      "difficulty": 2,
+      "correct": null,
+      "feedback": "didn't understand the question",
+      "pace": "struggled"
+    }
+  ]
+}

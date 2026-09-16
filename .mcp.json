@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "taskgen": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "python", "-m", "taskgen.mcp_server"]
+    }
+  }
+}

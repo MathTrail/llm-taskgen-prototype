@@ -1,0 +1,852 @@
+[
+  {
+    "id": "wp-34-d1-1",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "You have an empty 3-litre jug, an empty 5-litre jug and a tap. The jugs have no marks. Each step is one of these: fill a jug from the tap, empty a jug onto the ground, or pour water from one jug into the other until the first jug is empty or the second is full. What is the smallest number of steps needed to have exactly 2 litres in one of the jugs?",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "4",
+      "D": "2",
+      "E": "It is impossible"
+    },
+    "correct_answer": "D",
+    "solution": "Fill the 5-litre jug (step 1) and pour from it into the 3-litre jug until that one is full (step 2). 5 - 3 = 2 litres stay in the big jug. One step is not enough: after one step each jug is empty or full.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "After one step each jug is empty or full, so neither can hold 2 litres."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Fill the 5-litre jug and pour it into the 3-litre jug: 2 steps are enough."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "There is a shorter way: fill the 5-litre jug and pour it into the 3-litre one."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "5 - 3 = 2, so pouring the full big jug into the small one leaves 2 litres."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d1-2",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "Tim has a balance and two weights: 1 kg and 3 kg. He may put the weights only on the pan opposite the load. Which of these loads can Tim NOT weigh in one weighing?",
+    "options": {
+      "A": "1 kg",
+      "B": "3 kg",
+      "C": "4 kg",
+      "D": "He can weigh all of them",
+      "E": "2 kg"
+    },
+    "correct_answer": "E",
+    "solution": "With the weights on one pan Tim can make 1 kg, 3 kg or 1 + 3 = 4 kg. 2 kg cannot be made.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "The 1 kg weight alone balances 1 kg."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "The 3 kg weight alone balances 3 kg."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "Both weights together balance 4 kg."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Making 2 kg as 3 - 1 would need a weight on the load's pan, which is not allowed."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d1-3",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "There are 3 coins that look the same. One of them is fake and lighter than the others; the other two weigh the same. What is the smallest number of weighings on a balance without weights that is sure to find the fake coin?",
+    "options": {
+      "A": "1",
+      "B": "0",
+      "C": "2",
+      "D": "3",
+      "E": "It is impossible"
+    },
+    "correct_answer": "A",
+    "solution": "Put one coin on each pan. If one pan goes up, the coin on it is the fake. If the pans balance, the fake is the coin that was not weighed. One weighing is enough.",
+    "distractors": {
+      "B": {
+        "trap": "ignored_condition",
+        "text": "The coins look the same, so without weighing you cannot tell."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "If the pans balance, the third coin is the fake; you do not need to weigh it."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "3 is the number of coins."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The fake is lighter, so the balance shows it."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d1-4",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "A bucket holds 10 litres of water. Masha pours water from it into an empty 7-litre jug until the jug is full. How many litres are left in the bucket?",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "7",
+      "D": "10",
+      "E": "17"
+    },
+    "correct_answer": "B",
+    "solution": "The jug takes 7 litres. 10 - 7 = 3 litres are left in the bucket.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "The jug holds only 7 litres, so not all the water fits into it."
+      },
+      "C": {
+        "trap": "answered_other_question",
+        "text": "7 litres are in the jug, not in the bucket."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Masha poured some water out of the bucket."
+      },
+      "E": {
+        "trap": "wrong_operation",
+        "text": "The water is poured out, so take away: 10 - 7."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d1-5",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 1,
+    "question": "Sasha has a balance and two weights: 1 kg and 2 kg. He wants to weigh out exactly 3 kg of sugar in one weighing. Where should the weights go?",
+    "options": {
+      "A": "Both weights on the pan with the sugar",
+      "B": "The 1 kg weight with the sugar, the 2 kg weight opposite",
+      "C": "Both weights on the pan opposite the sugar",
+      "D": "The 2 kg weight with the sugar, the 1 kg weight opposite",
+      "E": "It cannot be done in one weighing"
+    },
+    "correct_answer": "C",
+    "solution": "The sugar must balance 3 kg, and 1 + 2 = 3. So both weights go on the other pan.",
+    "distractors": {
+      "A": {
+        "trap": "reversed_relation",
+        "text": "Weights next to the sugar make its pan heavier; to balance the sugar they must go opposite."
+      },
+      "B": {
+        "trap": "wrong_operation",
+        "text": "This balances only 2 - 1 = 1 kg of sugar."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "With 2 kg next to the sugar and only 1 kg opposite, the sugar's pan is heavier even with no sugar."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "1 + 2 = 3, so both weights together balance 3 kg."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d2-1",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "You have an empty 3-litre jug, an empty 5-litre jug and a tap. The jugs have no marks. Each step is one of these: fill a jug from the tap, empty a jug onto the ground, or pour water from one jug into the other until the first jug is empty or the second is full. What is the smallest number of steps needed to have exactly 4 litres in one of the jugs?",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "8",
+      "D": "It is impossible",
+      "E": "6"
+    },
+    "correct_answer": "E",
+    "solution": "Fill the 5-litre jug and pour it into the 3-litre jug: 2 litres stay in the big jug (2 steps). Empty the small jug and pour the 2 litres into it (4 steps). Fill the big jug again and pour into the small jug until it is full: it takes 1 litre, so 4 litres stay in the big jug (6 steps). There is no shorter way.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "After 4 steps you can have 2 litres, but not yet 4."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Count the steps again: fill, pour, empty, pour, fill, pour is 6."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "Starting with the 3-litre jug takes 8 steps; starting with the 5-litre jug takes only 6."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Pouring the big jug into the small one gives 2 litres, and then 4 litres."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d2-2",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "There are 9 coins that look the same. One of them is fake and lighter than the others; all real coins weigh the same. What is the smallest number of weighings on a balance without weights that is sure to find the fake coin?",
+    "options": {
+      "A": "2",
+      "B": "1",
+      "C": "3",
+      "D": "4",
+      "E": "8"
+    },
+    "correct_answer": "A",
+    "solution": "Split the coins into three groups of 3. Weigh two groups: the fake is in the lighter group or, if they balance, in the third group. One more weighing finds the fake among those 3 coins. So 2 weighings. One weighing is not enough: it has only 3 outcomes, but there are 9 coins.",
+    "distractors": {
+      "B": {
+        "trap": "stopped_early",
+        "text": "One weighing only tells which group of 3 coins has the fake."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "With groups of 3, two weighings are enough."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "Weighing coins in pairs is slow; groups of 3 need only 2 weighings."
+      },
+      "E": {
+        "trap": "answered_other_question",
+        "text": "8 is how many coins are real."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d2-3",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "Nina has a balance and three weights: 1 kg, 3 kg and 9 kg. She may put the weights only on the pan opposite the load. Which of these loads can she weigh in one weighing?",
+    "options": {
+      "A": "2 kg",
+      "B": "10 kg",
+      "C": "5 kg",
+      "D": "7 kg",
+      "E": "11 kg"
+    },
+    "correct_answer": "B",
+    "solution": "With the weights on one pan she can make only 1, 3, 4, 9, 10, 12 and 13 kg. Of the loads given, only 10 kg = 9 + 1 can be made.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "2 = 3 - 1 would need a weight on the load's pan, which is not allowed."
+      },
+      "C": {
+        "trap": "ignored_condition",
+        "text": "No weights add up to 5: 1 + 3 = 4, and 9 is too heavy."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "No weights add up to 7: 1 + 3 = 4, and 9 is too heavy."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "11 = 9 + 3 - 1 would need a weight on the load's pan, which is not allowed."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d2-4",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "There are 4 coins that look the same. One of them is fake and lighter than the others; the other three weigh the same. What is the smallest number of weighings on a balance without weights that is sure to find the fake coin?",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "2",
+      "D": "4",
+      "E": "It is impossible"
+    },
+    "correct_answer": "C",
+    "solution": "Weigh 1 coin against 1 coin. If one is lighter, it is the fake. If they balance, the fake is one of the other two, and a second weighing of those two finds it. One weighing is not always enough: it has only 3 outcomes, but there are 4 coins.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "One weighing finds the fake only if you are lucky; you must be sure."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Two weighings are always enough."
+      },
+      "D": {
+        "trap": "number_from_text",
+        "text": "4 is the number of coins."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "The fake is lighter, so two weighings always show it."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d2-5",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 2,
+    "question": "You have an empty 5-litre jug, an empty 2-litre jug and a tap. The jugs have no marks. Each step is one of these: fill a jug from the tap, empty a jug onto the ground, or pour water from one jug into the other until the first jug is empty or the second is full. What is the smallest number of steps needed to have exactly 1 litre in one of the jugs?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "6",
+      "D": "4",
+      "E": "It is impossible"
+    },
+    "correct_answer": "D",
+    "solution": "Fill the 5-litre jug and pour into the 2-litre jug: 3 litres stay (2 steps). Empty the 2-litre jug and pour again: 1 litre stays in the big jug (4 steps). There is no shorter way.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "After 2 steps the big jug holds 3 litres, not 1."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "You have to empty the small jug before pouring again: that makes 4 steps."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "Filling the small jug three times also works, but takes 6 steps; there is a 4-step way."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "5 - 2 - 2 = 1, so pouring the big jug into the small one twice leaves 1 litre."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d3-1",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "A bucket holds 8 litres of water. There are two empty jugs of 5 litres and 3 litres. There is no tap, and no water may be poured away. Each step is pouring from one container into another until the first is empty or the second is full. What is the smallest number of steps needed to have exactly 4 litres in one of the containers?",
+    "options": {
+      "A": "6",
+      "B": "4",
+      "C": "5",
+      "D": "7",
+      "E": "It is impossible"
+    },
+    "correct_answer": "A",
+    "solution": "Write the litres in the bucket, the 5-litre jug and the 3-litre jug. One shortest way: (8, 0, 0), (3, 5, 0), (3, 2, 3), (6, 2, 0), (6, 0, 2), (1, 5, 2), (1, 4, 3). After 6 steps the 5-litre jug holds 4 litres.",
+    "distractors": {
+      "B": {
+        "trap": "stopped_early",
+        "text": "4 steps are not enough; the shortest way takes 6."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Count the pourings again: the shortest way has 6."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "7 steps give 4 litres in both the bucket and the 5-litre jug, but one container is enough."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "It can be done by pouring back and forth, as the solution shows."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d3-2",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "There are 27 coins that look the same. One of them is fake and lighter than the others; all real coins weigh the same. What is the smallest number of weighings on a balance without weights that is sure to find the fake coin?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "9",
+      "E": "26"
+    },
+    "correct_answer": "B",
+    "solution": "Split the coins into 3 groups of 9 and weigh two of them: the fake is in the lighter group or in the third one. Then split those 9 into groups of 3, and then the 3 into single coins. 3 weighings. 2 weighings are not enough: they have only 3 × 3 = 9 outcomes, fewer than 27 coins.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "2 weighings have only 9 outcomes, fewer than 27 coins."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Groups of 9, then 3, then 1: 3 weighings are enough."
+      },
+      "D": {
+        "trap": "answered_other_question",
+        "text": "9 is the size of each group in the first weighing."
+      },
+      "E": {
+        "trap": "answered_other_question",
+        "text": "26 is how many coins are real."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d3-3",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "Oleg has a balance and three weights: 1 kg, 3 kg and 9 kg. He may put weights on either pan, also next to the load. Which of these loads can he NOT weigh in one weighing?",
+    "options": {
+      "A": "2 kg",
+      "B": "5 kg",
+      "C": "14 kg",
+      "D": "7 kg",
+      "E": "11 kg"
+    },
+    "correct_answer": "C",
+    "solution": "A weight next to the load counts as taken away: 2 = 3 - 1, 5 = 9 - 3 - 1, 7 = 9 + 1 - 3, 11 = 9 + 3 - 1. But all three weights together make only 13 kg, so 14 kg cannot be weighed.",
+    "distractors": {
+      "A": {
+        "trap": "ignored_condition",
+        "text": "Put 3 kg opposite the load and 1 kg next to it: 3 - 1 = 2."
+      },
+      "B": {
+        "trap": "ignored_condition",
+        "text": "Put 9 kg opposite, and 3 kg and 1 kg next to the load: 9 - 3 - 1 = 5."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Put 9 kg and 1 kg opposite, and 3 kg next to the load: 9 + 1 - 3 = 7."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Put 9 kg and 3 kg opposite, and 1 kg next to the load: 9 + 3 - 1 = 11."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d3-4",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "You have an empty 4-litre jug, an empty 9-litre jug and a tap. The jugs have no marks. Each step is one of these: fill a jug from the tap, empty a jug onto the ground, or pour water from one jug into the other until the first jug is empty or the second is full. What is the smallest number of steps needed to have exactly 6 litres in one of the jugs?",
+    "options": {
+      "A": "6",
+      "B": "7",
+      "C": "10",
+      "D": "8",
+      "E": "It is impossible"
+    },
+    "correct_answer": "D",
+    "solution": "Fill the 9-litre jug, pour into the 4-litre jug, empty it, pour again, empty it: 1 litre is left in the big jug (5 steps). Pour this 1 litre into the small jug (6 steps). Fill the big jug and pour into the small jug until it is full: it takes 3 litres, and 6 litres stay in the big jug (8 steps).",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "6 steps are not enough; the shortest way takes 8."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Count the steps again: the shortest way has 8."
+      },
+      "C": {
+        "trap": "missed_case",
+        "text": "There is a shorter way, starting with the big jug: 8 steps."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "9 - 4 - 4 = 1 litre, and then 9 - 3 = 6 litres can be made."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d3-5",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 3,
+    "question": "You have an empty 6-litre jug, an empty 4-litre jug and a tap. The jugs have no marks. Each step is one of these: fill a jug from the tap, empty a jug onto the ground, or pour water from one jug into the other until the first jug is empty or the second is full. What is the smallest number of steps needed to have exactly 3 litres in one of the jugs?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6",
+      "E": "It is impossible"
+    },
+    "correct_answer": "E",
+    "solution": "Both jugs hold an even number of litres. Filling, emptying and pouring always leave an even number of litres in each jug: 0, 2, 4 or 6. So 3 litres can never be made.",
+    "distractors": {
+      "A": {
+        "trap": "number_from_text",
+        "text": "3 is the amount of water wanted, and it can never be made."
+      },
+      "B": {
+        "trap": "wrong_parity",
+        "text": "Every amount you can make is even, and 3 is odd."
+      },
+      "C": {
+        "trap": "wrong_parity",
+        "text": "Every amount you can make is even, and 3 is odd."
+      },
+      "D": {
+        "trap": "wrong_parity",
+        "text": "Every amount you can make is even, and 3 is odd."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d4-1",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "There are 12 coins that look the same. One of them is fake and lighter than the others; all real coins weigh the same. What is the smallest number of weighings on a balance without weights that is sure to find the fake coin?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "6",
+      "E": "11"
+    },
+    "correct_answer": "B",
+    "solution": "Weigh 4 coins against 4. The fake is among the 4 lighter coins, or among the 4 not weighed. 4 coins need 2 more weighings, so 3 in all. 2 weighings have only 3 × 3 = 9 outcomes, fewer than 12 coins, so they are not enough.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "2 weighings have only 9 outcomes, but there are 12 coins."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "3 weighings are enough, as the solution shows."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "Weighing in pairs is slow; groups of 4 need only 3 weighings."
+      },
+      "E": {
+        "trap": "answered_other_question",
+        "text": "11 is how many coins are real."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d4-2",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "You have an empty 5-litre jug, an empty 7-litre jug and a tap. The jugs have no marks. Each step is one of these: fill a jug from the tap, empty a jug onto the ground, or pour water from one jug into the other until the first jug is empty or the second is full. What is the smallest number of steps needed to have exactly 6 litres in one of the jugs?",
+    "options": {
+      "A": "6",
+      "B": "8",
+      "C": "10",
+      "D": "12",
+      "E": "It is impossible"
+    },
+    "correct_answer": "C",
+    "solution": "Fill the 7-litre jug and pour it into the 5-litre jug: 2 litres stay. Empty the small jug and pour the 2 litres into it. Fill the big jug again and pour until the small jug is full: 4 litres stay. Empty the small jug, pour the 4 litres into it, fill the big jug and pour until the small jug is full: 6 litres stay. That is 10 steps, and there is no shorter way.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "6 steps are not enough; the shortest way takes 10."
+      },
+      "B": {
+        "trap": "stopped_early",
+        "text": "After 8 steps you can have 4 litres, but 6 litres need 2 more steps."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "Two rounds of fill, pour, empty, pour and then one more fill and pour make 10 steps."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "It can be done: the big jug is left with 2, then 4, then 6 litres."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d4-3",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "Lena wants a set of weights, each weighing a whole number of kilograms, so that with her balance she can weigh any load of 1, 2, 3, 4, 5, 6 or 7 kg in one weighing. The weights may go only on the pan opposite the load. What is the smallest number of weights she needs?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "7",
+      "D": "3",
+      "E": "It is impossible"
+    },
+    "correct_answer": "D",
+    "solution": "Weights of 1, 2 and 4 kg work: 3 = 1 + 2, 5 = 1 + 4, 6 = 2 + 4 and 7 = 1 + 2 + 4. Two weights are not enough: they can make at most 3 different loads, one weight, the other, or both, but 7 loads are needed.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Two weights make at most 3 different loads, but 7 are needed."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Weights of 1, 2 and 4 kg are already enough."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "7 kg is the heaviest load, not the number of weights."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Weights of 1, 2 and 4 kg make every load from 1 to 7 kg."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d4-4",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "There are 3 coins. One of them is fake: it is either heavier or lighter than a real coin, but nobody knows which. The two real coins weigh the same. What is the smallest number of weighings on a balance without weights that is sure to find the fake coin and tell whether it is heavier or lighter?",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "4",
+      "D": "It is impossible",
+      "E": "2"
+    },
+    "correct_answer": "E",
+    "solution": "Weigh coin 1 against coin 2. If they balance, coin 3 is fake; weigh it against coin 1 to see whether it is heavier or lighter. If they do not balance, weigh coin 1 against coin 3: if these balance, coin 2 is fake, and the first weighing shows how; if not, coin 1 is fake, and the pans show how. So 2 weighings. One weighing has only 3 outcomes, but there are 6 possible answers: each of 3 coins, heavier or lighter.",
+    "distractors": {
+      "A": {
+        "trap": "best_case_not_worst",
+        "text": "One weighing has 3 outcomes, but there are 6 possible answers, so it is not always enough."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "2 weighings are enough, as the solution shows."
+      },
+      "C": {
+        "trap": "double_count",
+        "text": "Each weighing compares two coins at once; 2 weighings are enough."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Two weighings show both which coin is fake and how it differs."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d4-5",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 4,
+    "question": "There are 10 bags of coins, numbered 1 to 10. In nine bags every coin weighs 10 g; in one bag every coin weighs 11 g. Vera takes 1 coin from bag 1, 2 coins from bag 2, and so on, up to 10 coins from bag 10, and puts all of them on a scale that shows the weight. The scale shows 553 g. Which bag has the heavy coins?",
+    "options": {
+      "A": "bag 3",
+      "B": "bag 1",
+      "C": "bag 5",
+      "D": "bag 10",
+      "E": "It is impossible to tell"
+    },
+    "correct_answer": "A",
+    "solution": "Vera took 1 + 2 + ... + 10 = 55 coins. If all of them weighed 10 g, they would weigh 550 g. There are 3 extra grams, and each heavy coin adds 1 g, so there are 3 heavy coins: they come from bag 3.",
+    "distractors": {
+      "B": {
+        "trap": "ignored_condition",
+        "text": "One heavy coin would add only 1 g, but there are 3 extra grams."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "5 is a digit of 553, not the number of extra grams."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Bag 10 would add 10 extra grams, not 3."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Each bag adds a different number of extra grams, so the scale tells which bag it is."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d5-1",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "There are 12 coins. One of them is fake: it is heavier or lighter than a real coin, but nobody knows which. All real coins weigh the same. What is the smallest number of weighings on a balance without weights that is sure to find the fake coin and tell whether it is heavier or lighter?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "3",
+      "D": "6",
+      "E": "It is impossible"
+    },
+    "correct_answer": "C",
+    "solution": "There are 24 possible answers: each of 12 coins, heavier or lighter, and 2 weighings have only 9 outcomes. 3 weighings are enough. Weigh coins 1-4 against 5-8. If they balance, coins 1-8 are real: weigh 9, 10, 11 against 1, 2, 3; if these balance, coin 12 is fake and one more weighing against a real coin shows how; if not, you know whether the fake is heavier or lighter, and weighing 9 against 10 finds it. If 1-4 is heavier, weigh 1, 2, 5 against 3, 6, 9: if they balance, the fake is 4 (heavier), 7 or 8 (lighter), and weighing 7 against 8 finds it; if 1, 2, 5 is heavier, the fake is 1 or 2 (heavier) or 6 (lighter), and weighing 1 against 2 finds it; if 1, 2, 5 is lighter, the fake is 3 (heavier) or 5 (lighter), and weighing 3 against a real coin finds it. The case where 5-8 is heavier is the same with the pans swapped.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "2 weighings have 9 outcomes, but there are 24 possible answers."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "3 weighings are enough, as the solution shows."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "12 ÷ 2 = 6 is the number of pairs; clever weighings need only 3."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "It can be done in 3 weighings, as the solution shows."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d5-2",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "A bucket holds 8 litres of water. There are two empty jugs of 5 litres and 3 litres. There is no tap, and no water may be poured away. Each step is pouring from one container into another until the first is empty or the second is full. What is the smallest number of steps needed to share the water into two equal parts: 4 litres in the bucket and 4 litres in the 5-litre jug?",
+    "options": {
+      "A": "5",
+      "B": "6",
+      "C": "8",
+      "D": "7",
+      "E": "It is impossible"
+    },
+    "correct_answer": "D",
+    "solution": "Write the litres in the bucket, the 5-litre jug and the 3-litre jug: (8, 0, 0), (3, 5, 0), (3, 2, 3), (6, 2, 0), (6, 0, 2), (1, 5, 2), (1, 4, 3), (4, 4, 0). That is 7 steps, and there is no shorter way.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "5 steps are not enough; the shortest way takes 7."
+      },
+      "B": {
+        "trap": "answered_other_question",
+        "text": "After 6 steps only the 5-litre jug holds 4 litres; one more step is needed for the bucket."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "Count the steps again: 7 are enough."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "It can be done in 7 steps, as the solution shows."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d5-3",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "Pavel wants a set of weights, each weighing a whole number of kilograms, so that with his balance he can weigh any whole load from 1 to 13 kg in one weighing. The weights may go on either pan, also next to the load. What is the smallest number of weights he needs?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "13",
+      "D": "It is impossible",
+      "E": "3"
+    },
+    "correct_answer": "E",
+    "solution": "Weights of 1, 3 and 9 kg work: each weight can be opposite the load, next to it, or not used, and this gives every load from 1 to 13 kg, for example 2 = 3 - 1 and 5 = 9 - 3 - 1. Two weights are not enough: they make at most 4 different loads, one weight, the other, their sum and their difference.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "Two weights make at most 4 different loads, but 13 are needed."
+      },
+      "B": {
+        "trap": "off_by_one",
+        "text": "Weights of 1, 3 and 9 kg are already enough."
+      },
+      "C": {
+        "trap": "number_from_text",
+        "text": "13 kg is the heaviest load, not the number of weights."
+      },
+      "D": {
+        "trap": "ignored_condition",
+        "text": "Weights of 1, 3 and 9 kg make every load from 1 to 13 kg."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d5-4",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "There are 10 coins that look the same. One of them is fake and lighter than the others; all real coins weigh the same. What is the smallest number of weighings on a balance without weights that is sure to find the fake coin?",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "4",
+      "D": "5",
+      "E": "9"
+    },
+    "correct_answer": "A",
+    "solution": "2 weighings have only 3 × 3 = 9 outcomes, and there are 10 coins, so 2 are not enough. 3 are enough: weigh 3 coins against 3. The fake is among the lighter 3, or among the 4 not weighed; 3 coins need 1 more weighing and 4 coins need 2 more.",
+    "distractors": {
+      "B": {
+        "trap": "stopped_early",
+        "text": "2 weighings are enough for 9 coins, but there are 10."
+      },
+      "C": {
+        "trap": "off_by_one",
+        "text": "3 weighings are enough, as the solution shows."
+      },
+      "D": {
+        "trap": "wrong_operation",
+        "text": "Weighing in pairs takes 5 weighings; groups of 3 need only 3."
+      },
+      "E": {
+        "trap": "answered_other_question",
+        "text": "9 is how many coins are real."
+      }
+    }
+  },
+  {
+    "id": "wp-34-d5-5",
+    "topic": "algorithms.weighing_pouring",
+    "grade_level": "3-4",
+    "difficulty": 5,
+    "question": "A bag holds 24 kg of nails. With a balance without weights, you can split any amount of nails into two equal parts in one weighing, and you can pour parts together without weighing. What is the smallest number of weighings needed to get exactly 9 kg of nails in one pile?",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "2",
+      "D": "4",
+      "E": "It is impossible"
+    },
+    "correct_answer": "B",
+    "solution": "Split 24 kg into 12 + 12, then 12 into 6 + 6, then 6 into 3 + 3. Now pour 6 kg and 3 kg together: 9 kg, after 3 weighings. After 2 weighings the piles are 12, 6 and 6 kg, and no group of them adds up to 9.",
+    "distractors": {
+      "A": {
+        "trap": "stopped_early",
+        "text": "One weighing only gives two piles of 12 kg."
+      },
+      "C": {
+        "trap": "stopped_early",
+        "text": "After 2 weighings the piles are 12, 6 and 6 kg, and no group of them adds up to 9."
+      },
+      "D": {
+        "trap": "off_by_one",
+        "text": "3 weighings are enough: 6 kg and 3 kg make 9 kg."
+      },
+      "E": {
+        "trap": "ignored_condition",
+        "text": "Piles of 6 kg and 3 kg can be made, and 6 + 3 = 9."
+      }
+    }
+  }
+]

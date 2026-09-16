@@ -1,0 +1,58 @@
+{
+  "title": "Self-check of a task (SPEC 5.4)",
+  "description": "The client's model reviews its own task by the checklist: defects first, then a solution. Handed in with submit_task as self_check; a blocking issue rejects the task (D42).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["issues", "option_check", "final_answer"],
+  "properties": {
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "severity", "comment"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "ambiguous",
+              "missing_data",
+              "multiple_correct",
+              "no_correct",
+              "too_hard_for_grade",
+              "needs_picture",
+              "factual_error"
+            ]
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["blocking", "minor"],
+            "description": "blocking: the task is rejected; minor: the task is kept and the remark is saved."
+          },
+          "comment": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Every defect found; an empty list if there are none."
+    },
+    "option_check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["A", "B", "C", "D", "E"],
+      "properties": {
+        "A": { "type": "string" },
+        "B": { "type": "string" },
+        "C": { "type": "string" },
+        "D": { "type": "string" },
+        "E": { "type": "string" }
+      },
+      "description": "For each option: \"correct\" or \"wrong because ...\"."
+    },
+    "final_answer": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "E", "UNSOLVABLE"],
+      "description": "UNSOLVABLE if the task cannot be solved as written."
+    }
+  }
+}
